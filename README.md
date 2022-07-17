@@ -33,17 +33,17 @@ Example usage:
 ```
 <script src="https://cdn.jsdelivr.net/gh/AtOnceCo/AtOnce@main/status.js"></script>
 <script>
-    function createAtOnceOrderStatusInfo() {
-        let fta = false
-        {% if first_time_accessed %} fta = true {% endif %}
-        
+    function AtOnceStatusBox() {
         let accept_returns = true
         let portal_name = "RETURNS.YOURSTORE.COM"
         
-        let ar_i = AtOnceReturns(portal_name, accept_returns, {{ checkout.attributes.atonce_return | json }}, fta, {{ checkout.order_number | json }}, {{ checkout.shipping_address.zip | json }})
-        if (ar_i.length) { Shopify.Checkout.OrderStatus.addContentBox(ar_i[0],ar_i[1]) }
+        let f = false
+        {% if first_time_accessed %} f = true {% endif %}
+        
+        let a = AtOnceReturns(portal_name, accept_returns, {{ checkout.attributes.atonce_return | json }}, f, {{ checkout.order_number | json }}, {{ checkout.shipping_address.zip | json }})
+        if (a.length) { Shopify.Checkout.OrderStatus.addContentBox(ar_i[0],ar_i[1]) }
     }
-    createAtOnceOrderStatusInfo()
+    AtOnceStatusBox()
 </script>
 ```
 
