@@ -10,6 +10,7 @@ It also saves customers from needing to find/locate their order number by storin
 <br/>
 **Note: You should also add your self-service code to your order status notifications in Shopify Admin > Settings > Notifications**
 <br/>
+<br/>
 We suggest adding it to:
 <br/>
 - Order Confirmation Email
