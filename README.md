@@ -20,7 +20,7 @@ We suggest adding it to:
 <br/>
 
 ```
-<div style="text-align:center;margin-top:0.5rem;"><a href="https://RETURNS.YOURSTORE.COM?order={{ order_number }}_atonce_{% if shipping_address %}{{ shipping_address.zip | remove: " " | upcase }}{% else %}{{ billing_address.zip | remove: " " | upcase }}{% endif %}" target="_blank">Need help? Return/Exchange your order in 50 seconds</a></div>
+<div style="text-align:center;margin-top:0.5rem;"><a href="https://RETURNS.YOURSTORE.COM?order={{ order_number }}_atonce_{% if shipping_address %}{{ shipping_address.zip | remove: " " | upcase }}{% else %}{{ billing_address.zip | remove: " " | upcase }}{% endif %}" target="_blank">Need help? Return/Exchange your order at once</a></div>
 ```
 
 <br/>
