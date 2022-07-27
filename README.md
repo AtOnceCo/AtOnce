@@ -6,6 +6,12 @@ This generates a content box that allows customers to easily return items from t
 It also saves customers from needing to find/locate their order number by storing it locally.
 
 
+Note: You should also add your self-service code to your order status notifications in Shopify Admin > Settings > Notifications:
+```
+<div style="text-align:center;margin-top:0.5rem;"><a href="https://RETURNS.YOURSTORE.COM?order={{ order_number }}_atonce_{% if shipping_address %}{{ shipping_address.zip | remove: " " | upcase }}{% else %}{{ billing_address.zip | remove: " " | upcase }}{% endif %}" target="_blank">Need help? Return/Exchange/Edit your order</a></div>
+```
+
+
 Variables:
 ```
 portal_name = "RETURNS.YOURSTORE.COM"
