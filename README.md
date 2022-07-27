@@ -4,14 +4,14 @@ AtOnce - Shopify Customer Service Made Easy. Returns, Exchanges &amp; Refunds.
 This generates a content box that allows customers to easily return items from their order status page.
 
 It also saves customers from needing to find/locate their order number by storing it locally.
-
-
+<br/>
+<br/>
 Note: You should also add your self-service code to your order status notifications in Shopify Admin > Settings > Notifications:
 ```
 <div style="text-align:center;margin-top:0.5rem;"><a href="https://RETURNS.YOURSTORE.COM?order={{ order_number }}_atonce_{% if shipping_address %}{{ shipping_address.zip | remove: " " | upcase }}{% else %}{{ billing_address.zip | remove: " " | upcase }}{% endif %}" target="_blank">Need help? Return/Exchange/Edit your order</a></div>
 ```
-
-
+<br/>
+<br/>
 Variables:
 ```
 portal_name = "RETURNS.YOURSTORE.COM"
@@ -28,13 +28,14 @@ order_zip = {{ checkout.shipping_address.zip | json }}
 (optional custom link styles)
 a_style = "font-weight:600;padding: 0.75rem 1rem;border: 1px solid #ddd;border-radius: 5px;"
 ```
-
+<br/>
+<br/>
 Main function:
 ```
 AtOnceReturns(portal_name, accept_returns, new_return_id, first_time_accessed, order_num, order_zip, a_style)
 ```
-
-
+<br/>
+<br/>
 Example usage:
 ```
 <script src="https://cdn.jsdelivr.net/gh/AtOnceCo/AtOnce@main/status.js"></script>
@@ -52,8 +53,8 @@ Example usage:
     AtOnceStatusBox()
 </script>
 ```
-
-
+<br/>
+<br/>
 Example on order status page:
-
+<br/>
 ![Example](https://github.com/AtOnceCo/AtOnce/blob/main/Example%201.png)
