@@ -64,7 +64,4 @@ Example usage:
 <br/>
 
 Example on order status page:
-
-<br/>
-
 ![Example](https://github.com/AtOnceCo/AtOnce/blob/main/Example%201.png)
