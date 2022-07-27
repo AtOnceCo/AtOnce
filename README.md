@@ -6,7 +6,7 @@ This generates a content box that allows customers to easily return items from t
 It also saves customers from needing to find/locate their order number by storing it locally.
 <br/>
 <br/>
-Note: You should also add your self-service code to your order status notifications in Shopify Admin > Settings > Notifications:
+**Note: You should also add your self-service code to your order status notifications in Shopify Admin > Settings > Notifications:**
 ```
 <div style="text-align:center;margin-top:0.5rem;"><a href="https://RETURNS.YOURSTORE.COM?order={{ order_number }}_atonce_{% if shipping_address %}{{ shipping_address.zip | remove: " " | upcase }}{% else %}{{ billing_address.zip | remove: " " | upcase }}{% endif %}" target="_blank">Need help? Return/Exchange/Edit your order</a></div>
 ```
@@ -14,7 +14,7 @@ Note: You should also add your self-service code to your order status notificati
 <br/>
 <br/>
 
-Variables:
+**Variables:**
 ```
 portal_name = "RETURNS.YOURSTORE.COM"
 OR portal_name = "YOURSTORE.USEATONCE.COM"
@@ -34,7 +34,7 @@ a_style = "font-weight:600;padding: 0.75rem 1rem;border: 1px solid #ddd;border-r
 <br/>
 <br/>
 
-Main function:
+**Main function:**
 ```
 AtOnceReturns(portal_name, accept_returns, new_return_id, first_time_accessed, order_num, order_zip, a_style)
 ```
@@ -42,7 +42,7 @@ AtOnceReturns(portal_name, accept_returns, new_return_id, first_time_accessed, o
 <br/>
 <br/>
 
-Example usage:
+**Example usage:**
 ```
 <script src="https://cdn.jsdelivr.net/gh/AtOnceCo/AtOnce@main/status.js"></script>
 <script>
@@ -63,5 +63,5 @@ Example usage:
 <br/>
 <br/>
 
-Example on order status page:
+**Example on order status page:**
 ![Example](https://github.com/AtOnceCo/AtOnce/blob/main/Example%201.png)
