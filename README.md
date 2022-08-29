@@ -68,7 +68,7 @@ AtOnceReturns(portal_name, accept_returns, new_return_id, first_time_accessed, o
         {% if first_time_accessed %} f = true {% endif %}
         
         let a = AtOnceReturns(portal_name, accept_returns, {{ checkout.attributes.atonce_return | json }}, f, {{ checkout.order_number | json }}, {{ checkout.shipping_address.zip | json }})
-        if (a.length) { Shopify.Checkout.OrderStatus.addContentBox(ar_i[0],ar_i[1]) }
+        if (a.length) { Shopify.Checkout.OrderStatus.addContentBox(a[0],a[1]) }
     }
     AtOnceStatusBox()
 </script>
