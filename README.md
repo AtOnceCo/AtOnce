@@ -15,8 +15,8 @@ We suggest adding it to:
 <br/>
 - Order Confirmation Email
 - Shipping Confirmation Email
+- Out For Delivery Email
 - Delivered Email
-- Local Order Delivered Email
 <br/>
 
 ```
