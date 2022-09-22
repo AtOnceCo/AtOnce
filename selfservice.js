@@ -1,4 +1,4 @@
-import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";import{getAuth as o,signInAnonymously as n,onAuthStateChanged as i}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";import{getFirestore as a,doc as l,collection as p,query as r,where as c,limit as s,orderBy as u,getDoc as d,getDocs as v,onSnapshot as $}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";import m from"https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.esm.js";import"https://cdn.jsdelivr.net/npm/autolinker@3.15.0/dist/Autolinker.min.js";import h from"https://cdn.jsdelivr.net/gh/AtOnceCo/Slider@main/slider.js";import _ from"https://cdn.skypack.dev/mime/lite";import{getStorage as g,getDownloadURL as f,ref as A,uploadBytes as x,deleteObject as O}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-storage.js";async function createAtOnceLiveChat(e,t){try{var o=setInterval(function(){"complete"===document.readyState&&(clearInterval(o),function o(){try{let n=document.getElementById("AtOnceChatContainer"),i=2147483647;if(Number(t.z)&&(i=Number(t.z)),n)n.innerHTML="";else{let a=!1;(window.screen.width<=600||window.innerWidth<=600)&&(a=!0),(n=document.createElement("iframe")).title="Self Service",n.id="AtOnceChatContainer",n.allowFullscreen=!0,n.style.border="none",n.style.outline="none",n.style.position="fixed",n.style.bottom=0,n.style.right=0,n.style.width="100px",n.style.height="100px",n.style.maxWidth="450px",n.style.maxHeight=`${a?"1000px":"700px"}`,n.style.zIndex=i,n.style.userSelect="none",n.style.opacity=1,n.style.visibility="visible",document.body.appendChild(n)}createTheAtOnceLiveChat(e,i)}catch(l){}}())},100)}catch(n){}}async function createTheAtOnceLiveChat(C,b){try{let y=`-${E(5)}`,S=`
+import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";import{getAuth as o,signInAnonymously as n,onAuthStateChanged as i}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";import{getFirestore as a,doc as l,collection as p,query as r,where as c,limit as s,orderBy as u,getDoc as d,getDocs as v,onSnapshot as $}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";import m from"https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.esm.js";import"https://cdn.jsdelivr.net/npm/autolinker@3.15.0/dist/Autolinker.min.js";import h from"https://cdn.jsdelivr.net/gh/AtOnceCo/Slider@main/slider.js";import _ from"https://cdn.skypack.dev/mime/lite";import{getStorage as g,getDownloadURL as f,ref as A,uploadBytes as x,deleteObject as O}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-storage.js";async function createAtOnceLiveChat(e,t){try{var o=setInterval(function(){"complete"===document.readyState&&(clearInterval(o),function o(){try{let n=document.getElementById("AtOnceChatContainer"),i=2147483647;try{t&&Number(t.z)&&(i=Number(t.z))}catch(a){}if(n)n.innerHTML="";else{let l=!1;(window.screen.width<=600||window.innerWidth<=600)&&(l=!0),(n=document.createElement("iframe")).title="Self Service",n.id="AtOnceChatContainer",n.allowFullscreen=!0,n.style.border="none",n.style.outline="none",n.style.position="fixed",n.style.bottom=0,n.style.right=0,n.style.width="100px",n.style.height="100px",n.style.maxWidth="450px",n.style.maxHeight=`${l?"1000px":"700px"}`,n.style.zIndex=i,n.style.userSelect="none",n.style.opacity=1,n.style.visibility="visible",document.body.appendChild(n)}createTheAtOnceLiveChat(e,i)}catch(p){}}())},100)}catch(n){}}async function createTheAtOnceLiveChat(C,y){try{let b=`-${E(5)}`,S=`
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92" style="width:24px;height:24px;">
             <path d="M61.8 68.1c1.6 1.5 1.6 4.1.1 5.7-.8.8-1.9 1.2-2.9 1.2s-2-.4-2.8-1.1l-26-25c-.8-.8-1.2-1.8-1.2-2.9s.4-2.1 1.2-2.9l26-25c1.6-1.5 4.1-1.5 5.7.1 1.5 1.6 1.5 4.1-.1 5.7L38.8 46l23 22.1z" fill="#333" class="color000000 svgShape"/>
         </svg>
@@ -1334,11 +1334,11 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
         <option value='AA'>Armed Forces Americas</option>
         <option value='AE'>Armed Forces Europe</option>
         <option value='AP'>Armed Forces Pacific</option>
-        `};async function k(e,t){return fetch(`https://atonce.com/api/selfservice.js?action=${e}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(t)}).then(e=>e.json().then(e=>e).catch(e=>{}))}function L(e){let t=e=>({id:e.id,...e.data()});return e.docs?e.docs.map(t):e.exists()?t(e):null}function E(e){let t="",o="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",n=o.length;for(let i=0;i<e;i++)t+=o.charAt(Math.floor(Math.random()*n));return t}function N(e){let t=(+`${e}`).toFixed(2).replace(/([0-9]+(\.[0-9]+[1-9])?)(\.?0+$)/,"$1").toString(),o=t.slice(-2);return"."==o[0]?`${t}0`:t}function B(e){let t={USD:"$",EUR:"€",JPY:"\xa5",GBP:"\xa3",AUD:"AU$",CAD:"CA$",CHF:"CHF",HKD:"HK$",NZD:"NZ$"};return t[e]?t[e]:`${e} `}function H(e,t,o,n,i,a){let l="";if(e&&e.length>1){(l=document.createElement("div")).className=`AtOnceModalProductImageSlideshowContainer${y}`;let p=document.createElement("ul");for(let r of(p.className=`AtOnceModalProductImageUL${y}`,e)){let c=document.createElement("li");c.className=a;let s=document.createElement("img");s.alt="",s.className=`AtOnceModalProductImage${y}`,s.style.maxWidth="100%",s.setAttribute("product_image","true"),r?s.src=`${r}`:s.src=`${product_placeholder_image}`,c.appendChild(s),p.appendChild(c),n.push(c)}l.appendChild(p),t.innerHTML=S,t.className=`AtOnceModalProductImageSlideshowChevron${y} AtOnceModalProductImageSlideshowChevron_left${y}`,t.id="productSliderLeft",o.innerHTML=T,o.className=`AtOnceModalProductImageSlideshowChevron${y} AtOnceModalProductImageSlideshowChevron_right${y}`,o.id="productSliderRight",l.appendChild(t),l.appendChild(o);let u=new h(p,l);u.init(),u.addArrow(t,o)}return l}function I(e){try{let t=document.querySelectorAll('[product_image="true"]');if(t&&t.length){let o=t.length;for(let n=0;n<o;n++)if(t[n].src==e){for(let i=0;i<o;i++){let a=t[i].parentElement;if(-1!==a.className.indexOf("active")){let l=document.getElementById("productSliderLeft"),p=document.getElementById("productSliderRight"),r=i-n;if(0==r);else if(r<0){if(r=Math.abs(r),p)for(let c=0;c<r;c++)p.click()}else if(r>0&&l)for(let s=0;s<r;s++)l.click();break}}break}}}catch(u){}}let R={apiKey:"AIzaSyDt13tSh_eab4msT_1huODpEe8q4L0EHlg",authDomain:"email-automation-321716.firebaseapp.com",databaseURL:"https://email-automation-321716.firebaseio.com",storageBucket:"email-automation-321716.appspot.com"};function K(o){try{return t()}catch(n){return e(o)}}let U=K({apiKey:"AIzaSyDt13tSh_eab4msT_1huODpEe8q4L0EHlg",authDomain:"email-automation-321716.firebaseapp.com",projectId:"email-automation-321716"}),z=K(R),G=g(z,R.storageBucket),V=a(U),D=o(U),F=!0,J=1,j="",q="",Q="",Z=0,W=Date.now(),Y=!1,X="",ee=window.top.document.title,et=0,eo=0,en="",ei="",ea=[],el="#fefefe",ep=[],er=[],ec=[],es,eu=!1;(window.screen.width<=600||window.innerWidth<=600)&&(eu=!0);let ed="#1a73e8",ev="#fff",e$="#111",em="#333",eh={top_hi_text:"Hi [[NAME_PLACEHOLDER]] \uD83D\uDC4B",top_hi_subtext:"Need help? Get instant solutions below"},e_={box:`
+        `};async function k(e,t){return fetch(`https://atonce.com/api/selfservice.js?action=${e}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(t)}).then(e=>e.json().then(e=>e).catch(e=>{}))}function L(e){let t=e=>({id:e.id,...e.data()});return e.docs?e.docs.map(t):e.exists()?t(e):null}function E(e){let t="",o="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",n=o.length;for(let i=0;i<e;i++)t+=o.charAt(Math.floor(Math.random()*n));return t}function N(e){let t=(+`${e}`).toFixed(2).replace(/([0-9]+(\.[0-9]+[1-9])?)(\.?0+$)/,"$1").toString(),o=t.slice(-2);return"."==o[0]?`${t}0`:t}function B(e){let t={USD:"$",EUR:"€",JPY:"\xa5",GBP:"\xa3",AUD:"AU$",CAD:"CA$",CHF:"CHF",HKD:"HK$",NZD:"NZ$"};return t[e]?t[e]:`${e} `}function H(e,t,o,n,i,a){let l="";if(e&&e.length>1){(l=document.createElement("div")).className=`AtOnceModalProductImageSlideshowContainer${b}`;let p=document.createElement("ul");for(let r of(p.className=`AtOnceModalProductImageUL${b}`,e)){let c=document.createElement("li");c.className=a;let s=document.createElement("img");s.alt="",s.className=`AtOnceModalProductImage${b}`,s.style.maxWidth="100%",s.setAttribute("product_image","true"),r?s.src=`${r}`:s.src=`${product_placeholder_image}`,c.appendChild(s),p.appendChild(c),n.push(c)}l.appendChild(p),t.innerHTML=S,t.className=`AtOnceModalProductImageSlideshowChevron${b} AtOnceModalProductImageSlideshowChevron_left${b}`,t.id="productSliderLeft",o.innerHTML=T,o.className=`AtOnceModalProductImageSlideshowChevron${b} AtOnceModalProductImageSlideshowChevron_right${b}`,o.id="productSliderRight",l.appendChild(t),l.appendChild(o);let u=new h(p,l);u.init(),u.addArrow(t,o)}return l}function I(e){try{let t=document.querySelectorAll('[product_image="true"]');if(t&&t.length){let o=t.length;for(let n=0;n<o;n++)if(t[n].src==e){for(let i=0;i<o;i++){let a=t[i].parentElement;if(-1!==a.className.indexOf("active")){let l=document.getElementById("productSliderLeft"),p=document.getElementById("productSliderRight"),r=i-n;if(0==r);else if(r<0){if(r=Math.abs(r),p)for(let c=0;c<r;c++)p.click()}else if(r>0&&l)for(let s=0;s<r;s++)l.click();break}}break}}}catch(u){}}let R={apiKey:"AIzaSyDt13tSh_eab4msT_1huODpEe8q4L0EHlg",authDomain:"email-automation-321716.firebaseapp.com",databaseURL:"https://email-automation-321716.firebaseio.com",storageBucket:"email-automation-321716.appspot.com"};function K(o){try{return t()}catch(n){return e(o)}}let U=K({apiKey:"AIzaSyDt13tSh_eab4msT_1huODpEe8q4L0EHlg",authDomain:"email-automation-321716.firebaseapp.com",projectId:"email-automation-321716"}),z=K(R),G=g(z,R.storageBucket),V=a(U),D=o(U),F=!0,J=1,j="",q="",Q="",Z=0,W=Date.now(),Y=!1,X="",ee=window.top.document.title,et=0,eo=0,en="",ei="",ea=[],el="#fefefe",ep=[],er=[],ec=[],es,eu=!1;(window.screen.width<=600||window.innerWidth<=600)&&(eu=!0);let ed="#1a73e8",ev="#fff",e$="#111",em="#333",eh={top_hi_text:"Hi [[NAME_PLACEHOLDER]] \uD83D\uDC4B",top_hi_subtext:"Need help? Get instant solutions below"},e_={box:`
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#333">
                 <path fill-rule="evenodd" d="M16.164 3a.5.5 0 0 0-.004.002.5.5 0 0 0-.01 0 .5.5 0 0 0-.17.043L4.422 7.988a.5.5 0 0 0-.422.5V23.49a.5.5 0 0 0 .043.207.5.5 0 0 0 .002.006.5.5 0 0 0 .014.027.5.5 0 0 0 .255.239l11.567 4.945a.5.5 0 0 0 .293.094.5.5 0 0 0 .328-.098l11.56-4.941a.5.5 0 0 0 .307-.395.5.5 0 0 0 .004-.027.5.5 0 0 0 .002-.024.5.5 0 0 0 0-.025.5.5 0 0 0 0-.008V8.488a.5.5 0 0 0-.414-.498L16.406 3.05a.5.5 0 0 0-.011-.005.5.5 0 0 0-.082-.027.5.5 0 0 0-.014-.004.5.5 0 0 0-.035-.008.5.5 0 0 0-.014-.002.5.5 0 0 0-.037-.002.5.5 0 0 0-.049-.002zm.023 1.045 2.45 1.047L8.25 9.535a.5.5 0 0 0-.03.014L5.769 8.5l10.42-4.455zm3.723 1.592 2.973 1.271-10.58 4.526a.5.5 0 0 0-.301.51.5.5 0 0 0-.002.058v5.35l-1.084-1.627a.5.5 0 0 0-.639-.17L9 16.193v-5.89l10.91-4.666zm4.244 1.814L26.607 8.5l-10.42 4.455-2.45-1.047 10.388-4.443a.5.5 0 0 0 .03-.014zM5 9.258l3 1.283v6.461a.5.5 0 0 0 .723.447l1.605-.803 1.729 2.592a.5.5 0 0 0 .002.004.5.5 0 0 0 .252.227.5.5 0 0 0 .002.002.5.5 0 0 0 .044.015.5.5 0 0 0 .092.02.5.5 0 0 0 .059.002.5.5 0 0 0 .058-.004.5.5 0 0 0 .041-.008.5.5 0 0 0 .03-.008.5.5 0 0 0 .025-.008.5.5 0 0 0 .082-.035.5.5 0 0 0 .002-.002.5.5 0 0 0 .254-.502v-6.26l2.688 1.15v13.915L5 23.174V9.258zm22.375.002v13.914l-10.688 4.572V13.83l10.688-4.57z" color="#333" font-family="sans-serif" font-weight="400" overflow="visible" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#333;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#333;solid-opacity:1"/>
             </svg>`,return:`
-            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 64 64" width="32" height="32" class="AtOnceReturnIconAdjustment${y}" fill="#333">
+            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 64 64" width="32" height="32" class="AtOnceReturnIconAdjustment${b}" fill="#333">
                 <path d="M21 32a1 1 0 0 1-.71-.29l-3.56-3.56-2.41.8A1 1 0 0 1 13 28v-7a1 1 0 0 1 .64-.93l21-8a1 1 0 0 1 .71 1.87L15 21.69v4.92l1.68-.56a1 1 0 0 1 1 .24l2.32 2.3V24a1 1 0 0 1 .62-.93l21-8.59a1 1 0 0 1 .76 1.85L22 24.67V31a1 1 0 0 1-1 1Z"/>
                 <path d="M28 57a1 1 0 0 1-.34-.06l-22-8A1 1 0 0 1 5 48V18a1 1 0 0 1 2 0v29.3l20 7.27V26a1 1 0 0 1 2 0v30a1 1 0 0 1-1 1zm22-31a1 1 0 0 1-1-1v-7a1 1 0 0 1 2 0v7a1 1 0 0 1-1 1z"/>
                 <path d="M28 57a1 1 0 0 1-.34-1.94L49 47.3V45a1 1 0 0 1 2 0v3a1 1 0 0 1-.66.94l-22 8A1 1 0 0 1 28 57zm0-30a1 1 0 0 1-.34-.06l-22-8a1 1 0 0 1 0-1.88l22-8a1 1 0 0 1 .68 0l22 8a1 1 0 0 1 0 1.88l-22 8A1 1 0 0 1 28 27zM8.93 18 28 24.94 47.07 18 28 11.06zM33 49.55a1 1 0 0 1-.34-1.94l4-1.45a1 1 0 0 1 .68 1.84l-4 1.45a1 1 0 0 1-.34.1zm0-4a1 1 0 0 1-.34-1.94l2-.73a1 1 0 0 1 .68 1.88l-2 .73a1 1 0 0 1-.34.06z"/>
@@ -1355,10 +1355,10 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                 <circle cx="128" cy="180" r="8" fill="#333"/>
                 <path fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" d="M128,144.0045v-8a28,28,0,1,0-28-28"/>
             </svg>`,faq:`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#333" width="30" height="30" class="AtOnceFAQIconAdjustment${y} faq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#333" width="30" height="30" class="AtOnceFAQIconAdjustment${b} faq">
                 <path d="M14,57a1,1,0,0,1-.39-.08A1,1,0,0,1,13,56V47H9a5,5,0,0,1-5-5V18a5,5,0,0,1,5-5H49a5,5,0,0,1,5,5V42a5,5,0,0,1-5,5H24.84L14.69,56.72A1,1,0,0,1,14,57ZM9,15a3,3,0,0,0-3,3V42a3,3,0,0,0,3,3h5a1,1,0,0,1,1,1v7.66l8.75-8.38a1,1,0,0,1,.69-.28H49a3,3,0,0,0,3-3V18a3,3,0,0,0-3-3ZM60,36V12a5,5,0,0,0-5-5H15a5,5,0,0,0-5,5h2a3,3,0,0,1,3-3H55a3,3,0,0,1,3,3V36a3,3,0,0,1-3,3v2A5,5,0,0,0,60,36ZM30,31.92A6,6,0,1,0,23,26h2a4,4,0,1,1,4,4,1,1,0,0,0-1,1v5h2ZM30,38H28v2h2Z"/>
             </svg>`,chat:`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#333" class="AtOnceFAQIconAdjustment${y}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#333" class="AtOnceFAQIconAdjustment${b}">
                 <path transform="scale(-1, 1) translate(-24,0)" d="M12 11.25c-.4141846 0-.75.3358154-.75.75s.3358154.75.75.75.75-.3358154.75-.75-.3358154-.75-.75-.75zm-3 0c-.4141846 0-.75.3358154-.75.75s.3358154.75.75.75.75-.3358154.75-.75-.3358154-.75-.75-.75zm6 0c-.4141846 0-.75.3358154-.75.75s.3358154.75.75.75.75-.3358154.75-.75-.3358154-.75-.75-.75zm4.4152832-5.9597168c-3.7055054-4.09552-10.02948-4.4117432-14.125-.7062988-4.09552 3.7055054-4.4117432 10.02948-.7062988 14.125l-2.4375 2.4375c-.09375.09375-.1464233.2208862-.1464233.3534546C2 21.776062 2.223877 21.999939 2.5 22H12c2.4794312-.000061 4.8704224-.9212646 6.7089844-2.5847168 4.095581-3.7055054 4.4117431-10.02948.7062988-14.125zM12 21H3.7069702l1.928772-1.9287109c.000061-.000061.0001221-.0001221.0001221-.0001831.1951904-.1952515.1951294-.5117188-.0001221-.7068481C3.9483643 16.6768799 3.0002441 14.3883667 3 12.0020142c-.0005493-4.9700317 4.0279541-8.9994507 8.9979858-9 4.9699707-.0005493 8.9994507 4.0279541 9 8.9979858.0005494 4.9699707-4.0279541 8.9994507-8.9979858 9z"/>
             </svg>
             `,existing_customer:`
@@ -1378,7 +1378,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
             <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" clip-rule="evenodd" viewBox="0 0 128 128" width="32" height="32">
                 <path fill="none" d="M.211 0h128v128h-128z"/><path fill="#333" fill-rule="nonzero" d="M75.941 79.528c-11.617 10.144-28.988 13.34-43.601 7.365C14.72 79.689 3.496 59.425 6.867 40.571 10.24 21.704 27.782 6.443 47.398 6.008c.361-.006.722-.008 1.084-.007 19.279.183 37.454 15.06 41.025 34.312 2.394 12.904-1.734 26.845-10.689 36.433l34.787 33.82c.746.788.617 1.05.605 1.489-.042 1.525-2.11 2.527-3.394 1.379L75.941 79.528ZM47.965 10.001c-17.208.163-33.355 13.173-36.934 30.111-2.634 12.469 1.515 26.166 10.639 35.073 10.478 10.228 27.063 13.662 40.897 8.005 16.003-6.542 26.182-25.034 23.007-42.148-3.147-16.967-18.86-30.64-36.627-31.035a53.632 53.632 0 0 0-.982-.006Z"/>
             </svg>
-            `};async function eg(e){return new Promise(function(t,o){Promise.all(e).then(e=>{t(e)}).catch(e=>{t("error")})})}function ef(e){let t=e.length;for(let o=0;o<t;o++)e.sort(function(e,t){return t.f-e.f});for(let n=0;n<t;n++)e[n].actions&&ef(e[n].actions);return e}async function eA(){try{let e=[];async function t(e,t){return new Promise(async function(t,o){try{let n=`${C}`.toLowerCase(),i=l(V,"self_service",`${n}.useatonce.com`,`${e}`,"1");d(i).then(o=>{o.exists()?("quick_links"==e?(er=o.data().list,er=ef(er)):(ec=o.data().list,ec=ef(ec)),t("success")):t("error")})}catch(a){t("error")}})}async function o(){return new Promise(async function(e,t){try{let o=`${C}`.toLowerCase(),n=l(V,"stripe_check",`${o}@emails.atonce.com`);d(n).then(t=>{if(t.exists()){let o=t.data();o&&"active"==o.stripeSubscriptionStatus?e(!0):e(!1)}else e(!1)})}catch(i){e(!1)}})}async function n(){return new Promise(async function(e,t){try{let o=`${C}`.toLowerCase(),n=l(V,"self_service",`${o}.useatonce.com`);d(n).then(t=>{if(t.exists()){j=t.data();try{let o=window.location.hostname;o&&-1==o.indexOf(".useatonce.com")&&-1==o.indexOf("returns.")&&-1==o.indexOf("exchanges.")&&-1==o.indexOf("refunds.")&&(q=`https://${o}`)}catch(n){}!q&&j.brand_url&&(q=`https://${j.brand_url}`),j.main_email&&(Q=j.main_email),j.last_seen&&!1==isNaN(j.last_seen)&&(Z=Number(j.last_seen));let i=`${j.color}`.trimStart().trimEnd();if(i&&/[0-9A-Fa-f]{6}/g.test(i)){ed=i;let a=function e(t,o,n){let i="#"===t.charAt(0)?t.substring(1,7):t,a=parseInt(i.substring(0,2),16),l=parseInt(i.substring(2,4),16),p=parseInt(i.substring(4,6),16);if(!(.299*a+.587*l+.114*p>186))return[o,t,t];{function r(e,t){return e.replace(/^#/,"").replace(/../g,e=>("0"+Math.min(255,Math.max(0,parseInt(e,16)+t)).toString(16)).substr(-2))}let c=r(t,-7),s=r(t,-25);return[n,`#${c}`,`#${s}`]}}(ed,"#fff","#111");ev=a[0],e$=a[1],em=a[2]}let l=j.shopify_stores;if(l&&Array.isArray(l)&&l.length){let p=[];for(let r of l)p.push(r);ea=p=[...new Set(p)]}e("success")}else e("error")})}catch(i){e("error")}})}e.push(t("quick_links",er)),e.push(t("quick_order_links",ec)),e.push(n()),e.push(o());let i=await eg(e);if(!1==i[3])return"error";return i[0]}catch(a){return"error"}}async function e0(){return new Promise(async function(e,t){let o=!1;try{"true"==localStorage.getItem("hasTeamToken")&&(o=!0)}catch(a){}let l="";try{l=D.currentUser.uid}catch(p){}if(D&&o||l){if(!l)try{i(D,e=>{e&&localStorage.setItem("AtOnceLiveChatUserID",D.currentUser.uid)})}catch(r){}eA().then(t=>{e(t)})}else if(D&&null===D.currentUser)try{i(D,t=>{t?(eA().then(t=>{e(t)}),localStorage.setItem("AtOnceLiveChatUserID",D.currentUser.uid)):n(D).then(()=>{i(D,t=>{t?(localStorage.setItem("AtOnceLiveChatUserID",t.uid),eA().then(t=>{e(t)})):e("error")})}).catch(t=>{e("error")})})}catch(c){}else n(D).then(()=>{i(D,t=>{t?(localStorage.setItem("AtOnceLiveChatUserID",t.uid),eA().then(t=>{e(t)})):e("error")})}).catch(t=>{e("error")})})}await e0().then(e=>{if("error"!=e)try{let t=!1;try{document.addEventListener("visibilitychange",function(){try{!0==t&&"visible"==document.visibilityState&&(window.top.document.title=ee)}catch(e){}})}catch(o){}let n=0,i="",a=[];try{!1==isNaN(Number(localStorage.getItem("AtOnceLastUnreadMessage")))&&(n=Number(localStorage.getItem("AtOnceLastUnreadMessage")))}catch(h){}let g=document.createElement("div");g.className=`AtOnceChatNotification${y} hidden`;let S=document.createElement("div");async function T(e){try{let t=[`${e}`],o=localStorage.getItem("AtOnceOrders");if(o)try{let n=o.split(",");if(n&&n.length)for(let i of n)i&&i.length>7&&-1==t.indexOf(i)&&t.push(i)}catch(a){}localStorage.setItem("AtOnceOrders",t)}catch(l){}}async function R(e,t,o){k("get_customer_orders",{store:o,customer:t,order:e}).then(e=>{if(e.success){let t=e.success;for(let o of t=t.reverse())T(o)}try{let n=localStorage.getItem("AtOnceOrders");if(n){let i=n.split(",")[0];i&&i.length>7&&-1!==i.indexOf("_atonce_")&&function e(t,o,n){try{for(let i of t)i.text?-1!==i.text.indexOf(o)&&-1==i.text.indexOf(`${eM}?order=`)&&(i.text=e5(i.text,o,`${eM}?order=${n}`)):i.link&&-1!==i.link.indexOf(o)&&-1==i.link.indexOf(`${eM}?order=`)&&(i.link=e5(i.link,o,`${eM}?order=${n}`)),i.sub_actions&&e(i.sub_actions,o,n)}catch(a){}}(er,eM,i)}}catch(a){}})}function K(e){return e?e.toLowerCase().split(" ").map(e=>e.charAt(0).toUpperCase()+e.slice(1)).join(" ").replaceAll("_"," "):""}async function U(e,t){let o=null,n=null,i=[];for(let a of ea)i.push(p(a));async function p(i){return new Promise(async function(a,p){try{let r=await d(l(V,"shopify",`${i}`,`${t}`,`${e}`)).then(L);r&&(o=i,n=r),a("success")}catch(c){a("success")}})}return i.length>0&&await eg(i),[n,o,e]}S.className=`AtOnceLiveChatMessagesContainer${y} hidden`;let z=`
+            `};async function eg(e){return new Promise(function(t,o){Promise.all(e).then(e=>{t(e)}).catch(e=>{t("error")})})}function ef(e){let t=e.length;for(let o=0;o<t;o++)e.sort(function(e,t){return t.f-e.f});for(let n=0;n<t;n++)e[n].actions&&ef(e[n].actions);return e}async function eA(){try{let e=[];async function t(e,t){return new Promise(async function(t,o){try{let n=`${C}`.toLowerCase(),i=l(V,"self_service",`${n}.useatonce.com`,`${e}`,"1");d(i).then(o=>{o.exists()?("quick_links"==e?(er=o.data().list,er=ef(er)):(ec=o.data().list,ec=ef(ec)),t("success")):t("error")})}catch(a){t("error")}})}async function o(){return new Promise(async function(e,t){try{let o=`${C}`.toLowerCase(),n=l(V,"stripe_check",`${o}@emails.atonce.com`);d(n).then(t=>{if(t.exists()){let o=t.data();o&&"active"==o.stripeSubscriptionStatus?e(!0):e(!1)}else e(!1)})}catch(i){e(!1)}})}async function n(){return new Promise(async function(e,t){try{let o=`${C}`.toLowerCase(),n=l(V,"self_service",`${o}.useatonce.com`);d(n).then(t=>{if(t.exists()){j=t.data();try{let o=window.location.hostname;o&&-1==o.indexOf(".useatonce.com")&&-1==o.indexOf("returns.")&&-1==o.indexOf("exchanges.")&&-1==o.indexOf("refunds.")&&(q=`https://${o}`)}catch(n){}!q&&j.brand_url&&(q=`https://${j.brand_url}`),j.main_email&&(Q=j.main_email),j.last_seen&&!1==isNaN(j.last_seen)&&(Z=Number(j.last_seen));let i=`${j.color}`.trimStart().trimEnd();if(i&&/[0-9A-Fa-f]{6}/g.test(i)){ed=i;let a=function e(t,o,n){let i="#"===t.charAt(0)?t.substring(1,7):t,a=parseInt(i.substring(0,2),16),l=parseInt(i.substring(2,4),16),p=parseInt(i.substring(4,6),16);if(!(.299*a+.587*l+.114*p>186))return[o,t,t];{function r(e,t){return e.replace(/^#/,"").replace(/../g,e=>("0"+Math.min(255,Math.max(0,parseInt(e,16)+t)).toString(16)).substr(-2))}let c=r(t,-7),s=r(t,-25);return[n,`#${c}`,`#${s}`]}}(ed,"#fff","#111");ev=a[0],e$=a[1],em=a[2]}let l=j.shopify_stores;if(l&&Array.isArray(l)&&l.length){let p=[];for(let r of l)p.push(r);ea=p=[...new Set(p)]}e("success")}else e("error")})}catch(i){e("error")}})}e.push(t("quick_links",er)),e.push(t("quick_order_links",ec)),e.push(n()),e.push(o());let i=await eg(e);if(!1==i[3])return"error";return i[0]}catch(a){return"error"}}async function e0(){return new Promise(async function(e,t){let o=!1;try{"true"==localStorage.getItem("hasTeamToken")&&(o=!0)}catch(a){}let l="";try{l=D.currentUser.uid}catch(p){}if(D&&o||l){if(!l)try{i(D,e=>{e&&localStorage.setItem("AtOnceLiveChatUserID",D.currentUser.uid)})}catch(r){}eA().then(t=>{e(t)})}else if(D&&null===D.currentUser)try{i(D,t=>{t?(eA().then(t=>{e(t)}),localStorage.setItem("AtOnceLiveChatUserID",D.currentUser.uid)):n(D).then(()=>{i(D,t=>{t?(localStorage.setItem("AtOnceLiveChatUserID",t.uid),eA().then(t=>{e(t)})):e("error")})}).catch(t=>{e("error")})})}catch(c){}else n(D).then(()=>{i(D,t=>{t?(localStorage.setItem("AtOnceLiveChatUserID",t.uid),eA().then(t=>{e(t)})):e("error")})}).catch(t=>{e("error")})})}await e0().then(e=>{if("error"!=e)try{let t=!1;try{document.addEventListener("visibilitychange",function(){try{!0==t&&"visible"==document.visibilityState&&(window.top.document.title=ee)}catch(e){}})}catch(o){}let n=0,i="",a=[];try{!1==isNaN(Number(localStorage.getItem("AtOnceLastUnreadMessage")))&&(n=Number(localStorage.getItem("AtOnceLastUnreadMessage")))}catch(h){}let g=document.createElement("div");g.className=`AtOnceChatNotification${b} hidden`;let S=document.createElement("div");async function T(e){try{let t=[`${e}`],o=localStorage.getItem("AtOnceOrders");if(o)try{let n=o.split(",");if(n&&n.length)for(let i of n)i&&i.length>7&&-1==t.indexOf(i)&&t.push(i)}catch(a){}localStorage.setItem("AtOnceOrders",t)}catch(l){}}async function R(e,t,o){k("get_customer_orders",{store:o,customer:t,order:e}).then(e=>{if(e.success){let t=e.success;for(let o of t=t.reverse())T(o)}try{let n=localStorage.getItem("AtOnceOrders");if(n){let i=n.split(",")[0];i&&i.length>7&&-1!==i.indexOf("_atonce_")&&function e(t,o,n){try{for(let i of t)i.text?-1!==i.text.indexOf(o)&&-1==i.text.indexOf(`${eM}?order=`)&&(i.text=e5(i.text,o,`${eM}?order=${n}`)):i.link&&-1!==i.link.indexOf(o)&&-1==i.link.indexOf(`${eM}?order=`)&&(i.link=e5(i.link,o,`${eM}?order=${n}`)),i.sub_actions&&e(i.sub_actions,o,n)}catch(a){}}(er,eM,i)}}catch(a){}})}function K(e){return e?e.toLowerCase().split(" ").map(e=>e.charAt(0).toUpperCase()+e.slice(1)).join(" ").replaceAll("_"," "):""}async function U(e,t){let o=null,n=null,i=[];for(let a of ea)i.push(p(a));async function p(i){return new Promise(async function(a,p){try{let r=await d(l(V,"shopify",`${i}`,`${t}`,`${e}`)).then(L);r&&(o=i,n=r),a("success")}catch(c){a("success")}})}return i.length>0&&await eg(i),[n,o,e]}S.className=`AtOnceLiveChatMessagesContainer${b} hidden`;let z=`
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform="scale(-1 1)" fill="${ev}" style="height:42px;width:42px;">
                         <path d="M12 2C6.5 2 2 6.5 2 12c0 2.3.8 4.5 2.3 6.3l-2 2c-.4.4-.4 1 0 1.4.2.2.4.3.7.3h9c5.5 0 10-4.5 10-10S17.5 2 12 2zM8 13c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm4 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm4 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/>
                     </svg>            
@@ -1424,7 +1424,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                         <path fill="#888" fill-rule="evenodd" d="m15.7 13.3-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" class="color000000 svgShape"/>
                     </svg>
-                    `;eA=eA.replace(`fill="${ev}"`,`fill="${"#fff"==ev?"#eee":"#222"}"`);let e1=e5(ef.replace(`stroke="${ev}"`,'stroke="#555"'),"16","10"),eb=ef.replace(`stroke="${ev}"`,`stroke="${"#fff"==ev?"#ddd":"#333"}"`),ey=ef.replace(`stroke="${ev}"`,'stroke="#555"'),e3=ef.replace(`stroke="${ev}"`,'stroke="#fff"').replace('width="16" height="16"','width="8" height="8"').replace('width="16" height="16"','width="8" height="8"'),e2="",eS=[],eT=!1,e4="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",eM=`https://${j.domain?j.domain:`${C}.useatonce.com`}`;function e5(e,t,o){let n=t.replace(/([.*+?^=!:${}()|\[\]\/\\])/g,"\\$1");return e.replace(RegExp(n,"g"),o)}let eP=(e,t)=>{try{for(let o of e)o.text?(t&&-1!==o.text.indexOf("{{return_portal}}")&&(o.text=e5(o.text,"{{return_portal}}",eM)),-1!==o.text.indexOf("{{brand_url}}")&&(o.text=e5(o.text,"{{brand_url}}",q))):o.link&&(t&&-1!==o.link.indexOf("{{return_portal}}")&&(o.link=e5(o.link,"{{return_portal}}",eM)),-1!==o.link.indexOf("{{brand_url}}")&&(o.link=e5(o.link,"{{brand_url}}",q))),o.sub_actions&&eP(o.sub_actions,t)}catch(n){}};for(let[e6,ew]of Object.entries(eh))-1!==ew.indexOf("[[NAME_PLACEHOLDER]]")&&(eh[`${e6}`]=ew.replace("[[NAME_PLACEHOLDER]]","there"));eP(er,!0),eP(ec);try{for(let ek of er)"map"===ek.type||ek.tri_action||ep.push(ek)}catch(eL){}ep=ep.filter((e,t,o)=>o.findIndex(t=>t.heading===e.heading)===t);let eE=document.createElement("style");eE.innerHTML=`
+                    `;eA=eA.replace(`fill="${ev}"`,`fill="${"#fff"==ev?"#eee":"#222"}"`);let e1=e5(ef.replace(`stroke="${ev}"`,'stroke="#555"'),"16","10"),ey=ef.replace(`stroke="${ev}"`,`stroke="${"#fff"==ev?"#ddd":"#333"}"`),eb=ef.replace(`stroke="${ev}"`,'stroke="#555"'),e3=ef.replace(`stroke="${ev}"`,'stroke="#fff"').replace('width="16" height="16"','width="8" height="8"').replace('width="16" height="16"','width="8" height="8"'),e2="",eS=[],eT=!1,e4="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",eM=`https://${j.domain?j.domain:`${C}.useatonce.com`}`;function e5(e,t,o){let n=t.replace(/([.*+?^=!:${}()|\[\]\/\\])/g,"\\$1");return e.replace(RegExp(n,"g"),o)}let eP=(e,t)=>{try{for(let o of e)o.text?(t&&-1!==o.text.indexOf("{{return_portal}}")&&(o.text=e5(o.text,"{{return_portal}}",eM)),-1!==o.text.indexOf("{{brand_url}}")&&(o.text=e5(o.text,"{{brand_url}}",q))):o.link&&(t&&-1!==o.link.indexOf("{{return_portal}}")&&(o.link=e5(o.link,"{{return_portal}}",eM)),-1!==o.link.indexOf("{{brand_url}}")&&(o.link=e5(o.link,"{{brand_url}}",q))),o.sub_actions&&eP(o.sub_actions,t)}catch(n){}};for(let[e6,ew]of Object.entries(eh))-1!==ew.indexOf("[[NAME_PLACEHOLDER]]")&&(eh[`${e6}`]=ew.replace("[[NAME_PLACEHOLDER]]","there"));eP(er,!0),eP(ec);try{for(let ek of er)"map"===ek.type||ek.tri_action||ep.push(ek)}catch(eL){}ep=ep.filter((e,t,o)=>o.findIndex(t=>t.heading===e.heading)===t);let eE=document.createElement("style");eE.innerHTML=`
                     
                     html {
                         box-sizing: border-box;
@@ -1527,7 +1527,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: 0.2s;
                     }
 
-                    .atonce_input_red${y} {
+                    .atonce_input_red${b} {
                         outline: 1px solid #dd0000 !important;
                         border-color: transparent !important;
                     }
@@ -1554,7 +1554,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: ${eu?'""':"8px"};
                     }
                     
-                    .AtOnceBody${y} {
+                    .AtOnceBody${b} {
                         background-color: ${el};
                     }
 
@@ -1583,69 +1583,69 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         background: transparent;
                     }
 
-                    .AtOnceBreakAll${y} {
+                    .AtOnceBreakAll${b} {
                         word-break: break-all;
                     }
 
-                    .AtOnceDisabledDiv${y} {
+                    .AtOnceDisabledDiv${b} {
                         user-select: none;
                         pointer-events: none;
                         opacity: 0.3;
                     }
 
-                    .AtOnceFlex${y} {
+                    .AtOnceFlex${b} {
                         display: flex;
                         align-items: center;
                         align-self: center;
                     }
 
-                    .AtOnceFlexCenter${y} {
+                    .AtOnceFlexCenter${b} {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         align-self: center;
                     }
 
-                    .AtOnceFlexSpaced${y} {
+                    .AtOnceFlexSpaced${b} {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         align-self: center;
                     }
 
-                    .AtOnceMarginBottomSmall${y} {
+                    .AtOnceMarginBottomSmall${b} {
                         margin-bottom: 6px;
                     }
 
-                    .AtOnceMarginBottomMedium${y} {
+                    .AtOnceMarginBottomMedium${b} {
                         margin-bottom: 12px;
                     }
 
-                    .AtOnceMarginBottomLarge${y} {
+                    .AtOnceMarginBottomLarge${b} {
                         margin-bottom: 16px;
                     }
 
-                    .AtOnceNoSelect${y} {
+                    .AtOnceNoSelect${b} {
                         user-select: none;
                     }
 
-                    .AtOnceFlexSpacedOrder${y} {
+                    .AtOnceFlexSpacedOrder${b} {
                         width: 100%;
                         padding: 0 0 0 24px;
                     }
 
-                    .AtOnceFlexSpacedNoAlign${y} {
+                    .AtOnceFlexSpacedNoAlign${b} {
                         display: flex;
                         justify-content: space-between;
                         width: 100%;
                     }
 
-                    .AtOnceFlexSpacedProductTitle${y} {
+                    .AtOnceFlexSpacedProductTitle${b} {
                         width: 100%;
                         margin-left: 24px;
                     }
 
-                    .AtOnceAttachmentsUploading${y} {
+                    .AtOnceAttachmentsUploading${b} {
                         background: ${ed};
                         color: ${ev};
                         border-radius: 100px;
@@ -1658,18 +1658,18 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         display: inline-flex;
                     }
 
-                    .AtOnceAttachmentCloseBtn${y} {
+                    .AtOnceAttachmentCloseBtn${b} {
                         margin-left: 12px;
                         cursor: pointer;
                         user-select: none;
                     }
 
-                    .AtOnceFlexSpacedProductTitleSmall${y} {
+                    .AtOnceFlexSpacedProductTitleSmall${b} {
                         width: 100%;
                         margin: 0 12px;
                     }
 
-                    .AtOnceProductQuantityText${y} {
+                    .AtOnceProductQuantityText${b} {
                         position: absolute;
                         top: -6px;
                         right: -17%;
@@ -1682,30 +1682,30 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceProductQuantityTextTwo${y} {
+                    .AtOnceProductQuantityTextTwo${b} {
                         right: -22% !important;
                     }
 
-                    .AtOncePositionRelative${y} {
+                    .AtOncePositionRelative${b} {
                         position: relative;
                     }
 
-                    .AtOnceFlexStart${y} {
+                    .AtOnceFlexStart${b} {
                         align-self: flex-start;
                         flex: none;
                     }
 
-                    .AtOnceSubContainer${y} {
+                    .AtOnceSubContainer${b} {
                         height: 100%;
                         overflow-y: hidden;
-                        animation: AtOnceShowSubContainer${y} 0.25s linear forwards;
+                        animation: AtOnceShowSubContainer${b} 0.25s linear forwards;
                     }
 
-                    .AtOnceSubContainer${y} img {
+                    .AtOnceSubContainer${b} img {
                         max-width: 100%;
                     }
 
-                    .AtOnceSubContainer${y} iframe {
+                    .AtOnceSubContainer${b} iframe {
                         border: none;
                         outline: none;
                         border-radius: 24px;
@@ -1713,7 +1713,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         min-height: 225px;
                     }
 
-                    .AtOnceChatPrimaryContainer${y} {
+                    .AtOnceChatPrimaryContainer${b} {
                         border-radius: ${eu?0:"24px"};
                         background: ${el};
                         margin-top: ${eu?0:"10px"};
@@ -1728,15 +1728,15 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         box-shadow: 0 0 10px #99999955;
                     }
 
-                    .AtOnceChatPrimaryContainer${y}.AtOnceShowPrimaryContainer${y} {
-                        animation: AtOnceShowPrimaryContainer${y} 0.2s linear forwards;
+                    .AtOnceChatPrimaryContainer${b}.AtOnceShowPrimaryContainer${b} {
+                        animation: AtOnceShowPrimaryContainer${b} 0.2s linear forwards;
                     }
 
-                    .AtOnceChatPrimaryContainer${y}.AtOnceHidePrimaryContainer${y} {
-                        animation: AtOnceHidePrimaryContainer${y} 0.2s linear forwards;
+                    .AtOnceChatPrimaryContainer${b}.AtOnceHidePrimaryContainer${b} {
+                        animation: AtOnceHidePrimaryContainer${b} 0.2s linear forwards;
                     }
 
-                    .AtOnceLiveChatMessagesContainer${y} {
+                    .AtOnceLiveChatMessagesContainer${b} {
                         border-radius: 0;
                         background: transparent;
                         margin-top: -${eu?"95":"80"}px;
@@ -1752,13 +1752,13 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         justify-content: flex-end;
                     }
 
-                    .AtOnceLiveChatMessagesContainer${y}.hidden {
+                    .AtOnceLiveChatMessagesContainer${b}.hidden {
                         display: none;
                         user-select: none;
                         pointer-events: none;
                     }
 
-                    .AtOnceLiveChatCloseButton${y} {
+                    .AtOnceLiveChatCloseButton${b} {
                         display: flex;
                         justify-content: end;
                         align-items: center;
@@ -1774,7 +1774,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceChatButton${y} {
+                    .AtOnceChatButton${b} {
                         bottom: ${eu?"15px":"20px"};
                         right: ${eu?"15px":"20px"};
                         border: none;
@@ -1797,16 +1797,16 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: 64px;
                         height: 64px;
                         border-radius: 50%;
-                        z-index: ${b};
+                        z-index: ${y};
                         box-shadow: rgb(0 0 0 / 10%) 0px 1px 6px, rgb(0 0 0 / 20%) 0px 2px 12px;
                         transform-origin: center bottom;
                         user-select: none;
                         background: ${ed};
                         cursor: pointer;
-                        animation: AtOnceShowChatButton${y} 0.2s linear forwards;
+                        animation: AtOnceShowChatButton${b} 0.2s linear forwards;
                     }
 
-                    .AtOnceChatNotification${y} {
+                    .AtOnceChatNotification${b} {
                         position: absolute;
                         right: -3px;
                         bottom: -3px;
@@ -1826,24 +1826,24 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceChatNotification${y}.hidden {
+                    .AtOnceChatNotification${b}.hidden {
                         display: none;
                         pointer-events: none;
                         user-select: none;
                     }
 
-                    .AtOnceHideChatButton${y} {
-                        animation: AtOnceHidePrimaryContainer${y} 0.2s linear forwards;
+                    .AtOnceHideChatButton${b} {
+                        animation: AtOnceHidePrimaryContainer${b} 0.2s linear forwards;
                     }
 
-                    .AtOnceCloseButtonMobile${y} {
+                    .AtOnceCloseButtonMobile${b} {
                         position: fixed;
                         top: ${eu?"16px":"24px"};
                         right: ${eu?"16px":"24px"};
                         cursor: pointer;
                     }
 
-                    .AtOnceManageOrdersLabel${y} {
+                    .AtOnceManageOrdersLabel${b} {
                         margin:7px 0;
                         position:relative;
                         display:inline-block;
@@ -1852,7 +1852,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: 100%;
                     }
 
-                    .AtOnceManageOrdersSpan${y} {
+                    .AtOnceManageOrdersSpan${b} {
                         margin:10px;
                         padding: 2px;
                         pointer-events: none;
@@ -1867,7 +1867,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         background: ${el}00;
                     }
 
-                    .AtOnceEnterEmailInputLabel${y} {
+                    .AtOnceEnterEmailInputLabel${b} {
                         font-size: 13px;
                         margin-left: 8px;
                         margin-bottom: -7px;
@@ -1875,7 +1875,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-top: 6px;
                     }
 
-                    .AtOnceSearchInput${y} {
+                    .AtOnceSearchInput${b} {
                         padding: 8px 16px;
                         margin-bottom: 12px;
                         outline: none;
@@ -1886,25 +1886,25 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: calc(100% - 48px);
                     }
 
-                    .AtOnceSearchInputIconed${y} {
+                    .AtOnceSearchInputIconed${b} {
                         padding: 8px 16px 8px 38px;
                     }
 
-                    .AtOnceSearchInput${y}.full {
+                    .AtOnceSearchInput${b}.full {
                         margin-left: 0;
                         width: 100%;
                         margin-bottom: 0;
                         margin-top: 36px;
                     }
 
-                    .AtOnceSearchInput${y}.full.bottomed {
+                    .AtOnceSearchInput${b}.full.bottomed {
                         margin-top: 8px;
                         margin-bottom: 12px;
                         border-radius: 12px;
                         padding: 8px 10px;
                     }
 
-                    .AtOnceSearchInputIcon${y} {
+                    .AtOnceSearchInputIcon${b} {
                         width: 16px;
                         height: 16px;
                         position: absolute;
@@ -1912,7 +1912,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         left: 36px;
                     }
 
-                    .AtOnceManageOrdersInput${y} {
+                    .AtOnceManageOrdersInput${b} {
                         padding: 12px;
                         outline: none;
                         margin-top: 0;
@@ -1920,14 +1920,14 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: 100%;
                     }
 
-                    .AtOnceManageOrdersInput${y}:focus + .AtOnceManageOrdersSpan${y}, .AtOnceManageOrdersInput${y}:not(:placeholder-shown) + .AtOnceManageOrdersSpan${y} {
+                    .AtOnceManageOrdersInput${b}:focus + .AtOnceManageOrdersSpan${b}, .AtOnceManageOrdersInput${b}:not(:placeholder-shown) + .AtOnceManageOrdersSpan${b} {
                         color: #222;
                         font-size: 14px;
                         transform: translateY(-22px) translateX(2px);
                         background: ${el}ff;
                     }
                       
-                    .AtOnceManageOrdersInput${y}:focus + .AtOnceManageOrdersSpan${y}, .AtOnceManageOrdersInput${y}:not(:-ms-input-placeholder) + .AtOnceManageOrdersSpan${y} {
+                    .AtOnceManageOrdersInput${b}:focus + .AtOnceManageOrdersSpan${b}, .AtOnceManageOrdersInput${b}:not(:-ms-input-placeholder) + .AtOnceManageOrdersSpan${b} {
                         color: #222;
                         font-size: 13px;
                         padding: 2px;
@@ -1935,7 +1935,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         background: ${el}ff;
                     }
 
-                    .AtOnceLoadingSpinner${y}::after {
+                    .AtOnceLoadingSpinner${b}::after {
                         content: "";
                         z-index: 1;
                         box-sizing: border-box;
@@ -1949,27 +1949,27 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         border-left: 2.5px solid ${ev};
                         border-bottom: 2.5px solid ${ev};
                         border-right: 2.5px solid transparent;
-                        animation: AtOnceSpinner${y} .6s linear infinite;
+                        animation: AtOnceSpinner${b} .6s linear infinite;
                     }
 
-                    .AtOnceLoadingSpinner${y}.bottomed::after {
+                    .AtOnceLoadingSpinner${b}.bottomed::after {
                         margin-top: -12.5px;
                     }
 
-                    .AtOnceLoadingSpinner${y}.bottomed.bigger::after {
+                    .AtOnceLoadingSpinner${b}.bottomed.bigger::after {
                         margin-top: -33px;
                     }
 
-                    .AtOncePrimaryMessageContainer${y} {
+                    .AtOncePrimaryMessageContainer${b} {
                         font-size: 16px;
                     }
 
-                    .AtOncePrimaryMessageContainer${y}.self {
+                    .AtOncePrimaryMessageContainer${b}.self {
                         display: table;
                         margin-left: auto;
                     }
 
-                    .AtOnceSeenContainer${y} {
+                    .AtOnceSeenContainer${b} {
                         margin-left: auto;
                         display: table;
                         margin-right: 0;
@@ -1979,7 +1979,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceMessageContainer${y} {
+                    .AtOnceMessageContainer${b} {
                         border-radius: 16px;
                         padding: 5px 15px 5px 15px;
                         display: table;
@@ -1988,7 +1988,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         word-break: break-word;
                     }
 
-                    .AtOnceMessageContainerLink${y} {
+                    .AtOnceMessageContainerLink${b} {
                         border-radius: 100px;
                         text-decoration: none !important;
                         justify-content: center;
@@ -2009,21 +2009,21 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         min-width: 175px;
                     }
 
-                    .AtOnceMessageContainerLink${y}:hover {
+                    .AtOnceMessageContainerLink${b}:hover {
                         text-decoration: underline !important;
                     }
 
-                    .AtOnceMessageContainerLink${y}.self {
+                    .AtOnceMessageContainerLink${b}.self {
                         background: ${ev};
-                        color: ${"#fff"==ev?"#222":"#fff"};
+                        color: ${"#fff"==ev?"#222":"#fff"} !important;
                     }
 
-                    .AtOnceMessageContainerLink${y}.sender {
+                    .AtOnceMessageContainerLink${b}.sender {
                         background: #222;
                         color: #fff;
                     }
 
-                    .AtOnceMessageContainerPreview${y} {
+                    .AtOnceMessageContainerPreview${b} {
                         border-radius: 24px;
                         padding: 10px 15px;
                         width: fit-content;
@@ -2036,60 +2036,64 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         box-shadow: 0 0 5px #ccc;
                     }
 
-                    .AtOnceMessageContainerPreview${y}.one {
+                    .AtOnceMessageContainerPreview${b}.one {
                         opacity: 0.8;
                     }
 
-                    .AtOnceMessageContainerPreview${y}.two {
+                    .AtOnceMessageContainerPreview${b}.two {
                         opacity: 0.9;
                     }
 
-                    .AtOnceMessageContainerPreview${y}.three {
+                    .AtOnceMessageContainerPreview${b}.three {
                         opacity: 1;
                     }
 
-                    .AtOnceMessageContainer${y}.self.start {
+                    .AtOnceMessageContainer${b}.self a {
+                        color: #fff;
+                    }
+
+                    .AtOnceMessageContainer${b}.self.start {
                         border-bottom-right-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${y}.self.middle {
+                    .AtOnceMessageContainer${b}.self.middle {
                         border-top-right-radius: 6px;
                         border-bottom-right-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${y}.self.end {
+                    .AtOnceMessageContainer${b}.self.end {
                         border-top-right-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${y}.sender.start {
+                    .AtOnceMessageContainer${b}.sender.start {
                         border-bottom-left-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${y}.sender.middle {
+                    .AtOnceMessageContainer${b}.sender.middle {
                         border-top-left-radius: 6px;
                         border-bottom-left-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${y}.sender.end {
+                    .AtOnceMessageContainer${b}.sender.end {
                         border-top-left-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${y} > a {
+                    .AtOnceMessageContainer${b} > a {
                         color: ${ev};
                     }
 
-                    .AtOnceMessageContainer${y}.sender {
+                    .AtOnceMessageContainer${b}.sender {
                         margin-right: auto;
                     }
 
-                    .AtOnceMessageContainer${y}.self {
+                    .AtOnceMessageContainer${b}.self {
                         background: ${ed};
                         color: ${ev};
                         margin-left: auto;
                         ${"#111"==ev?"background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,.07));":""}
                     }
 
-                    .AtOncePseudoAttachmentLink${y} {
+                    .AtOncePseudoAttachmentLink${b} {
                         font-weight: 600;
                         color: ${em};
                         cursor: pointer;
@@ -2104,39 +2108,39 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         vertical-align: top;
                     }
 
-                    .AtOncePseudoAttachmentLink${y}.image {
+                    .AtOncePseudoAttachmentLink${b}.image {
                         border: none;
                         padding: 0px;
                     }
 
-                    .AtOncePseudoAttachmentLink${y}.video {
+                    .AtOncePseudoAttachmentLink${b}.video {
                         border: none;
                         padding: 0px;
                     }
                     
-                    .AtOncePseudoAttachmentLink${y}.video>video {
+                    .AtOncePseudoAttachmentLink${b}.video>video {
                         border-radius: 16px;
                     }
 
-                    .AtOncePseudoAttachmentLink${y}.audio {
+                    .AtOncePseudoAttachmentLink${b}.audio {
                         border: none;
                         padding: 0px;
                         width: 100%;
                         max-height: 48px;
                     }
                     
-                    .AtOncePseudoAttachmentLink${y}.audio>audio {
+                    .AtOncePseudoAttachmentLink${b}.audio>audio {
                         height: 48px;
                         border-radius: 30px;
                     }
 
-                    .AtOncePseudoAttachmentLink${y}.self {
+                    .AtOncePseudoAttachmentLink${b}.self {
                         margin-left: auto;
                         margin-right: 0;
                         display: block;
                     }
 
-                    .AtOnceMainAttachmentsUnavailable${y} {
+                    .AtOnceMainAttachmentsUnavailable${b} {
                         background-color: #eee;
                         width: fit-content;
                         border-radius: 50px;
@@ -2151,34 +2155,34 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-bottom: 8px;
                     }
 
-                    .AtOnceMainAttachmentsUnavailable${y}.self {
+                    .AtOnceMainAttachmentsUnavailable${b}.self {
                         margin-left: auto;
                         background: ${ed};
                         color: ${ev};
                         ${"#111"==ev?"background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,.07));":""}
                     }
 
-                    .AtOnceMainAttachmentsPreview${y} {
+                    .AtOnceMainAttachmentsPreview${b} {
                         border-radius: 16px;
                         width: 100%;
                     }
 
-                    .AtOncePrimarySubjectHeader${y} {
+                    .AtOncePrimarySubjectHeader${b} {
                         margin-top: 16px;
                     }
 
-                    .AtOnceTimestampContainer${y} {
+                    .AtOnceTimestampContainer${b} {
                         font-size: 12px;
                         margin-bottom: -16px;
                         margin-top: 12px;
                         user-select: none;
                     }
 
-                    .AtOnceMessageContainer${y}.sender {
+                    .AtOnceMessageContainer${b}.sender {
                         background: #eee;
                     }
 
-                    .AtOnceProductImage${y} {
+                    .AtOnceProductImage${b} {
                         width: 64px;
                         height: 64px;
                         background-position: center;
@@ -2186,51 +2190,51 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         border-radius: 16px;
                     }
 
-                    .AtOnceContainerPadded${y} {
+                    .AtOnceContainerPadded${b} {
                         padding: 24px;
                     }
 
-                    .AtOnceContainerPaddedBottomSmall${y} {
+                    .AtOnceContainerPaddedBottomSmall${b} {
                         padding-bottom: 4px;
                     }
 
-                    .AtOnceContainerPaddedBottom${y} {
+                    .AtOnceContainerPaddedBottom${b} {
                         padding-bottom: 16px;
                     }
 
-                    .AtOnceContainerPaddedBottomLarge${y} {
+                    .AtOnceContainerPaddedBottomLarge${b} {
                         padding-bottom: 54px;
                     }
 
-                    .AtOnceContainerNoBottomPadding${y} {
+                    .AtOnceContainerNoBottomPadding${b} {
                         padding-bottom: 0;
                     }
 
-                    .AtOnceContainerSmallTopPadding${y} {
+                    .AtOnceContainerSmallTopPadding${b} {
                         padding-top: 12px !important;
                     }
 
-                    .AtOnceContainerPaddedLess${y} {
+                    .AtOnceContainerPaddedLess${b} {
                         padding: 0 24px;
                     }
 
-                    .AtOnceContainerPaddedTopTiny${y} {
+                    .AtOnceContainerPaddedTopTiny${b} {
                         padding-top: 4px;
                     }
 
-                    .AtOnceContainerPaddedTopSmall${y} {
+                    .AtOnceContainerPaddedTopSmall${b} {
                         padding-top: 12px;
                     }
 
-                    .AtOnceContainerPaddedTopMedium${y} {
+                    .AtOnceContainerPaddedTopMedium${b} {
                         padding-top: 16px;
                     }
 
-                    .AtOnceContainerPaddedTopLarge${y} {
+                    .AtOnceContainerPaddedTopLarge${b} {
                         padding-top: 24px;
                     }
 
-                    .AtOnceContainerFlexProducts${y} {
+                    .AtOnceContainerFlexProducts${b} {
                         display: grid;
                         flex-wrap: unset;
                         width: calc(100% + 16px);
@@ -2247,19 +2251,19 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: 0.2s opacity linear;
                     }
 
-                    .AtOnceContainerFlexProducts${y}.visible {
+                    .AtOnceContainerFlexProducts${b}.visible {
                         opacity: 1;
                     }
 
-                    .AtOnceContainerPaddedTop${y} {
+                    .AtOnceContainerPaddedTop${b} {
                         padding-top: 36px;
                     }
 
-                    .AtOnceChatFirstContainer${y} {
+                    .AtOnceChatFirstContainer${b} {
                         height: 100%;
                     }
 
-                    .AtOnceContainerScrollMiddle${y} {
+                    .AtOnceContainerScrollMiddle${b} {
                         width: 100%;
                         max-height: calc(100% - ${eu?"175px":"160px"});
                         height: 100%;
@@ -2268,21 +2272,21 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         position: relative;
                     }
 
-                    .AtOnceContainerScrollMiddleHelpCenter${y} {
+                    .AtOnceContainerScrollMiddleHelpCenter${b} {
                         max-height: calc(100% - 120px);
                     }
 
-                    .AtOnceQuantityContainer${y} {
+                    .AtOnceQuantityContainer${b} {
                         margin-top: 14px;
                     }
 
-                    .AtOnceQuantitySubContainer${y} {
+                    .AtOnceQuantitySubContainer${b} {
                         border: 1px solid #ddd;
                         border-radius: 12px;
                         width: fit-content;
                     }
 
-                    .AtOnceQuantityButtons${y} {
+                    .AtOnceQuantityButtons${b} {
                         height: 32px;
                         user-select: none;
                         width: 32px;
@@ -2292,21 +2296,21 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         cursor: pointer;
                     }
 
-                    .AtOnceQuantityLabel${y} {
+                    .AtOnceQuantityLabel${b} {
                         color: #555;
                         font-size: 14px;
                         margin-bottom: 4px;
                         user-select: none;
                     }
 
-                    .AtOnceQuantityLabelSmall${y} {
+                    .AtOnceQuantityLabelSmall${b} {
                         color: #555;
                         font-size: 13px;
                         margin-bottom: 2px;
                         user-select: none;
                     }
 
-                    .AtOnceQuantityInput${y} {
+                    .AtOnceQuantityInput${b} {
                         width: 48px;
                         height: 16px;
                         user-select: none;
@@ -2323,21 +2327,21 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         -moz-appearance: textfield;
                     }
 
-                    .AtOnceQuantityInput${y}.smaller {
+                    .AtOnceQuantityInput${b}.smaller {
                         width: 36px;
                     }
 
-                    .AtOnceQuantityInput${y}::-webkit-outer-spin-button {
+                    .AtOnceQuantityInput${b}::-webkit-outer-spin-button {
                         -webkit-appearance: none;
                         margin: 0;
                     }
 
-                    .AtOnceQuantityInput${y}::-webkit-inner-spin-button {
+                    .AtOnceQuantityInput${b}::-webkit-inner-spin-button {
                         -webkit-appearance: none;
                         margin: 0;
                     }
 
-                    .AtOnceContainerLiveChatMain${y} {
+                    .AtOnceContainerLiveChatMain${b} {
                         display: flex;
                         padding: 12px;
                         position: fixed;
@@ -2345,7 +2349,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: 100%;
                     }
 
-                    .AtOnceContainerLiveChatAttachmentsError${y} {
+                    .AtOnceContainerLiveChatAttachmentsError${b} {
                         background: #f5f5f5;
                         width: calc(100% - 36px);
                         height: 64px;
@@ -2363,11 +2367,11 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         pointer-events: none;
                     }
 
-                    .AtOnceContainerLiveChatAttachmentsError${y}.shown {
-                        animation: AtOnceErrorMessage${y} 4s linear forwards;
+                    .AtOnceContainerLiveChatAttachmentsError${b}.shown {
+                        animation: AtOnceErrorMessage${b} 4s linear forwards;
                     }
 
-                    .AtOnceContainerLiveChatAttachments${y} {
+                    .AtOnceContainerLiveChatAttachments${b} {
                         background: #f5f5f5;
                         width: calc(100% - 36px);
                         height: 64px;
@@ -2379,20 +2383,20 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         overflow-y: auto;
                     }
 
-                    .AtOnceContainerLiveChatAttachments${y}.shown {
+                    .AtOnceContainerLiveChatAttachments${b}.shown {
                         display: block;
                     }
 
-                    .AtOnceContainerLiveChatAttachments${y}::-webkit-scrollbar-track {
+                    .AtOnceContainerLiveChatAttachments${b}::-webkit-scrollbar-track {
                         margin-top: 12px;
                         margin-bottom: 12px;
                     }
 
-                    .AtOnceContainerLiveChatAttachments${y}::-webkit-scrollbar {
+                    .AtOnceContainerLiveChatAttachments${b}::-webkit-scrollbar {
                         width: ${eu?'""':"8px"};
                     }
 
-                    .AtOnceContainerLiveChatInput${y} {
+                    .AtOnceContainerLiveChatInput${b} {
                         width: calc(100% - ${eu?"44px":"40px"});
                         margin-right: 4px;
                         max-height: 100px;
@@ -2403,7 +2407,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         padding: 6px 31px 6px 12px;
                     }
 
-                    .AtOnceContainerLiveChatInput${y} span {
+                    .AtOnceContainerLiveChatInput${b} span {
                         background-color: #f5f5f5 !important;
                         background: #f5f5f5 !important;
                         font-family: ${e4} !important;
@@ -2411,29 +2415,29 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         font-size: ${eu?"16px !important":"15px !important"};
                     }
 
-                    .AtOnceContainerLiveChatInputDisabled${y} {
+                    .AtOnceContainerLiveChatInputDisabled${b} {
                         max-height: 28px;
                         overflow-y: hidden;
                     }
 
-                    .AtOnceContainerLiveChatInputDisabled${y}:empty:before{
+                    .AtOnceContainerLiveChatInputDisabled${b}:empty:before{
                         color: #f5f5f5;
                     }
 
-                    .AtOnceContainerLiveChatInput${y}::-webkit-scrollbar-track {
+                    .AtOnceContainerLiveChatInput${b}::-webkit-scrollbar-track {
                         margin-top: 12px;
                         margin-bottom: 12px;
                     }
 
-                    .AtOnceContainerLiveChatInput${y}::-webkit-scrollbar {
+                    .AtOnceContainerLiveChatInput${b}::-webkit-scrollbar {
                         width: ${eu?'""':"8px"};
                     }
 
-                    .AtOnceContainerLiveChatInput${y}::-webkit-scrollbar-thumb {
+                    .AtOnceContainerLiveChatInput${b}::-webkit-scrollbar-thumb {
                         background-color: transparent;
                     }
 
-                    .AtOnceContainerLiveChatButton${y} {
+                    .AtOnceContainerLiveChatButton${b} {
                         cursor: pointer;
                         user-select: none;
                         margin-left: 8px;
@@ -2454,20 +2458,20 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         outline: none;
                     }
 
-                    .AtOnceContainerLiveChatButton${y}:disabled {
+                    .AtOnceContainerLiveChatButton${b}:disabled {
                         filter: grayscale(1) opacity(0.5);
                         pointer-events: none;
                     }
 
-                    .AtOnceContainerLiveChatButton${y}:hover {
+                    .AtOnceContainerLiveChatButton${b}:hover {
                         background: #f5f5f5;
                     }
 
-                    .AtOnceContainerLiveChatButton${y}:active {
+                    .AtOnceContainerLiveChatButton${b}:active {
                         filter: brightness(0.9);
                     }
 
-                    .AtOnceContainerLiveChatButton${y}.attachment {
+                    .AtOnceContainerLiveChatButton${b}.attachment {
                         filter: grayscale(1);
                         right: 60.5px;
                         background: transparent;
@@ -2475,39 +2479,39 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         padding: 2px;
                     }
 
-                    .AtOnceContainerLiveChatButton${y}.attachment:hover {
+                    .AtOnceContainerLiveChatButton${b}.attachment:hover {
                         filter: none;
                     }
 
-                    .AtOnceGradientBackground${y} {
+                    .AtOnceGradientBackground${b} {
                         background: ${ed};
                         color: ${ev};
                         background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,${"#111"==ev?".12":".32"}));
                     }
 
-                    .AtOnceTopContainer${y} {
+                    .AtOnceTopContainer${b} {
                         ${eu?"":"border-top-right-radius: 24px;"}
                         ${eu?"":"border-top-left-radius: 24px;"}
                     }
 
-                    .AtOnceBottomContainer${y} {
+                    .AtOnceBottomContainer${b} {
                         position: fixed;
                         bottom: 0;
                         width: 100%;
                         text-align: center;
                     }
 
-                    .AtOnceTopHeadingContainer${y} {
+                    .AtOnceTopHeadingContainer${b} {
                         display: flex;
                         align-items: center;
                     }
 
-                    .AtOnceChatTopBackButton${y} {
+                    .AtOnceChatTopBackButton${b} {
                         margin-right: 8px;
                         margin-left: -8px;
                     }
 
-                    .AtOnceChatRoundedCircleIcon${y} {
+                    .AtOnceChatRoundedCircleIcon${b} {
                         border-radius: 50%;
                         transition: 0.2s linear;
                         text-decoration: none;
@@ -2519,45 +2523,45 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         background: ${el}00;
                     }
 
-                    .AtOnceChatRoundedCircleIcon${y}:hover {
+                    .AtOnceChatRoundedCircleIcon${b}:hover {
                         background: ${el}55;
                     }
 
-                    .AtOnceMarginLeft${y} {
+                    .AtOnceMarginLeft${b} {
                         margin-left: auto;
                     }
 
-                    .AtOnceMainHeading${y} {
+                    .AtOnceMainHeading${b} {
                         font-size: 32px;
                         font-weight: 600;
                         user-select: none;
                     }
 
-                    .AtOnceSubHeading${y} {
+                    .AtOnceSubHeading${b} {
                         font-size: 18px;
                         font-weight: 600;
                         user-select: none;
                     }
 
-                    .AtOnceSubHeadingSmall${y} {
+                    .AtOnceSubHeadingSmall${b} {
                         font-size: 14px;
                         font-weight: 600;
                         user-select: none;
                     }
 
-                    .AtOnceTextContainer${y} {
+                    .AtOnceTextContainer${b} {
                         padding: 0 24px;
                         font-size: 16px;
                         font-weight: 400;
                     }
 
-                    .AtOnceButtonContainer${y} {
+                    .AtOnceButtonContainer${b} {
                         display: ${eu?"block":"flex"};
                         justify-content: ${eu?"center":"space-between"};
                         padding-bottom: 12px;
                     }
 
-                    .AtOnceMainButton${y} {
+                    .AtOnceMainButton${b} {
                         cursor: pointer;
                         font-size: 16px;
                         border-radius: 100px;
@@ -2570,7 +2574,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         ${eu?"margin-top: 12px;":""}
                     }
 
-                    .AtOnceMainButtonSmall${y} {
+                    .AtOnceMainButtonSmall${b} {
                         font-size: 14px;
                         font-weight: 400 !important;
                         width: unset;
@@ -2581,30 +2585,30 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-top: -4px;
                     }
 
-                    .AtOnceMainButtonSmall${y}.smaller {
+                    .AtOnceMainButtonSmall${b}.smaller {
                         margin-top: 2px;
                         margin-right: 0;
                         padding: 12px 14px;
                     }
 
-                    .AtOnceMainButtonSmall${y}:hover {
+                    .AtOnceMainButtonSmall${b}:hover {
                         box-shadow: 0 3px 6px rgb(0 0 0 / 0.15) !important;
                         filter: brightness(0.975) !important;
                     }
 
-                    .AtOnceMainButton${y}:disabled {
+                    .AtOnceMainButton${b}:disabled {
                         color: #fff;
                         background: #ccc;
                         border-color: #ccc;
                         pointer-events: none;
                     }
 
-                    .AtOnceMainButton${y}:hover {
+                    .AtOnceMainButton${b}:hover {
                         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
                         filter: brightness(0.95);
                     }
 
-                    .AtOncePrimaryButton${y} {
+                    .AtOncePrimaryButton${b} {
                         color: ${ev};
                         padding: ${eu?"12.5px":"9.5px"} 5.5px;
                         border: none;
@@ -2612,22 +2616,22 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         ${"#111"==ev?"background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,.07));":""}
                     }
 
-                    .AtOncePrimaryButton${y}.green {
+                    .AtOncePrimaryButton${b}.green {
                         background: #16AA9E !important;
                         color: white !important;
                     }
 
-                    .AtOncePrimaryButton${y}.red {
+                    .AtOncePrimaryButton${b}.red {
                         background: #dd0000 !important;
                         color: white !important;
                     }
 
-                    .AtOnceSecondaryButton${y} {
+                    .AtOnceSecondaryButton${b} {
                         border: 1.5px solid ${e$};
                         background: transparent;
                     }
 
-                    .AtOnceTertiaryButton${y} {
+                    .AtOnceTertiaryButton${b} {
                         width: fit-content;
                         padding: 4px 12px;
                         border-width: 1px;
@@ -2637,147 +2641,147 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         ${eu?"margin-top: -2px;":""}
                     }
 
-                    .AtOnceQuaternaryButton${y}:hover {
+                    .AtOnceQuaternaryButton${b}:hover {
                         box-shadow: none !important;
                     }
 
-                    .AtOnceMainButtonLeft${y} {
+                    .AtOnceMainButtonLeft${b} {
                         margin-right: ${eu?"0":"4px"};
                     }
 
-                    .AtOnceMainButtonRight${y} {
+                    .AtOnceMainButtonRight${b} {
                         margin-left: ${eu?"0":"4px"};
                     }
 
-                    .AtOnceMainButtonRightMargin${y} {
+                    .AtOnceMainButtonRightMargin${b} {
                         margin-left: 0 !important;
                     }
 
-                    .AtOnceTriHeading${y} {
+                    .AtOnceTriHeading${b} {
                         font-size: 16px;
                         font-weight: 600;
                     }
 
-                    .AtOnceBold${y} {
+                    .AtOnceBold${b} {
                         font-weight: 600;
                     }
 
-                    .AtOnceSubTextBold${y} {
+                    .AtOnceSubTextBold${b} {
                         font-size: 14px;
                         font-weight: 600;
                     }
 
-                    .AtOnceSubText${y} {
+                    .AtOnceSubText${b} {
                         font-size: 14px;
                         font-weight: 400;
                         user-select: none;
                     }
 
-                    .AtOnceSubTextSpacingLeft${y} {
+                    .AtOnceSubTextSpacingLeft${b} {
                         margin-left: 3px;
                     }
 
-                    .AtOnceSubTextSpacingRight${y} {
+                    .AtOnceSubTextSpacingRight${b} {
                         margin-right: 3px;
                     }
 
-                    .AtOnceUserSelect${y} {
+                    .AtOnceUserSelect${b} {
                         user-select: auto !important;
                     }
 
-                    .AtOnceSubTag${y} {
+                    .AtOnceSubTag${b} {
                         text-align: right;
                     }
                     
-                    .AtOnceSubTag${y}.gray {
+                    .AtOnceSubTag${b}.gray {
                         color: #333;
                     }
 
-                    .AtOnceSubTag${y}.blue {
+                    .AtOnceSubTag${b}.blue {
                         color: #16AA9E;
                     }
                     
-                    .AtOnceSubTextAntiMarginTop${y} {
+                    .AtOnceSubTextAntiMarginTop${b} {
                         margin-top: -8px;
                     }
 
-                    .AtOnceSubTextMarginBottom${y} {
+                    .AtOnceSubTextMarginBottom${b} {
                         margin-bottom: 8px;
                     }
 
-                    .AtOnceSubTextSmall${y} {
+                    .AtOnceSubTextSmall${b} {
                         font-size: 13px;
                     }
 
-                    .AtOnceSubTextLarge${y} {
+                    .AtOnceSubTextLarge${b} {
                         font-size: 16px;
                     }
 
-                    .AtOnceSubTextMediumMargin${y} {
+                    .AtOnceSubTextMediumMargin${b} {
                         margin-top: 8px;
                     }
 
-                    .AtOnceTextLargeMargin${y} {
+                    .AtOnceTextLargeMargin${b} {
                         margin-top: 12px;
                     }
 
-                    .AtOnceContainerLargeMargin${y} {
+                    .AtOnceContainerLargeMargin${b} {
                         margin-top: ${eu?"24px":"16px"};
                     }
 
-                    .AtOnceSubTextLargeMargin${y} {
+                    .AtOnceSubTextLargeMargin${b} {
                         margin-top: 24px;
                         margin-bottom: 12px;
                         font-weight: 600;
                     }
 
-                    .AtOnceTextCenter${y} {
+                    .AtOnceTextCenter${b} {
                         text-align: center;
                     }
 
-                    .AtOnceSubTextMargin${y} {
+                    .AtOnceSubTextMargin${b} {
                         margin-top: 2px;
                     }
 
-                    .AtOnceSubHeadingMargin${y} {
+                    .AtOnceSubHeadingMargin${b} {
                         margin: 24px 0 10px 24px;
                     }
 
-                    .AtOnceSubHeadingMarginSmall${y} {
+                    .AtOnceSubHeadingMarginSmall${b} {
                         margin: 16px 0 10px 24px;
                     }
 
-                    .AtOnceContactFormInput${y} {
+                    .AtOnceContactFormInput${b} {
                         border: none;
                         border-bottom: 1px solid #eee;
                         border-radius: 0;
                     }
 
-                    .AtOnceTextColorError${y} {
+                    .AtOnceTextColorError${b} {
                         color: #d40000;
                     }
 
-                    .AtOnceTextColorTwo${y} {
+                    .AtOnceTextColorTwo${b} {
                         color: #222;
                     }
 
-                    .AtOnceTextColorThree${y} {
+                    .AtOnceTextColorThree${b} {
                         color: #333;
                     }
 
-                    .AtOnceTextColorFive${y} {
+                    .AtOnceTextColorFive${b} {
                         color: #555;
                     }
 
-                    .AtOnceTextColorSeven${y} {
+                    .AtOnceTextColorSeven${b} {
                         color: #777;
                     }
 
-                    .AtOnceTextColorNine${y} {
+                    .AtOnceTextColorNine${b} {
                         color: #999;
                     }
 
-                    .AtOnceQuickIcon${y} {
+                    .AtOnceQuickIcon${b} {
                         width: fit-content;
                         height: fit-content;
                         margin-right: 6px;
@@ -2787,7 +2791,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: 0.2s linear;
                     }
 
-                    .AtOnceQuickButton${y} {
+                    .AtOnceQuickButton${b} {
                         display: flex;
                         align-items: center;
                         padding: 10px 20px;
@@ -2802,7 +2806,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceQuickButtonPaddedMore${y} {
+                    .AtOnceQuickButtonPaddedMore${b} {
                         padding: 16px 20px;
                         display: flex;
                         align-items: center;
@@ -2814,42 +2818,42 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceQuickButtonPaddedLess${y} {
+                    .AtOnceQuickButtonPaddedLess${b} {
                         padding: 10px 24px;
                     }
 
-                    .AtOnceQuickButtonLink${y}:hover {
+                    .AtOnceQuickButtonLink${b}:hover {
                         text-decoration: none;
                     }
 
-                    .AtOnceQuickButtonPadded${y} {
+                    .AtOnceQuickButtonPadded${b} {
                         padding: 17px 20px;
                     }
 
-                    .AtOnceQuickButton${y}:hover {
+                    .AtOnceQuickButton${b}:hover {
                         background: ${ed}22;
                     }
 
-                    .AtOnceQuickLinkButtonHeaders${y} {
+                    .AtOnceQuickLinkButtonHeaders${b} {
                         margin-left: 4px;
                     }
 
-                    .AtOnceReturnIconAdjustment${y} {
+                    .AtOnceReturnIconAdjustment${b} {
                         margin-right: -2px;
                         margin-left: 2px;
                     }
 
-                    .AtOnceFAQIconAdjustment${y} {
+                    .AtOnceFAQIconAdjustment${b} {
                         margin-right: 1px;
                         margin-left: 1px;
                     }
 
-                    .AtOnceFAQIconAdjustment${y}.faq {
+                    .AtOnceFAQIconAdjustment${b}.faq {
                         margin-bottom: -1px;
                         margin-top: 1px;
                     }
 
-                    .AtOnceDestinationLabel${y} {
+                    .AtOnceDestinationLabel${b} {
                         font-size: 13px;
                         font-weight: 400;
                         color: #555;
@@ -2857,7 +2861,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-left: 2px;
                     }
 
-                    .AtOnceDestinationInput${y} {
+                    .AtOnceDestinationInput${b} {
                         outline: 1px solid transparent;
                         border: 1px solid;
                         border-color: #ddd;
@@ -2871,30 +2875,30 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: 0s;
                     }
 
-                    .AtOnceDestinationInput${y}:focus-visible {
+                    .AtOnceDestinationInput${b}:focus-visible {
                         outline: 1px solid ${e$};
                         border-color: transparent;
                     }
 
-                    .AtOnceInputSubContainer_left${y} {
+                    .AtOnceInputSubContainer_left${b} {
                         display: grid;
                         width: calc(50% - 8px);
                         float: left;
                     }
 
-                    .AtOnceInputSubContainer_right${y} {
+                    .AtOnceInputSubContainer_right${b} {
                         display: grid;
                         width: calc(50% - 8px);
                         margin-left: 16px;
                         float: right;
                     }
 
-                    .AtOnceInputSubContainer_clear${y} {
+                    .AtOnceInputSubContainer_clear${b} {
                         clear: both;
                         padding-top: 16px;
                     }
 
-                    .AtOnceMainShopProductSubContainer${y} {
+                    .AtOnceMainShopProductSubContainer${b} {
                         flex: 50%;
                         padding: 8px;
                         cursor: default;
@@ -2904,7 +2908,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         min-width: 100%;
                     }
 
-                    .AtOnceModalProductImageSlideshowContainer${y} {
+                    .AtOnceModalProductImageSlideshowContainer${b} {
                         position: relative;
                         width: 90%;
                         margin-left: 5%;
@@ -2913,7 +2917,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         overflow: hidden;
                     }
 
-                    .AtOnceModalProductImageSlideshowChevron${y} {
+                    .AtOnceModalProductImageSlideshowChevron${b} {
                         cursor: pointer;
                         position: absolute;
                         top: calc(50% - 12px);
@@ -2924,25 +2928,25 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: linear 0.2s;
                     }
 
-                    .AtOnceModalProductImageSlideshowChevron${y}:hover {
+                    .AtOnceModalProductImageSlideshowChevron${b}:hover {
                         background: ${el};
                     }
 
-                    .AtOnceModalProductImageSlideshowChevron${y}:active {
+                    .AtOnceModalProductImageSlideshowChevron${b}:active {
                         filter: brightness(0.75);
                     }
 
-                    .AtOnceModalProductImageSlideshowChevron_left${y} {
+                    .AtOnceModalProductImageSlideshowChevron_left${b} {
                         left: 0;
                         padding: 5px 5px 2px 4px;
                     }
 
-                    .AtOnceModalProductImageSlideshowChevron_right${y} {
+                    .AtOnceModalProductImageSlideshowChevron_right${b} {
                         right: 0;
                         padding: 5px 4px 2px 5px;
                     }
 
-                    .AtOnceMainShopStickyChangesContainer${y} {
+                    .AtOnceMainShopStickyChangesContainer${b} {
                         background: ${el};
                         width: 100%;
                         height: 64px;
@@ -2957,17 +2961,17 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: opacity 0.2s linear;
                     }
 
-                    .AtOnceMainShopStickyChangesContainer${y}.bigger {
+                    .AtOnceMainShopStickyChangesContainer${b}.bigger {
                         height: 124px;
                         display: block !important;
                     }
 
-                    .AtOnceMainShopStickyChangesContainer${y}.visible {
+                    .AtOnceMainShopStickyChangesContainer${b}.visible {
                         opacity: 1;
                         pointer-events: auto;
                     }
 
-                    .AtOnceMainShopProductImageContainer${y} {
+                    .AtOnceMainShopProductImageContainer${b} {
                         width: 100%;
                         user-select: none;
                         align-self: center;
@@ -2980,15 +2984,15 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         cursor: pointer;
                     }
 
-                    .AtOnceMainShopProductImageContainer${y}:hover {
+                    .AtOnceMainShopProductImageContainer${b}:hover {
                         color: ${e$};
                     }
 
-                    .AtOnceMainShopProductImageContainer${y}:hover + .AtOnceMainShopProductTitleContainer${y} {
+                    .AtOnceMainShopProductImageContainer${b}:hover + .AtOnceMainShopProductTitleContainer${b} {
                         color: ${e$};
                     }
 
-                    .AtOnceMainShopProductImageDiv${y} {
+                    .AtOnceMainShopProductImageDiv${b} {
                         align-self: center;
                         background: #eee;
                         text-align: center;
@@ -3000,52 +3004,52 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         justify-content: center;
                     }
 
-                    .AtOnceMainShopProductImageDivText${y} {
+                    .AtOnceMainShopProductImageDivText${b} {
                         margin-top: calc(-50% - 14px);
                         font-size: 16px;
                         padding: 0 8px;
                     }
 
-                    .AtOnceMainShopProductImage${y} {
+                    .AtOnceMainShopProductImage${b} {
                         width: 100%;
                         user-select: none;
                         border-radius: 24px;
                         pointer-events: none;
                     }
 
-                    .AtOnceMainShopProductPriceContainer${y} {
+                    .AtOnceMainShopProductPriceContainer${b} {
                         pointer-events: none;
                         user-select: none;
                         line-height: 24px;
                     }
 
-                    .AtOnceMainShopProductTitleContainer${y} {
+                    .AtOnceMainShopProductTitleContainer${b} {
                         pointer-events: none;
                         user-select: none;
                     }
 
-                    .AtOnceMainShopProductTitleText${y} {
+                    .AtOnceMainShopProductTitleText${b} {
                         font-size: 16px;
                         font-weight: 600;
                         user-select: none;
                         pointer-events: none;
                     }
 
-                    .AtOnceMainShopProductPriceText${y} {
+                    .AtOnceMainShopProductPriceText${b} {
                         color: #555;
                         font-weight: 400;
                         pointer-events: none;
                         user-select: none;
                     }
 
-                    .AtOnceMainShopProductPriceText_compare${y} {
+                    .AtOnceMainShopProductPriceText_compare${b} {
                         color: #777 !important;
                         text-decoration: line-through;
                         text-decoration-color: #777777aa;
                         margin-right: 12px;
                     }
 
-                    .AtOnceModalBackground${y} {
+                    .AtOnceModalBackground${b} {
                         top: 0;
                         left: 0;
                         width: 100%;
@@ -3061,12 +3065,12 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         background-color: transparent;
                     }
 
-                    .AtOnceModalBackground${y}.active {
+                    .AtOnceModalBackground${b}.active {
                         opacity: 1;
                         pointer-events: auto;
                     }
 
-                    .AtOnceModalContainer${y} {
+                    .AtOnceModalContainer${b} {
                         width: 100%;
                         border: none;
                         height: 100%;
@@ -3087,17 +3091,17 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         background-color: ${el};
                     }
 
-                    .AtOnceModalContainer${y}::-webkit-scrollbar-track {
+                    .AtOnceModalContainer${b}::-webkit-scrollbar-track {
                         ${eu?"":"margin-top: 16px; margin-bottom: 16px;"}
                     }
 
-                    .AtOnceModalContainer${y}.active {
+                    .AtOnceModalContainer${b}.active {
                         opacity: 1;
                         pointer-events: auto;
                         ${eu?"":"border-radius: 22px; box-shadow: none;"}
                     }
 
-                    .AtOnceModalCloseBtn${y} {
+                    .AtOnceModalCloseBtn${b} {
                         height: 24px;
                         width: 24px;
                         text-align: center;
@@ -3110,22 +3114,22 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         z-index: 2;
                     }
 
-                    .AtOnceModalCloseBtn${y}:hover {
+                    .AtOnceModalCloseBtn${b}:hover {
                         filter: brightness(0.6);
                     }
 
-                    .AtOnceModalCloseBtn${y}:active {
+                    .AtOnceModalCloseBtn${b}:active {
                         filter: brightness(0.5);
                     }
 
-                    .AtOnceModalStickyBottomContainer${y} {
+                    .AtOnceModalStickyBottomContainer${b} {
                         padding-top: 4px;
                         background: ${el};
                         bottom: 0;
                         position: sticky;
                     }
 
-                    .AtOnceModalProductImageContainer${y} {
+                    .AtOnceModalProductImageContainer${b} {
                         width: 100%;
                         cursor: default;
                         display: block;
@@ -3136,11 +3140,11 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-top: 24px;
                     }
 
-                    .AtOnceModalProductImageContainer${y}.maxwidth {
+                    .AtOnceModalProductImageContainer${b}.maxwidth {
                         width: 100% !important;
                     }
 
-                    .AtOnceModalProductImageContainer${y}.slideshow {
+                    .AtOnceModalProductImageContainer${b}.slideshow {
                         margin: 0 20px;
                         overflow: hidden;
                         max-width: 400px;
@@ -3149,7 +3153,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         border-radius: 4px;
                     }
 
-                    .AtOnceModalProductImage${y} {
+                    .AtOnceModalProductImage${b} {
                         width: 75%;
                         margin-left: 12.5%;
                         cursor: default;
@@ -3159,22 +3163,22 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         pointer-events: none;
                     }
 
-                    .AtOnceModalProductImageUL${y} {
+                    .AtOnceModalProductImageUL${b} {
                         padding: 0;
                         margin: 0;
                         list-style: none;
                         display: flex;
                     }
 
-                    .AtOnceModalProductImageUL${y}:hover {
+                    .AtOnceModalProductImageUL${b}:hover {
                         will-change: transform;
                     }
 
-                    .AtOnceModalProductImage${y}.border {
+                    .AtOnceModalProductImage${b}.border {
                         border-radius: 36px;
                     }
 
-                    .AtOnceModalProductRightContainer${y} {
+                    .AtOnceModalProductRightContainer${b} {
                         width: 100%;
                         margin-top: 16px;
                         margin-left: 0;
@@ -3185,27 +3189,27 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: linear 0.15s;
                     }
                         
-                    .AtOnceModalProductRightContainer${y}::-webkit-scrollbar-track {
+                    .AtOnceModalProductRightContainer${b}::-webkit-scrollbar-track {
                         background: ${el};
                         border-radius: 20px;
                         margin-top: 6px;
                         margin-bottom: 6px;
                     }
 
-                    .AtOnceModalProductRightContainer${y}::-webkit-scrollbar-thumb {
+                    .AtOnceModalProductRightContainer${b}::-webkit-scrollbar-thumb {
                         background-color: #ccc;
                         border-radius: 20px;
                         border: 2.5px solid ${el};
                     }
 
-                    .AtOnceModalProductTitle${y} {
+                    .AtOnceModalProductTitle${b} {
                         user-select: none;
                         font-weight: 600;
                         font-size: 24px;
                         color: #222;
                     }
 
-                    .AtOnceModalProductVariantInfo${y} {
+                    .AtOnceModalProductVariantInfo${b} {
                         user-select: none;
                         margin-top: 4px;
                         font-size: 14px;
@@ -3213,11 +3217,11 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         color: #999;
                     }
 
-                    .AtOnceModalProductVariantInfo${y}.price {
+                    .AtOnceModalProductVariantInfo${b}.price {
                         margin-left: 24px;
                     }
 
-                    .AtOnceVariantsLabel${y} {
+                    .AtOnceVariantsLabel${b} {
                         color: #333;
                         font-size: 14px;
                         margin-top: 8px;
@@ -3225,7 +3229,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceModalProductVariantSelectionContainer_images${y} {
+                    .AtOnceModalProductVariantSelectionContainer_images${b} {
                         display: flex;
                         flex-wrap: wrap;
                         flex-direction: row;
@@ -3234,12 +3238,12 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-bottom: -8px;
                     }
 
-                    .AtOnceFlexTitle${y} {
+                    .AtOnceFlexTitle${b} {
                         display: flex;
                         align-items: center;
                     }
 
-                    .AtOnceGreenCircle${y} {
+                    .AtOnceGreenCircle${b} {
                         margin-right: 10px;
                         background-color: #2ecc71;
                         font-size: 0;
@@ -3254,7 +3258,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         display: inline-flex;
                     }
 
-                    .AtOnceMainShopVariantsButton${y} {
+                    .AtOnceMainShopVariantsButton${b} {
                         color: #222;
                         border: 1px solid;
                         cursor: pointer;
@@ -3271,16 +3275,16 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-bottom: 8px;
                     }
 
-                    .AtOnceMainShopVariantsButton${y}:hover {
+                    .AtOnceMainShopVariantsButton${b}:hover {
                         border-color: #222;
                     }
 
-                    .AtOnceMainShopVariantsButton${y}:disabled {
+                    .AtOnceMainShopVariantsButton${b}:disabled {
                         opacity: 0.2;
                         pointer-events: none;
                     }
 
-                    .AtOnceMainShopVariantsButton_image${y} {
+                    .AtOnceMainShopVariantsButton_image${b} {
                         background-size: cover;
                         border-radius: 50%;
                         background-position: center;
@@ -3290,64 +3294,64 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-left: 1.5px;
                     }
 
-                    .AtOnceMainShopVariantsButton_one${y}:hover {
+                    .AtOnceMainShopVariantsButton_one${b}:hover {
                         border-color: ${e$};
                     }
 
-                    .AtOnceMainShopVariantsButton_image_active${y} {
+                    .AtOnceMainShopVariantsButton_image_active${b} {
                         border-color: #222;
                         outline: 1.5px solid #222;
                     }
 
-                    .AtOnceMainShopVariantsButton_image_active_one${y} {
+                    .AtOnceMainShopVariantsButton_image_active_one${b} {
                         border-color: ${e$};
                         outline: 1.5px solid ${e$};
                     }
 
-                    .AtOnceMainShopVariantsButton_active${y} {
+                    .AtOnceMainShopVariantsButton_active${b} {
                         color: ${el};
                         background: #222;
                         border-color: #222;
                     }
 
-                    .AtOnceMainShopProductDescription${y} {
+                    .AtOnceMainShopProductDescription${b} {
                         margin: 32px 0;
                     }
 
-                    .AtOnceMainShopProductDescription${y} img {
+                    .AtOnceMainShopProductDescription${b} img {
                         border-radius: 16px;
                         max-width: 100%;
                     }
 
-                    .AtOnceMainShopProductDescription${y}:after {
+                    .AtOnceMainShopProductDescription${b}:after {
                         clear: both;
                         content: "";
                         display: block;
                     }
 
 
-                    .AtOncePoweredByContainer${y} {
+                    .AtOncePoweredByContainer${b} {
                         padding: 12px 0;
                     }
 
-                    .AtOncePoweredByLink${y} {
+                    .AtOncePoweredByLink${b} {
                         user-select: none;
                         text-decoration: none !important;
                         color: #aaa;
                         transition: 0.2s linear;
                     }
 
-                    .AtOncePoweredByText${y} {
+                    .AtOncePoweredByText${b} {
                         font-weight: 600;
                         color: #1a73e8;
                     }
 
-                    .AtOncePoweredByLink${y}:hover {
+                    .AtOncePoweredByLink${b}:hover {
                         color: #1a73e8;
                     }
 
 
-                    .AtOnceTiBlock${y} {
+                    .AtOnceTiBlock${b} {
                         -webkit-box-align: center;
                             -ms-flex-align: center;
                                 align-items: center;
@@ -3360,13 +3364,13 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         background: #eee;
                     }
                     
-                    .AtOnceTiContainer${y} .AtOnceTidot${y} {
+                    .AtOnceTiContainer${b} .AtOnceTidot${b} {
                         background-color: #777;
                     }
                     
-                    .AtOnceTidot${y} {
-                        -webkit-animation: AtOnceMercuryTypingAnimation${y} 1.5s infinite ease-in-out;
-                                animation: AtOnceMercuryTypingAnimation${y} 1.5s infinite ease-in-out;
+                    .AtOnceTidot${b} {
+                        -webkit-animation: AtOnceMercuryTypingAnimation${b} 1.5s infinite ease-in-out;
+                                animation: AtOnceMercuryTypingAnimation${b} 1.5s infinite ease-in-out;
                         border-radius: 50%;
                         display: inline-block;
                         height: 8px;
@@ -3374,22 +3378,22 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: 8px;
                     }
                     
-                    .AtOnceTidot${y}:nth-child(1) {
+                    .AtOnceTidot${b}:nth-child(1) {
                         -webkit-animation-delay: 200ms;
                                 animation-delay: 200ms;
                     }
                     
-                    .AtOnceTidot${y}:nth-child(2) {
+                    .AtOnceTidot${b}:nth-child(2) {
                         -webkit-animation-delay: 300ms;
                                 animation-delay: 300ms;
                     }
                     
-                    .AtOnceTidot${y}:nth-child(3) {
+                    .AtOnceTidot${b}:nth-child(3) {
                         -webkit-animation-delay: 400ms;
                                 animation-delay: 400ms;
                     }
 
-                    @-webkit-keyframes AtOnceMercuryTypingAnimation${y} {
+                    @-webkit-keyframes AtOnceMercuryTypingAnimation${b} {
                         0% {
                             -webkit-transform: translateY(0)
                         }
@@ -3403,7 +3407,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         }
                     }
                     
-                    @keyframes AtOnceMercuryTypingAnimation${y} {
+                    @keyframes AtOnceMercuryTypingAnimation${b} {
                         0% {
                             -webkit-transform: translateY(0)
                         }
@@ -3417,44 +3421,44 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         }
                     }
 
-                    @keyframes AtOnceSpinner${y} {
+                    @keyframes AtOnceSpinner${b} {
                         to {
                             transform: rotate(360deg);
                         }
                     }
 
-                    @keyframes AtOnceShowSubContainer${y} {
+                    @keyframes AtOnceShowSubContainer${b} {
                         0% {opacity: 0;}
                         100% {opacity: 1;}
                     }
 
-                    @keyframes AtOnceHideSubContainer${y} {
+                    @keyframes AtOnceHideSubContainer${b} {
                         0% {opacity: 1;}
                         100% {opacity: 0;}
                     }
 
-                    @keyframes AtOnceShowChatButton${y} {
+                    @keyframes AtOnceShowChatButton${b} {
                         0% {transform:translate(0px, 10px);}
                         100% {transform:translate(0px, 0px);}
                     }
 
-                    @keyframes AtOnceHidePrimaryContainer${y} {
+                    @keyframes AtOnceHidePrimaryContainer${b} {
                         0% {opacity: 1;${eu?"":"transform:translate(0px, 0px);"}}
                         100% {opacity: 0;user-select:none;${eu?"":"transform:translate(0px, 10px);"}}
                     }
 
-                    @keyframes AtOnceShowPrimaryContainer${y} {
+                    @keyframes AtOnceShowPrimaryContainer${b} {
                         0% {opacity: 0;${eu?"":"transform:translate(0px, 10px);"}}
                         100% {opacity: 1;user-select:unset;${eu?"":"transform:translate(0px, 0px);"}}
                     }
 
-                    @keyframes AtOnceErrorMessage${y} {
+                    @keyframes AtOnceErrorMessage${b} {
                         0% {opacity: 0;z-index:1;pointer-events: auto;}
                         5% {opacity: 1;z-index:1;pointer-events: auto;}
                         95% {opacity: 1;z-index:1;pointer-events: auto;}
                         100% {opacity: 0;z-index:-1;pointer-events: none;}
                     }
-                    `;let eN=[],e7=[],eB="";function eH(e,t,o,n,i){return{attachments_fetched:"true",from:e,id:t,message:o,messageId:t,name:e,sender:D.currentUser.uid,snippet:"",subject:o.substring(0,30),threadId:n,timestamp:Date.now(),to:Q,type:"live",other_attachments:i}}function e8(e,t){let o=Math.floor(Date.now());(e=Number(e)).toString().length>15&&(e/=1e3);let n=o-e;if(t&&(n=e-o),n<12e4)return"Now";if(n<36e5)return`${Math.round(Number(n)/6e4)}m ago`;if(n<864e5)return`${Math.round(Number(n)/36e5)}h ago`;if(n<6048e5)return function e(t){let o=new Intl.DateTimeFormat("en-US",{dateStyle:"full",timeZone:`${Intl.DateTimeFormat().resolvedOptions().timeZone}`}),n=o.format(new Date(1e3*t));return n.substring(0,n.indexOf(","))}(e/1e3);if(n>6048e5)return function e(t){let o=new Intl.DateTimeFormat("en-US",{dateStyle:"medium",timeZone:`${Intl.DateTimeFormat().resolvedOptions().timeZone}`});return o.format(new Date(1e3*t)).split(",")[0]}(e/1e3);else return""}async function eI(){let e=p(V,"messages",`${Q}`,"user_threads",`${D.currentUser.uid}`,"threads");return new Promise(async function(t,o){try{v(e).then(e=>{e.empty||e.forEach(e=>{let t=e.data().list;t&&Array.prototype.push.apply(eN,t)}),t(!0)}).catch(e=>{t(!0)})}catch(n){t(!0)}})}async function eR(){try{if(eo){let e=es.getElementById("AtOnceLiveChatMainContainer");if(e){let t=Date.now()-eo,o=es.getElementById("atOnceAgentTypingIndicatorContainer");if(o){if(t>4e3){Y=!1;try{clearInterval(X)}catch(n){}o.remove()}else!1==Y&&(Y=!0,X=setInterval(function(){eR()},2e3))}else{if(t<4e3){let i=document.createElement("div");i.className=`AtOnceTiContainer${y}`,i.id="atOnceAgentTypingIndicatorContainer";let a=document.createElement("div");a.className=`AtOnceTiBlock${y}`;for(let l=0;l<3;l++){let p=document.createElement("div");p.className=`AtOnceTidot${y}`,a.appendChild(p)}i.appendChild(a),e.appendChild(i)}!1==Y&&(Y=!0,X=setInterval(function(){eR()},2e3))}}}}catch(r){}}async function eK(e){let o=r(p(V,"messages",`${Q}`,"all_msgs",`${e}`,"sub_msgs"),u("timestamp","desc"),s(20));try{let c=r(l(V,"messages",`${Q}`,"user_threads",`${D.currentUser.uid}`));$(c,e=>{try{let t=e.data();if(t){if(t.agent_read&&!1==isNaN(t.agent_read)){et=Number(t.agent_read);let o=es.getElementById("AtOnceMessageSeenText");o&&(o.innerText="Read");let n=es.getElementById("AtOnceMessageConnectedText");n&&Date.now()-et<18e4&&en&&(n.className=`AtOnceFlexCenter${y} AtOnceTimestampContainer${y} AtOnceTextColorNine${y} AtOnceSubText${y}`,n.innerText=`${en} joined the chat`)}t.agent_typed&&!1==isNaN(t.agent_read)&&(eo=Number(t.agent_read)),t.agent_read_by&&(en=t.agent_read_by),t.agent_typed_by&&(ei=t.agent_typed_by),eR()}}catch(i){}})}catch(d){}$(o,o=>{try{o.docChanges().forEach(o=>{try{let l=o.doc.data();if(l){let p=l.message.id;for(let r of e7)if(r.threadId==e){let c=r.messages;if(c){let s=c.findIndex(function(e){return e.id==p});function u(o){let l=es.getElementById("AtOnceLiveChatMainContainer");if(eB==e&&l&&!0==t){try{"visible"==document.visibilityState?(n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)):(ee||(ee=window.top.document.title),window.top.document.title=`(1) ${ee}`)}catch(p){}o&&td(c,l)}else if(!1==t||"hidden"==document.visibilityState)try{let r=[];try{let s=D.currentUser.uid;if(c&&c.length)for(let u of c)u.timestamp&&u.timestamp>n&&u.sender!==s&&r.push(u)}catch(d){}if(r.length){let v=r.slice(0,3);if(!1==t){S.innerHTML="";let $=document.createElement("div");$.className=`AtOnceLiveChatCloseButton${y}`,$.innerHTML=e3,$.addEventListener("click",function(){try{g.className=`AtOnceChatNotification${y} hidden`,ee&&(window.top.document.title=ee),S.className=`AtOnceLiveChatMessagesContainer${y} hidden`,S.innerHTML="";try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(e){}}catch(t){}}),S.appendChild($);let m=v.length;for(let h=0;h<m;h++){let _=document.createElement("div");1==m?_.className=`AtOnceMessageContainerPreview${y} three`:2==m?_.className=`AtOnceMessageContainerPreview${y} ${0==h?"two":"three"}`:_.className=`AtOnceMessageContainerPreview${y} ${0==h?"one":1==h?"two":"three"}`,_.innerHTML=Autolinker.link(v[h].message),_.addEventListener("click",function(){tM(),th(e,c)}),i=e,a=c,S.appendChild(_)}AtOnceChatContainer.style.width="100%",AtOnceChatContainer.style.height="100%",S.className=`AtOnceLiveChatMessagesContainer${y}`,ti=[]}ee||(ee=window.top.document.title),window.top.document.title=`(${r.length}) ${ee}`,g.innerText=r.length,g.className=`AtOnceChatNotification${y}`}}catch(f){}}-1==s?(r.messages.push(l.message),r.timestamp=l.timestamp,e7.sort(function(e,t){return t.timestamp-e.timestamp}),u(!0)):u()}break}}}catch(d){}})}catch(l){}},e=>{})}async function eU(e){try{return new Promise(async function(t,o){try{let n=r(p(V,"messages",`${Q}`,"all_msgs",`${e}`,"sub_msgs"),u("timestamp","desc"),s(20));v(n).then(o=>{if(o.empty)eK(e),t(!0);else try{let n=[];o.forEach(e=>{let t=e.data().message;t&&n.push(t)}),n.length&&(n.sort(function(e,t){return e.timestamp-t.timestamp}),e7.push({threadId:e,messages:n,timestamp:n[n.length-1].timestamp}),eK(e)),t(!0)}catch(i){t(!0)}}).catch(e=>{t(!0)})}catch(i){t(!0)}})}catch(t){return!0}}function ez(e){setTimeout(function(){try{e.selectionStart=e.selectionEnd=1e4,e.focus(),e.scrollLeft=e.scrollWidth}catch(t){}},0)}let eG=document.createElement("div");eG.className=`AtOnceSubContainer${y}`;let eV=document.createElement("div");eV.style.cssText="visibility:hidden !important;position:relative !important;display:none !important;width:0;height:0;line-height:0;transform:scale(0);",eV.className=`AtOnceChatPrimaryContainer${y}`;let eD=document.createElement("div");eD.className=`AtOnceChatFirstContainer${y}`;let eF=document.createElement("div");function eJ(e){let t=document.createElement("div");return(t.innerHTML=e),t.textContent}async function ej(){try{await eQ.then(()=>{if(e7.length){e7.sort(function(e,t){return t.timestamp-e.timestamp});let e=document.createElement("div"),t=document.createElement("div");for(let o of(t.innerText="Your conversations",t.className=`AtOnceSubHeadingSmall${y} AtOnceTextColorSeven${y} AtOnceSubHeadingMargin${y}`,e.appendChild(t),e7))try{let n=o.messages,i=n[n.length-1],a=eJ(i.subject.substring(0,30)).replace(/\n/g," "),l=eJ(i.snippet.substring(0,30)).replace(/\n/g," "),p=e8(i.timestamp),r=o.threadId,c=document.createElement("div");c.className=`AtOnceFlexSpaced${y} AtOnceQuickButton${y} AtOnceQuickButtonPaddedLess${y}`,c.addEventListener("click",function(){th(r,n)});let s=document.createElement("div"),u=document.createElement("div");u.className=`AtOnceSubText${y} AtOnceSubTextLarge${y} AtOnceTextColorThree${y}`,u.innerText=a;let d=document.createElement("div");d.innerText=l,d.className=`AtOnceSubText${y} AtOnceTextColorSeven${y}`,s.appendChild(u),s.appendChild(d);let v=document.createElement("div");v.className=`AtOnceSubText${y} AtOnceFlexStart${y} AtOnceTextColorNine${y}`,v.innerText=p,c.appendChild(s),c.appendChild(v),e.appendChild(c)}catch($){}es.getElementById("AtOnceLiveChatMainContainer")||eF.appendChild(e)}})}catch(e){}}eF.className=`AtOnceContainerScrollMiddle${y}`;let eq=!1,eQ=eZ();async function eZ(){return new Promise(async function(e,t){if(!0==eq)e(!0);else try{eI().then(()=>{try{if(eN.length>0){let t=eN.slice(-5),o=[];for(let n of t)o.push(eU(n));eg(o).then(()=>{eq=!0,e(!0)})}else eq=!0,e(!0)}catch(i){eq=!0,e(!0)}})}catch(o){eq=!0,e(!0)}})}let eW=document.createElement("div");eW.className=`AtOnceContainerPadded${y} AtOnceTopContainer${y} AtOnceGradientBackground${y}`;let eY=document.createElement("div"),eX=document.createElement("div");eX.className=`AtOnceTopHeadingContainer${y}`;let te=document.createElement("div");te.className=`AtOnceChatRoundedCircleIcon${y} AtOnceChatTopBackButton${y}`,te.style.display="none";let tt=document.createElement("div");tt.innerHTML=eA,te.appendChild(tt);let to=document.createElement("div");eX.appendChild(te),eX.appendChild(to);let tn=document.createElement("div");tn.className=`AtOnceSubText${y} AtOnceSubTextMargin${y}`,eY.appendChild(eX),eY.appendChild(tn),eW.appendChild(eY);let ti=[],ta="Usual reply time: a few hours",tl=new Date().getDay();(0==tl||6==tl)&&(ta="Usual reply time: 48 hours"),Z&&W-Z<9e5&&(ta=`<div class="AtOnceFlexTitle${y}"><span class="AtOnceGreenCircle${y}"> </span>We’re Online</div>`);let tp=D.currentUser.email;tp&&localStorage.setItem("AtOnceLiveChatUserEmail",tp.trimStart().trimEnd().toLowerCase());try{tp||(tp=localStorage.getItem("AtOnceLiveChatUserEmail").trimStart().trimEnd().toLowerCase())}catch(tr){}let tc=new m(ep,{distance:2e3,keys:["heading","subheading","actions_heading","text",]});function ts(e,t,o){e||(e="order");let n=[],i=tc.search(e);if(i.item)n.push(i);else for(let a of i)try{if(n.length>o)break;n.push(a.item)}catch(l){}if(n.length)for(let p of(t.innerHTML="",n))t9(p,t,!1,!1,"",t,!1,"","",!0)}function tu(e){let t=document.createElement("a"),o=e.name;return void 0===e.type?(t.href=`data:${e.mimetype},${e.url}`,t.target="_blank",t.download=o):"image"==e.type?(t.href=`data:image/${e.filetype},${e.url}`,t.target="_blank",t.download=o):(t.href=`${e.url}`,t.target="_blank"),t}function td(e,t){try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(o){}try{if(t.innerHTML="",e&&e.length){let i=e.length,a=i-1,l="",p=0,r="",c=document.createElement("div");c.className=`AtOnceTextCenter${y} AtOnceSubHeadingSmall${y} AtOnceTextColorThree${y} AtOnceSubTextAntiMarginTop${y}`,c.innerText=`We’ll reply here & email ${tp||localStorage.getItem("AtOnceLiveChatUserEmail")}`,t.appendChild(c);for(let s=0;s<i;s++){let u=e[s];if(u&&u.message){let d=u.name,v=u.timestamp,$=!1;u.sender!==Q&&($=!0);let m=document.createElement("div");m.className=`AtOncePrimaryMessageContainer${y} ${$?"self":"sender"}`;let h=document.createElement("div");h.className=`AtOnceMessageContainer${y} ${$?"self":"sender"}`,h.innerHTML=Autolinker.link(u.message);try{if(u.first_url_title){let _=h.getElementsByTagName("a");if(_.length){let g=_[0].cloneNode(!1);g.className=`AtOnceMessageContainerLink${y} ${$?"self":"sender"}`,g.innerText=u.first_url_title,h.appendChild(g)}}}catch(f){}let A="",x="";if(l==d&&(h.classList.add("middle"),r&&-1!==r.className.indexOf("end")&&(r.classList.remove("end"),r.classList.add("start"))),l!==d){r?(h.classList.add("end"),r.classList.remove("middle"),r.classList.add("end")):h.classList.add("start");let O=document.createElement("div");if(O.className=`${""==l?"":"AtOncePrimarySubjectHeader"}${y} AtOnceSubText${y} AtOnceSubTextSmall${y} ${$?`AtOnceSubTextSpacingRight${y}`:`AtOnceSubTextSpacingLeft${y}`} AtOnceTextColorSeven${y} ${$?`AtOncePrimaryMessageContainer${y} self`:""}`,!0==$?O.innerText="Me":O.innerText=`${d}`,m.appendChild(O),v-p>12e4){p=v;let C=document.createElement("div");C.className=`AtOnceFlexCenter${y} AtOnceTimestampContainer${y} AtOnceTextColorNine${y}`,C.innerText=e8(v),t.appendChild(C)}}if(s==a){h.className=`AtOnceMessageContainer${y} ${$?"self":"sender"} end`;try{$&&((A=document.createElement("div")).className=`AtOnceSeenContainer${y}`,A.id="AtOnceMessageSeenText",et>=u.timestamp?A.innerText="Read":A.innerText="Unread"),(0==s||Math.abs(u.timestamp-et)>12e5)&&((x=document.createElement("div")).id="AtOnceMessageConnectedText",et>u.timestamp&&Date.now()-et<18e4&&en&&(x.className=`AtOnceFlexCenter${y} AtOnceTimestampContainer${y} AtOnceTextColorNine${y} AtOnceSubText${y}`,x.innerText=`${en} joined the chat`))}catch(b){}}m.appendChild(h),t.appendChild(m),A&&t.appendChild(A),x&&t.appendChild(x);let S=u.other_attachments,T=`${$?"self":"sender"}`;if(S&&S.length)for(let M of S)try{let P=document.createElement("div"),w=tu(M),k=M.name;if(""==k){k="File";let L=M.filetype;""!==L&&(k+=`.${L}`)}let E=k.substring(0,35);function N(e){let t=document.createElement("img");t.addEventListener("error",function(){t.style.display="none",P.className=`AtOnceMainAttachmentsUnavailable${y} ${T}`,P.innerHTML="Image unavailable/expired",w.removeAttribute("href"),w.removeAttribute("target"),w.removeAttribute("download"),w.remove()}),t.src=e.url,t.className=`AtOnceMainAttachmentsPreview${y}`,P.classList.add("image"),P.innerText="",P.appendChild(t)}function B(e){let t=document.createElement("video");t.style.width="100%",t.controls=!0;let o=document.createElement("source");o.src=e.url,t.appendChild(o),P.classList.add("video"),P.innerText="",P.appendChild(t)}function H(e){let t=document.createElement("audio");t.style.width="100%",t.controls=!0;let o=document.createElement("source");o.addEventListener("error",function(){o.style.display="none",t.style.display="none",w.removeAttribute("href"),w.removeAttribute("target"),w.removeAttribute("download"),w.remove(),P.className=`AtOnceMainAttachmentsUnavailable${y} ${T}`,P.innerHTML="Audio file unavailable"}),o.src=e.url,t.appendChild(o),P.classList.add("audio"),P.innerText="",P.appendChild(t)}k.length>35&&(E=`${E}...`),P.className=`AtOncePseudoAttachmentLink${y} ${T}`,P.title=k,P.innerText=`${E}`,!1!==M.mimetype&&(-1!==M.mimetype.indexOf("image")?N(M):-1!==M.mimetype.indexOf("video")?B(M):-1!==M.mimetype.indexOf("audio")&&H(M)),P.addEventListener("click",function(){w&&w.click()}),t.appendChild(P)}catch(I){}l=d,r=h}}}try{setTimeout(function(){eF.children[0].scrollIntoView({behavior:"smooth",block:"end"})},2)}catch(R){}}catch(K){}}async function tv(e){return new Promise(async function(t,o){try{await U(e,"orders").then(e=>{if(e&&e[0]){let o=e[0],n=o.line_items,i=[];if(o.line_items_returned&&o.line_items_returned.length){let a=o.line_items_returned;for(let l of a){let r=1;l.quantity&&(r=Number(l.quantity)),isNaN(r)&&(r=1),i.push({id:l.id,line_item:l.line_item,product_id:l.product_id,quantity:r})}}let c=p(V,"shopify",e[1],"products");n?tf(n,i,!1,c).then(()=>{t(e)}):t(null)}else t(null)})}catch(n){t(null)}})}function t$(){te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${y}`),to.innerHTML="Recent Orders",to.className=`AtOnceSubHeading${y}`,tn.innerText="",tn.style.display="none";let e=document.createElement("div");e.className=`AtOnceContainerPaddedTopSmall${y}`;let t=document.createElement("div");t.className=`AtOnceFlexCenter${y}`;let o=document.createElement("button");return o.id=`AtOnceFindOtherOrders${y}`,o.className=`AtOnceMainButton${y} AtOnceSecondaryButton${y} AtOnceTertiaryButton${y}`,o.innerText="Find Another Order",o.addEventListener("click",function(){tg(!0)}),t.appendChild(o),e.appendChild(t),e}async function tm(e,t){return new Promise(async function(o,n){let i=function e(){let t=localStorage.getItem("AtOnceOrders"),o=[];if(t)try{let n=t.split(",");if(n&&n.length)for(let i of n)try{i&&i.length>7&&-1==o.indexOf(i)&&o.push(i.replace("_atonce_",""))}catch(a){}}catch(l){}return o}(),a=[];if(i.length){for(let l of i=i.slice(0,15))a.push(tv(l));await eg(a).then(n=>{if(a.length&&n){let i=[];for(let l of n)if(l){let p=l[1],r=i.findIndex(function(e){return e.store==p});-1==r&&i.push({order:l[0],store:p,order_identifier:l[2]})}if(i.length)for(let c of i)R(c.order_identifier,c.order.customer_id,c.store)}if(e){if(n&&n.length){let s=t$();for(let u of(eS=[],n)){if(u){let d=u[1],v=u[0];t0(v,d,s,eF)}eS.push(u)}eF.innerHTML="";es.getElementById("AtOnceLiveChatMainContainer")||eF.appendChild(s)}}else if(t)for(let $ of(eS=[],n))$&&eS.push($);o(!0)})}else o(null)})}function th(e,t,o){to.innerHTML=ta,to.className=`AtOnceSubHeading${y}`,tn.style.display="none",te.style.display="",ti=[];let n=[],i=0,a=async e=>{let t=Array.from(e.target.files);d(t)};if(o){let l=t[0];k("send_live_message",{company:Q,user:D.currentUser.uid,email:tp,message:l.message,id:l.id,threadId:e,u:F}).then(()=>{eK(e)});let p=e7.findIndex(function(t){return t.threadId==e});-1==p&&e7.unshift({threadId:e,timestamp:Date.now(),messages:t})}eB=e;let r=document.createElement("div");r.id="AtOnceLiveChatMainContainer",r.className=`AtOnceContainerPadded${y}`,td(t,r);let c=document.createElement("div");c.className=`AtOnceContainerLiveChatMain${y}`;let s=document.createElement("div");s.className=`AtOnceContainerLiveChatAttachments${y}`;let u=document.createElement("div");async function d(e){try{let t=e.length;for(let o=0;o<t;o++){let a=await e[o],l=Number(a.size);if(l>20971520||l+i>20971520)u.classList.add("shown");else{let p=a.name,r=a.type;i+=l;let c=`${E(32)}${p}`,d=A(G,`attachments/${Q}/${c}`),v={customMetadata:{user_id:`${D.currentUser.uid}`,owner:`${Q}`}},$=document.createElement("div");$.className=`AtOnceFlex${y}`;let m=document.createElement("span");m.innerHTML=`${p} <span class="AtOnceAttachmentsUploading${y}">Uploading</span>`;let h=document.createElement("div");h.className=`AtOnceAttachmentCloseBtn${y}`,h.innerHTML=e1;let _=!1;$.appendChild(m),$.appendChild(h),s.appendChild($),s.classList.add("shown"),x(d,a,v).then(()=>{f(d).then(e=>{if(!1==_)n.push({url:e,fakeName:c,name:p,fileName:p,mimetype:r}),m.innerText=`${p}`;else{$.remove();try{O(d)}catch(t){}}}).catch(e=>{})}),h.addEventListener("click",function(){_=!0,$.remove();try{O(d)}catch(e){}if(n.length)try{for(let t of n)if(t.fakeName==c){n=n.filter(e=>e!==t);break}}catch(o){}0==n.length&&s.classList.remove("shown")})}}}catch(g){}}u.className=`AtOnceContainerLiveChatAttachmentsError${y}`,u.innerText="Max file size is 20MB";let v=document.createElement("span");v.className=`AtOnceContainerLiveChatInput${y}`,v.setAttribute("placeholder","Write a message"),v.contentEditable=!0,v.addEventListener("keydown",function e(t){try{"Enter"===t.key&&!1==t.shiftKey&&b()}catch(o){}});let $=`
+                    `;let eN=[],e7=[],eB="";function eH(e,t,o,n,i){return{attachments_fetched:"true",from:e,id:t,message:o,messageId:t,name:e,sender:D.currentUser.uid,snippet:"",subject:o.substring(0,30),threadId:n,timestamp:Date.now(),to:Q,type:"live",other_attachments:i}}function e8(e,t){let o=Math.floor(Date.now());(e=Number(e)).toString().length>15&&(e/=1e3);let n=o-e;if(t&&(n=e-o),n<12e4)return"Now";if(n<36e5)return`${Math.round(Number(n)/6e4)}m ago`;if(n<864e5)return`${Math.round(Number(n)/36e5)}h ago`;if(n<6048e5)return function e(t){let o=new Intl.DateTimeFormat("en-US",{dateStyle:"full",timeZone:`${Intl.DateTimeFormat().resolvedOptions().timeZone}`}),n=o.format(new Date(1e3*t));return n.substring(0,n.indexOf(","))}(e/1e3);if(n>6048e5)return function e(t){let o=new Intl.DateTimeFormat("en-US",{dateStyle:"medium",timeZone:`${Intl.DateTimeFormat().resolvedOptions().timeZone}`});return o.format(new Date(1e3*t)).split(",")[0]}(e/1e3);else return""}async function eI(){let e=p(V,"messages",`${Q}`,"user_threads",`${D.currentUser.uid}`,"threads");return new Promise(async function(t,o){try{v(e).then(e=>{e.empty||e.forEach(e=>{let t=e.data().list;t&&Array.prototype.push.apply(eN,t)}),t(!0)}).catch(e=>{t(!0)})}catch(n){t(!0)}})}async function eR(){try{if(eo){let e=es.getElementById("AtOnceLiveChatMainContainer");if(e){let t=Date.now()-eo,o=es.getElementById("atOnceAgentTypingIndicatorContainer");if(o){if(t>4e3){Y=!1;try{clearInterval(X)}catch(n){}o.remove()}else!1==Y&&(Y=!0,X=setInterval(function(){eR()},2e3))}else{if(t<4e3){let i=document.createElement("div");i.className=`AtOnceTiContainer${b}`,i.id="atOnceAgentTypingIndicatorContainer";let a=document.createElement("div");a.className=`AtOnceTiBlock${b}`;for(let l=0;l<3;l++){let p=document.createElement("div");p.className=`AtOnceTidot${b}`,a.appendChild(p)}i.appendChild(a),e.appendChild(i)}!1==Y&&(Y=!0,X=setInterval(function(){eR()},2e3))}}}}catch(r){}}async function eK(e){let o=r(p(V,"messages",`${Q}`,"all_msgs",`${e}`,"sub_msgs"),u("timestamp","desc"),s(20));try{let c=r(l(V,"messages",`${Q}`,"user_threads",`${D.currentUser.uid}`));$(c,e=>{try{let t=e.data();if(t){if(t.agent_read&&!1==isNaN(t.agent_read)){et=Number(t.agent_read);let o=es.getElementById("AtOnceMessageSeenText");o&&(o.innerText="Read");let n=es.getElementById("AtOnceMessageConnectedText");n&&Date.now()-et<18e4&&en&&(n.className=`AtOnceFlexCenter${b} AtOnceTimestampContainer${b} AtOnceTextColorNine${b} AtOnceSubText${b}`,n.innerText=`${en} joined the chat`)}t.agent_typed&&!1==isNaN(t.agent_read)&&(eo=Number(t.agent_read)),t.agent_read_by&&(en=t.agent_read_by),t.agent_typed_by&&(ei=t.agent_typed_by),eR()}}catch(i){}})}catch(d){}$(o,o=>{try{o.docChanges().forEach(o=>{try{let l=o.doc.data();if(l){let p=l.message.id;for(let r of e7)if(r.threadId==e){let c=r.messages;if(c){let s=c.findIndex(function(e){return e.id==p});function u(o){let l=es.getElementById("AtOnceLiveChatMainContainer");if(eB==e&&l&&!0==t){try{"visible"==document.visibilityState?(n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)):(ee||(ee=window.top.document.title),window.top.document.title=`(1) ${ee}`)}catch(p){}o&&td(c,l)}else if(!1==t||"hidden"==document.visibilityState)try{let r=[];try{let s=D.currentUser.uid;if(c&&c.length)for(let u of c)u.timestamp&&u.timestamp>n&&u.sender!==s&&r.push(u)}catch(d){}if(r.length){let v=r.slice(0,3);if(!1==t){S.innerHTML="";let $=document.createElement("div");$.className=`AtOnceLiveChatCloseButton${b}`,$.innerHTML=e3,$.addEventListener("click",function(){try{g.className=`AtOnceChatNotification${b} hidden`,ee&&(window.top.document.title=ee),S.className=`AtOnceLiveChatMessagesContainer${b} hidden`,S.innerHTML="";try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(e){}}catch(t){}}),S.appendChild($);let m=v.length;for(let h=0;h<m;h++){let _=document.createElement("div");1==m?_.className=`AtOnceMessageContainerPreview${b} three`:2==m?_.className=`AtOnceMessageContainerPreview${b} ${0==h?"two":"three"}`:_.className=`AtOnceMessageContainerPreview${b} ${0==h?"one":1==h?"two":"three"}`,_.innerHTML=Autolinker.link(v[h].message),_.addEventListener("click",function(){tM(),th(e,c)}),i=e,a=c,S.appendChild(_)}AtOnceChatContainer.style.width="100%",AtOnceChatContainer.style.height="100%",S.className=`AtOnceLiveChatMessagesContainer${b}`,ti=[]}ee||(ee=window.top.document.title),window.top.document.title=`(${r.length}) ${ee}`,g.innerText=r.length,g.className=`AtOnceChatNotification${b}`}}catch(f){}}-1==s?(r.messages.push(l.message),r.timestamp=l.timestamp,e7.sort(function(e,t){return t.timestamp-e.timestamp}),u(!0)):u()}break}}}catch(d){}})}catch(l){}},e=>{})}async function eU(e){try{return new Promise(async function(t,o){try{let n=r(p(V,"messages",`${Q}`,"all_msgs",`${e}`,"sub_msgs"),u("timestamp","desc"),s(20));v(n).then(o=>{if(o.empty)eK(e),t(!0);else try{let n=[];o.forEach(e=>{let t=e.data().message;t&&n.push(t)}),n.length&&(n.sort(function(e,t){return e.timestamp-t.timestamp}),e7.push({threadId:e,messages:n,timestamp:n[n.length-1].timestamp}),eK(e)),t(!0)}catch(i){t(!0)}}).catch(e=>{t(!0)})}catch(i){t(!0)}})}catch(t){return!0}}function ez(e){setTimeout(function(){try{e.selectionStart=e.selectionEnd=1e4,e.focus(),e.scrollLeft=e.scrollWidth}catch(t){}},0)}let eG=document.createElement("div");eG.className=`AtOnceSubContainer${b}`;let eV=document.createElement("div");eV.style.cssText="visibility:hidden !important;position:relative !important;display:none !important;width:0;height:0;line-height:0;transform:scale(0);",eV.className=`AtOnceChatPrimaryContainer${b}`;let eD=document.createElement("div");eD.className=`AtOnceChatFirstContainer${b}`;let eF=document.createElement("div");function eJ(e){let t=document.createElement("div");return(t.innerHTML=e),t.textContent}async function ej(){try{await eQ.then(()=>{if(e7.length){e7.sort(function(e,t){return t.timestamp-e.timestamp});let e=document.createElement("div"),t=document.createElement("div");for(let o of(t.innerText="Your conversations",t.className=`AtOnceSubHeadingSmall${b} AtOnceTextColorSeven${b} AtOnceSubHeadingMargin${b}`,e.appendChild(t),e7))try{let n=o.messages,i=n[n.length-1],a=eJ(i.subject.substring(0,30)).replace(/\n/g," "),l=eJ(i.snippet.substring(0,30)).replace(/\n/g," "),p=e8(i.timestamp),r=o.threadId,c=document.createElement("div");c.className=`AtOnceFlexSpaced${b} AtOnceQuickButton${b} AtOnceQuickButtonPaddedLess${b}`,c.addEventListener("click",function(){th(r,n)});let s=document.createElement("div"),u=document.createElement("div");u.className=`AtOnceSubText${b} AtOnceSubTextLarge${b} AtOnceTextColorThree${b}`,u.innerText=a;let d=document.createElement("div");d.innerText=l,d.className=`AtOnceSubText${b} AtOnceTextColorSeven${b}`,s.appendChild(u),s.appendChild(d);let v=document.createElement("div");v.className=`AtOnceSubText${b} AtOnceFlexStart${b} AtOnceTextColorNine${b}`,v.innerText=p,c.appendChild(s),c.appendChild(v),e.appendChild(c)}catch($){}es.getElementById("AtOnceLiveChatMainContainer")||eF.appendChild(e)}})}catch(e){}}eF.className=`AtOnceContainerScrollMiddle${b}`;let eq=!1,eQ=eZ();async function eZ(){return new Promise(async function(e,t){if(!0==eq)e(!0);else try{eI().then(()=>{try{if(eN.length>0){let t=eN.slice(-5),o=[];for(let n of t)o.push(eU(n));eg(o).then(()=>{eq=!0,e(!0)})}else eq=!0,e(!0)}catch(i){eq=!0,e(!0)}})}catch(o){eq=!0,e(!0)}})}let eW=document.createElement("div");eW.className=`AtOnceContainerPadded${b} AtOnceTopContainer${b} AtOnceGradientBackground${b}`;let eY=document.createElement("div"),eX=document.createElement("div");eX.className=`AtOnceTopHeadingContainer${b}`;let te=document.createElement("div");te.className=`AtOnceChatRoundedCircleIcon${b} AtOnceChatTopBackButton${b}`,te.style.display="none";let tt=document.createElement("div");tt.innerHTML=eA,te.appendChild(tt);let to=document.createElement("div");eX.appendChild(te),eX.appendChild(to);let tn=document.createElement("div");tn.className=`AtOnceSubText${b} AtOnceSubTextMargin${b}`,eY.appendChild(eX),eY.appendChild(tn),eW.appendChild(eY);let ti=[],ta="Usual reply time: a few hours",tl=new Date().getDay();(0==tl||6==tl)&&(ta="Usual reply time: 48 hours"),Z&&W-Z<9e5&&(ta=`<div class="AtOnceFlexTitle${b}"><span class="AtOnceGreenCircle${b}"> </span>We’re Online</div>`);let tp=D.currentUser.email;tp&&localStorage.setItem("AtOnceLiveChatUserEmail",tp.trimStart().trimEnd().toLowerCase());try{tp||(tp=localStorage.getItem("AtOnceLiveChatUserEmail").trimStart().trimEnd().toLowerCase())}catch(tr){}let tc=new m(ep,{distance:2e3,keys:["heading","subheading","actions_heading","text",]});function ts(e,t,o){e||(e="order");let n=[],i=tc.search(e);if(i.item)n.push(i);else for(let a of i)try{if(n.length>o)break;n.push(a.item)}catch(l){}if(n.length)for(let p of(t.innerHTML="",n))t9(p,t,!1,!1,"",t,!1,"","",!0)}function tu(e){let t=document.createElement("a"),o=e.name;return void 0===e.type?(t.href=`data:${e.mimetype},${e.url}`,t.target="_blank",t.download=o):"image"==e.type?(t.href=`data:image/${e.filetype},${e.url}`,t.target="_blank",t.download=o):(t.href=`${e.url}`,t.target="_blank"),t}function td(e,t){try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(o){}try{if(t.innerHTML="",e&&e.length){let i=e.length,a=i-1,l="",p="",r=0,c="",s=document.createElement("div");s.className=`AtOnceTextCenter${b} AtOnceSubHeadingSmall${b} AtOnceTextColorThree${b} AtOnceSubTextAntiMarginTop${b}`,s.innerText=`We’ll reply here & email ${tp||localStorage.getItem("AtOnceLiveChatUserEmail")}`,t.appendChild(s);for(let u=0;u<i;u++){let d=e[u];if(d&&d.message){let v=d.name,$=d.to,m=d.timestamp,h=!1;d.sender!==Q&&(h=!0);let _=document.createElement("div");_.className=`AtOncePrimaryMessageContainer${b} ${h?"self":"sender"}`;let g=document.createElement("div");g.className=`AtOnceMessageContainer${b} ${h?"self":"sender"}`,g.innerHTML=Autolinker.link(d.message);try{if(d.first_url_title){let f=g.getElementsByTagName("a");if(f.length){let A=f[0].cloneNode(!1);A.className=`AtOnceMessageContainerLink${b} ${h?"self":"sender"}`,A.innerText=d.first_url_title,g.appendChild(A)}}}catch(x){}let O="",C="",y=l==v||p==$&&$==Q;if(y&&(g.classList.add("middle"),c&&-1!==c.className.indexOf("end")&&(c.classList.remove("end"),c.classList.add("start"))),!y){c?(g.classList.add("end"),c.classList.remove("middle"),c.classList.add("end")):g.classList.add("start");let S=document.createElement("div");if(S.className=`${""==l?"":"AtOncePrimarySubjectHeader"}${b} AtOnceSubText${b} AtOnceSubTextSmall${b} ${h?`AtOnceSubTextSpacingRight${b}`:`AtOnceSubTextSpacingLeft${b}`} AtOnceTextColorSeven${b} ${h?`AtOncePrimaryMessageContainer${b} self`:""}`,!0==h?S.innerText="Me":S.innerText=`${v}`,_.appendChild(S),m-r>12e4){r=m;let T=document.createElement("div");T.className=`AtOnceFlexCenter${b} AtOnceTimestampContainer${b} AtOnceTextColorNine${b}`,T.innerText=e8(m),t.appendChild(T)}}if(u==a){g.className=`AtOnceMessageContainer${b} ${h?"self":"sender"} end`;try{h&&((O=document.createElement("div")).className=`AtOnceSeenContainer${b}`,O.id="AtOnceMessageSeenText",et>=d.timestamp?O.innerText="Read":O.innerText="Unread"),(0==u||Math.abs(d.timestamp-et)>12e5)&&((C=document.createElement("div")).id="AtOnceMessageConnectedText",et>d.timestamp&&Date.now()-et<18e4&&en&&(C.className=`AtOnceFlexCenter${b} AtOnceTimestampContainer${b} AtOnceTextColorNine${b} AtOnceSubText${b}`,C.innerText=`${en} joined the chat`))}catch(M){}}_.appendChild(g),t.appendChild(_),O&&t.appendChild(O),C&&t.appendChild(C);let P=d.other_attachments,w=`${h?"self":"sender"}`;if(P&&P.length)for(let k of P)try{let L=document.createElement("div"),E=tu(k),N=k.name;if(""==N){N="File";let B=k.filetype;""!==B&&(N+=`.${B}`)}let H=N.substring(0,35);function I(e){let t=document.createElement("img");t.addEventListener("error",function(){t.style.display="none",L.className=`AtOnceMainAttachmentsUnavailable${b} ${w}`,L.innerHTML="Image unavailable/expired",E.removeAttribute("href"),E.removeAttribute("target"),E.removeAttribute("download"),E.remove()}),t.src=e.url,t.className=`AtOnceMainAttachmentsPreview${b}`,L.classList.add("image"),L.innerText="",L.appendChild(t)}function R(e){let t=document.createElement("video");t.style.width="100%",t.controls=!0;let o=document.createElement("source");o.src=e.url,t.appendChild(o),L.classList.add("video"),L.innerText="",L.appendChild(t)}function K(e){let t=document.createElement("audio");t.style.width="100%",t.controls=!0;let o=document.createElement("source");o.addEventListener("error",function(){o.style.display="none",t.style.display="none",E.removeAttribute("href"),E.removeAttribute("target"),E.removeAttribute("download"),E.remove(),L.className=`AtOnceMainAttachmentsUnavailable${b} ${w}`,L.innerHTML="Audio file unavailable"}),o.src=e.url,t.appendChild(o),L.classList.add("audio"),L.innerText="",L.appendChild(t)}N.length>35&&(H=`${H}...`),L.className=`AtOncePseudoAttachmentLink${b} ${w}`,L.title=N,L.innerText=`${H}`,!1!==k.mimetype&&(-1!==k.mimetype.indexOf("image")?I(k):-1!==k.mimetype.indexOf("video")?R(k):-1!==k.mimetype.indexOf("audio")&&K(k)),L.addEventListener("click",function(){E&&E.click()}),t.appendChild(L)}catch(U){}l=v,p=$,c=g}}}try{setTimeout(function(){eF.children[0].scrollIntoView({behavior:"smooth",block:"end"})},2)}catch(z){}}catch(G){}}async function tv(e){return new Promise(async function(t,o){try{await U(e,"orders").then(e=>{if(e&&e[0]){let o=e[0],n=o.line_items,i=[];if(o.line_items_returned&&o.line_items_returned.length){let a=o.line_items_returned;for(let l of a){let r=1;l.quantity&&(r=Number(l.quantity)),isNaN(r)&&(r=1),i.push({id:l.id,line_item:l.line_item,product_id:l.product_id,quantity:r})}}let c=p(V,"shopify",e[1],"products");n?tf(n,i,!1,c).then(()=>{t(e)}):t(null)}else t(null)})}catch(n){t(null)}})}function t$(){te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerHTML="Recent Orders",to.className=`AtOnceSubHeading${b}`,tn.innerText="",tn.style.display="none";let e=document.createElement("div");e.className=`AtOnceContainerPaddedTopSmall${b}`;let t=document.createElement("div");t.className=`AtOnceFlexCenter${b}`;let o=document.createElement("button");return o.id=`AtOnceFindOtherOrders${b}`,o.className=`AtOnceMainButton${b} AtOnceSecondaryButton${b} AtOnceTertiaryButton${b}`,o.innerText="Find Another Order",o.addEventListener("click",function(){tg(!0)}),t.appendChild(o),e.appendChild(t),e}async function tm(e,t){return new Promise(async function(o,n){let i=function e(){let t=localStorage.getItem("AtOnceOrders"),o=[];if(t)try{let n=t.split(",");if(n&&n.length)for(let i of n)try{i&&i.length>7&&-1==o.indexOf(i)&&o.push(i.replace("_atonce_",""))}catch(a){}}catch(l){}return o}(),a=[];if(i.length){for(let l of i=i.slice(0,15))a.push(tv(l));await eg(a).then(n=>{if(a.length&&n){let i=[];for(let l of n)if(l){let p=l[1],r=i.findIndex(function(e){return e.store==p});-1==r&&i.push({order:l[0],store:p,order_identifier:l[2]})}if(i.length)for(let c of i)R(c.order_identifier,c.order.customer_id,c.store)}if(e){if(n&&n.length){let s=t$();for(let u of(eS=[],n)){if(u){let d=u[1],v=u[0];t0(v,d,s,eF)}eS.push(u)}eF.innerHTML="";es.getElementById("AtOnceLiveChatMainContainer")||eF.appendChild(s)}}else if(t)for(let $ of(eS=[],n))$&&eS.push($);o(!0)})}else o(null)})}function th(e,t,o){to.innerHTML=ta,to.className=`AtOnceSubHeading${b}`,tn.style.display="none",te.style.display="",ti=[];let n=[],i=0,a=async e=>{let t=Array.from(e.target.files);d(t)};if(o){let l=t[0];k("send_live_message",{company:Q,user:D.currentUser.uid,email:tp,message:l.message,id:l.id,threadId:e,u:!0}).then(()=>{eK(e)});let p=e7.findIndex(function(t){return t.threadId==e});-1==p&&e7.unshift({threadId:e,timestamp:Date.now(),messages:t})}eB=e;let r=document.createElement("div");r.id="AtOnceLiveChatMainContainer",r.className=`AtOnceContainerPadded${b}`,td(t,r);let c=document.createElement("div");c.className=`AtOnceContainerLiveChatMain${b}`;let s=document.createElement("div");s.className=`AtOnceContainerLiveChatAttachments${b}`;let u=document.createElement("div");async function d(e){try{let t=e.length;for(let o=0;o<t;o++){let a=await e[o],l=Number(a.size);if(l>20971520||l+i>20971520)u.classList.add("shown");else{let p=a.name,r=a.type;i+=l;let c=`${E(32)}${p}`,d=A(G,`attachments/${Q}/${c}`),v={customMetadata:{user_id:`${D.currentUser.uid}`,owner:`${Q}`}},$=document.createElement("div");$.className=`AtOnceFlex${b}`;let m=document.createElement("span");m.innerHTML=`${p} <span class="AtOnceAttachmentsUploading${b}">Uploading</span>`;let h=document.createElement("div");h.className=`AtOnceAttachmentCloseBtn${b}`,h.innerHTML=e1;let _=!1;$.appendChild(m),$.appendChild(h),s.appendChild($),s.classList.add("shown"),x(d,a,v).then(()=>{f(d).then(e=>{if(!1==_)n.push({url:e,fakeName:c,name:p,fileName:p,mimetype:r}),m.innerText=`${p}`;else{$.remove();try{O(d)}catch(t){}}}).catch(e=>{})}),h.addEventListener("click",function(){_=!0,$.remove();try{O(d)}catch(e){}if(n.length)try{for(let t of n)if(t.fakeName==c){n=n.filter(e=>e!==t);break}}catch(o){}0==n.length&&s.classList.remove("shown")})}}}catch(g){}}u.className=`AtOnceContainerLiveChatAttachmentsError${b}`,u.innerText="Max file size is 20MB";let v=document.createElement("span");v.className=`AtOnceContainerLiveChatInput${b}`,v.setAttribute("placeholder","Write a message"),v.contentEditable=!0,v.addEventListener("keydown",function e(t){try{"Enter"===t.key&&!1==t.shiftKey&&y()}catch(o){}});let $=`
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                             <path fill="${"#111"==ev?em:ed}" d="M18.08,12.42,11.9,18.61a4.25,4.25,0,0,1-6-6l8-8a2.57,2.57,0,0,1,3.54,0,2.52,2.52,0,0,1,0,3.54l-6.9,6.89A.75.75,0,1,1,9.42,14l5.13-5.12a1,1,0,0,0-1.42-1.42L8,12.6a2.74,2.74,0,0,0,0,3.89,2.82,2.82,0,0,0,3.89,0l6.89-6.9a4.5,4.5,0,0,0-6.36-6.36l-8,8A6.25,6.25,0,0,0,13.31,20l6.19-6.18a1,1,0,1,0-1.42-1.42Z"/>
                         </svg>
@@ -3462,4 +3466,4 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         <svg width="17" height="17" viewBox="0 0 24 24" fill="${"#111"==ev?em:ed}" xmlns="http://www.w3.org/2000/svg">
                             <path transform="translate(1, 0)" d="m16.6915026 12.4744748-13.18537879.785487c-.31393759 0-.47090638.1570974-.47090638.3141948l-1.88362554 6.440993C.8376543 20.8006365.99 21.89 1.77946707 22.52c.63053293.47 1.72665674.58 2.35453192.3229026L21.714504 14.0454487c.9418128-.4712921 1.4127191-1.4138765 1.2557504-2.3564608-.1569688-.6283896-.6278752-1.2567791-1.2557504-1.5709739L4.13399899 1.16346272C3.34915502.9 2.40734225 1.00636533 1.77946707 1.4776575.9946231 2.10604706.8376543 3.0486314 1.15159189 3.99121575l1.88362554 6.44099305c0 .1570973.31393759.3141947.47090638.3141947l13.18537879.785487s.4709063 0 .4709063.4712922c0 .4712921-.4709063.4712921-.4709063.4712921Z"/>
                         </svg>
-                        `,h=document.createElement("input");h.style.display="none",h.type="file",h.multiple=!0,h.addEventListener("change",a);let g=document.createElement("button");g.className=`AtOnceContainerLiveChatButton${y} attachment`,g.innerHTML=$,g.addEventListener("click",function(){h.click()});let C=document.createElement("button");function b(){try{let t=v.innerText,o=t.replace(/\s+/g,"");function i(){setTimeout(function(){v.innerText="",C.disabled=!0,v.classList.remove(`AtOnceContainerLiveChatInputDisabled${y}`)},1e-6)}if(o.length>0){v.classList.add(`AtOnceContainerLiveChatInputDisabled${y}`);let a=E(20),l=[];if(n.length)for(let p of n)try{l.push({url:p.url,fileName:p.fileName,name:p.name,mimetype:p.mimetype,filetype:_.getExtension(p.mimetype)})}catch(c){}for(let u of(k("send_live_message",{company:Q,user:D.currentUser.uid,email:tp,message:t,attachments:l,threadId:e,id:a}),s.classList.remove("shown"),s.innerHTML="",e7))if(u.threadId==e){let d=u.messages;if(d){let $=d.findIndex(function(e){return e.id==a});if(-1==$){let m=eH(tp,a,t,e,l);u.messages.push(m),u.timestamp=m.timestamp,e7.sort(function(e,t){return t.timestamp-e.timestamp}),td(u.messages,r)}}break}i()}else v.classList.add(`AtOnceContainerLiveChatInputDisabled${y}`),i()}catch(h){}}C.className=`AtOnceContainerLiveChatButton${y}`,C.innerHTML=m,C.disabled=!0,C.addEventListener("click",function(){b()}),v.addEventListener("keyup",function(){try{v.innerText.length>0?C.disabled=!1:C.disabled=!0}catch(e){}}),c.appendChild(u),c.appendChild(s),c.appendChild(v),c.appendChild(h),c.appendChild(g),c.appendChild(C),eF.innerHTML="",eF.appendChild(r),eF.appendChild(c),ez(v),eR()}function t_(e,t,o,n){let i=document.createElement("div");i.className=`AtOnceContainerPadded${y} AtOnceButtonContainer${y}`;let a=`AtOnceMainButton${y} AtOnceMainButtonLeft${y} AtOncePrimaryButton${y}`,l=`AtOnceMainButton${y} AtOnceMainButtonRight${y} AtOnceSecondaryButton${y}`,p=(es.getElementById("AtOnceMainSearchInput"),document.createElement("button"));p.className=t?l:a,p.innerText="Okay, thanks",p.addEventListener("click",function(){eT?tx():tb(er,"Quick links")});let r=document.createElement("button");if(r.className=t?a:l,r.innerText="Message us",r.addEventListener("click",function(){let e="";try{eT&&(e=e2.name)}catch(t){}!function e(t,o,n){to.innerHTML=ta,to.className=`AtOnceSubHeading${y}`;let i=document.createElement("div"),a=document.createElement("div"),l=document.createElement("div");l.className=`AtOnceContainerPaddedLess${y}`;let p=document.createElement("div");p.className=`AtOnceContainerLargeMargin${y}`;let r=document.createElement("div");r.className=`AtOnceSubText${y} AtOnceSubTextLargeMargin${y} AtOnceTextCenter${y}`,r.innerText=`Need something else? We’d love to help!`;let c=document.createElement("input");c.className=`AtOnceContactFormInput${y}`,c.placeholder="Enter your email",c.type="text";let s=document.createElement("textarea");s.maxLength=5e3,s.placeholder="Leave a message",(t||o)&&o&&(s.value=`Order ${o}. `);let u=document.createElement("button");u.disabled=!0,u.innerText="Send",u.className=`AtOnceMainButton${y} AtOncePrimaryButton${y} AtOnceSubTextMediumMargin${y}`;let d=Date.now();function v(){setTimeout(function(){try{u.innerText="Send"}catch(e){}},3e3)}s.addEventListener("keyup",function(){try{let e=s.value;if(e.length>0){let t=Date.now();t-d>500&&(d=t,ts(e,p,4)),u.disabled=!1}else u.disabled=!0}catch(o){}}),u.addEventListener("click",function(){try{if(-1==c.value.indexOf("@"))u.innerText="Invalid Email",v();else if(""==s.value.trimStart().trimEnd())u.innerText="Invalid Message",v(),ez(s);else{var e;let t=c.value.trimStart().trimEnd().toLowerCase();!0==D.currentUser.isAnonymous&&t!==tp&&localStorage.setItem("AtOnceLiveChatUserEmail",t),tp=t;let o=s.value.trimStart().trimEnd(),n=(e=`${D.currentUser.uid}${o.substring(0,30)}`,window.btoa(unescape(encodeURIComponent(e))).replace(/=/g,"").replace(/\+/g,"-").replace(/\//g,"_")),i=E(20);th(n,[eH(tp,i,o,n)],!0)}}catch(a){}}),ts("order",p,4),l.appendChild(r),l.appendChild(c),l.appendChild(s),l.appendChild(u),a.appendChild(l),a.appendChild(p),i.appendChild(a),eF.innerHTML="",eF.appendChild(i),tp&&(c.value=tp,ez(s))}(o,e,n)}),!0==t){let c=document.createElement("div"),s=document.createElement("div"),u=Date.now();ts("order",s,2);let d=document.createElement("div");d.className=`AtOncePositionRelative${y} AtOnceFlexTitle${y}`;let v=document.createElement("div");v.className=`AtOnceSearchInputIcon${y}`,v.innerHTML=eC;let $=document.createElement("input");$.id="AtOnceMainSearchInput",$.type="text",$.className=`AtOnceSearchInput${y} AtOnceSearchInputIconed${y}`,$.placeholder="Search instant answers",$.addEventListener("keyup",function(){try{let e=$.value,t=Date.now();t-u>500&&(u=t,ts(e,s,2))}catch(o){}}),d.appendChild(v),d.appendChild($),c.appendChild(d),c.appendChild(s),e.appendChild(c),setTimeout(function(){ez($)},2);try{i.appendChild(r)}catch(m){}try{i.appendChild(p)}catch(h){}try{es.getElementById(`AtOnceContainerHelpCenterSearch${y}`).remove()}catch(_){}}else{try{i.appendChild(p)}catch(g){}try{i.appendChild(r)}catch(f){}}e.appendChild(i)}function tg(e){if(e||!localStorage.getItem("AtOnceOrders")){te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${y}`),to.innerHTML=`I’m an existing customer`,to.className=`AtOnceSubHeading${y}`,tn.innerText="",tn.style.display="none";let t=document.createElement("div"),o=document.createElement("div");o.className=`AtOnceSubHeadingSmall${y} AtOnceSubHeadingMargin${y} AtOnceTextColorSeven${y}`,o.innerText="Access your orders";let n=document.createElement("div");n.className=`AtOnceContainerPaddedLess${y} AtOnceContainerPaddedTopSmall${y}`;let i=document.createElement("div");i.innerText="Order info is in your email/text/packing slip",i.className=`AtOnceSubText${y} AtOnceTextColorTwo${y} AtOnceSubTextMarginBottom${y}`;let a=document.createElement("div");a.className=`AtOnceContainerPaddedTopSmall${y}`;let l=[];function p(e,t){let o=document.createElement("label");o.className=`AtOnceManageOrdersLabel${y}`;let n=document.createElement("span");n.className=`AtOnceManageOrdersSpan${y}`,n.innerText=e;let i=document.createElement("input");i.type="text",i.className=`AtOnceManageOrdersInput${y}`,i.placeholder=" ",o.appendChild(i),o.appendChild(n),a.appendChild(o),l.push({input:i,name:t})}p("Order Number/ID","order_number"),p("Zip/Postal Code","zip_code");let r=l[0].input,c=l[1].input,s=document.createElement("div");s.style.display="none",s.className=`AtOnceLoadingSpinner${y}`;let u=document.createElement("button");u.className=`AtOnceMainButton${y} AtOncePrimaryButton${y} AtOnceSubTextMediumMargin${y}`,u.innerText="Enter",u.disabled=!0;let d=document.createElement("div");for(let v of(d.className=`AtOnceTriHeading${y} AtOncePrimarySubjectHeader${y} AtOnceFlexCenter${y} AtOnceTextColorError${y}`,d.innerText="",u.addEventListener("click",function(){s.style.display="";let t=`${r.value}`.replace(/\s/g,"").replace(/\D/g,"").trimStart().trimEnd().toUpperCase(),o=`${c.value}`.replace(/\s/g,"").trimStart().trimEnd().toUpperCase(),n=`${t}${o}`;U(n,"orders").then(n=>{n&&n[0]?(T(`${t}_atonce_${o}`),tx(e)):(u.disabled=!0,s.style.display="none",d.innerText="Order not found")})}),l))v.input.addEventListener("keyup",function(){d.innerText="",r.value.length>3&&c.value.length>3?u.disabled=!1:u.disabled=!0}),"zip_code"==v.name?v.input.addEventListener("keydown",function e(t){try{"Enter"===t.key&&!1==t.shiftKey&&u.click()}catch(o){}}):ez(v.input);n.appendChild(i),n.appendChild(a),n.appendChild(s),n.appendChild(u),n.appendChild(d),t.appendChild(o),t.appendChild(n),eF.innerHTML="",eF.appendChild(t)}else tx(!0)}async function tf(e,t,o,n){try{let i=[];if(t.length){let a=t.length;for(let l=0;l<a;l++)t[l].position_id=l}if(o)for(let p of e)p&&p.variant_id&&-1==i.indexOf(p.variant_id)&&i.push(p.variant_id);else for(let s of e){let u=s.variant_id;u&&-1==i.indexOf(u)&&i.push(u);let d=s.id,$=Number(s.price_set.presentment_money.amount)*Number(s.quantity),m=s.price_set.presentment_money.currency_code,h=s.discount_allocations,_=s.tax_lines;if(h&&h.length)for(let g of h)$-=Number(g.amount_set.presentment_money.amount);if(_&&_.length)for(let f of _)$+=Number(f.price_set.presentment_money.amount);s.customer_paid_amount=$.toFixed(2),s.customer_paid_currency=m;let A=s.quantity-s.fulfillable_quantity;if(A>0&&t.length)for(let x of t){if(0==A)break;if(x.line_item==d){let O=x.position_id,C=x.quantity-A;0==C?(A=0,t=t.filter(e=>e.id!==O)):C>0?(x.quantity-=A,A=0):C<0&&(x.quantity=0,A=Math.abs(C))}}s.returnable_quantity=A}if(i.length){let b=function e(t,o){for(var n=[],i=0;i<t.length;i+=o)n.push(t.slice(i,i+o));return n}(i,10),y=[],S=[];async function T(t){return new Promise(async function(a,l){await v(r(n,c("variant_ids_list","array-contains-any",t))).then(t=>{t.empty||t.forEach(t=>{try{let n=t.data(),a=n.variants,l=n.images,p=n.options,r=["id","price","compare_at_price","option1","option2","option3","position","product_id","title"];for(let c of i)if(-1==S.indexOf(c)){S.push(c);let s=e.findIndex(function(e){return e.variant_id==c});if(-1!==s){o&&(e[s].title=n.title);let u=[];for(let d of a){let v=d.id;if(v==c){if(o)e[s].variant_title=d.title;else{let $={};for(let m=1;m<4;m++){let h=`option${m}`,_=d[`${h}`];_&&($[`${h}`]=_)}"{}"!==JSON.stringify($)&&(e[s].current_variant=$)}}if(!o&&(null==d.inventory_management||"continue"==d.inventory_policy||d.inventory_quantity>0)){let g={};for(let f of r)-1!==f.indexOf("price")?g[`${f}`]=Number(d[`${f}`]).toFixed(2):g[`${f}`]=d[`${f}`];for(let A of l)-1!==A.variant_ids.indexOf(v)&&(g.img=A.src);u.push(g)}}if(!o){if(p&&p.length){let x=[];for(let O of p)x.push({name:O.name,position:O.position,values:O.values});e[s].product_options=x}e[s].exchange_options=u}if(l&&l.length){let C=[];for(let b of l)-1!==b.variant_ids.indexOf(c)&&(e[s].img=b.src),b.src&&C.push(b.src);o||(e[s].images=C)}1==a.length?e[s].hasOnlyDefaultVariant=!0:e[s].hasOnlyDefaultVariant=!1}}}catch(y){}}),a("success")})})}if(b&&b.length){for(let M of b)y.push(T(M));y.length&&await eg(y)}}return e}catch(P){return e}}function tA(e){if(e2){let t=[],o=[],n=0,i=e2.currency,a=B(i);te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${y}`),to.innerHTML=`${"edit_add"==e?"Add Items Below":"Add/Remove Items Below"}`,to.className=`AtOnceSubHeading${y}`,tn.innerText="",tn.style.display="none";let l=document.createElement("div");l.className=`AtOnceContainerPadded${y} AtOnceContainerNoBottomPadding${y}`;let d=document.createElement("div");d.className=`AtOnceMainShopStickyChangesContainer${y} AtOnceFlexCenter${y}`;let $=document.createElement("button");$.className=`AtOnceMainButton${y} AtOncePrimaryButton${y}`,$.innerText="Edit Order";let h=document.createElement("div");h.style.display="none",h.className=`AtOnceLoadingSpinner${y} bottomed`;let _=document.createElement("div");_.style.display="none";let g=document.createElement("div");g.className=`AtOnceEnterEmailInputLabel${y}`,g.innerText="Enter your email";let f=document.createElement("input");f.className=`AtOnceSearchInput${y} full bottomed`,f.placeholder="Enter your email";try{e2.email?f.value=e2.email:e2.customer.email&&(f.value=e2.customer.email);try{!f.value&&localStorage.getItem("AtOnceLiveChatUserEmail")&&(f.value=localStorage.getItem("AtOnceLiveChatUserEmail"))}catch(A){}}catch(x){}f.value||(l.classList.add(`AtOnceContainerPaddedBottomLarge${y}`),l.classList.remove(`AtOnceContainerNoBottomPadding${y}`),h.classList.add("bigger"),d.classList.add("bigger"),_.style.display="",f.addEventListener("keyup",function(){try{f.value&&-1!==f.value.indexOf("@")?$.disabled=!1:$.disabled=!0}catch(e){}})),_.appendChild(g),_.appendChild(f);let O="",C=e2.shipping_zip,b=e2.billing_zip,S="";null!=C?S=C:null!=b&&(S=b);let T=e2.order_number;O=`${T=`${T}`.replace(/\s/g,"").replace(/\D/g,"").trimStart().trimEnd().toUpperCase()}${S=`${S}`.replace(/\s/g,"").trimStart().trimEnd().toUpperCase()}`,$.addEventListener("click",function(){h.style.display="",$.disabled=!0,$.classList.remove("red");let e=[];for(let o of t){let n={};!1!==o.product_exists&&o.id&&(o.line_item&&(n.line_item=Number(o.line_item)),o.id&&(n.variant_id=Number(o.id)),o.product_id&&(n.product_id=Number(o.product_id)),0==o.quantity?n.quantity=0:Number(o.quantity)?n.quantity=Number(o.quantity):n.quantity=1,e.push(n))}function i(e,t){setTimeout(function(){try{let o=$.innerText;"Updated - Check Your Email"!==o&&"Update Failed"!==o&&($.innerText=`${e} (${t}/4)`)}catch(n){}},2e3*t)}i("Checking Order",1),i("Adding Credit",2),i("Updating Order",3),i("Sending Email",4);let a=`${f.value}`.trimStart().trimEnd().toLowerCase();k("edit_order",{store:e2.shopify_store,order:e2.id,order_identifier:O,line_items:e,email:a}).then(e=>{try{a&&-1!==a.indexOf("@")&&!localStorage.getItem("AtOnceLiveChatUserEmail")&&(tp||(tp=a),localStorage.setItem("AtOnceLiveChatUserEmail",a))}catch(t){}e&&e.success?(h.style.display="none",$.disabled=!1,$.classList.add("green"),$.innerText="Updated - Check Your Email",setTimeout(function(){try{te.click()}catch(e){}},3e3)):($.classList.add("red"),h.style.display="none",$.innerText="Update Failed")})}),d.appendChild(_),d.appendChild($),d.appendChild(h);let M=document.createElement("div"),P=p(V,"shopify",e2.shopify_store,"products"),w=r(P,c("in_stock","==",!0),c("status","==","active"),u("total_sales","desc"),s(200)),L=["id","price","compare_at_price","option1","option2","option3","position","product_id","title"],E=[],R="",K={keys:["handle","description","title","variant_titles_list","product_type",]},U=document.createElement("div");U.className=`AtOnceContainerPaddedTopMedium${y}`;let z=document.createElement("div");function G(e,o){let n=e.length;if(n>0){for(let i=0;i<n;i++){let l=e[i],p=document.createElement("div");p.className=`AtOnceMainShopProductSubContainer${y}`;let r=document.createElement("div");r.className=`AtOnceMainShopProductImageContainer${y}`,r.setAttribute("atonce_product_id",`${l.id}`);let c="",s=l.image;if(s)(c=document.createElement("img")).className=`AtOnceMainShopProductImage${y}`,c.src=s;else{(c=document.createElement("div")).className=`AtOnceMainShopProductImageDiv${y}`;let u=document.createElement("div");u.className=`AtOnceMainShopProductImageDivText${y}`,u.innerText=l.title,c.appendChild(u)}r.appendChild(c);let d=document.createElement("div");if(d.className=`AtOnceMainShopProductPriceContainer${y}`,l.compare_at_price){let v=document.createElement("span");v.className=`AtOnceMainShopProductPriceText${y} AtOnceMainShopProductPriceText_compare${y}`,v.innerText=`${a}${l.compare_at_price}`,d.appendChild(v)}let $=document.createElement("span");if($.className=`AtOnceMainShopProductPriceText${y}`,$.innerText=`${a}${l.price}`,d.appendChild($),p.appendChild(r),s){let m=document.createElement("div");m.className=`AtOnceMainShopProductTitleContainer${y}`;let h=document.createElement("div");h.className=`AtOnceMainShopProductTitleText${y}`,h.innerText=l.title,m.appendChild(h),p.appendChild(m)}p.appendChild(d),r.addEventListener("click",function(){let e=document.createElement("div"),o=l.variants;e.className=`AtOnceModalBackground${y}`;let n=document.createElement("div");n.style.display="none",n.className=`AtOnceModalContainer${y}`;let i=document.createElement("div");i.innerHTML=ey,i.className=`AtOnceModalCloseBtn${y}`;let p=document.createElement("div");p.className=`AtOnceModalProductImageContainer${y}`;let r=document.createElement("img");r.className=`AtOnceModalProductImage${y}`;let c=l.images,s="",u=[],d=document.createElement("div"),v=document.createElement("div"),$=`AtOnceModalProductImageContainer${y} maxwidth slideshow`,m=`AtOnceModalProductImageContainer${y} maxwidth`,h=l.image;h?r.src=`${h}`:(r.classList.add("border"),r.src=`${product_placeholder_image}`),p.appendChild(r);let _=document.createElement("div");_.className=`AtOnceModalProductRightContainer${y}`;let g="",f=l.hasOnlyDefaultVariant;!1==f&&(g=o[0].title);let A=document.createElement("span"),x=document.createElement("span");function O(){let e=document.createElement("div");e.className=`AtOnceModalProductTitle${y}`;let t=document.createElement("div");t.className=`AtOnceModalProductVariantInfo${y}`,""==g?x.className=`AtOnceModalProductVariantInfo${y}`:x.className=`AtOnceModalProductVariantInfo${y} price`,A.innerText=g,x.innerText=`${a}${l.price}`,t.appendChild(A),t.appendChild(x),e.innerText=l.title,_.appendChild(e),_.appendChild(t)}let C={},b={};function S(e){try{let t=!1;for(let n of o){let i=!0;for(let[a,l]of Object.entries(e))if(n[a]!==l){i=!1;break}if(!0==i){t=!0;break}}return t}catch(p){return!0}}function T(e){let t=!1;for(let n of o){let i=!0;for(let[a,p]of Object.entries(C))if(n[a]!==p){i=!1;break}if(!0==i){n.img?b.img=n.img:l.image?b.img=l.image:b.img=product_placeholder_image,b.id=n.id,b.title=l.title,b.option=n.title,b.price=n.price,b.product_id=n.product_id,b.variant_title=n.title,b.hasOnlyDefaultVariant=l.hasOnlyDefaultVariant,b.quantity=void 0!==l.quantity?l.quantity:1,t=!0,z();break}}!1==t&&(e&&(e.disabled=!0),U())}function M(){let e=document.createElement("div");if(e.className=`AtOncePrimarySubjectHeader${y}`,!1==f){let t=l.options,n=t.length,i=[];for(let p of t){let c=document.createElement("div"),s=`option${p.position}`,u=document.createElement("div");u.className=`AtOnceVariantsLabel${y}`,u.innerText=p.name;let d=[],v=[],$=[],m=document.createElement("div"),h=!0,g=!0,O=!0,b="",M="";for(let P of o){let w=P[`${s}`];if(-1==d.indexOf(w)){d.push(w);let k=P.img;k!==M&&(M&&(O=!1),M=k)}}for(let L of(!1==O&&(m.className=`AtOnceModalProductVariantSelectionContainer_images${y}`),o)){let E=L[`${s}`];if(-1==v.indexOf(E)){async function N(){for(let e of o){let t=!0;for(let[n,i]of Object.entries(C))if(e[n]!==i){t=!1;break}if(!0==t){e.title?A.innerText=e.title:A.innerText="",e.price&&(x.innerText=`${a}${e.price}`);break}}}v.push(E);let B=document.createElement("button"),H=`AtOnceMainShopVariantsButton${y}`,R=`AtOnceMainShopVariantsButton_active${y}`,K=L.img;!1==O&&(1==n?(H=`AtOnceMainShopVariantsButton${y} AtOnceMainShopVariantsButton_image${y} AtOnceMainShopVariantsButton_one${y}`,R=`AtOnceMainShopVariantsButton_image_active${y} AtOnceMainShopVariantsButton_image_active_one${y}`):(H=`AtOnceMainShopVariantsButton${y} AtOnceMainShopVariantsButton_image${y}`,R=`AtOnceMainShopVariantsButton_image_active${y}`),K&&(B.style.backgroundImage=`url(${K})`)),!0==h?(h=!1,C[`${s}`]=E,B.className=`${H} ${R}`):B.className=H,K!==b&&(b&&(g=!1),b=K);let U={option_name:s,name:E,button:B};$.push(B),i.push(U),B.addEventListener("click",function(){async function e(e){try{let t=JSON.parse(JSON.stringify(C));if(t){t[`${e.option_name}`]=e.name;let o=S(t);!0==o?e.button.disabled=!1:e.button.disabled=!0}}catch(n){}}if(C[`${s}`]=E,T(B),N(),K?!1==g&&(r.src!==K&&(r.src=K),I(K)):!1==g&&(r.src!==product_placeholder_image&&(r.src=product_placeholder_image),I(K)),$.length)for(let t of $)t!==B&&(t.className=H);if(i.length)for(let o of i)e(o);B.className=`${H} ${R}`}),!0==O&&(B.innerText=E),m.appendChild(B)}}c.appendChild(u),c.appendChild(m),e.appendChild(c)}}_.appendChild(e)}function P(){let e=document.createElement("div");e.className=`AtOnceMainShopProductDescription${y}`,e.innerHTML=l.description,_.appendChild(e)}O(),M();let w=document.createElement("div");w.className=`AtOnceQuantityContainer${y}`;let k=document.createElement("div");k.className=`AtOnceQuantitySubContainer${y} AtOnceFlexCenter${y}`;let L=document.createElement("div");L.innerText="Quantity",L.className=`AtOnceQuantityLabel${y}`;let E=document.createElement("span");E.innerHTML=e9,E.className=`AtOnceQuantityButtons${y} AtOnceFlexCenter${y}`;let N=document.createElement("span");N.innerHTML=eO,N.className=`AtOnceQuantityButtons${y} AtOnceFlexCenter${y}`;let B=document.createElement("input");B.type="number",B.min=1,B.value=1,B.step=1,B.className=`AtOnceQuantityInput${y} AtOnceFlexCenter${y}`,N.addEventListener("click",function(){let e=B.value;e++,B.value=e}),E.addEventListener("click",function(){let e=B.value;e>1&&e--,B.value=e}),w.appendChild(L),w.appendChild(k),k.appendChild(E),k.appendChild(B),k.appendChild(N),_.appendChild(w);let R=document.createElement("div");R.className=`AtOncePrimarySubjectHeader${y} AtOnceModalStickyBottomContainer${y}`;let K=document.createElement("button");function U(){K.disabled=!0,K.innerText="Sold Out"}function z(){K.disabled=!1,K.innerText="Add to Cart"}function G(){if(t.length){let o=!1;for(let n of t)if(n.id==b.id){let i=Number(n.quantity);i+=Number(b.quantity),n.quantity=i,o=!0;break}!1==o&&t.push(b)}else t.push(b);ee(),V(e)}function V(e){try{e.className=`AtOnceModalBackground${y}`}catch(t){}setTimeout(function(){try{e.remove()}catch(t){}},150)}K.className=`AtOnceMainButton${y} AtOncePrimaryButton${y}`,K.innerText="Add to Cart",K.addEventListener("click",function(){!0==f&&(b.id=o[0].id,l.image?b.img=l.image:b.img=product_placeholder_image,b.name=l.title,b.price=l.price,b.product_id=l.id,b.title="");let e=B.value;e<1&&(e=1),b.quantity=e,G()}),T(),R.appendChild(K),_.appendChild(R),P(),i.addEventListener("click",function(){V(e)}),e.addEventListener("click",function(t){let o=t.target;!1===n.contains(o)&&!1===p.contains(o)&&V(e)}),n.appendChild(i),s=H(c,d,v,u,m,$),n.appendChild(i),c&&c.length>1?n.appendChild(s):n.appendChild(p),n.appendChild(_),e.appendChild(n),n.style.display="",eF.appendChild(e),setTimeout(function(){n.className=`AtOnceModalContainer${y} active`,e.className=`AtOnceModalBackground${y} active`},0)}),o.appendChild(p)}z.classList.add("visible")}}async function D(){return new Promise(async function(e,t){v(w).then(t=>{t.empty||(t.forEach(e=>{try{let t=e.data(),o=t.id,n=t.title,i=t.image,a=t.images;i&&(i=i.src);let l=t.body_html,p="0.00",r=null;try{p=`${N(Number(t.variants[0].price))}`}catch(c){}try{let s=t.variants[0].compare_at_price;s&&(r=`${N(Number(s))}`)}catch(u){}let d={id:o,title:n,image:i,description:l,product_type:t.product_type,handle:t.handle,price:p,compare_at_price:r,variant_titles_list:t.variant_titles_list,options:t.options},v=[];if(a&&a.length){for(let $ of a)$.src&&v.push($.src);d.images=v}let m=t.variants;if(1==m.length){let h=m[0];d.variants=[{product_id:h.product_id,id:h.id,title:""}],d.hasOnlyDefaultVariant=!0}else{d.hasOnlyDefaultVariant=!1;let _=[];for(let g of m)if(null==g.inventory_management||"continue"==g.inventory_policy||g.inventory_quantity>0){let f=g.id,A={};for(let x of L)-1!==x.indexOf("price")?A[`${x}`]=Number(g[`${x}`]).toFixed(2):A[`${x}`]=g[`${x}`];for(let O of a)-1!==O.variant_ids.indexOf(f)&&(A.img=O.src);_.push(A)}d.variants=_}E.push(d)}catch(C){}}),E.length&&(G(E,z),R=new m(E,K))),e(!0)})})}z.className=`AtOnceContainerFlexProducts${y}`,U.appendChild(z);let F=D(),J=document.createElement("div"),j=document.createElement("input");function q(e){t.splice(e,1),X(),ee()}function Q(e,t,o,n){let i=document.createElement("div");i.className=`AtOnceFlex${y} AtOnceMarginBottomLarge${y}${t?"":` AtOnceDisabledDiv${y}`}`;let a=document.createElement("div"),l=document.createElement("div");l.className=`AtOnceProductImage${y}`,e.img?l.style.backgroundImage=`url(${e.img})`:l.innerHTML=ex,a.appendChild(l);let p=document.createElement("div");p.className=`AtOnceFlexSpacedProductTitleSmall${y}`;let r=document.createElement("div");r.className=`AtOnceSubTextBold${y} AtOnceTextColorThree${y}`,r.innerText=e.title?e.title:"";let c=document.createElement("div");c.className=`AtOnceSubText${y} AtOnceTextColorNine${y} AtOnceUserSelect${y}`;let s="";if(!1==e.hasOnlyDefaultVariant&&e.variant_title&&(s=e.variant_title),c.innerText=s,p.appendChild(r),p.appendChild(c),!0!==e.hasOnlyDefaultVariant){let u=e.product_id,d=e.title,v=document.createElement("button");function $(){let e=es.getElementById("AtOnceSearchInputProducts");if(e){e.value=d;try{e.dispatchEvent(new KeyboardEvent("keyup",{key:"a"}))}catch(t){}}}v.className=`AtOnceMainButton${y} AtOnceMainButtonSmall${y} smaller AtOnceSecondaryButton${y}`,v.innerText="Add style",v.addEventListener("click",function(){let e=es.querySelectorAll(`[atonce_product_id="${u}"]`);if(e&&e.length)try{e[0].click()}catch(t){$()}else $()}),p.appendChild(v)}let m=document.createElement("div");m.className=`AtOnceProductQuantityText${y}`,m.innerText=e.quantity;let h=document.createElement("div"),_=document.createElement("div");_.className=`AtOnceQuantitySubContainer${y} AtOnceFlexCenter${y}`;let g=document.createElement("div");g.innerText="New quantity",g.className=`AtOnceQuantityLabelSmall${y}`;let f=document.createElement("span");f.innerHTML=e9,f.className=`AtOnceQuantityButtons${y} AtOnceFlexCenter${y}`;let A=document.createElement("span");A.innerHTML=eO,A.className=`AtOnceQuantityButtons${y} AtOnceFlexCenter${y}`;let x=document.createElement("input");x.type="number",x.min=1;let O=1;e.quantity&&Number(e.quantity)>1&&(O=Number(e.quantity)),x.value=O,x.step=1,x.className=`AtOnceQuantityInput${y} smaller AtOnceFlexCenter${y}`,t&&(x.addEventListener("keyup",function(){let t=x.value;t>0||(t=0),o||0!=t||q(n),e.quantity=t,X()}),A.addEventListener("click",function(){let t=x.value;t++,x.value=t,e.quantity=t,X()}),f.addEventListener("click",function(){let t=x.value;t>0&&t--,o||0!=t||q(n),x.value=t,e.quantity=t,X()})),h.appendChild(g),h.appendChild(_),_.appendChild(f),_.appendChild(x),_.appendChild(A),i.appendChild(a),i.appendChild(p),i.appendChild(h),M.appendChild(i)}j.className=`AtOnceSearchInput${y} full`,j.placeholder="Search new products",j.id="AtOnceSearchInputProducts",j.addEventListener("keyup",function(){F.then(()=>{if(R){if(z.innerHTML="",j.value){let e=R.search(j.value),t=[];if(e.item)t.push(e);else for(let o of e)t.push(o.item);t.length?G(t,z):G(E,z)}else G(E,z)}})}),J.appendChild(j),l.appendChild(d),l.appendChild(M),l.appendChild(J),l.appendChild(U);let Z=e2.line_items;if(Z&&Z.length){for(let W of Z){let Y=!0;!1!==W.product_exists&&W.variant_id||(Y=!1),n+=Number(W.fulfillable_quantity)*Number(W.price),t.push({line_item:W.id,id:W.variant_id,title:W.title,option:W.variant_title,price:W.price,product_id:W.product_id,variant_title:W.variant_title,is_editable:Y,img:W.img,quantity:W.fulfillable_quantity,hasOnlyDefaultVariant:W.hasOnlyDefaultVariant})}o=JSON.parse(JSON.stringify(t)),ee()}function X(){let i=!0,a=0,l=0;for(let p of t)a+=Number(p.quantity),l+=Number(p.price)*Number(p.quantity);if(f.value){if($.disabled=!1,$.classList.remove("red"),0==a&&"edit_cancel"==e)$.innerText="Cancel & Send Gift Card";else{let r=Number(Number(n).toFixed(2))-Number(Number(l).toFixed(2));r>0?$.innerText="Edit & Send Gift Card":r<0?$.innerText="Edit & Send Invoice":$.innerText="Edit Order"}}else $.disabled=!0;if(o.length!==t.length)d.classList.add("visible");else{let c=o.length;for(let s=0;s<c;s++){let u=o[s],v=t[s];if(u.quantity!==v.quantity){i=!1;break}}!1==i&&d.classList.add("visible")}!0==i&&o.length==t.length&&d.classList.remove("visible")}function ee(){M.innerHTML="";let e=t.length;for(let o=0;o<e;o++){let n=t[o],i=n.line_item;!1===n.is_editable?Q(n,!1,i,o):Q(n,!0,i,o)}X()}eF.innerHTML="",eF.appendChild(l)}}function t0(e,t,o,n){let i="",a=e.shipping_zip,l=e.billing_zip,p="";null!=a?p=a:null!=l&&(p=l);let r=e.order_number;function c(t,o){let n=document.createElement("div");n.className=`AtOnceNoSelect${y}${o?` AtOnceTextLargeMargin${y}`:""}`;let i=document.createElement("div");i.className=`AtOnceFlexSpacedNoAlign${y} AtOnceQuickButtonPaddedMore${y}`;let a=document.createElement("div");a.className=`AtOncePositionRelative${y}`;let l="",p=e.line_items,r=p.length,c=e.fulfillments;if(c&&c.length){for(let s of p)if(s.img){let $=s.id,m=s.hasOnlyDefaultVariant;for(let h of c){let _=h.line_items;if(_&&_.length)for(let g of _)g.id==$&&(g.img=s.img,g.hasOnlyDefaultVariant=m)}}}for(let f of p)if(f.img){l=f.img;break}let A=document.createElement("div");A.className=`AtOnceProductImage${y}`,l?A.style.backgroundImage=`url(${l})`:A.innerHTML=ex;let x=document.createElement("div");x.className=`AtOnceProductQuantityText${y} AtOnceProductQuantityTextTwo${y}`,a.appendChild(x),a.appendChild(A),1!==r?r=`+${r-1}`:x.remove(),x.innerText=r;let O=document.createElement("div");O.className=`AtOnceFlexSpacedOrder${y}`;let C=document.createElement("div");C.className=`AtOnceFlexSpacedNoAlign${y}`;let b=document.createElement("div");b.className=`AtOnceSubTextBold${y} AtOnceTextColorThree${y}`,b.innerText=`${e.name}`;let S=e.fulfillment_status;"paid"!==e.financial_status?S=e.financial_status:S?"partial"==S&&(S="Partially_fulfilled"):S="Unfulfilled",S=K(S);let T=["gray","gray","gray","gray","blue","gray"],M="",P=0;for(let w of[["Unfulfilled"],["Expired","Voided","On hold","Authorized","Refunded"],["Pending","In progress","Scheduled"],["Partially paid","Partially fulfilled","Partial"],["Paid","Fulfilled"],["Partially refunded"]])w.includes(S)&&(M=T[P]),P+=1;e.cancelled_at&&(M="gray",S="Cancelled");let k=document.createElement("div");k.className=`AtOnceSubTag${y} ${M}`,k.innerText=S,C.appendChild(b),C.appendChild(k);let L=document.createElement("div");L.className=`AtOnceFlexSpacedNoAlign${y}`;let E=document.createElement("div");E.className=`AtOnceSubText${y} AtOnceTextColorNine${y}`,E.innerText=`${B(e.total_price_set.presentment_money.currency_code)}${N(e.total_price_set.presentment_money.amount)}`;let H=document.createElement("div");H.className=`AtOnceSubText${y} AtOnceTextColorNine${y}`,H.innerText=e8(Date.parse(e.created_at));let I=document.createElement("div");I.className=`AtOnceFlex${y} AtOnceTextLargeMargin${y}`;let R=document.createElement("button");R.className=`AtOnceMainButton${y} AtOnceMainButtonSmall${y} AtOnceSecondaryButton${y}`,R.innerText=t[0],"Help"==t[0]?R.addEventListener("click",function(){t$(),u()}):"View"==t[0]?R.addEventListener("click",function(){t$(),v()}):"Track"==t[0]&&R.addEventListener("click",function(){t$(),d()});let U=document.createElement("button");return U.className=`AtOnceMainButton${y} AtOnceMainButtonSmall${y} AtOnceSecondaryButton${y}`,U.innerText="Track","Help"==t[1]?U.addEventListener("click",function(){t$(),u()}):"View"==t[1]?U.addEventListener("click",function(){t$(),v()}):"Track"==t[1]&&U.addEventListener("click",function(){t$(),d()}),I.appendChild(R),I.appendChild(U),L.appendChild(E),L.appendChild(H),O.appendChild(C),O.appendChild(L),O.appendChild(I),i.appendChild(a),i.appendChild(O),n.appendChild(i),n}i=`${r=`${r}`.replace(/\s/g,"").replace(/\D/g,"").trimStart().trimEnd().toUpperCase()}_atonce_${p=`${p}`.replace(/\s/g,"").trimStart().trimEnd().toUpperCase()}`;let s=c(["Help","Track"]);function u(){e.shopify_store=t,e2=e,eT=!0;let a=document.createElement("div");a.className=`AtOnceContainerPaddedTopSmall${y}`;let l=c(["View","Track"]),p=document.createElement("div"),r=document.createElement("div");r.className=`AtOnceSubHeadingSmall${y} AtOnceSubHeadingMarginSmall${y} AtOnceTextColorSeven${y}`,r.innerText="Quick help";let s=document.createElement("div");if(tC=document.createElement("div"),ec.length){let u=JSON.parse(JSON.stringify(ec));for(let d of(i&&function e(t,o){try{for(let n of t)n.text?-1!==n.text.indexOf("{{return_portal}}")&&(n.text=e5(n.text,"{{return_portal}}",`${eM}?order=${o}`)):n.link&&-1!==n.link.indexOf("{{return_portal}}")&&(n.link=e5(n.link,"{{return_portal}}",`${eM}?order=${o}`)),n.sub_actions&&e(n.sub_actions,o)}catch(i){}}(u,i),u))if(d.actions){let v=d.actions;for(let $ of u)-1!==v.indexOf($.id)&&($.is_actioned=!0)}for(let m of u)!0!==m.is_actioned&&t9(m,s,!1,!1,r,s,!1,u,"Quick help",!0,!0)}p.appendChild(r),p.appendChild(s),o.style.display="none",to.innerHTML=`Order ${e.name}`,to.className=`AtOnceSubHeading${y}`,a.appendChild(l),a.appendChild(p),n.innerHTML="",n.appendChild(a)}function d(){e.shopify_store=t,e2=e,eT=!0;let i=document.createElement("div");i.className=`AtOnceContainerPaddedTopSmall${y}`;let a=c(["Help","View"]),l=document.createElement("div"),p=e.fulfillments,r=e.shipping_address;function s(e){let t=document.createElement("div");t.className=`AtOnceContainerPadded${y} AtOnceContainerSmallTopPadding${y} AtOnceContainerNoBottomPadding${y}`;let o=document.createElement("div");o.className=`AtOnceTriHeading${y} AtOnceTextColorThree${y} AtOnceMarginBottomMedium${y}`;let n=document.createElement("div");n.className=`AtOnceContainerPaddedBottom${y}`,t.appendChild(o),t.appendChild(n);let i=!0,a=e.tracking_numbers,l=e.tracking_urls,p=0;try{p=a.length>l.length?a.length:l.length}catch(r){}function c(o,a,l,r,c,s){if(o){let u=document.createElement("div");if(u.className=`AtOnceFlex${y} AtOnceTextColorThree${y} AtOnceBreakAll${y} AtOnceContainerPaddedBottomSmall${y}`,e.tracking_company&&"Other"!==e.tracking_company&&c){let d=document.createElement("div");d.className=`AtOnceBold${y}`,d.innerText=`Sent via ${e.tracking_company}`,u.appendChild(d)}else if(c&&"Other"==e.tracking_company&&e.updated_at){i=!1;let v=document.createElement("div");v.className=`AtOnceTextColorNine${y}`,v.innerText=`Updated ${e8(Date.parse(e.updated_at))}`,u.appendChild(v)}let $=document.createElement("div");if(r&&($.className=`AtOnceTextColorNine${y} AtOnceMarginLeft${y}`),s?$.innerHTML=`${1==p&&(s||l)?"":"Tracking: "}<a href="${o}" target="_blank" rel="noopener noreferrer">${s}</a>`:l?$.innerHTML=`<a href="${o}" target="_blank" rel="noopener noreferrer">${a}</a>`:$.innerText=`${a} ${r?e8(Date.parse(o)):o}`,1==p&&(s||l)){let m=t.children[t.childElementCount-1];m.children[m.childElementCount-1].insertAdjacentElement("afterbegin",$)}else u.appendChild($),n.appendChild(u)}}c(e.created_at,"Shipped",!1,!0,!0),!0==i&&c(e.updated_at,"Updated",!1,!0);try{if(p>0)for(let s=0;s<p;s++)l[s]&&a[s]?c(l[s],"Tracking url",!0,!1,!1,a[s]):a[s]?c(a[s],"Tracking no.",!1,!1):l[s]&&c(l[s],"Tracking url",!0,!1,!1)}catch(u){}let d=e.line_items;if(d&&d.length)for(let v of(o.innerText=`${K(e.display_status)}`,d)){let $=document.createElement("div");$.className=`AtOnceFlex${y} AtOnceMarginBottomMedium${y}`;let m=document.createElement("div");m.className=`AtOncePositionRelative${y}`;let h=document.createElement("div");h.className=`AtOnceProductQuantityText${y}`,h.innerText=v.quantity;let _=document.createElement("div");_.className=`AtOnceProductImage${y}`,v.img?_.style.backgroundImage=`url(${v.img})`:_.innerHTML=ex,m.appendChild(h),m.appendChild(_);let g=document.createElement("div");g.className=`AtOnceFlexSpacedProductTitle${y}`;let f=document.createElement("div");f.className=`AtOnceSubTextBold${y} AtOnceTextColorThree${y}`,f.innerText=v.title?v.title:"";let A=document.createElement("div");A.className=`AtOnceSubText${y} AtOnceTextColorNine${y} AtOnceUserSelect${y}`;let x="";!1==v.hasOnlyDefaultVariant&&v.variant_title&&(x=v.variant_title),A.innerText=x,g.appendChild(f),g.appendChild(A),$.appendChild(m),$.appendChild(g),t.appendChild($)}return t}if(p&&p.length)for(let u of p){let d=s(u);l.appendChild(d)}else{let v=document.createElement("div");v.className=`AtOnceContainerPadded${y} AtOnceContainerSmallTopPadding${y} AtOnceContainerNoBottomPadding${y} AtOnceSubTextLarge${y}`;let $=Date.parse(e.created_at);Date.now()-$>432e6?v.innerHTML=`<p>Thanks for your patience!</p><p>Your order is likely still in production.</p><p>If you don’t get any updates after 3 more days, please message us & we’ll find your order.</p>`:v.innerHTML=`<p>Thanks for your patience!</p><p>Your order is still in production.</p><p>We’ll send your tracking info once it’s shipped.</p>`,l.appendChild(v)}let m=document.createElement("div");if(m.className=`AtOnceContainerPadded${y} AtOnceContainerNoBottomPadding${y}`,r){function h(e,t){return r[`${e}`]?`${t?" ":""}${r[`${e}`]}`:""}let _=document.createElement("div");_.className=`AtOnceSubHeadingSmall${y} AtOnceTextColorSeven${y}`,_.innerText="Shipping address";let g=document.createElement("div");g.className=`AtOnceSubText${y} AtOnceTextColorThree${y} AtOnceSubTextMediumMargin${y}`;let f=document.createElement("div");f.innerText=`${h("address1")}${h("address2",!0)}`;let A=document.createElement("div");A.innerText=`${h("city")}${h(`${r.province_code?"province_code":"province"}`,!0)}${h("zip",!0)}`;let x=document.createElement("div");x.innerText=`${h("country")}`,g.appendChild(f),g.appendChild(A),g.appendChild(x),m.appendChild(_),m.appendChild(g)}o.style.display="none",to.innerHTML=`Order ${e.name}`,to.className=`AtOnceSubHeading${y}`,i.appendChild(a),i.appendChild(l),i.appendChild(m),n.innerHTML="",n.appendChild(i)}async function v(){e.shopify_store=t,e2=e,eT=!0;let o=e.line_items,i=[];if(e.line_items_returned&&e.line_items_returned.length){let a=e.line_items_returned;for(let l of a){let p=1;l.quantity&&(p=Number(l.quantity)),isNaN(p)&&(p=1),i.push({id:l.id,line_item:l.line_item,product_id:l.product_id,quantity:p})}}te.style.display="",n.classList.add(`AtOnceContainerScrollMiddleHelpCenter${y}`),to.innerHTML=`Order ${e.name}`,to.className=`AtOnceSubHeading${y}`,tn.innerText="",tn.style.display="none";let r=document.createElement("div");r.className=`AtOnceContainerPadded${y}`;let s=document.createElement("div");for(let u of(s.className=`AtOnceContainerPaddedTopSmall${y}`,o))try{let d=document.createElement("div");d.className=`AtOnceFlexSpacedNoAlign${y} AtOnceMarginBottomMedium${y}`;let v=document.createElement("div");v.className=`AtOncePositionRelative${y}`;let $=u.img,m=u.title,h=u.customer_paid_amount,_=u.customer_paid_currency,g="";!1==u.hasOnlyDefaultVariant&&u.variant_title&&(g=u.variant_title);let f=document.createElement("div");f.className=`AtOnceProductQuantityText${y}`,f.innerText=u.quantity;let A=document.createElement("div");A.className=`AtOnceProductImage${y}`,$?A.style.backgroundImage=`url(${$})`:A.innerHTML=ex,v.appendChild(f),v.appendChild(A);let x=document.createElement("div");x.className=`AtOnceFlexSpacedProductTitle${y}`;let O=document.createElement("div");O.className=`AtOnceTriHeading${y} AtOnceTextColorThree${y}`,O.innerText=m;let C=document.createElement("div");C.className=`AtOnceSubText${y} AtOnceTextColorNine${y} AtOnceUserSelect${y}`,C.innerText=g,x.appendChild(O),x.appendChild(C);let b=document.createElement("div");b.className=`AtOnceSubText${y} AtOnceTextColorFive${y}`,b.innerText=`${B(_)}${N(h)}`,d.appendChild(v),d.appendChild(x),d.appendChild(b),s.appendChild(d)}catch(S){}let T=document.createElement("div");function M(t,o,n){try{let i=e[`${o}`];if(i&&i.presentment_money){let a=i.presentment_money.amount;if("Discount"==t&&0==Number(a));else{let l=document.createElement("div");l.className=`AtOnceFlexSpacedNoAlign${y} AtOnceMarginBottomSmall${y}${n?` AtOnceContainerPaddedTopSmall${y}`:""}`;let p=document.createElement("div");p.className=`${n?" AtOnceTriHeading":"AtOnceSubText"}${y} AtOnceTextColorThree${y}`,p.innerText=t;let r=document.createElement("div");r.className=`${n?" AtOnceTriHeading":"AtOnceSubText"}${y} AtOnceTextColorFive${y}`,0==Number(a)?r.innerText="Free":r.innerText=`${"Discount"==t?"- ":""}${B(i.presentment_money.currency_code)}${N(a)}`,l.appendChild(p),l.appendChild(r),T.appendChild(l)}}}catch(c){}}if(T.className=`AtOnceContainerPaddedTopMedium${y}`,M("Subtotal","total_line_items_price_set"),M("Discount","total_discounts_set"),M("Shipping","total_shipping_price_set"),M("Taxes","total_tax_set"),M("Total","total_price_set",!0),s.appendChild(T),e.self_service_gift_cards&&e.self_service_gift_cards.length){let P=e.self_service_gift_cards,w=document.createElement("div");w.className=`AtOnceContainerPaddedTopLarge${y}`;let k=document.createElement("div");k.className=`AtOnceSubHeadingSmall${y} AtOnceTextColorSeven${y} AtOnceSubTextMarginBottom${y}`,k.innerText="Gift Cards",w.appendChild(k);let L=B(e.presentment_currency);for(let E of P){let H=document.createElement("div");H.className=`AtOnceFlex${y} AtOnceMarginBottomMedium${y}`;let I=document.createElement("div");I.className=`AtOnceFlexSpacedNoAlign${y}`;let R=document.createElement("a");R.target="_blank",R.rel="noopener noreferrer",R.href=`${q||e.shopify_store}/discount/${E.code}?ref=atonce`,R.innerText=`${E.code}`;let K=document.createElement("div");K.className=`AtOnceSubText${y} AtOnceTextColorFive${y}`,K.innerText=`${L}${Number(E.presentment_amount).toFixed(2)}`,I.appendChild(R),I.appendChild(K),H.appendChild(I),w.appendChild(H)}s.appendChild(w)}if(e.self_services&&e.self_services.length){let U=e.self_services,z=document.createElement("div");z.className=`AtOnceContainerPaddedTopLarge${y}`;let G=document.createElement("div");for(let V of(G.className=`AtOnceSubHeadingSmall${y} AtOnceTextColorSeven${y} AtOnceSubTextMarginBottom${y}`,G.innerText="Returns",z.appendChild(G),U)){let D=document.createElement("div");D.className=`AtOnceFlex${y} AtOnceMarginBottomMedium${y}`;let F=document.createElement("div");F.className=`AtOnceFlexSpacedNoAlign${y}`;let J=document.createElement("a");J.target="_blank",J.rel="noopener noreferrer",J.href=`${eM}?return=${V.return}`,J.innerText=`${V.return}`,F.appendChild(J),D.appendChild(F),z.appendChild(D)}s.appendChild(z)}r.appendChild(s);let j=c(["Help","Track"],!0);n.innerHTML="",n.appendChild(j),n.appendChild(r)}o.appendChild(s)}async function tx(e){if(eT=!1,eS.length&&!e){let t=t$();for(let o of eS)if(o){let n=o[1],i=o[0];t0(i,n,t,eF)}eF.innerHTML="",eF.appendChild(t)}else tm(!0)}async function tO(){let e=document.createElement("div");if(eF.appendChild(e),0==eS.length&&await tm(!1,!0),eS.length){let t=document.createElement("div");t.innerText="Your orders",t.className=`AtOnceSubHeadingSmall${y} AtOnceTextColorSeven${y} AtOnceSubHeadingMargin${y}`,e.appendChild(t);let o=eS.length,n=eS.slice(0,3);for(let i of n)if(i){let a=i[1],l=i[0];t0(l,a,e,eF)}if(o>3){let p=document.createElement("div");p.className=`AtOnceFlexCenter${y} AtOnceContainerPaddedLess${y} AtOnceContainerPaddedTopTiny${y}`;let r=document.createElement("button");r.className=`AtOnceMainButton${y} AtOnceSecondaryButton${y} AtOnceTertiaryButton${y} AtOnceQuaternaryButton${y}`,r.innerText="View All Orders",r.addEventListener("click",function(){tx()}),p.appendChild(r),e.appendChild(p)}}}function t9(e,t,o,n,i,a,l,p,r,c,s){try{let u=!1;try{e2&&(e2.fulfillments&&e2.fulfillments.length||e2.cancelled_at||Number(e2.total_outstanding))&&(u=!0)}catch(d){}let v=null;try{v=e.action}catch($){}if(!0==u&&("edit_add"==v||"edit_remove"==v||"edit_shipping_address"==v||"edit_cancel"==v));else{let m="div";"link"==e.type?m="a":"map"==e.type?m="map":"text"==e.type?m="text":"button"==e.type&&(m="button");let h=document.createElement("a"==m?"a":"div");if(h.className=`AtOnceQuickButton${y}`,"a"==m){h.target="_blank",h.rel="noopener noreferrer";let _=e.link;_?h.href=`${_}`:h.href="https://atonce.com?utm_medium=self_service&utm_campaign=missing_link",h.classList.add(`AtOnceQuickButtonLink${y}`)}else if("map"==m){let g=e.actions,f=e.actions_heading,A=e.sub_action;h.addEventListener("click",function(){tb(g,f,!0,A)})}else if("text"==m){let x=e.text,O=e.heading,C=e.sub_actions;h.addEventListener("click",function(){let o=document.createElement("div");if(o.className=`AtOnceTextContainer${y}`,o.innerHTML=x,i&&(i.innerText=O),a.innerHTML="",a.appendChild(o),C){let s=document.createElement("div");try{for(let u of C)t9(u,s,!0,n,i,a,l,p,r)}catch(d){}a.appendChild(s)}if("search"==e.tri_action){try{tC.remove()}catch(v){}t_(a,!0,e.heading,e.tri_action)}else t_(a,!1,e.heading,e.tri_action);if(!0!==c&&ti.push({l:p,t:r,t_q:n,t_s:l}),n&&l)try{tC.remove()}catch($){}if(!0==c)try{t.scrollIntoView({behavior:"smooth"})}catch(m){}})}else"button"==m&&("manage_orders"==v?h.addEventListener("click",function(){tg(!1)}):"edit_add"==v?h.addEventListener("click",function(){tA("edit_add")}):"edit_remove"==v?h.addEventListener("click",function(){tA("edit_remove")}):"edit_shipping_address"==v?h.addEventListener("click",function(){!function e(){if(e2){let t=e2.shipping_address,o=JSON.parse(JSON.stringify(t)),n=document.createElement("div");n.className=`AtOnceMainShopStickyChangesContainer${y} AtOnceFlexCenter${y}`;let i=document.createElement("button");i.className=`AtOnceMainButton${y} AtOncePrimaryButton${y}`,i.innerText="Change Address";let a=document.createElement("div");function l(e,t){setTimeout(function(){try{let o=i.innerText;"Changed Address"!==o&&"Address Change Failed"!==o&&(i.innerText=`${e} (${t}/3)`)}catch(n){}},2e3*t)}a.style.display="none",a.className=`AtOnceLoadingSpinner${y} bottomed`,i.addEventListener("click",function(){a.style.display="",i.disabled=!0,i.classList.remove("red"),l("Confirming Address",1),l("Updating Package",2),l("Changing Address",3),k("edit_shipping_address",{store:e2.shopify_store,order:e2.id,address:t}).then(e=>{e&&e.success?(a.style.display="none",i.disabled=!1,i.classList.add("green"),i.innerText="Changed Address",setTimeout(function(){try{te.click()}catch(e){}},2500)):(i.classList.add("red"),a.style.display="none",i.innerText="Address Change Failed")})}),n.appendChild(a),n.appendChild(i);let p=[];te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${y}`),to.innerHTML="Change Address",to.className=`AtOnceSubHeading${y}`,tn.innerText="",tn.style.display="none";let r=document.createElement("div");r.className=`AtOnceContainerPadded${y} AtOnceContainerNoBottomPadding${y}`;let c=P,s=t.country_code,u=t.country,d=[];for(let v of M)d.push(`<option value="${v.alpha2}">${v.country}</option>`);let $="";for(let m of d)-1==m.indexOf(`value="${s}"`)&&($+=m);c=$+c,s&&u&&(c=`<option value="${s}">${u}</option>`+c);let h=[{name:"Name",value:"name",required:!0,type:"text"},{name:"Address",value:"address1",required:!0,type:"text"},{name:"Apartment, suite, etc.",value:"address2",required:!1,type:"text"},{name:"City",value:"city",required:!0,type:"text"},{name:"State/Province",value:"province_code",required:!0,type:"text"},{name:"ZIP/Post code",value:"zip",required:!0,type:"text"},{name:"Country",value:"country_code",required:!0,options:c,type:"text"},{name:"Company",value:"company",required:!1,maxLength:35,type:"text"},{name:"Phone",value:"phone",required:!1,type:"tel"},];if(t)for(let _ of h){let g="";t[`${_.value}`]&&(g=t[`${_.value}`]),g&&(_.default=g)}let f="l",A=document.createElement("div"),x="";for(let O of h){let C=document.createElement("div");if(A.appendChild(C),"l"==f)f="r",C.className=`AtOnceInputSubContainer_left${y}`;else{f="l";let b=document.createElement("div");b.className=`AtOnceInputSubContainer_clear${y}`,A.appendChild(b),C.className=`AtOnceInputSubContainer_right${y}`}let S="",T=document.createElement("label");if(T.htmlFor=O.value,T.innerText=`${O.name}`,T.className=`AtOnceDestinationLabel${y}`,O.options||"province_code"==O.value){if((S=document.createElement("select")).className=`AtOnceDestinationInput${y}`,O.options){if(S.innerHTML=O.options,t.country_code){if(x.innerHTML=w[`${t.country_code}`],t.province_code){x.value=t.province_code;try{let L=new Event("change");x.dispatchEvent(L)}catch(E){}}w[`${t.country_code}`]?x.disabled=!1:x.disabled=!0}else x.disabled=!0;S.addEventListener("change",function(){x.innerHTML=w[`${S.value}`],w[`${S.value}`]?x.disabled=!1:x.disabled=!0})}else x=S}else(S=document.createElement("input")).className=`AtOnceDestinationInput${y}`,S.type=O.type,S.name=O.value,O.maxLength&&(S.maxLength=O.maxLength);function N(){i.innerText="Change Address",i.disabled=!1,i.classList.remove("red"),B(),!S.value&&O.required?S.classList.add(`atonce_input_red${y}`):S.classList.remove(`atonce_input_red${y}`)}O.default&&(S.value=O.default),S.addEventListener("keyup",function(){B()}),S.addEventListener("change",function(){t[`${O.value}`]=S.value,N()}),N(),p.push({input:S,required:O.required,value:O.value,name:O.name}),C.appendChild(T),C.appendChild(S)}function B(){let e=!0;for(let[i,a]of Object.entries(o))if(t[`${i}`]!==o[`${i}`]){e=!1;break}!0==e?n.classList.remove("visible"):n.classList.add("visible")}A.style.display="",r.appendChild(A),r.appendChild(n),eF.innerHTML="",eF.appendChild(r)}}()}):"edit_cancel"==v&&h.addEventListener("click",function(){tA("edit_cancel")}));if("map"==m||"text"==m||"button"==m||"link"==m){let b=e.id;h.addEventListener("click",function(){try{k("update_frequency",{store:Q,id:b,ol:eT,u:F,f:J}),J+=.1,F=!1}catch(e){}})}let S=document.createElement("div");S.className=`AtOnceQuickLinkButtonHeaders${y}`;let T=document.createElement("div");if(T.className=`AtOnceTriHeading${y} AtOnceTextColorThree${y}`,T.innerText=e.heading?e.heading:e.actions_heading,S.appendChild(T),e.subheading){let L=document.createElement("div");L.className=`AtOnceSubText${y} AtOnceTextColorSeven${y}`,L.innerText=e.subheading,S.appendChild(L)}else(n||s)&&!0!==o&&h.classList.add(`AtOnceQuickButtonPadded${y}`);if(e.icon){let E=document.createElement("div");E.className=`AtOnceQuickIcon${y}`,E.innerHTML=e_[`${e.icon}`],h.appendChild(E)}h.appendChild(S);let N=document.createElement("div");N.className=`AtOnceMarginLeft${y}`,N.innerHTML=e0,h.appendChild(N),t.appendChild(h)}}catch(B){}}tm(!1,!0);let tC="";function t1(e,t){let o=document.createElement("div");o.id=`AtOnceContainerHelpCenterSearch${y}`,o.className=`AtOnceContainerPaddedTopSmall${y}`;let n=document.createElement("div"),i=Date.now(),a=document.createElement("div");a.className=`AtOncePositionRelative${y} AtOnceFlexTitle${y}`;let l=document.createElement("div");l.className=`AtOnceSearchInputIcon${y}`,l.innerHTML=eC;let p=document.createElement("input");p.id="AtOnceMainSearchInput",p.type="text",p.className=`AtOnceSearchInput${y} AtOnceSearchInputIconed${y}`,p.placeholder="Search instant answers",function e(t,o,n){try{let i=[];if(o||!(ea&&ea.length)&&ep.length){if(t.innerHTML="",o){let a=tc.search(o);if(a.item)i.push(a);else{a.sort(function(e,t){return t.f-e.f});let l=[];function p(){if(n&&n.length&&a.length)for(let e of a){let t=e.id;-1==n.findIndex(function(e){return e==t})&&l.push(e)}}if(p(),l.length)for(let r of l)try{if(i.length>5)break;i.push(r.item)}catch(c){}else for(let s of(a=ep.sort(function(e,t){return t.f-e.f}),p(),l))try{if(i.length>5)break;i.push(s)}catch(u){}}}else i=ep.sort(function(e,t){return t.f-e.f});try{if(o&&i.length<5){let d=ep.sort(function(e,t){return t.f-e.f});for(let v of d){let $=v.id;if(i.length<5)-1==n.findIndex(function(e){return e==$})&&i.push(v);else break}let m=d.slice(0,5);for(let h of m){let _=h.id;if(i.length<5)-1==i.findIndex(function(e){return e.id==_})&&i.push(h);else break}}}catch(g){}let f=i.slice(0,5);for(let A of f)t9(A,t,!1,!1,"",t,!1,"","",!0)}}catch(x){}}(n,e,t),p.addEventListener("keyup",function(){try{let e=p.value,t=Date.now();t-i>500&&(i=t,ts(e,n,4))}catch(o){}}),a.appendChild(l),a.appendChild(p),o.appendChild(a),o.appendChild(n),eF.appendChild(o)}function tb(e,t,o,n,i){o?(eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${y}`),to.innerText="Instant Answers",to.className=`AtOnceSubHeading${y}`,tn.style.display="none",te.style.display=""):(eF.classList.remove(`AtOnceContainerScrollMiddleHelpCenter${y}`),te.style.display="none",to.className=`AtOnceMainHeading${y}`,to.innerText=eh.top_hi_text,tn.innerText=eh.top_hi_subtext,tn.style.display="");let a=document.createElement("div"),l=document.createElement("div");l.className=`AtOnceSubHeadingSmall${y} AtOnceSubHeadingMargin${y} AtOnceTextColorSeven${y}`,l.innerText=t||"";let p=document.createElement("div"),r=document.createElement("div");if(tC=r,"Quick links"==t){if(e.length)for(let c of e)c.icon&&t9(c,p,!1,o,l,p,n,e,t)}else if(eT){if(e.length){for(let s of e)for(let u of ec)if(u.id==s){t9(u,p,!1,o,l,p,n,e,t);break}}}else if(e.length){for(let d of e)for(let v of er)if(v.id==d){t9(v,p,!1,o,l,p,n,e,t);break}}if(a.appendChild(l),a.appendChild(p),o&&n)try{r.className=`AtOnceContainerPaddedTop${y}`,t9(n,r,!0,o,l,p,n,e,t),a.appendChild(r)}catch($){}eF.innerHTML="",eF.appendChild(a),"Quick links"==t?(t1(),tO(),ej()):t1(t,e),!0!==i&&ti.push({l:e,t:t,t_q:o,t_s:n})}te.addEventListener("click",function(){if(eT)tx();else{ti.pop();let e=ti[ti.length-1];e?tb(e.l,e.t,e.t_q,e.t_s,!0):tb(er,"Quick links"),eT=!1}});let ty=document.createElement("div");ty.className=`AtOncePoweredByContainer${y} AtOnceBottomContainer${y}`;let t3=document.createElement("div");t3.className=`AtOnceSubText${y} AtOnceTextColorSeven${y}`,t3.innerHTML=`<a href="https://atonce.com?utm_medium=self_service&utm_campaign=by_atonce" target="_blank" rel="noopener noreferrer" class="AtOncePoweredByLink${y}">Powered by <span class="AtOncePoweredByText${y}">AtOnce</span></a>`,ty.appendChild(t3),eD.appendChild(eW),eD.appendChild(eF),eD.appendChild(ty),eV.appendChild(eD);let t2=document.createElement("button");t2.className=`AtOnceChatButton${y}`,t2.appendChild(g),t2.ariaLabel="Open self service",t2.ariaHasPopup=!1;let tS=document.createElement("div");tS.innerHTML=z;let tT=document.createElement("div");function t4(){t=!1,t2.classList.remove(`AtOnceHideChatButton${y}`),!0==eu&&es.body.classList.remove(`AtOnceBody${y}`),eV.className=`AtOnceChatPrimaryContainer${y} AtOnceHidePrimaryContainer${y}`;try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(e){}setTimeout(function(){!1==t&&(t2.style.display="",eV.style.display="none",AtOnceChatContainer.style.width="100px",AtOnceChatContainer.style.height="100px")},200)}function tM(){AtOnceChatContainer.style.width="100%",AtOnceChatContainer.style.height="100%",eV.style.display="",S.className=`AtOnceLiveChatMessagesContainer${y} hidden`,S.innerHTML="",setTimeout(function(){if(!0==t){t2.style.display="none";try{g.className=`AtOnceChatNotification${y} hidden`,ee&&(window.top.document.title=ee)}catch(e){}}},200),t=!0,ti=[],tb(er,"Quick links"),eV.style.cssText="",t2.classList.add(`AtOnceHideChatButton${y}`),!0==eu&&es.body.classList.add(`AtOnceBody${y}`),eV.className=`AtOnceChatPrimaryContainer${y} AtOnceShowPrimaryContainer${y}`}tT.className=`AtOnceCloseButtonMobile${y}`,tT.innerHTML=eb,tT.addEventListener("click",function(){t4()}),eV.appendChild(tT),tS.className=`AtOnceFlexCenter${y}`,t2.addEventListener("click",function(){if(!0==t)t4();else{if(i&&S.innerText)try{setTimeout(function(){try{th(i,a)}catch(e){}})}catch(e){}tM()}}),t2.appendChild(tS),eG.appendChild(S),eG.appendChild(eV),eG.appendChild(t2),setTimeout(function(){let e=document.getElementById("AtOnceChatContainer");e.contentDocument?es=e.contentDocument:e.contentWindow&&(es=e.contentWindow.document),es.head.appendChild(eE),es.body.appendChild(eG)})}catch(t5){}})}catch(ex){}}export{createAtOnceLiveChat};
+                        `,h=document.createElement("input");h.style.display="none",h.type="file",h.multiple=!0,h.addEventListener("change",a);let g=document.createElement("button");g.className=`AtOnceContainerLiveChatButton${b} attachment`,g.innerHTML=$,g.addEventListener("click",function(){h.click()});let C=document.createElement("button");function y(){try{let t=v.innerText,o=t.replace(/\s+/g,"");function i(){setTimeout(function(){v.innerText="",C.disabled=!0,v.classList.remove(`AtOnceContainerLiveChatInputDisabled${b}`)},1e-6)}if(o.length>0){v.classList.add(`AtOnceContainerLiveChatInputDisabled${b}`);let a=E(20),l=[];if(n.length)for(let p of n)try{l.push({url:p.url,fileName:p.fileName,name:p.name,mimetype:p.mimetype,filetype:_.getExtension(p.mimetype)})}catch(c){}for(let u of(k("send_live_message",{company:Q,user:D.currentUser.uid,email:tp,message:t,attachments:l,threadId:e,id:a}),s.classList.remove("shown"),s.innerHTML="",e7))if(u.threadId==e){let d=u.messages;if(d){let $=d.findIndex(function(e){return e.id==a});if(-1==$){let m=eH(tp,a,t,e,l);u.messages.push(m),u.timestamp=m.timestamp,e7.sort(function(e,t){return t.timestamp-e.timestamp}),td(u.messages,r)}}break}i()}else v.classList.add(`AtOnceContainerLiveChatInputDisabled${b}`),i()}catch(h){}}C.className=`AtOnceContainerLiveChatButton${b}`,C.innerHTML=m,C.disabled=!0,C.addEventListener("click",function(){y()}),v.addEventListener("keyup",function(){try{v.innerText.length>0?C.disabled=!1:C.disabled=!0}catch(e){}}),c.appendChild(u),c.appendChild(s),c.appendChild(v),c.appendChild(h),c.appendChild(g),c.appendChild(C),eF.innerHTML="",eF.appendChild(r),eF.appendChild(c),ez(v),eR()}function t_(e,t,o,n){let i=document.createElement("div");i.className=`AtOnceContainerPadded${b} AtOnceButtonContainer${b}`;let a=`AtOnceMainButton${b} AtOnceMainButtonLeft${b} AtOncePrimaryButton${b}`,l=`AtOnceMainButton${b} AtOnceMainButtonRight${b} AtOnceSecondaryButton${b}`,p=(es.getElementById("AtOnceMainSearchInput"),document.createElement("button"));p.className=t?l:a,p.innerText="Okay, thanks",p.addEventListener("click",function(){eT?tx():ty(er,"Quick links")});let r=document.createElement("button");if(r.className=t?a:l,r.innerText="Message us",r.addEventListener("click",function(){let e="";try{eT&&(e=e2.name)}catch(t){}!function e(t,o,n){to.innerHTML=ta,to.className=`AtOnceSubHeading${b}`;let i=document.createElement("div"),a=document.createElement("div"),l=document.createElement("div");l.className=`AtOnceContainerPaddedLess${b}`;let p=document.createElement("div");p.className=`AtOnceContainerLargeMargin${b}`;let r=document.createElement("div");r.className=`AtOnceSubText${b} AtOnceSubTextLargeMargin${b} AtOnceTextCenter${b}`,r.innerText=`Need something else? We’d love to help!`;let c=document.createElement("input");c.className=`AtOnceContactFormInput${b}`,c.placeholder="Enter your email",c.type="text";let s=document.createElement("textarea");s.maxLength=5e3,s.placeholder="Leave a message",(t||o)&&o&&(s.value=`Order ${o}. `);let u=document.createElement("button");u.disabled=!0,u.innerText="Send",u.className=`AtOnceMainButton${b} AtOncePrimaryButton${b} AtOnceSubTextMediumMargin${b}`;let d=Date.now();function v(){setTimeout(function(){try{u.innerText="Send"}catch(e){}},3e3)}s.addEventListener("keyup",function(){try{let e=s.value;if(e.length>0){let t=Date.now();t-d>500&&(d=t,ts(e,p,4)),u.disabled=!1}else u.disabled=!0}catch(o){}}),u.addEventListener("click",function(){try{if(-1==c.value.indexOf("@"))u.innerText="Invalid Email",v();else if(""==s.value.trimStart().trimEnd())u.innerText="Invalid Message",v(),ez(s);else{var e;let t=c.value.trimStart().trimEnd().toLowerCase();!0==D.currentUser.isAnonymous&&t!==tp&&localStorage.setItem("AtOnceLiveChatUserEmail",t),tp=t;let o=s.value.trimStart().trimEnd(),n=(e=`${D.currentUser.uid}${o.substring(0,30)}`,window.btoa(unescape(encodeURIComponent(e))).replace(/=/g,"").replace(/\+/g,"-").replace(/\//g,"_")),i=E(20);th(n,[eH(tp,i,o,n)],!0)}}catch(a){}}),ts("order",p,4),l.appendChild(r),l.appendChild(c),l.appendChild(s),l.appendChild(u),a.appendChild(l),a.appendChild(p),i.appendChild(a),eF.innerHTML="",eF.appendChild(i),tp&&(c.value=tp,ez(s))}(o,e,n)}),!0==t){let c=document.createElement("div"),s=document.createElement("div"),u=Date.now();ts("order",s,2);let d=document.createElement("div");d.className=`AtOncePositionRelative${b} AtOnceFlexTitle${b}`;let v=document.createElement("div");v.className=`AtOnceSearchInputIcon${b}`,v.innerHTML=eC;let $=document.createElement("input");$.id="AtOnceMainSearchInput",$.type="text",$.className=`AtOnceSearchInput${b} AtOnceSearchInputIconed${b}`,$.placeholder="Search instant answers",$.addEventListener("keyup",function(){try{let e=$.value,t=Date.now();t-u>500&&(u=t,ts(e,s,2))}catch(o){}}),d.appendChild(v),d.appendChild($),c.appendChild(d),c.appendChild(s),e.appendChild(c),setTimeout(function(){ez($)},2);try{i.appendChild(r)}catch(m){}try{i.appendChild(p)}catch(h){}try{es.getElementById(`AtOnceContainerHelpCenterSearch${b}`).remove()}catch(_){}}else{try{i.appendChild(p)}catch(g){}try{i.appendChild(r)}catch(f){}}e.appendChild(i)}function tg(e){if(e||!localStorage.getItem("AtOnceOrders")){te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerHTML=`I’m an existing customer`,to.className=`AtOnceSubHeading${b}`,tn.innerText="",tn.style.display="none";let t=document.createElement("div"),o=document.createElement("div");o.className=`AtOnceSubHeadingSmall${b} AtOnceSubHeadingMargin${b} AtOnceTextColorSeven${b}`,o.innerText="Access your orders";let n=document.createElement("div");n.className=`AtOnceContainerPaddedLess${b} AtOnceContainerPaddedTopSmall${b}`;let i=document.createElement("div");i.innerText="Order info is in your email/text/packing slip",i.className=`AtOnceSubText${b} AtOnceTextColorTwo${b} AtOnceSubTextMarginBottom${b}`;let a=document.createElement("div");a.className=`AtOnceContainerPaddedTopSmall${b}`;let l=[];function p(e,t){let o=document.createElement("label");o.className=`AtOnceManageOrdersLabel${b}`;let n=document.createElement("span");n.className=`AtOnceManageOrdersSpan${b}`,n.innerText=e;let i=document.createElement("input");i.type="text",i.className=`AtOnceManageOrdersInput${b}`,i.placeholder=" ",o.appendChild(i),o.appendChild(n),a.appendChild(o),l.push({input:i,name:t})}p("Order Number/ID","order_number"),p("Zip/Postal Code","zip_code");let r=l[0].input,c=l[1].input,s=document.createElement("div");s.style.display="none",s.className=`AtOnceLoadingSpinner${b}`;let u=document.createElement("button");u.className=`AtOnceMainButton${b} AtOncePrimaryButton${b} AtOnceSubTextMediumMargin${b}`,u.innerText="Enter",u.disabled=!0;let d=document.createElement("div");for(let v of(d.className=`AtOnceTriHeading${b} AtOncePrimarySubjectHeader${b} AtOnceFlexCenter${b} AtOnceTextColorError${b}`,d.innerText="",u.addEventListener("click",function(){s.style.display="";let t=`${r.value}`.replace(/\s/g,"").replace(/\D/g,"").trimStart().trimEnd().toUpperCase(),o=`${c.value}`.replace(/\s/g,"").trimStart().trimEnd().toUpperCase(),n=`${t}${o}`;U(n,"orders").then(n=>{n&&n[0]?(T(`${t}_atonce_${o}`),tx(e)):(u.disabled=!0,s.style.display="none",d.innerText="Order not found")})}),l))v.input.addEventListener("keyup",function(){d.innerText="",r.value.length>3&&c.value.length>3?u.disabled=!1:u.disabled=!0}),"zip_code"==v.name?v.input.addEventListener("keydown",function e(t){try{"Enter"===t.key&&!1==t.shiftKey&&u.click()}catch(o){}}):ez(v.input);n.appendChild(i),n.appendChild(a),n.appendChild(s),n.appendChild(u),n.appendChild(d),t.appendChild(o),t.appendChild(n),eF.innerHTML="",eF.appendChild(t)}else tx(!0)}async function tf(e,t,o,n){try{let i=[];if(t.length){let a=t.length;for(let l=0;l<a;l++)t[l].position_id=l}if(o)for(let p of e)p&&p.variant_id&&-1==i.indexOf(p.variant_id)&&i.push(p.variant_id);else for(let s of e){let u=s.variant_id;u&&-1==i.indexOf(u)&&i.push(u);let d=s.id,$=Number(s.price_set.presentment_money.amount)*Number(s.quantity),m=s.price_set.presentment_money.currency_code,h=s.discount_allocations,_=s.tax_lines;if(h&&h.length)for(let g of h)$-=Number(g.amount_set.presentment_money.amount);if(_&&_.length)for(let f of _)$+=Number(f.price_set.presentment_money.amount);s.customer_paid_amount=$.toFixed(2),s.customer_paid_currency=m;let A=s.quantity-s.fulfillable_quantity;if(A>0&&t.length)for(let x of t){if(0==A)break;if(x.line_item==d){let O=x.position_id,C=x.quantity-A;0==C?(A=0,t=t.filter(e=>e.id!==O)):C>0?(x.quantity-=A,A=0):C<0&&(x.quantity=0,A=Math.abs(C))}}s.returnable_quantity=A}if(i.length){let y=function e(t,o){for(var n=[],i=0;i<t.length;i+=o)n.push(t.slice(i,i+o));return n}(i,10),b=[],S=[];async function T(t){return new Promise(async function(a,l){await v(r(n,c("variant_ids_list","array-contains-any",t))).then(t=>{t.empty||t.forEach(t=>{try{let n=t.data(),a=n.variants,l=n.images,p=n.options,r=["id","price","compare_at_price","option1","option2","option3","position","product_id","title"];for(let c of i)if(-1==S.indexOf(c)){S.push(c);let s=e.findIndex(function(e){return e.variant_id==c});if(-1!==s){o&&(e[s].title=n.title);let u=[];for(let d of a){let v=d.id;if(v==c){if(o)e[s].variant_title=d.title;else{let $={};for(let m=1;m<4;m++){let h=`option${m}`,_=d[`${h}`];_&&($[`${h}`]=_)}"{}"!==JSON.stringify($)&&(e[s].current_variant=$)}}if(!o&&(null==d.inventory_management||"continue"==d.inventory_policy||d.inventory_quantity>0)){let g={};for(let f of r)-1!==f.indexOf("price")?g[`${f}`]=Number(d[`${f}`]).toFixed(2):g[`${f}`]=d[`${f}`];for(let A of l)-1!==A.variant_ids.indexOf(v)&&(g.img=A.src);u.push(g)}}if(!o){if(p&&p.length){let x=[];for(let O of p)x.push({name:O.name,position:O.position,values:O.values});e[s].product_options=x}e[s].exchange_options=u}if(l&&l.length){let C=[];for(let y of l)-1!==y.variant_ids.indexOf(c)&&(e[s].img=y.src),y.src&&C.push(y.src);o||(e[s].images=C)}1==a.length?e[s].hasOnlyDefaultVariant=!0:e[s].hasOnlyDefaultVariant=!1}}}catch(b){}}),a("success")})})}if(y&&y.length){for(let M of y)b.push(T(M));b.length&&await eg(b)}}return e}catch(P){return e}}function tA(e){if(e2){let t=[],o=[],n=0,i=e2.currency,a=B(i);te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerHTML=`${"edit_add"==e?"Add Items Below":"Add/Remove Items Below"}`,to.className=`AtOnceSubHeading${b}`,tn.innerText="",tn.style.display="none";let l=document.createElement("div");l.className=`AtOnceContainerPadded${b} AtOnceContainerNoBottomPadding${b}`;let d=document.createElement("div");d.className=`AtOnceMainShopStickyChangesContainer${b} AtOnceFlexCenter${b}`;let $=document.createElement("button");$.className=`AtOnceMainButton${b} AtOncePrimaryButton${b}`,$.innerText="Edit Order";let h=document.createElement("div");h.style.display="none",h.className=`AtOnceLoadingSpinner${b} bottomed`;let _=document.createElement("div");_.style.display="none";let g=document.createElement("div");g.className=`AtOnceEnterEmailInputLabel${b}`,g.innerText="Enter your email";let f=document.createElement("input");f.className=`AtOnceSearchInput${b} full bottomed`,f.placeholder="Enter your email";try{e2.email?f.value=e2.email:e2.customer.email&&(f.value=e2.customer.email);try{!f.value&&localStorage.getItem("AtOnceLiveChatUserEmail")&&(f.value=localStorage.getItem("AtOnceLiveChatUserEmail"))}catch(A){}}catch(x){}f.value||(l.classList.add(`AtOnceContainerPaddedBottomLarge${b}`),l.classList.remove(`AtOnceContainerNoBottomPadding${b}`),h.classList.add("bigger"),d.classList.add("bigger"),_.style.display="",f.addEventListener("keyup",function(){try{f.value&&-1!==f.value.indexOf("@")?$.disabled=!1:$.disabled=!0}catch(e){}})),_.appendChild(g),_.appendChild(f);let O="",C=e2.shipping_zip,y=e2.billing_zip,S="";null!=C?S=C:null!=y&&(S=y);let T=e2.order_number;O=`${T=`${T}`.replace(/\s/g,"").replace(/\D/g,"").trimStart().trimEnd().toUpperCase()}${S=`${S}`.replace(/\s/g,"").trimStart().trimEnd().toUpperCase()}`,$.addEventListener("click",function(){h.style.display="",$.disabled=!0,$.classList.remove("red");let e=[];for(let o of t){let n={};!1!==o.product_exists&&o.id&&(o.line_item&&(n.line_item=Number(o.line_item)),o.id&&(n.variant_id=Number(o.id)),o.product_id&&(n.product_id=Number(o.product_id)),0==o.quantity?n.quantity=0:Number(o.quantity)?n.quantity=Number(o.quantity):n.quantity=1,e.push(n))}function i(e,t){setTimeout(function(){try{let o=$.innerText;"Updated - Check Your Email"!==o&&"Update Failed"!==o&&($.innerText=`${e} (${t}/4)`)}catch(n){}},2e3*t)}i("Checking Order",1),i("Adding Credit",2),i("Updating Order",3),i("Sending Email",4);let a=`${f.value}`.trimStart().trimEnd().toLowerCase();k("edit_order",{store:e2.shopify_store,order:e2.id,order_identifier:O,line_items:e,email:a}).then(e=>{try{a&&-1!==a.indexOf("@")&&!localStorage.getItem("AtOnceLiveChatUserEmail")&&(tp||(tp=a),localStorage.setItem("AtOnceLiveChatUserEmail",a))}catch(t){}e&&e.success?(h.style.display="none",$.disabled=!1,$.classList.add("green"),$.innerText="Updated - Check Your Email",setTimeout(function(){try{te.click()}catch(e){}},3e3)):($.classList.add("red"),h.style.display="none",$.innerText="Update Failed")})}),d.appendChild(_),d.appendChild($),d.appendChild(h);let M=document.createElement("div"),P=p(V,"shopify",e2.shopify_store,"products"),w=r(P,c("in_stock","==",!0),c("status","==","active"),u("total_sales","desc"),s(200)),L=["id","price","compare_at_price","option1","option2","option3","position","product_id","title"],E=[],R="",K={keys:["handle","description","title","variant_titles_list","product_type",]},U=document.createElement("div");U.className=`AtOnceContainerPaddedTopMedium${b}`;let z=document.createElement("div");function G(e,o){let n=e.length;if(n>0){for(let i=0;i<n;i++){let l=e[i],p=document.createElement("div");p.className=`AtOnceMainShopProductSubContainer${b}`;let r=document.createElement("div");r.className=`AtOnceMainShopProductImageContainer${b}`,r.setAttribute("atonce_product_id",`${l.id}`);let c="",s=l.image;if(s)(c=document.createElement("img")).className=`AtOnceMainShopProductImage${b}`,c.src=s;else{(c=document.createElement("div")).className=`AtOnceMainShopProductImageDiv${b}`;let u=document.createElement("div");u.className=`AtOnceMainShopProductImageDivText${b}`,u.innerText=l.title,c.appendChild(u)}r.appendChild(c);let d=document.createElement("div");if(d.className=`AtOnceMainShopProductPriceContainer${b}`,l.compare_at_price){let v=document.createElement("span");v.className=`AtOnceMainShopProductPriceText${b} AtOnceMainShopProductPriceText_compare${b}`,v.innerText=`${a}${l.compare_at_price}`,d.appendChild(v)}let $=document.createElement("span");if($.className=`AtOnceMainShopProductPriceText${b}`,$.innerText=`${a}${l.price}`,d.appendChild($),p.appendChild(r),s){let m=document.createElement("div");m.className=`AtOnceMainShopProductTitleContainer${b}`;let h=document.createElement("div");h.className=`AtOnceMainShopProductTitleText${b}`,h.innerText=l.title,m.appendChild(h),p.appendChild(m)}p.appendChild(d),r.addEventListener("click",function(){let e=document.createElement("div"),o=l.variants;e.className=`AtOnceModalBackground${b}`;let n=document.createElement("div");n.style.display="none",n.className=`AtOnceModalContainer${b}`;let i=document.createElement("div");i.innerHTML=eb,i.className=`AtOnceModalCloseBtn${b}`;let p=document.createElement("div");p.className=`AtOnceModalProductImageContainer${b}`;let r=document.createElement("img");r.className=`AtOnceModalProductImage${b}`;let c=l.images,s="",u=[],d=document.createElement("div"),v=document.createElement("div"),$=`AtOnceModalProductImageContainer${b} maxwidth slideshow`,m=`AtOnceModalProductImageContainer${b} maxwidth`,h=l.image;h?r.src=`${h}`:(r.classList.add("border"),r.src=`${product_placeholder_image}`),p.appendChild(r);let _=document.createElement("div");_.className=`AtOnceModalProductRightContainer${b}`;let g="",f=l.hasOnlyDefaultVariant;!1==f&&(g=o[0].title);let A=document.createElement("span"),x=document.createElement("span");function O(){let e=document.createElement("div");e.className=`AtOnceModalProductTitle${b}`;let t=document.createElement("div");t.className=`AtOnceModalProductVariantInfo${b}`,""==g?x.className=`AtOnceModalProductVariantInfo${b}`:x.className=`AtOnceModalProductVariantInfo${b} price`,A.innerText=g,x.innerText=`${a}${l.price}`,t.appendChild(A),t.appendChild(x),e.innerText=l.title,_.appendChild(e),_.appendChild(t)}let C={},y={};function S(e){try{let t=!1;for(let n of o){let i=!0;for(let[a,l]of Object.entries(e))if(n[a]!==l){i=!1;break}if(!0==i){t=!0;break}}return t}catch(p){return!0}}function T(e){let t=!1;for(let n of o){let i=!0;for(let[a,p]of Object.entries(C))if(n[a]!==p){i=!1;break}if(!0==i){n.img?y.img=n.img:l.image?y.img=l.image:y.img=product_placeholder_image,y.id=n.id,y.title=l.title,y.option=n.title,y.price=n.price,y.product_id=n.product_id,y.variant_title=n.title,y.hasOnlyDefaultVariant=l.hasOnlyDefaultVariant,y.quantity=void 0!==l.quantity?l.quantity:1,t=!0,z();break}}!1==t&&(e&&(e.disabled=!0),U())}function M(){let e=document.createElement("div");if(e.className=`AtOncePrimarySubjectHeader${b}`,!1==f){let t=l.options,n=t.length,i=[];for(let p of t){let c=document.createElement("div"),s=`option${p.position}`,u=document.createElement("div");u.className=`AtOnceVariantsLabel${b}`,u.innerText=p.name;let d=[],v=[],$=[],m=document.createElement("div"),h=!0,g=!0,O=!0,y="",M="";for(let P of o){let w=P[`${s}`];if(-1==d.indexOf(w)){d.push(w);let k=P.img;k!==M&&(M&&(O=!1),M=k)}}for(let L of(!1==O&&(m.className=`AtOnceModalProductVariantSelectionContainer_images${b}`),o)){let E=L[`${s}`];if(-1==v.indexOf(E)){async function N(){for(let e of o){let t=!0;for(let[n,i]of Object.entries(C))if(e[n]!==i){t=!1;break}if(!0==t){e.title?A.innerText=e.title:A.innerText="",e.price&&(x.innerText=`${a}${e.price}`);break}}}v.push(E);let B=document.createElement("button"),H=`AtOnceMainShopVariantsButton${b}`,R=`AtOnceMainShopVariantsButton_active${b}`,K=L.img;!1==O&&(1==n?(H=`AtOnceMainShopVariantsButton${b} AtOnceMainShopVariantsButton_image${b} AtOnceMainShopVariantsButton_one${b}`,R=`AtOnceMainShopVariantsButton_image_active${b} AtOnceMainShopVariantsButton_image_active_one${b}`):(H=`AtOnceMainShopVariantsButton${b} AtOnceMainShopVariantsButton_image${b}`,R=`AtOnceMainShopVariantsButton_image_active${b}`),K&&(B.style.backgroundImage=`url(${K})`)),!0==h?(h=!1,C[`${s}`]=E,B.className=`${H} ${R}`):B.className=H,K!==y&&(y&&(g=!1),y=K);let U={option_name:s,name:E,button:B};$.push(B),i.push(U),B.addEventListener("click",function(){async function e(e){try{let t=JSON.parse(JSON.stringify(C));if(t){t[`${e.option_name}`]=e.name;let o=S(t);!0==o?e.button.disabled=!1:e.button.disabled=!0}}catch(n){}}if(C[`${s}`]=E,T(B),N(),K?!1==g&&(r.src!==K&&(r.src=K),I(K)):!1==g&&(r.src!==product_placeholder_image&&(r.src=product_placeholder_image),I(K)),$.length)for(let t of $)t!==B&&(t.className=H);if(i.length)for(let o of i)e(o);B.className=`${H} ${R}`}),!0==O&&(B.innerText=E),m.appendChild(B)}}c.appendChild(u),c.appendChild(m),e.appendChild(c)}}_.appendChild(e)}function P(){let e=document.createElement("div");e.className=`AtOnceMainShopProductDescription${b}`,e.innerHTML=l.description,_.appendChild(e)}O(),M();let w=document.createElement("div");w.className=`AtOnceQuantityContainer${b}`;let k=document.createElement("div");k.className=`AtOnceQuantitySubContainer${b} AtOnceFlexCenter${b}`;let L=document.createElement("div");L.innerText="Quantity",L.className=`AtOnceQuantityLabel${b}`;let E=document.createElement("span");E.innerHTML=e9,E.className=`AtOnceQuantityButtons${b} AtOnceFlexCenter${b}`;let N=document.createElement("span");N.innerHTML=eO,N.className=`AtOnceQuantityButtons${b} AtOnceFlexCenter${b}`;let B=document.createElement("input");B.type="number",B.min=1,B.value=1,B.step=1,B.className=`AtOnceQuantityInput${b} AtOnceFlexCenter${b}`,N.addEventListener("click",function(){let e=B.value;e++,B.value=e}),E.addEventListener("click",function(){let e=B.value;e>1&&e--,B.value=e}),w.appendChild(L),w.appendChild(k),k.appendChild(E),k.appendChild(B),k.appendChild(N),_.appendChild(w);let R=document.createElement("div");R.className=`AtOncePrimarySubjectHeader${b} AtOnceModalStickyBottomContainer${b}`;let K=document.createElement("button");function U(){K.disabled=!0,K.innerText="Sold Out"}function z(){K.disabled=!1,K.innerText="Add to Cart"}function G(){if(t.length){let o=!1;for(let n of t)if(n.id==y.id){let i=Number(n.quantity);i+=Number(y.quantity),n.quantity=i,o=!0;break}!1==o&&t.push(y)}else t.push(y);ee(),V(e)}function V(e){try{e.className=`AtOnceModalBackground${b}`}catch(t){}setTimeout(function(){try{e.remove()}catch(t){}},150)}K.className=`AtOnceMainButton${b} AtOncePrimaryButton${b}`,K.innerText="Add to Cart",K.addEventListener("click",function(){!0==f&&(y.id=o[0].id,l.image?y.img=l.image:y.img=product_placeholder_image,y.name=l.title,y.price=l.price,y.product_id=l.id,y.title="");let e=B.value;e<1&&(e=1),y.quantity=e,G()}),T(),R.appendChild(K),_.appendChild(R),P(),i.addEventListener("click",function(){V(e)}),e.addEventListener("click",function(t){let o=t.target;!1===n.contains(o)&&!1===p.contains(o)&&V(e)}),n.appendChild(i),s=H(c,d,v,u,m,$),n.appendChild(i),c&&c.length>1?n.appendChild(s):n.appendChild(p),n.appendChild(_),e.appendChild(n),n.style.display="",eF.appendChild(e),setTimeout(function(){n.className=`AtOnceModalContainer${b} active`,e.className=`AtOnceModalBackground${b} active`},0)}),o.appendChild(p)}z.classList.add("visible")}}async function D(){return new Promise(async function(e,t){v(w).then(t=>{t.empty||(t.forEach(e=>{try{let t=e.data(),o=t.id,n=t.title,i=t.image,a=t.images;i&&(i=i.src);let l=t.body_html,p="0.00",r=null;try{p=`${N(Number(t.variants[0].price))}`}catch(c){}try{let s=t.variants[0].compare_at_price;s&&(r=`${N(Number(s))}`)}catch(u){}let d={id:o,title:n,image:i,description:l,product_type:t.product_type,handle:t.handle,price:p,compare_at_price:r,variant_titles_list:t.variant_titles_list,options:t.options},v=[];if(a&&a.length){for(let $ of a)$.src&&v.push($.src);d.images=v}let m=t.variants;if(1==m.length){let h=m[0];d.variants=[{product_id:h.product_id,id:h.id,title:""}],d.hasOnlyDefaultVariant=!0}else{d.hasOnlyDefaultVariant=!1;let _=[];for(let g of m)if(null==g.inventory_management||"continue"==g.inventory_policy||g.inventory_quantity>0){let f=g.id,A={};for(let x of L)-1!==x.indexOf("price")?A[`${x}`]=Number(g[`${x}`]).toFixed(2):A[`${x}`]=g[`${x}`];for(let O of a)-1!==O.variant_ids.indexOf(f)&&(A.img=O.src);_.push(A)}d.variants=_}E.push(d)}catch(C){}}),E.length&&(G(E,z),R=new m(E,K))),e(!0)})})}z.className=`AtOnceContainerFlexProducts${b}`,U.appendChild(z);let F=D(),J=document.createElement("div"),j=document.createElement("input");function q(e){t.splice(e,1),X(),ee()}function Q(e,t,o,n){let i=document.createElement("div");i.className=`AtOnceFlex${b} AtOnceMarginBottomLarge${b}${t?"":` AtOnceDisabledDiv${b}`}`;let a=document.createElement("div"),l=document.createElement("div");l.className=`AtOnceProductImage${b}`,e.img?l.style.backgroundImage=`url(${e.img})`:l.innerHTML=ex,a.appendChild(l);let p=document.createElement("div");p.className=`AtOnceFlexSpacedProductTitleSmall${b}`;let r=document.createElement("div");r.className=`AtOnceSubTextBold${b} AtOnceTextColorThree${b}`,r.innerText=e.title?e.title:"";let c=document.createElement("div");c.className=`AtOnceSubText${b} AtOnceTextColorNine${b} AtOnceUserSelect${b}`;let s="";if(!1==e.hasOnlyDefaultVariant&&e.variant_title&&(s=e.variant_title),c.innerText=s,p.appendChild(r),p.appendChild(c),!0!==e.hasOnlyDefaultVariant){let u=e.product_id,d=e.title,v=document.createElement("button");function $(){let e=es.getElementById("AtOnceSearchInputProducts");if(e){e.value=d;try{e.dispatchEvent(new KeyboardEvent("keyup",{key:"a"}))}catch(t){}}}v.className=`AtOnceMainButton${b} AtOnceMainButtonSmall${b} smaller AtOnceSecondaryButton${b}`,v.innerText="Add style",v.addEventListener("click",function(){let e=es.querySelectorAll(`[atonce_product_id="${u}"]`);if(e&&e.length)try{e[0].click()}catch(t){$()}else $()}),p.appendChild(v)}let m=document.createElement("div");m.className=`AtOnceProductQuantityText${b}`,m.innerText=e.quantity;let h=document.createElement("div"),_=document.createElement("div");_.className=`AtOnceQuantitySubContainer${b} AtOnceFlexCenter${b}`;let g=document.createElement("div");g.innerText="New quantity",g.className=`AtOnceQuantityLabelSmall${b}`;let f=document.createElement("span");f.innerHTML=e9,f.className=`AtOnceQuantityButtons${b} AtOnceFlexCenter${b}`;let A=document.createElement("span");A.innerHTML=eO,A.className=`AtOnceQuantityButtons${b} AtOnceFlexCenter${b}`;let x=document.createElement("input");x.type="number",x.min=1;let O=1;e.quantity&&Number(e.quantity)>1&&(O=Number(e.quantity)),x.value=O,x.step=1,x.className=`AtOnceQuantityInput${b} smaller AtOnceFlexCenter${b}`,t&&(x.addEventListener("keyup",function(){let t=x.value;t>0||(t=0),o||0!=t||q(n),e.quantity=t,X()}),A.addEventListener("click",function(){let t=x.value;t++,x.value=t,e.quantity=t,X()}),f.addEventListener("click",function(){let t=x.value;t>0&&t--,o||0!=t||q(n),x.value=t,e.quantity=t,X()})),h.appendChild(g),h.appendChild(_),_.appendChild(f),_.appendChild(x),_.appendChild(A),i.appendChild(a),i.appendChild(p),i.appendChild(h),M.appendChild(i)}j.className=`AtOnceSearchInput${b} full`,j.placeholder="Search new products",j.id="AtOnceSearchInputProducts",j.addEventListener("keyup",function(){F.then(()=>{if(R){if(z.innerHTML="",j.value){let e=R.search(j.value),t=[];if(e.item)t.push(e);else for(let o of e)t.push(o.item);t.length?G(t,z):G(E,z)}else G(E,z)}})}),J.appendChild(j),l.appendChild(d),l.appendChild(M),l.appendChild(J),l.appendChild(U);let Z=e2.line_items;if(Z&&Z.length){for(let W of Z){let Y=!0;!1!==W.product_exists&&W.variant_id||(Y=!1),n+=Number(W.fulfillable_quantity)*Number(W.price),t.push({line_item:W.id,id:W.variant_id,title:W.title,option:W.variant_title,price:W.price,product_id:W.product_id,variant_title:W.variant_title,is_editable:Y,img:W.img,quantity:W.fulfillable_quantity,hasOnlyDefaultVariant:W.hasOnlyDefaultVariant})}o=JSON.parse(JSON.stringify(t)),ee()}function X(){let i=!0,a=0,l=0;for(let p of t)a+=Number(p.quantity),l+=Number(p.price)*Number(p.quantity);if(f.value){if($.disabled=!1,$.classList.remove("red"),0==a&&"edit_cancel"==e)$.innerText="Cancel & Send Gift Card";else{let r=Number(Number(n).toFixed(2))-Number(Number(l).toFixed(2));r>0?$.innerText="Edit & Send Gift Card":r<0?$.innerText="Edit & Send Invoice":$.innerText="Edit Order"}}else $.disabled=!0;if(o.length!==t.length)d.classList.add("visible");else{let c=o.length;for(let s=0;s<c;s++){let u=o[s],v=t[s];if(u.quantity!==v.quantity){i=!1;break}}!1==i&&d.classList.add("visible")}!0==i&&o.length==t.length&&d.classList.remove("visible")}function ee(){M.innerHTML="";let e=t.length;for(let o=0;o<e;o++){let n=t[o],i=n.line_item;!1===n.is_editable?Q(n,!1,i,o):Q(n,!0,i,o)}X()}eF.innerHTML="",eF.appendChild(l)}}function t0(e,t,o,n){let i="",a=e.shipping_zip,l=e.billing_zip,p="";null!=a?p=a:null!=l&&(p=l);let r=e.order_number;function c(t,o){let n=document.createElement("div");n.className=`AtOnceNoSelect${b}${o?` AtOnceTextLargeMargin${b}`:""}`;let i=document.createElement("div");i.className=`AtOnceFlexSpacedNoAlign${b} AtOnceQuickButtonPaddedMore${b}`;let a=document.createElement("div");a.className=`AtOncePositionRelative${b}`;let l="",p=e.line_items,r=p.length,c=e.fulfillments;if(c&&c.length){for(let s of p)if(s.img){let $=s.id,m=s.hasOnlyDefaultVariant;for(let h of c){let _=h.line_items;if(_&&_.length)for(let g of _)g.id==$&&(g.img=s.img,g.hasOnlyDefaultVariant=m)}}}for(let f of p)if(f.img){l=f.img;break}let A=document.createElement("div");A.className=`AtOnceProductImage${b}`,l?A.style.backgroundImage=`url(${l})`:A.innerHTML=ex;let x=document.createElement("div");x.className=`AtOnceProductQuantityText${b} AtOnceProductQuantityTextTwo${b}`,a.appendChild(x),a.appendChild(A),1!==r?r=`+${r-1}`:x.remove(),x.innerText=r;let O=document.createElement("div");O.className=`AtOnceFlexSpacedOrder${b}`;let C=document.createElement("div");C.className=`AtOnceFlexSpacedNoAlign${b}`;let y=document.createElement("div");y.className=`AtOnceSubTextBold${b} AtOnceTextColorThree${b}`,y.innerText=`${e.name}`;let S=e.fulfillment_status;"paid"!==e.financial_status?S=e.financial_status:S?"partial"==S&&(S="Partially_fulfilled"):S="Unfulfilled",S=K(S);let T=["gray","gray","gray","gray","blue","gray"],M="",P=0;for(let w of[["Unfulfilled"],["Expired","Voided","On hold","Authorized","Refunded"],["Pending","In progress","Scheduled"],["Partially paid","Partially fulfilled","Partial"],["Paid","Fulfilled"],["Partially refunded"]])w.includes(S)&&(M=T[P]),P+=1;e.cancelled_at&&(M="gray",S="Cancelled");let k=document.createElement("div");k.className=`AtOnceSubTag${b} ${M}`,k.innerText=S,C.appendChild(y),C.appendChild(k);let L=document.createElement("div");L.className=`AtOnceFlexSpacedNoAlign${b}`;let E=document.createElement("div");E.className=`AtOnceSubText${b} AtOnceTextColorNine${b}`,E.innerText=`${B(e.total_price_set.presentment_money.currency_code)}${N(e.total_price_set.presentment_money.amount)}`;let H=document.createElement("div");H.className=`AtOnceSubText${b} AtOnceTextColorNine${b}`,H.innerText=e8(Date.parse(e.created_at));let I=document.createElement("div");I.className=`AtOnceFlex${b} AtOnceTextLargeMargin${b}`;let R=document.createElement("button");R.className=`AtOnceMainButton${b} AtOnceMainButtonSmall${b} AtOnceSecondaryButton${b}`,R.innerText=t[0],"Help"==t[0]?R.addEventListener("click",function(){t$(),u()}):"View"==t[0]?R.addEventListener("click",function(){t$(),v()}):"Track"==t[0]&&R.addEventListener("click",function(){t$(),d()});let U=document.createElement("button");return U.className=`AtOnceMainButton${b} AtOnceMainButtonSmall${b} AtOnceSecondaryButton${b}`,U.innerText="Track","Help"==t[1]?U.addEventListener("click",function(){t$(),u()}):"View"==t[1]?U.addEventListener("click",function(){t$(),v()}):"Track"==t[1]&&U.addEventListener("click",function(){t$(),d()}),I.appendChild(R),I.appendChild(U),L.appendChild(E),L.appendChild(H),O.appendChild(C),O.appendChild(L),O.appendChild(I),i.appendChild(a),i.appendChild(O),n.appendChild(i),n}i=`${r=`${r}`.replace(/\s/g,"").replace(/\D/g,"").trimStart().trimEnd().toUpperCase()}_atonce_${p=`${p}`.replace(/\s/g,"").trimStart().trimEnd().toUpperCase()}`;let s=c(["Help","Track"]);function u(){e.shopify_store=t,e2=e,eT=!0;let a=document.createElement("div");a.className=`AtOnceContainerPaddedTopSmall${b}`;let l=c(["View","Track"]),p=document.createElement("div"),r=document.createElement("div");r.className=`AtOnceSubHeadingSmall${b} AtOnceSubHeadingMarginSmall${b} AtOnceTextColorSeven${b}`,r.innerText="Quick help";let s=document.createElement("div");if(tC=document.createElement("div"),ec.length){let u=JSON.parse(JSON.stringify(ec));for(let d of(i&&function e(t,o){try{for(let n of t)n.text?-1!==n.text.indexOf("{{return_portal}}")&&(n.text=e5(n.text,"{{return_portal}}",`${eM}?order=${o}`)):n.link&&-1!==n.link.indexOf("{{return_portal}}")&&(n.link=e5(n.link,"{{return_portal}}",`${eM}?order=${o}`)),n.sub_actions&&e(n.sub_actions,o)}catch(i){}}(u,i),u))if(d.actions){let v=d.actions;for(let $ of u)-1!==v.indexOf($.id)&&($.is_actioned=!0)}for(let m of u)!0!==m.is_actioned&&t9(m,s,!1,!1,r,s,!1,u,"Quick help",!0,!0)}p.appendChild(r),p.appendChild(s),o.style.display="none",to.innerHTML=`Order ${e.name}`,to.className=`AtOnceSubHeading${b}`,a.appendChild(l),a.appendChild(p),n.innerHTML="",n.appendChild(a)}function d(){e.shopify_store=t,e2=e,eT=!0;let i=document.createElement("div");i.className=`AtOnceContainerPaddedTopSmall${b}`;let a=c(["Help","View"]),l=document.createElement("div"),p=e.fulfillments,r=e.shipping_address;function s(e){let t=document.createElement("div");t.className=`AtOnceContainerPadded${b} AtOnceContainerSmallTopPadding${b} AtOnceContainerNoBottomPadding${b}`;let o=document.createElement("div");o.className=`AtOnceTriHeading${b} AtOnceTextColorThree${b} AtOnceMarginBottomMedium${b}`;let n=document.createElement("div");n.className=`AtOnceContainerPaddedBottom${b}`,t.appendChild(o),t.appendChild(n);let i=!0,a=e.tracking_numbers,l=e.tracking_urls,p=0;try{p=a.length>l.length?a.length:l.length}catch(r){}function c(o,a,l,r,c,s){if(o){let u=document.createElement("div");if(u.className=`AtOnceFlex${b} AtOnceTextColorThree${b} AtOnceBreakAll${b} AtOnceContainerPaddedBottomSmall${b}`,e.tracking_company&&"Other"!==e.tracking_company&&c){let d=document.createElement("div");d.className=`AtOnceBold${b}`,d.innerText=`Sent via ${e.tracking_company}`,u.appendChild(d)}else if(c&&"Other"==e.tracking_company&&e.updated_at){i=!1;let v=document.createElement("div");v.className=`AtOnceTextColorNine${b}`,v.innerText=`Updated ${e8(Date.parse(e.updated_at))}`,u.appendChild(v)}let $=document.createElement("div");if(r&&($.className=`AtOnceTextColorNine${b} AtOnceMarginLeft${b}`),s?$.innerHTML=`${1==p&&(s||l)?"":"Tracking: "}<a href="${o}" target="_blank" rel="noopener noreferrer">${s}</a>`:l?$.innerHTML=`<a href="${o}" target="_blank" rel="noopener noreferrer">${a}</a>`:$.innerText=`${a} ${r?e8(Date.parse(o)):o}`,1==p&&(s||l)){let m=t.children[t.childElementCount-1];m.children[m.childElementCount-1].insertAdjacentElement("afterbegin",$)}else u.appendChild($),n.appendChild(u)}}c(e.created_at,"Shipped",!1,!0,!0),!0==i&&c(e.updated_at,"Updated",!1,!0);try{if(p>0)for(let s=0;s<p;s++)l[s]&&a[s]?c(l[s],"Tracking url",!0,!1,!1,a[s]):a[s]?c(a[s],"Tracking no.",!1,!1):l[s]&&c(l[s],"Tracking url",!0,!1,!1)}catch(u){}let d=e.line_items;if(d&&d.length)for(let v of(o.innerText=`${K(e.display_status)}`,d)){let $=document.createElement("div");$.className=`AtOnceFlex${b} AtOnceMarginBottomMedium${b}`;let m=document.createElement("div");m.className=`AtOncePositionRelative${b}`;let h=document.createElement("div");h.className=`AtOnceProductQuantityText${b}`,h.innerText=v.quantity;let _=document.createElement("div");_.className=`AtOnceProductImage${b}`,v.img?_.style.backgroundImage=`url(${v.img})`:_.innerHTML=ex,m.appendChild(h),m.appendChild(_);let g=document.createElement("div");g.className=`AtOnceFlexSpacedProductTitle${b}`;let f=document.createElement("div");f.className=`AtOnceSubTextBold${b} AtOnceTextColorThree${b}`,f.innerText=v.title?v.title:"";let A=document.createElement("div");A.className=`AtOnceSubText${b} AtOnceTextColorNine${b} AtOnceUserSelect${b}`;let x="";!1==v.hasOnlyDefaultVariant&&v.variant_title&&(x=v.variant_title),A.innerText=x,g.appendChild(f),g.appendChild(A),$.appendChild(m),$.appendChild(g),t.appendChild($)}return t}if(p&&p.length)for(let u of p){let d=s(u);l.appendChild(d)}else{let v=document.createElement("div");v.className=`AtOnceContainerPadded${b} AtOnceContainerSmallTopPadding${b} AtOnceContainerNoBottomPadding${b} AtOnceSubTextLarge${b}`;let $=Date.parse(e.created_at);Date.now()-$>432e6?v.innerHTML=`<p>Thanks for your patience!</p><p>Your order is likely still in production.</p><p>If you don’t get any updates after 3 more days, please message us & we’ll find your order.</p>`:v.innerHTML=`<p>Thanks for your patience!</p><p>Your order is still in production.</p><p>We’ll send your tracking info once it’s shipped.</p>`,l.appendChild(v)}let m=document.createElement("div");if(m.className=`AtOnceContainerPadded${b} AtOnceContainerNoBottomPadding${b}`,r){function h(e,t){return r[`${e}`]?`${t?" ":""}${r[`${e}`]}`:""}let _=document.createElement("div");_.className=`AtOnceSubHeadingSmall${b} AtOnceTextColorSeven${b}`,_.innerText="Shipping address";let g=document.createElement("div");g.className=`AtOnceSubText${b} AtOnceTextColorThree${b} AtOnceSubTextMediumMargin${b}`;let f=document.createElement("div");f.innerText=`${h("address1")}${h("address2",!0)}`;let A=document.createElement("div");A.innerText=`${h("city")}${h(`${r.province_code?"province_code":"province"}`,!0)}${h("zip",!0)}`;let x=document.createElement("div");x.innerText=`${h("country")}`,g.appendChild(f),g.appendChild(A),g.appendChild(x),m.appendChild(_),m.appendChild(g)}o.style.display="none",to.innerHTML=`Order ${e.name}`,to.className=`AtOnceSubHeading${b}`,i.appendChild(a),i.appendChild(l),i.appendChild(m),n.innerHTML="",n.appendChild(i)}async function v(){e.shopify_store=t,e2=e,eT=!0;let o=e.line_items,i=[];if(e.line_items_returned&&e.line_items_returned.length){let a=e.line_items_returned;for(let l of a){let p=1;l.quantity&&(p=Number(l.quantity)),isNaN(p)&&(p=1),i.push({id:l.id,line_item:l.line_item,product_id:l.product_id,quantity:p})}}te.style.display="",n.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerHTML=`Order ${e.name}`,to.className=`AtOnceSubHeading${b}`,tn.innerText="",tn.style.display="none";let r=document.createElement("div");r.className=`AtOnceContainerPadded${b}`;let s=document.createElement("div");for(let u of(s.className=`AtOnceContainerPaddedTopSmall${b}`,o))try{let d=document.createElement("div");d.className=`AtOnceFlexSpacedNoAlign${b} AtOnceMarginBottomMedium${b}`;let v=document.createElement("div");v.className=`AtOncePositionRelative${b}`;let $=u.img,m=u.title,h=u.customer_paid_amount,_=u.customer_paid_currency,g="";!1==u.hasOnlyDefaultVariant&&u.variant_title&&(g=u.variant_title);let f=document.createElement("div");f.className=`AtOnceProductQuantityText${b}`,f.innerText=u.quantity;let A=document.createElement("div");A.className=`AtOnceProductImage${b}`,$?A.style.backgroundImage=`url(${$})`:A.innerHTML=ex,v.appendChild(f),v.appendChild(A);let x=document.createElement("div");x.className=`AtOnceFlexSpacedProductTitle${b}`;let O=document.createElement("div");O.className=`AtOnceTriHeading${b} AtOnceTextColorThree${b}`,O.innerText=m;let C=document.createElement("div");C.className=`AtOnceSubText${b} AtOnceTextColorNine${b} AtOnceUserSelect${b}`,C.innerText=g,x.appendChild(O),x.appendChild(C);let y=document.createElement("div");y.className=`AtOnceSubText${b} AtOnceTextColorFive${b}`,y.innerText=`${B(_)}${N(h)}`,d.appendChild(v),d.appendChild(x),d.appendChild(y),s.appendChild(d)}catch(S){}let T=document.createElement("div");function M(t,o,n){try{let i=e[`${o}`];if(i&&i.presentment_money){let a=i.presentment_money.amount;if("Discount"==t&&0==Number(a));else{let l=document.createElement("div");l.className=`AtOnceFlexSpacedNoAlign${b} AtOnceMarginBottomSmall${b}${n?` AtOnceContainerPaddedTopSmall${b}`:""}`;let p=document.createElement("div");p.className=`${n?" AtOnceTriHeading":"AtOnceSubText"}${b} AtOnceTextColorThree${b}`,p.innerText=t;let r=document.createElement("div");r.className=`${n?" AtOnceTriHeading":"AtOnceSubText"}${b} AtOnceTextColorFive${b}`,0==Number(a)?r.innerText="Free":r.innerText=`${"Discount"==t?"- ":""}${B(i.presentment_money.currency_code)}${N(a)}`,l.appendChild(p),l.appendChild(r),T.appendChild(l)}}}catch(c){}}if(T.className=`AtOnceContainerPaddedTopMedium${b}`,M("Subtotal","total_line_items_price_set"),M("Discount","total_discounts_set"),M("Shipping","total_shipping_price_set"),M("Taxes","total_tax_set"),M("Total","total_price_set",!0),s.appendChild(T),e.self_service_gift_cards&&e.self_service_gift_cards.length){let P=e.self_service_gift_cards,w=document.createElement("div");w.className=`AtOnceContainerPaddedTopLarge${b}`;let k=document.createElement("div");k.className=`AtOnceSubHeadingSmall${b} AtOnceTextColorSeven${b} AtOnceSubTextMarginBottom${b}`,k.innerText="Gift Cards",w.appendChild(k);let L=B(e.presentment_currency);for(let E of P){let H=document.createElement("div");H.className=`AtOnceFlex${b} AtOnceMarginBottomMedium${b}`;let I=document.createElement("div");I.className=`AtOnceFlexSpacedNoAlign${b}`;let R=document.createElement("a");R.target="_blank",R.rel="noopener noreferrer",R.href=`${q||e.shopify_store}/discount/${E.code}?ref=atonce`,R.innerText=`${E.code}`;let K=document.createElement("div");K.className=`AtOnceSubText${b} AtOnceTextColorFive${b}`,K.innerText=`${L}${Number(E.presentment_amount).toFixed(2)}`,I.appendChild(R),I.appendChild(K),H.appendChild(I),w.appendChild(H)}s.appendChild(w)}if(e.self_services&&e.self_services.length){let U=e.self_services,z=document.createElement("div");z.className=`AtOnceContainerPaddedTopLarge${b}`;let G=document.createElement("div");for(let V of(G.className=`AtOnceSubHeadingSmall${b} AtOnceTextColorSeven${b} AtOnceSubTextMarginBottom${b}`,G.innerText="Returns",z.appendChild(G),U)){let D=document.createElement("div");D.className=`AtOnceFlex${b} AtOnceMarginBottomMedium${b}`;let F=document.createElement("div");F.className=`AtOnceFlexSpacedNoAlign${b}`;let J=document.createElement("a");J.target="_blank",J.rel="noopener noreferrer",J.href=`${eM}?return=${V.return}`,J.innerText=`${V.return}`,F.appendChild(J),D.appendChild(F),z.appendChild(D)}s.appendChild(z)}r.appendChild(s);let j=c(["Help","Track"],!0);n.innerHTML="",n.appendChild(j),n.appendChild(r)}o.appendChild(s)}async function tx(e){if(eT=!1,eS.length&&!e){let t=t$();for(let o of eS)if(o){let n=o[1],i=o[0];t0(i,n,t,eF)}eF.innerHTML="",eF.appendChild(t)}else tm(!0)}async function tO(){let e=document.createElement("div");if(eF.appendChild(e),0==eS.length&&await tm(!1,!0),eS.length){let t=document.createElement("div");t.innerText="Your orders",t.className=`AtOnceSubHeadingSmall${b} AtOnceTextColorSeven${b} AtOnceSubHeadingMargin${b}`,e.appendChild(t);let o=eS.length,n=eS.slice(0,3);for(let i of n)if(i){let a=i[1],l=i[0];t0(l,a,e,eF)}if(o>3){let p=document.createElement("div");p.className=`AtOnceFlexCenter${b} AtOnceContainerPaddedLess${b} AtOnceContainerPaddedTopTiny${b}`;let r=document.createElement("button");r.className=`AtOnceMainButton${b} AtOnceSecondaryButton${b} AtOnceTertiaryButton${b} AtOnceQuaternaryButton${b}`,r.innerText="View All Orders",r.addEventListener("click",function(){tx()}),p.appendChild(r),e.appendChild(p)}}}function t9(e,t,o,n,i,a,l,p,r,c,s){try{let u=!1;try{e2&&(e2.fulfillments&&e2.fulfillments.length||e2.cancelled_at||Number(e2.total_outstanding))&&(u=!0)}catch(d){}let v=null;try{v=e.action}catch($){}if(!0==u&&("edit_add"==v||"edit_remove"==v||"edit_shipping_address"==v||"edit_cancel"==v));else{let m="div";"link"==e.type?m="a":"map"==e.type?m="map":"text"==e.type?m="text":"button"==e.type&&(m="button");let h=document.createElement("a"==m?"a":"div");if(h.className=`AtOnceQuickButton${b}`,"a"==m){h.target="_blank",h.rel="noopener noreferrer";let _=e.link;_?h.href=`${_}`:h.href="https://atonce.com?utm_medium=self_service&utm_campaign=missing_link",h.classList.add(`AtOnceQuickButtonLink${b}`)}else if("map"==m){let g=e.actions,f=e.actions_heading,A=e.sub_action;h.addEventListener("click",function(){ty(g,f,!0,A)})}else if("text"==m){let x=e.text,O=e.heading,C=e.sub_actions;h.addEventListener("click",function(){let o=document.createElement("div");if(o.className=`AtOnceTextContainer${b}`,o.innerHTML=x,i&&(i.innerText=O),a.innerHTML="",a.appendChild(o),C){let s=document.createElement("div");try{for(let u of C)t9(u,s,!0,n,i,a,l,p,r)}catch(d){}a.appendChild(s)}if("search"==e.tri_action){try{tC.remove()}catch(v){}t_(a,!0,e.heading,e.tri_action)}else t_(a,!1,e.heading,e.tri_action);if(!0!==c&&ti.push({l:p,t:r,t_q:n,t_s:l}),n&&l)try{tC.remove()}catch($){}if(!0==c)try{t.scrollIntoView({behavior:"smooth"})}catch(m){}})}else"button"==m&&("manage_orders"==v?h.addEventListener("click",function(){tg(!1)}):"edit_add"==v?h.addEventListener("click",function(){tA("edit_add")}):"edit_remove"==v?h.addEventListener("click",function(){tA("edit_remove")}):"edit_shipping_address"==v?h.addEventListener("click",function(){!function e(){if(e2){let t=e2.shipping_address,o=JSON.parse(JSON.stringify(t)),n=document.createElement("div");n.className=`AtOnceMainShopStickyChangesContainer${b} AtOnceFlexCenter${b}`;let i=document.createElement("button");i.className=`AtOnceMainButton${b} AtOncePrimaryButton${b}`,i.innerText="Change Address";let a=document.createElement("div");function l(e,t){setTimeout(function(){try{let o=i.innerText;"Changed Address"!==o&&"Address Change Failed"!==o&&(i.innerText=`${e} (${t}/3)`)}catch(n){}},2e3*t)}a.style.display="none",a.className=`AtOnceLoadingSpinner${b} bottomed`,i.addEventListener("click",function(){a.style.display="",i.disabled=!0,i.classList.remove("red"),l("Confirming Address",1),l("Updating Package",2),l("Changing Address",3),k("edit_shipping_address",{store:e2.shopify_store,order:e2.id,address:t}).then(e=>{e&&e.success?(a.style.display="none",i.disabled=!1,i.classList.add("green"),i.innerText="Changed Address",setTimeout(function(){try{te.click()}catch(e){}},2500)):(i.classList.add("red"),a.style.display="none",i.innerText="Address Change Failed")})}),n.appendChild(a),n.appendChild(i);let p=[];te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerHTML="Change Address",to.className=`AtOnceSubHeading${b}`,tn.innerText="",tn.style.display="none";let r=document.createElement("div");r.className=`AtOnceContainerPadded${b} AtOnceContainerNoBottomPadding${b}`;let c=P,s=t.country_code,u=t.country,d=[];for(let v of M)d.push(`<option value="${v.alpha2}">${v.country}</option>`);let $="";for(let m of d)-1==m.indexOf(`value="${s}"`)&&($+=m);c=$+c,s&&u&&(c=`<option value="${s}">${u}</option>`+c);let h=[{name:"Name",value:"name",required:!0,type:"text"},{name:"Address",value:"address1",required:!0,type:"text"},{name:"Apartment, suite, etc.",value:"address2",required:!1,type:"text"},{name:"City",value:"city",required:!0,type:"text"},{name:"State/Province",value:"province_code",required:!0,type:"text"},{name:"ZIP/Post code",value:"zip",required:!0,type:"text"},{name:"Country",value:"country_code",required:!0,options:c,type:"text"},{name:"Company",value:"company",required:!1,maxLength:35,type:"text"},{name:"Phone",value:"phone",required:!1,type:"tel"},];if(t)for(let _ of h){let g="";t[`${_.value}`]&&(g=t[`${_.value}`]),g&&(_.default=g)}let f="l",A=document.createElement("div"),x="";for(let O of h){let C=document.createElement("div");if(A.appendChild(C),"l"==f)f="r",C.className=`AtOnceInputSubContainer_left${b}`;else{f="l";let y=document.createElement("div");y.className=`AtOnceInputSubContainer_clear${b}`,A.appendChild(y),C.className=`AtOnceInputSubContainer_right${b}`}let S="",T=document.createElement("label");if(T.htmlFor=O.value,T.innerText=`${O.name}`,T.className=`AtOnceDestinationLabel${b}`,O.options||"province_code"==O.value){if((S=document.createElement("select")).className=`AtOnceDestinationInput${b}`,O.options){if(S.innerHTML=O.options,t.country_code){if(x.innerHTML=w[`${t.country_code}`],t.province_code){x.value=t.province_code;try{let L=new Event("change");x.dispatchEvent(L)}catch(E){}}w[`${t.country_code}`]?x.disabled=!1:x.disabled=!0}else x.disabled=!0;S.addEventListener("change",function(){x.innerHTML=w[`${S.value}`],w[`${S.value}`]?x.disabled=!1:x.disabled=!0})}else x=S}else(S=document.createElement("input")).className=`AtOnceDestinationInput${b}`,S.type=O.type,S.name=O.value,O.maxLength&&(S.maxLength=O.maxLength);function N(){i.innerText="Change Address",i.disabled=!1,i.classList.remove("red"),B(),!S.value&&O.required?S.classList.add(`atonce_input_red${b}`):S.classList.remove(`atonce_input_red${b}`)}O.default&&(S.value=O.default),S.addEventListener("keyup",function(){B()}),S.addEventListener("change",function(){t[`${O.value}`]=S.value,N()}),N(),p.push({input:S,required:O.required,value:O.value,name:O.name}),C.appendChild(T),C.appendChild(S)}function B(){let e=!0;for(let[i,a]of Object.entries(o))if(t[`${i}`]!==o[`${i}`]){e=!1;break}!0==e?n.classList.remove("visible"):n.classList.add("visible")}A.style.display="",r.appendChild(A),r.appendChild(n),eF.innerHTML="",eF.appendChild(r)}}()}):"edit_cancel"==v&&h.addEventListener("click",function(){tA("edit_cancel")}));if("map"==m||"text"==m||"button"==m||"link"==m){let y=e.id;h.addEventListener("click",function(){try{k("update_frequency",{store:Q,id:y,ol:eT,u:F,f:J}),J+=.1,F=!1}catch(e){}})}let S=document.createElement("div");S.className=`AtOnceQuickLinkButtonHeaders${b}`;let T=document.createElement("div");if(T.className=`AtOnceTriHeading${b} AtOnceTextColorThree${b}`,T.innerText=e.heading?e.heading:e.actions_heading,S.appendChild(T),e.subheading){let L=document.createElement("div");L.className=`AtOnceSubText${b} AtOnceTextColorSeven${b}`,L.innerText=e.subheading,S.appendChild(L)}else(n||s)&&!0!==o&&h.classList.add(`AtOnceQuickButtonPadded${b}`);if(e.icon){let E=document.createElement("div");E.className=`AtOnceQuickIcon${b}`,E.innerHTML=e_[`${e.icon}`],h.appendChild(E)}h.appendChild(S);let N=document.createElement("div");N.className=`AtOnceMarginLeft${b}`,N.innerHTML=e0,h.appendChild(N),t.appendChild(h)}}catch(B){}}tm(!1,!0);let tC="";function t1(e,t){let o=document.createElement("div");o.id=`AtOnceContainerHelpCenterSearch${b}`,o.className=`AtOnceContainerPaddedTopSmall${b}`;let n=document.createElement("div"),i=Date.now(),a=document.createElement("div");a.className=`AtOncePositionRelative${b} AtOnceFlexTitle${b}`;let l=document.createElement("div");l.className=`AtOnceSearchInputIcon${b}`,l.innerHTML=eC;let p=document.createElement("input");p.id="AtOnceMainSearchInput",p.type="text",p.className=`AtOnceSearchInput${b} AtOnceSearchInputIconed${b}`,p.placeholder="Search instant answers",function e(t,o,n){try{let i=[];if(o||!(ea&&ea.length)&&ep.length){if(t.innerHTML="",o){let a=tc.search(o);if(a.item)i.push(a);else{a.sort(function(e,t){return t.f-e.f});let l=[];function p(){if(n&&n.length&&a.length)for(let e of a){let t=e.id;-1==n.findIndex(function(e){return e==t})&&l.push(e)}}if(p(),l.length)for(let r of l)try{if(i.length>5)break;i.push(r.item)}catch(c){}else for(let s of(a=ep.sort(function(e,t){return t.f-e.f}),p(),l))try{if(i.length>5)break;i.push(s)}catch(u){}}}else i=ep.sort(function(e,t){return t.f-e.f});try{if(o&&i.length<5){let d=ep.sort(function(e,t){return t.f-e.f});for(let v of d){let $=v.id;if(i.length<5)-1==n.findIndex(function(e){return e==$})&&i.push(v);else break}let m=d.slice(0,5);for(let h of m){let _=h.id;if(i.length<5)-1==i.findIndex(function(e){return e.id==_})&&i.push(h);else break}}}catch(g){}let f=i.slice(0,5);for(let A of f)t9(A,t,!1,!1,"",t,!1,"","",!0)}}catch(x){}}(n,e,t),p.addEventListener("keyup",function(){try{let e=p.value,t=Date.now();t-i>500&&(i=t,ts(e,n,4))}catch(o){}}),a.appendChild(l),a.appendChild(p),o.appendChild(a),o.appendChild(n),eF.appendChild(o)}function ty(e,t,o,n,i){o?(eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerText="Instant Answers",to.className=`AtOnceSubHeading${b}`,tn.style.display="none",te.style.display=""):(eF.classList.remove(`AtOnceContainerScrollMiddleHelpCenter${b}`),te.style.display="none",to.className=`AtOnceMainHeading${b}`,to.innerText=eh.top_hi_text,tn.innerText=eh.top_hi_subtext,tn.style.display="");let a=document.createElement("div"),l=document.createElement("div");l.className=`AtOnceSubHeadingSmall${b} AtOnceSubHeadingMargin${b} AtOnceTextColorSeven${b}`,l.innerText=t||"";let p=document.createElement("div"),r=document.createElement("div");if(tC=r,"Quick links"==t){if(e.length)for(let c of e)c.icon&&t9(c,p,!1,o,l,p,n,e,t)}else if(eT){if(e.length){for(let s of e)for(let u of ec)if(u.id==s){t9(u,p,!1,o,l,p,n,e,t);break}}}else if(e.length){for(let d of e)for(let v of er)if(v.id==d){t9(v,p,!1,o,l,p,n,e,t);break}}if(a.appendChild(l),a.appendChild(p),o&&n)try{r.className=`AtOnceContainerPaddedTop${b}`,t9(n,r,!0,o,l,p,n,e,t),a.appendChild(r)}catch($){}eF.innerHTML="",eF.appendChild(a),"Quick links"==t?(t1(),tO(),ej()):t1(t,e),!0!==i&&ti.push({l:e,t:t,t_q:o,t_s:n})}te.addEventListener("click",function(){if(eT)tx();else{ti.pop();let e=ti[ti.length-1];e?ty(e.l,e.t,e.t_q,e.t_s,!0):ty(er,"Quick links"),eT=!1}});let tb=document.createElement("div");tb.className=`AtOncePoweredByContainer${b} AtOnceBottomContainer${b}`;let t3=document.createElement("div");t3.className=`AtOnceSubText${b} AtOnceTextColorSeven${b}`,t3.innerHTML=`<a href="https://atonce.com?utm_medium=self_service&utm_campaign=by_atonce" target="_blank" rel="noopener noreferrer" class="AtOncePoweredByLink${b}">Powered by <span class="AtOncePoweredByText${b}">AtOnce</span></a>`,tb.appendChild(t3),eD.appendChild(eW),eD.appendChild(eF),eD.appendChild(tb),eV.appendChild(eD);let t2=document.createElement("button");t2.className=`AtOnceChatButton${b}`,t2.appendChild(g),t2.ariaLabel="Open self service",t2.ariaHasPopup=!1;let tS=document.createElement("div");tS.innerHTML=z;let tT=document.createElement("div");function t4(){t=!1,t2.classList.remove(`AtOnceHideChatButton${b}`),!0==eu&&es.body.classList.remove(`AtOnceBody${b}`),eV.className=`AtOnceChatPrimaryContainer${b} AtOnceHidePrimaryContainer${b}`;try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(e){}setTimeout(function(){!1==t&&(t2.style.display="",eV.style.display="none",AtOnceChatContainer.style.width="100px",AtOnceChatContainer.style.height="100px")},200)}function tM(){AtOnceChatContainer.style.width="100%",AtOnceChatContainer.style.height="100%",eV.style.display="",S.className=`AtOnceLiveChatMessagesContainer${b} hidden`,S.innerHTML="",setTimeout(function(){if(!0==t){t2.style.display="none";try{g.className=`AtOnceChatNotification${b} hidden`,ee&&(window.top.document.title=ee)}catch(e){}}},200),t=!0,ti=[],ty(er,"Quick links"),eV.style.cssText="",t2.classList.add(`AtOnceHideChatButton${b}`),!0==eu&&es.body.classList.add(`AtOnceBody${b}`),eV.className=`AtOnceChatPrimaryContainer${b} AtOnceShowPrimaryContainer${b}`}tT.className=`AtOnceCloseButtonMobile${b}`,tT.innerHTML=ey,tT.addEventListener("click",function(){t4()}),eV.appendChild(tT),tS.className=`AtOnceFlexCenter${b}`,t2.addEventListener("click",function(){if(!0==t)t4();else{if(i&&S.innerText)try{setTimeout(function(){try{th(i,a)}catch(e){}})}catch(e){}tM()}}),t2.appendChild(tS),eG.appendChild(S),eG.appendChild(eV),eG.appendChild(t2),setTimeout(function(){let e=document.getElementById("AtOnceChatContainer");e.contentDocument?es=e.contentDocument:e.contentWindow&&(es=e.contentWindow.document),es.head.appendChild(eE),es.body.appendChild(eG)})}catch(t5){}})}catch(ex){}}export{createAtOnceLiveChat};
