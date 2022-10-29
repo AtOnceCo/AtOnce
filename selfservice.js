@@ -1,12 +1,12 @@
-import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";import{getAuth as o,signInAnonymously as n,onAuthStateChanged as i}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";import{getFirestore as a,doc as l,collection as p,query as r,where as c,limit as s,orderBy as u,getDoc as d,getDocs as v,onSnapshot as $}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";import m from"https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.esm.js";import"https://cdn.jsdelivr.net/npm/autolinker@3.15.0/dist/Autolinker.min.js";import h from"https://cdn.jsdelivr.net/gh/AtOnceCo/Slider@main/slider.js";import _ from"https://cdn.skypack.dev/mime/lite";import{getStorage as g,getDownloadURL as f,ref as A,uploadBytes as x,deleteObject as O}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-storage.js";async function createAtOnceLiveChat(e,t){try{var o=setInterval(function(){"complete"===document.readyState&&(clearInterval(o),function o(){try{let n=document.getElementById("AtOnceChatContainer"),i=2147483647;try{t&&Number(t.z)&&(i=Number(t.z))}catch(a){}if(n)n.innerHTML="";else{let l=!1;(window.screen.width<=600||window.innerWidth<=600)&&(l=!0),(n=document.createElement("iframe")).title="Self Service",n.id="AtOnceChatContainer",n.allowFullscreen=!0,n.style.border="none",n.style.outline="none",n.style.position="fixed",n.style.bottom=0,n.style.right=0,n.style.width="100px",n.style.height="100px",n.style.maxWidth="450px",n.style.maxHeight=`${l?"1000px":"700px"}`,n.style.zIndex=i,n.style.userSelect="none",n.style.opacity=1,n.style.visibility="visible",document.body.appendChild(n)}createTheAtOnceLiveChat(e,i)}catch(p){}}())},100)}catch(n){}}async function createTheAtOnceLiveChat(C,y){try{let b=`-${E(5)}`,S=`
+import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";import{getAuth as o,signInAnonymously as n,onAuthStateChanged as i}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";import{getFirestore as a,doc as l,collection as p,query as r,where as c,limit as s,orderBy as u,getDoc as d,getDocs as v,onSnapshot as $,setDoc as m}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";import h from"https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.esm.js";import"https://cdn.jsdelivr.net/npm/autolinker@3.15.0/dist/Autolinker.min.js";import _ from"https://cdn.jsdelivr.net/gh/AtOnceCo/Slider@main/slider.js";import g from"https://cdn.skypack.dev/mime/lite";import{getStorage as f,getDownloadURL as A,ref as x,uploadBytes as O,deleteObject as C}from"https://www.gstatic.com/firebasejs/9.9.2/firebase-storage.js";async function createAtOnceLiveChat(e,t){try{var o=setInterval(function(){"complete"===document.readyState&&(clearInterval(o),function o(){try{let n=document.getElementById("AtOnceChatContainer"),i=2147483647;try{t&&Number(t.z)&&(i=Number(t.z))}catch(a){}if(n)n.innerHTML="";else{let l=!1;(window.screen.width<=600||window.innerWidth<=600)&&(l=!0),(n=document.createElement("iframe")).title="Self Service",n.id="AtOnceChatContainer",n.allowFullscreen=!0,n.style.border="none",n.style.outline="none",n.style.position="fixed",n.style.bottom=0,n.style.right=0,n.style.width="100px",n.style.height="100px",n.style.maxWidth="450px",n.style.maxHeight=`${l?"1000px":"700px"}`,n.style.zIndex=i,n.style.userSelect="none",n.style.opacity=1,n.style.visibility="visible",document.body.appendChild(n)}createTheAtOnceLiveChat(e,i)}catch(p){}}())},100)}catch(n){}}async function createTheAtOnceLiveChat(y,b){try{let T=`-${E(5)}`,S=`
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92" style="width:24px;height:24px;">
             <path d="M61.8 68.1c1.6 1.5 1.6 4.1.1 5.7-.8.8-1.9 1.2-2.9 1.2s-2-.4-2.8-1.1l-26-25c-.8-.8-1.2-1.8-1.2-2.9s.4-2.1 1.2-2.9l26-25c1.6-1.5 4.1-1.5 5.7.1 1.5 1.6 1.5 4.1-.1 5.7L38.8 46l23 22.1z" fill="#333" class="color000000 svgShape"/>
         </svg>
-        `,T=`
+        `,M=`
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92" style="width:24px;height:24px;">
             <path d="M63 46c0 1.1-.4 2.1-1.2 2.9l-26 25C35 74.6 34 75 33 75c-1.1 0-2.1-.4-2.9-1.2-1.5-1.6-1.5-4.1.1-5.7l23-22.1-23-22.1c-1.6-1.5-1.6-4.1-.1-5.7 1.5-1.6 4.1-1.6 5.7-.1l26 25c.8.8 1.2 1.8 1.2 2.9z" fill="#333" class="color000000 svgShape"/>
         </svg>
-        `,M=[{alpha2:"US",country:"United States"},{alpha2:"GB",country:"United Kingdom"},{alpha2:"CA",country:"Canada"},{alpha2:"AU",country:"Australia"},{alpha2:"DE",country:"Germany"},{alpha2:"FR",country:"France"},{alpha2:"NL",country:"Netherlands"},{alpha2:"BR",country:"Brazil"},{alpha2:"IN",country:"India"},{alpha2:"IT",country:"Italy"}],P=`
+        `,w=[{alpha2:"US",country:"United States"},{alpha2:"GB",country:"United Kingdom"},{alpha2:"CA",country:"Canada"},{alpha2:"AU",country:"Australia"},{alpha2:"DE",country:"Germany"},{alpha2:"FR",country:"France"},{alpha2:"NL",country:"Netherlands"},{alpha2:"BR",country:"Brazil"},{alpha2:"IN",country:"India"},{alpha2:"IT",country:"Italy"}],P=`
         <option value="AF">Afghanistan</option>
         <option value="AX">\xc5land Islands</option>
         <option value="AL">Albania</option>
@@ -251,7 +251,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
         <option value="YE">Yemen</option>
         <option value="ZM">Zambia</option>
         <option value="ZW">Zimbabwe</option>
-        <option value="ZZ">Unknown Region</option>`,w={AR:`
+        <option value="ZZ">Unknown Region</option>`,k={AR:`
         <option value='B'>Buenos Aires</option>
         <option value='K'>Catamarca</option>
         <option value='H'>Chaco</option>
@@ -1334,11 +1334,11 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
         <option value='AA'>Armed Forces Americas</option>
         <option value='AE'>Armed Forces Europe</option>
         <option value='AP'>Armed Forces Pacific</option>
-        `};async function k(e,t){return fetch(`https://atonce.com/api/selfservice.js?action=${e}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(t)}).then(e=>e.json().then(e=>e).catch(e=>{}))}function L(e){let t=e=>({id:e.id,...e.data()});return e.docs?e.docs.map(t):e.exists()?t(e):null}function E(e){let t="",o="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",n=o.length;for(let i=0;i<e;i++)t+=o.charAt(Math.floor(Math.random()*n));return t}function N(e){let t=(+`${e}`).toFixed(2).replace(/([0-9]+(\.[0-9]+[1-9])?)(\.?0+$)/,"$1").toString(),o=t.slice(-2);return"."==o[0]?`${t}0`:t}function B(e){let t={USD:"$",EUR:"€",JPY:"\xa5",GBP:"\xa3",AUD:"AU$",CAD:"CA$",CHF:"CHF",HKD:"HK$",NZD:"NZ$"};return t[e]?t[e]:`${e} `}function H(e,t,o,n,i,a){let l="";if(e&&e.length>1){(l=document.createElement("div")).className=`AtOnceModalProductImageSlideshowContainer${b}`;let p=document.createElement("ul");for(let r of(p.className=`AtOnceModalProductImageUL${b}`,e)){let c=document.createElement("li");c.className=a;let s=document.createElement("img");s.alt="",s.className=`AtOnceModalProductImage${b}`,s.style.maxWidth="100%",s.setAttribute("product_image","true"),r?s.src=`${r}`:s.src=`${product_placeholder_image}`,c.appendChild(s),p.appendChild(c),n.push(c)}l.appendChild(p),t.innerHTML=S,t.className=`AtOnceModalProductImageSlideshowChevron${b} AtOnceModalProductImageSlideshowChevron_left${b}`,t.id="productSliderLeft",o.innerHTML=T,o.className=`AtOnceModalProductImageSlideshowChevron${b} AtOnceModalProductImageSlideshowChevron_right${b}`,o.id="productSliderRight",l.appendChild(t),l.appendChild(o);let u=new h(p,l);u.init(),u.addArrow(t,o)}return l}function I(e){try{let t=document.querySelectorAll('[product_image="true"]');if(t&&t.length){let o=t.length;for(let n=0;n<o;n++)if(t[n].src==e){for(let i=0;i<o;i++){let a=t[i].parentElement;if(-1!==a.className.indexOf("active")){let l=document.getElementById("productSliderLeft"),p=document.getElementById("productSliderRight"),r=i-n;if(0==r);else if(r<0){if(r=Math.abs(r),p)for(let c=0;c<r;c++)p.click()}else if(r>0&&l)for(let s=0;s<r;s++)l.click();break}}break}}}catch(u){}}let R={apiKey:"AIzaSyDt13tSh_eab4msT_1huODpEe8q4L0EHlg",authDomain:"email-automation-321716.firebaseapp.com",databaseURL:"https://email-automation-321716.firebaseio.com",storageBucket:"email-automation-321716.appspot.com"};function K(o){try{return t()}catch(n){return e(o)}}let U=K({apiKey:"AIzaSyDt13tSh_eab4msT_1huODpEe8q4L0EHlg",authDomain:"email-automation-321716.firebaseapp.com",projectId:"email-automation-321716"}),z=K(R),G=g(z,R.storageBucket),V=a(U),D=o(U),F=!0,J=1,j="",q="",Q="",Z=0,W=Date.now(),Y=!1,X="",ee=window.top.document.title,et=0,eo=0,en="",ei="",ea=[],el="#fefefe",ep=[],er=[],ec=[],es,eu=!1;(window.screen.width<=600||window.innerWidth<=600)&&(eu=!0);let ed="#1a73e8",ev="#fff",e$="#111",em="#333",eh={top_hi_text:"Hi [[NAME_PLACEHOLDER]] \uD83D\uDC4B",top_hi_subtext:"Need help? Get instant solutions below"},e_={box:`
+        `};async function L(e,t){return fetch(`https://atonce.com/api/selfservice.js?action=${e}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(t)}).then(e=>e.json().then(e=>e).catch(e=>{}))}function N(e){let t=e=>({id:e.id,...e.data()});return e.docs?e.docs.map(t):e.exists()?t(e):null}function E(e){let t="",o="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",n=o.length;for(let i=0;i<e;i++)t+=o.charAt(Math.floor(Math.random()*n));return t}function H(e){let t=(+`${e}`).toFixed(2).replace(/([0-9]+(\.[0-9]+[1-9])?)(\.?0+$)/,"$1").toString(),o=t.slice(-2);return"."==o[0]?`${t}0`:t}function B(e){let t={USD:"$",EUR:"€",JPY:"\xa5",GBP:"\xa3",AUD:"AU$",CAD:"CA$",CHF:"CHF",HKD:"HK$",NZD:"NZ$"};return t[e]?t[e]:`${e} `}function I(e,t,o,n,i,a){let l="";if(e&&e.length>1){(l=document.createElement("div")).className=`AtOnceModalProductImageSlideshowContainer${T}`;let p=document.createElement("ul");for(let r of(p.className=`AtOnceModalProductImageUL${T}`,e)){let c=document.createElement("li");c.className=a;let s=document.createElement("img");s.alt="",s.className=`AtOnceModalProductImage${T}`,s.style.maxWidth="100%",s.setAttribute("product_image","true"),r?s.src=`${r}`:s.src=`${AtOnceProductPlaceholderImage}`,c.appendChild(s),p.appendChild(c),n.push(c)}l.appendChild(p),t.innerHTML=S,t.className=`AtOnceModalProductImageSlideshowChevron${T} AtOnceModalProductImageSlideshowChevron_left${T}`,t.id="productSliderLeft",o.innerHTML=M,o.className=`AtOnceModalProductImageSlideshowChevron${T} AtOnceModalProductImageSlideshowChevron_right${T}`,o.id="productSliderRight",l.appendChild(t),l.appendChild(o);let u=new _(p,l);u.init(),u.addArrow(t,o)}return l}function R(e){try{let t=eh.querySelectorAll('[product_image="true"]');if(t&&t.length){let o=t.length;for(let n=0;n<o;n++)if(t[n].src==e){for(let i=0;i<o;i++){let a=t[i].parentElement;if(-1!==a.className.indexOf("active")){let l=eh.getElementById("productSliderLeft"),p=eh.getElementById("productSliderRight"),r=i-n;if(0==r);else if(r<0){if(r=Math.abs(r),p)for(let c=0;c<r;c++)p.click()}else if(r>0&&l)for(let s=0;s<r;s++)l.click();break}}break}}}catch(u){}}function K(e){try{let t=document.createElement("div");t.innerHTML=e;let o=t.getElementsByTagName("a");if(o&&o.length)for(let n of o)n.rel="noopener noreferrer nofollow";e=t.innerHTML}catch(i){}return e}let U={apiKey:"AIzaSyDt13tSh_eab4msT_1huODpEe8q4L0EHlg",authDomain:"email-automation-321716.firebaseapp.com",databaseURL:"https://email-automation-321716.firebaseio.com",storageBucket:"email-automation-321716.appspot.com"};function z(o){try{return t()}catch(n){return e(o)}}let G=z({apiKey:"AIzaSyDt13tSh_eab4msT_1huODpEe8q4L0EHlg",authDomain:"email-automation-321716.firebaseapp.com",projectId:"email-automation-321716"}),V=z(U),D=f(V,U.storageBucket),F=a(G),J=o(G),q=!0,j=1,Q="",Z="",Y="",W="a few hours",X=0,ee=Date.now(),et=!1,eo="",en=window.top.document.title,ei=0,ea=0,el="",ep="",er="",ec="shopify",es=[],eu="https://atonce.com",ed="#fefefe",ev=[],e$=[],em=[],eh,e_=!1;(window.screen.width<=600||window.innerWidth<=600)&&(e_=!0);let eg="#1a73e8",ef="#fff",eA="#111",e0="#333",ex={top_hi_text:"Hi [[NAME_PLACEHOLDER]] \uD83D\uDC4B",top_hi_subtext:"Need help? Get instant solutions below"},eO={box:`
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#333">
                 <path fill-rule="evenodd" d="M16.164 3a.5.5 0 0 0-.004.002.5.5 0 0 0-.01 0 .5.5 0 0 0-.17.043L4.422 7.988a.5.5 0 0 0-.422.5V23.49a.5.5 0 0 0 .043.207.5.5 0 0 0 .002.006.5.5 0 0 0 .014.027.5.5 0 0 0 .255.239l11.567 4.945a.5.5 0 0 0 .293.094.5.5 0 0 0 .328-.098l11.56-4.941a.5.5 0 0 0 .307-.395.5.5 0 0 0 .004-.027.5.5 0 0 0 .002-.024.5.5 0 0 0 0-.025.5.5 0 0 0 0-.008V8.488a.5.5 0 0 0-.414-.498L16.406 3.05a.5.5 0 0 0-.011-.005.5.5 0 0 0-.082-.027.5.5 0 0 0-.014-.004.5.5 0 0 0-.035-.008.5.5 0 0 0-.014-.002.5.5 0 0 0-.037-.002.5.5 0 0 0-.049-.002zm.023 1.045 2.45 1.047L8.25 9.535a.5.5 0 0 0-.03.014L5.769 8.5l10.42-4.455zm3.723 1.592 2.973 1.271-10.58 4.526a.5.5 0 0 0-.301.51.5.5 0 0 0-.002.058v5.35l-1.084-1.627a.5.5 0 0 0-.639-.17L9 16.193v-5.89l10.91-4.666zm4.244 1.814L26.607 8.5l-10.42 4.455-2.45-1.047 10.388-4.443a.5.5 0 0 0 .03-.014zM5 9.258l3 1.283v6.461a.5.5 0 0 0 .723.447l1.605-.803 1.729 2.592a.5.5 0 0 0 .002.004.5.5 0 0 0 .252.227.5.5 0 0 0 .002.002.5.5 0 0 0 .044.015.5.5 0 0 0 .092.02.5.5 0 0 0 .059.002.5.5 0 0 0 .058-.004.5.5 0 0 0 .041-.008.5.5 0 0 0 .03-.008.5.5 0 0 0 .025-.008.5.5 0 0 0 .082-.035.5.5 0 0 0 .002-.002.5.5 0 0 0 .254-.502v-6.26l2.688 1.15v13.915L5 23.174V9.258zm22.375.002v13.914l-10.688 4.572V13.83l10.688-4.57z" color="#333" font-family="sans-serif" font-weight="400" overflow="visible" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#333;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#333;solid-opacity:1"/>
             </svg>`,return:`
-            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 64 64" width="32" height="32" class="AtOnceReturnIconAdjustment${b}" fill="#333">
+            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 64 64" width="32" height="32" class="AtOnceReturnIconAdjustment${T}" fill="#333">
                 <path d="M21 32a1 1 0 0 1-.71-.29l-3.56-3.56-2.41.8A1 1 0 0 1 13 28v-7a1 1 0 0 1 .64-.93l21-8a1 1 0 0 1 .71 1.87L15 21.69v4.92l1.68-.56a1 1 0 0 1 1 .24l2.32 2.3V24a1 1 0 0 1 .62-.93l21-8.59a1 1 0 0 1 .76 1.85L22 24.67V31a1 1 0 0 1-1 1Z"/>
                 <path d="M28 57a1 1 0 0 1-.34-.06l-22-8A1 1 0 0 1 5 48V18a1 1 0 0 1 2 0v29.3l20 7.27V26a1 1 0 0 1 2 0v30a1 1 0 0 1-1 1zm22-31a1 1 0 0 1-1-1v-7a1 1 0 0 1 2 0v7a1 1 0 0 1-1 1z"/>
                 <path d="M28 57a1 1 0 0 1-.34-1.94L49 47.3V45a1 1 0 0 1 2 0v3a1 1 0 0 1-.66.94l-22 8A1 1 0 0 1 28 57zm0-30a1 1 0 0 1-.34-.06l-22-8a1 1 0 0 1 0-1.88l22-8a1 1 0 0 1 .68 0l22 8a1 1 0 0 1 0 1.88l-22 8A1 1 0 0 1 28 27zM8.93 18 28 24.94 47.07 18 28 11.06zM33 49.55a1 1 0 0 1-.34-1.94l4-1.45a1 1 0 0 1 .68 1.84l-4 1.45a1 1 0 0 1-.34.1zm0-4a1 1 0 0 1-.34-1.94l2-.73a1 1 0 0 1 .68 1.88l-2 .73a1 1 0 0 1-.34.06z"/>
@@ -1355,10 +1355,10 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                 <circle cx="128" cy="180" r="8" fill="#333"/>
                 <path fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" d="M128,144.0045v-8a28,28,0,1,0-28-28"/>
             </svg>`,faq:`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#333" width="30" height="30" class="AtOnceFAQIconAdjustment${b} faq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#333" width="30" height="30" class="AtOnceFAQIconAdjustment${T} faq">
                 <path d="M14,57a1,1,0,0,1-.39-.08A1,1,0,0,1,13,56V47H9a5,5,0,0,1-5-5V18a5,5,0,0,1,5-5H49a5,5,0,0,1,5,5V42a5,5,0,0,1-5,5H24.84L14.69,56.72A1,1,0,0,1,14,57ZM9,15a3,3,0,0,0-3,3V42a3,3,0,0,0,3,3h5a1,1,0,0,1,1,1v7.66l8.75-8.38a1,1,0,0,1,.69-.28H49a3,3,0,0,0,3-3V18a3,3,0,0,0-3-3ZM60,36V12a5,5,0,0,0-5-5H15a5,5,0,0,0-5,5h2a3,3,0,0,1,3-3H55a3,3,0,0,1,3,3V36a3,3,0,0,1-3,3v2A5,5,0,0,0,60,36ZM30,31.92A6,6,0,1,0,23,26h2a4,4,0,1,1,4,4,1,1,0,0,0-1,1v5h2ZM30,38H28v2h2Z"/>
             </svg>`,chat:`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#333" class="AtOnceFAQIconAdjustment${b}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#333" class="AtOnceFAQIconAdjustment${T}">
                 <path transform="scale(-1, 1) translate(-24,0)" d="M12 11.25c-.4141846 0-.75.3358154-.75.75s.3358154.75.75.75.75-.3358154.75-.75-.3358154-.75-.75-.75zm-3 0c-.4141846 0-.75.3358154-.75.75s.3358154.75.75.75.75-.3358154.75-.75-.3358154-.75-.75-.75zm6 0c-.4141846 0-.75.3358154-.75.75s.3358154.75.75.75.75-.3358154.75-.75-.3358154-.75-.75-.75zm4.4152832-5.9597168c-3.7055054-4.09552-10.02948-4.4117432-14.125-.7062988-4.09552 3.7055054-4.4117432 10.02948-.7062988 14.125l-2.4375 2.4375c-.09375.09375-.1464233.2208862-.1464233.3534546C2 21.776062 2.223877 21.999939 2.5 22H12c2.4794312-.000061 4.8704224-.9212646 6.7089844-2.5847168 4.095581-3.7055054 4.4117431-10.02948.7062988-14.125zM12 21H3.7069702l1.928772-1.9287109c.000061-.000061.0001221-.0001221.0001221-.0001831.1951904-.1952515.1951294-.5117188-.0001221-.7068481C3.9483643 16.6768799 3.0002441 14.3883667 3 12.0020142c-.0005493-4.9700317 4.0279541-8.9994507 8.9979858-9 4.9699707-.0005493 8.9994507 4.0279541 9 8.9979858.0005494 4.9699707-4.0279541 8.9994507-8.9979858 9z"/>
             </svg>
             `,existing_customer:`
@@ -1378,29 +1378,29 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
             <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" clip-rule="evenodd" viewBox="0 0 128 128" width="32" height="32">
                 <path fill="none" d="M.211 0h128v128h-128z"/><path fill="#333" fill-rule="nonzero" d="M75.941 79.528c-11.617 10.144-28.988 13.34-43.601 7.365C14.72 79.689 3.496 59.425 6.867 40.571 10.24 21.704 27.782 6.443 47.398 6.008c.361-.006.722-.008 1.084-.007 19.279.183 37.454 15.06 41.025 34.312 2.394 12.904-1.734 26.845-10.689 36.433l34.787 33.82c.746.788.617 1.05.605 1.489-.042 1.525-2.11 2.527-3.394 1.379L75.941 79.528ZM47.965 10.001c-17.208.163-33.355 13.173-36.934 30.111-2.634 12.469 1.515 26.166 10.639 35.073 10.478 10.228 27.063 13.662 40.897 8.005 16.003-6.542 26.182-25.034 23.007-42.148-3.147-16.967-18.86-30.64-36.627-31.035a53.632 53.632 0 0 0-.982-.006Z"/>
             </svg>
-            `};async function eg(e){return new Promise(function(t,o){Promise.all(e).then(e=>{t(e)}).catch(e=>{t("error")})})}function ef(e){let t=e.length;for(let o=0;o<t;o++)e.sort(function(e,t){return t.f-e.f});for(let n=0;n<t;n++)e[n].actions&&ef(e[n].actions);return e}async function eA(){try{let e=[];async function t(e,t){return new Promise(async function(t,o){try{let n=`${C}`.toLowerCase(),i=l(V,"self_service",`${n}.useatonce.com`,`${e}`,"1");d(i).then(o=>{o.exists()?("quick_links"==e?(er=o.data().list,er=ef(er)):(ec=o.data().list,ec=ef(ec)),t("success")):t("error")})}catch(a){t("error")}})}async function o(){return new Promise(async function(e,t){try{let o=`${C}`.toLowerCase(),n=l(V,"stripe_check",`${o}@emails.atonce.com`);d(n).then(t=>{if(t.exists()){let o=t.data();o&&"active"==o.stripeSubscriptionStatus?e(!0):e(!1)}else e(!1)})}catch(i){e(!1)}})}async function n(){return new Promise(async function(e,t){try{let o=`${C}`.toLowerCase(),n=l(V,"self_service",`${o}.useatonce.com`);d(n).then(t=>{if(t.exists()){j=t.data();try{let o=window.location.hostname;o&&-1==o.indexOf(".useatonce.com")&&-1==o.indexOf("returns.")&&-1==o.indexOf("exchanges.")&&-1==o.indexOf("refunds.")&&(q=`https://${o}`)}catch(n){}!q&&j.brand_url&&(q=`https://${j.brand_url}`),j.main_email&&(Q=j.main_email),j.last_seen&&!1==isNaN(j.last_seen)&&(Z=Number(j.last_seen));let i=`${j.color}`.trimStart().trimEnd();if(i&&/[0-9A-Fa-f]{6}/g.test(i)){ed=i;let a=function e(t,o,n){let i="#"===t.charAt(0)?t.substring(1,7):t,a=parseInt(i.substring(0,2),16),l=parseInt(i.substring(2,4),16),p=parseInt(i.substring(4,6),16);if(!(.299*a+.587*l+.114*p>186))return[o,t,t];{function r(e,t){return e.replace(/^#/,"").replace(/../g,e=>("0"+Math.min(255,Math.max(0,parseInt(e,16)+t)).toString(16)).substr(-2))}let c=r(t,-7),s=r(t,-25);return[n,`#${c}`,`#${s}`]}}(ed,"#fff","#111");ev=a[0],e$=a[1],em=a[2]}let l=j.shopify_stores;if(l&&Array.isArray(l)&&l.length){let p=[];for(let r of l)p.push(r);ea=p=[...new Set(p)]}e("success")}else e("error")})}catch(i){e("error")}})}e.push(t("quick_links",er)),e.push(t("quick_order_links",ec)),e.push(n()),e.push(o());let i=await eg(e);if(!1==i[3])return"error";return i[0]}catch(a){return"error"}}async function e0(){return new Promise(async function(e,t){let o=!1;try{"true"==localStorage.getItem("hasTeamToken")&&(o=!0)}catch(a){}let l="";try{l=D.currentUser.uid}catch(p){}if(D&&o||l){if(!l)try{i(D,e=>{e&&localStorage.setItem("AtOnceLiveChatUserID",D.currentUser.uid)})}catch(r){}eA().then(t=>{e(t)})}else if(D&&null===D.currentUser)try{i(D,t=>{t?(eA().then(t=>{e(t)}),localStorage.setItem("AtOnceLiveChatUserID",D.currentUser.uid)):n(D).then(()=>{i(D,t=>{t?(localStorage.setItem("AtOnceLiveChatUserID",t.uid),eA().then(t=>{e(t)})):e("error")})}).catch(t=>{e("error")})})}catch(c){}else n(D).then(()=>{i(D,t=>{t?(localStorage.setItem("AtOnceLiveChatUserID",t.uid),eA().then(t=>{e(t)})):e("error")})}).catch(t=>{e("error")})})}await e0().then(e=>{if("error"!=e)try{let t=!1;try{document.addEventListener("visibilitychange",function(){try{!0==t&&"visible"==document.visibilityState&&(window.top.document.title=ee)}catch(e){}})}catch(o){}let n=0,i="",a=[];try{!1==isNaN(Number(localStorage.getItem("AtOnceLastUnreadMessage")))&&(n=Number(localStorage.getItem("AtOnceLastUnreadMessage")))}catch(h){}let g=document.createElement("div");g.className=`AtOnceChatNotification${b} hidden`;let S=document.createElement("div");async function T(e){try{let t=[`${e}`],o=localStorage.getItem("AtOnceOrders");if(o)try{let n=o.split(",");if(n&&n.length)for(let i of n)i&&i.length>7&&-1==t.indexOf(i)&&t.push(i)}catch(a){}localStorage.setItem("AtOnceOrders",t)}catch(l){}}async function R(e,t,o){k("get_customer_orders",{store:o,customer:t,order:e}).then(e=>{if(e.success){let t=e.success;for(let o of t=t.reverse())T(o)}try{let n=localStorage.getItem("AtOnceOrders");if(n){let i=n.split(",")[0];i&&i.length>7&&-1!==i.indexOf("_atonce_")&&function e(t,o,n){try{for(let i of t)i.text?-1!==i.text.indexOf(o)&&-1==i.text.indexOf(`${eM}?order=`)&&(i.text=e5(i.text,o,`${eM}?order=${n}`)):i.link&&-1!==i.link.indexOf(o)&&-1==i.link.indexOf(`${eM}?order=`)&&(i.link=e5(i.link,o,`${eM}?order=${n}`)),i.sub_actions&&e(i.sub_actions,o,n)}catch(a){}}(er,eM,i)}}catch(a){}})}function K(e){return e?e.toLowerCase().split(" ").map(e=>e.charAt(0).toUpperCase()+e.slice(1)).join(" ").replaceAll("_"," "):""}async function U(e,t){let o=null,n=null,i=[];for(let a of ea)i.push(p(a));async function p(i){return new Promise(async function(a,p){try{let r=await d(l(V,"shopify",`${i}`,`${t}`,`${e}`)).then(L);r&&(o=i,n=r),a("success")}catch(c){a("success")}})}return i.length>0&&await eg(i),[n,o,e]}S.className=`AtOnceLiveChatMessagesContainer${b} hidden`;let z=`
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform="scale(-1 1)" fill="${ev}" style="height:42px;width:42px;">
+            `};async function e9(e){try{m(l(F,"messages",`${Y}`,"active_live",J.currentUser.uid),{time:!0==e?-1:Date.now()}).catch(e=>{})}catch(t){}}async function eC(e){return new Promise(function(t,o){Promise.all(e).then(e=>{t(e)}).catch(e=>{t("error")})})}function ey(e){let t=e.length;for(let o=0;o<t;o++)e.sort(function(e,t){return t.f-e.f});for(let n=0;n<t;n++)e[n].actions&&ey(e[n].actions);return e}function e1(e){if(e>80){let t=(e/60).toFixed(0);return t>48?"a few days":t>24?"a day":t>3?`${t} hours`:"a few hours"}return e<2?"a minute":`${e} minutes`}async function eb(){try{let e=[];async function t(e,t){return new Promise(async function(t,o){try{let n=`${y}`.toLowerCase(),i=l(F,"self_service",`${n}.useatonce.com`,`${e}`,"1");d(i).then(o=>{o.exists()?("quick_links"==e?(e$=o.data().list,e$=ey(e$)):(em=o.data().list,em=ey(em)),t("success")):t("error")})}catch(a){t("error")}})}async function o(){return new Promise(async function(e,t){try{let o=`${y}`.toLowerCase(),n=l(F,"stripe_check",`${o}@emails.atonce.com`);d(n).then(t=>{if(t.exists()){let o=t.data();o&&("active"==o.stripeSubscriptionStatus||!0!==o.more)?e(!0):e(!1)}else e(!1)})}catch(i){e(!1)}})}async function n(){return new Promise(async function(e,t){try{let o=`${y}`.toLowerCase(),n=l(F,"self_service",`${o}.useatonce.com`);d(n).then(t=>{if(t.exists()){Q=t.data();try{let o=window.location.hostname;o&&-1==o.indexOf("help.")&&-1==o.indexOf(".helpatonce.com")&&(Z=`https://${o}`)}catch(n){}if(!Z&&Q.brand_url&&(Z=`https://${Q.brand_url}`),Q.main_email&&(Y=Q.main_email),Q.last_reply_times)try{if(Q.last_reply_times.length){let i=Q.last_reply_times,a=0;for(let l of i)a+=Number(l);let p=a/i.length,r=Number((p/6e4).toFixed(0));W=e1(r)}}catch(c){}Q.last_seen&&!1==isNaN(Q.last_seen)&&(X=Number(Q.last_seen));let s=`${Q.color}`.trim();if(s&&/[0-9A-Fa-f]{6}/g.test(s)){eg=s;let u=function e(t,o,n){let i="#"===t.charAt(0)?t.substring(1,7):t,a=parseInt(i.substring(0,2),16),l=parseInt(i.substring(2,4),16),p=parseInt(i.substring(4,6),16);if(!(.299*a+.587*l+.114*p>186))return[o,t,t];{function r(e,t){return e.replace(/^#/,"").replace(/../g,e=>("0"+Math.min(255,Math.max(0,parseInt(e,16)+t)).toString(16)).substr(-2))}let c=r(t,-7),s=r(t,-25);return[n,`#${c}`,`#${s}`]}}(eg,"#fff","#111");ef=u[0],eA=u[1],e0=u[2]}let d=Q.shopify_stores,v=Q.woo_stores,$=[];if(d&&Array.isArray(d)&&d.length?(ec="shopify",$=d):v&&Array.isArray(v)&&v.length&&(ec="woocommerce",$=v),$.length){let m=[];for(let h of $)m.push(h);es=m=[...new Set(m)]}e("success")}else e("error")})}catch(i){e("error")}})}e.push(t("quick_links",e$)),e.push(t("quick_order_links",em)),e.push(n()),e.push(o());let i=await eC(e);if(!1==i[3])return"error";return i[0]}catch(a){return"error"}}async function e3(){return new Promise(async function(e,t){let o=!1;try{"true"==localStorage.getItem("hasTeamToken")&&(o=!0)}catch(a){}let l="";try{l=J.currentUser.uid}catch(p){}if(J&&o||l){if(!l)try{i(J,e=>{e&&localStorage.setItem("AtOnceLiveChatUserID",J.currentUser.uid)})}catch(r){}eb().then(t=>{e(t)})}else if(J&&null===J.currentUser)try{i(J,t=>{t?(eb().then(t=>{e(t)}),localStorage.setItem("AtOnceLiveChatUserID",J.currentUser.uid)):n(J).then(()=>{i(J,t=>{t?(localStorage.setItem("AtOnceLiveChatUserID",t.uid),eb().then(t=>{e(t)})):e("error")})}).catch(t=>{e("error")})})}catch(c){}else n(J).then(()=>{i(J,t=>{t?(localStorage.setItem("AtOnceLiveChatUserID",t.uid),eb().then(t=>{e(t)})):e("error")})}).catch(t=>{e("error")})})}await e3().then(e=>{if("error"!=e)try{let t=!1;try{document.addEventListener("visibilitychange",function(){try{!0==t&&"visible"==document.visibilityState&&(window.top.document.title=en)}catch(e){}})}catch(o){}let n=0,i="",a=[];try{!1==isNaN(Number(localStorage.getItem("AtOnceLastUnreadMessage")))&&(n=Number(localStorage.getItem("AtOnceLastUnreadMessage")))}catch(m){}let _=document.createElement("div");_.className=`AtOnceChatNotification${T} hidden`;let f=document.createElement("div");async function S(e){try{let t=[`${e}`],o=localStorage.getItem("AtOnceOrders");if(o)try{let n=o.split(",");if(n&&n.length)for(let i of n)i&&i.length>7&&-1==t.indexOf(i)&&t.push(i)}catch(a){}localStorage.setItem("AtOnceOrders",t)}catch(l){}}async function M(e,t,o){L("get_customer_orders",{store:o,customer:t,order:e}).then(e=>{if(e.success){let t=e.success;for(let o of t=t.reverse())S(o)}try{let n=localStorage.getItem("AtOnceOrders");if(n){let i=n.split(",")[0];i&&i.length>7&&-1!==i.indexOf("_atonce_")&&function e(t,o,n){try{for(let i of t)i.text?-1!==i.text.indexOf(o)&&-1==i.text.indexOf(`${eB}?order=`)&&(i.text=eI(i.text,o,`${eB}?order=${n}`)):i.link&&-1!==i.link.indexOf(o)&&-1==i.link.indexOf(`${eB}?order=`)&&(i.link=eI(i.link,o,`${eB}?order=${n}`)),i.sub_actions&&e(i.sub_actions,o,n)}catch(a){}}(e$,eB,i)}}catch(a){}})}function U(e){return e?e.toLowerCase().split(" ").map(e=>e.charAt(0).toUpperCase()+e.slice(1)).join(" ").replaceAll("_"," "):""}f.className=`AtOnceLiveChatMessagesContainer${T} hidden`;let z="";try{z=J.currentUser.email}catch(G){}z&&localStorage.setItem("AtOnceLiveChatUserEmail",`${z}`.trim().toLowerCase());try{z||(z=localStorage.getItem("AtOnceLiveChatUserEmail").trim().toLowerCase())}catch(V){}async function ey(e,t){let o=null,n=null,i=[];for(let a of es)i.push(p(a));async function p(i){return new Promise(async function(a,p){try{let r=await d(l(F,ec,`${i}`,`${t}`,`${e}`)).then(N);if(r){o=i,n=r;try{n.email&&!z&&(localStorage.setItem("AtOnceLiveChatUserEmail",n.email.trim().toLowerCase()),z=n.email.trim().toLowerCase())}catch(c){}}a("success")}catch(s){a("success")}})}return i.length>0&&await eC(i),[n,o,e]}let eb=`
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform="scale(-1 1)" fill="${ef}" style="height:42px;width:42px;">
                         <path d="M12 2C6.5 2 2 6.5 2 12c0 2.3.8 4.5 2.3 6.3l-2 2c-.4.4-.4 1 0 1.4.2.2.4.3.7.3h9c5.5 0 10-4.5 10-10S17.5 2 12 2zM8 13c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm4 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm4 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/>
                     </svg>            
-                    `,ef=`
+                    `,e3=`
                     <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 14 14">
-                            <path fill="none" stroke="${ev}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 1 1 13M1 1l12 12" class="colorStroke000 svgStroke"/>
+                            <path fill="none" stroke="${ef}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 1 1 13M1 1l12 12" class="colorStroke000 svgStroke"/>
                         </svg>
                     </svg>
-                    `,eA=`
+                    `,e2=`
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
-                        <g data-name="Layer 2" fill="${ev}" class="color000000 svgShape">
+                        <g data-name="Layer 2" fill="${ef}" class="color000000 svgShape">
                             <g data-name="arrow-back" class="color000000 svgShape">
                             <path d="M19 11H7.14l3.63-4.36a1 1 0 1 0-1.54-1.28l-5 6a1.19 1.19 0 0 0-.09.15c0 .05 0 .08-.07.13A1 1 0 0 0 4 12a1 1 0 0 0 .07.36c0 .05 0 .08.07.13a1.19 1.19 0 0 0 .09.15l5 6A1 1 0 0 0 10 19a1 1 0 0 0 .64-.23 1 1 0 0 0 .13-1.41L7.14 13H19a1 1 0 0 0 0-2z" class="color000000 svgShape"/>
                             </g>
                         </g>
                     </svg>
-                    `,e0=`
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" fill="${"#111"==ev?em:ed}">
+                    `,eT=`
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" fill="${"#111"==ef?e0:eg}">
                         <path d="M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z"/>
                     </svg>
-                    `,ex=`
+                    `,eS=`
                     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" style="background: #888;border-radius: 10px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32">
                             <g fill="#fefefe" class="color000 svgShape" data-name="Layer 2">
@@ -1408,23 +1408,23 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                             </g>
                         </svg>
                     </svg>
-                    `,eO=`
+                    `,e4="";try{e4="data:image/svg+xml;base64,"+btoa(eS)}catch(eM){}let ew=`
                     <svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16px" height="16px">
                             <path fill="#333" d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2Z" class="color000000 svgShape color888"/>
                         </svg>
                     </svg>
-                    `,e9=`
+                    `,e5=`
                     <svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="16px" height="16px">
                             <path fill="#333" d="M6 13c-.55228 0-1-.4477-1-1s.44772-1 1-1h12c.5523 0 1 .4477 1 1s-.4477 1-1 1H6Z" class="color000000 svgShape color888"/>
                         </svg>
                     </svg>
-                    `,eC=`
+                    `,eP=`
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                         <path fill="#888" fill-rule="evenodd" d="m15.7 13.3-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" class="color000000 svgShape"/>
                     </svg>
-                    `;eA=eA.replace(`fill="${ev}"`,`fill="${"#fff"==ev?"#eee":"#222"}"`);let e1=e5(ef.replace(`stroke="${ev}"`,'stroke="#555"'),"16","10"),ey=ef.replace(`stroke="${ev}"`,`stroke="${"#fff"==ev?"#ddd":"#333"}"`),eb=ef.replace(`stroke="${ev}"`,'stroke="#555"'),e3=ef.replace(`stroke="${ev}"`,'stroke="#fff"').replace('width="16" height="16"','width="8" height="8"').replace('width="16" height="16"','width="8" height="8"'),e2="",eS=[],eT=!1,e4="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",eM=`https://${j.domain?j.domain:`${C}.useatonce.com`}`;function e5(e,t,o){let n=t.replace(/([.*+?^=!:${}()|\[\]\/\\])/g,"\\$1");return e.replace(RegExp(n,"g"),o)}let eP=(e,t)=>{try{for(let o of e)o.text?(t&&-1!==o.text.indexOf("{{return_portal}}")&&(o.text=e5(o.text,"{{return_portal}}",eM)),-1!==o.text.indexOf("{{brand_url}}")&&(o.text=e5(o.text,"{{brand_url}}",q))):o.link&&(t&&-1!==o.link.indexOf("{{return_portal}}")&&(o.link=e5(o.link,"{{return_portal}}",eM)),-1!==o.link.indexOf("{{brand_url}}")&&(o.link=e5(o.link,"{{brand_url}}",q))),o.sub_actions&&eP(o.sub_actions,t)}catch(n){}};for(let[e6,ew]of Object.entries(eh))-1!==ew.indexOf("[[NAME_PLACEHOLDER]]")&&(eh[`${e6}`]=ew.replace("[[NAME_PLACEHOLDER]]","there"));eP(er,!0),eP(ec);try{for(let ek of er)"map"===ek.type||ek.tri_action||ep.push(ek)}catch(eL){}ep=ep.filter((e,t,o)=>o.findIndex(t=>t.heading===e.heading)===t);let eE=document.createElement("style");eE.innerHTML=`
+                    `;e2=e2.replace(`fill="${ef}"`,`fill="${"#fff"==ef?"#eee":"#222"}"`);let e6=eI(e3.replace(`stroke="${ef}"`,'stroke="#555"'),"16","10"),ek=e3.replace(`stroke="${ef}"`,`stroke="${"#fff"==ef?"#ddd":"#333"}"`),eL=e3.replace(`stroke="${ef}"`,'stroke="#555"'),eN=e3.replace(`stroke="${ef}"`,'stroke="#fff"').replace('width="16" height="16"','width="8" height="8"').replace('width="16" height="16"','width="8" height="8"'),eE="",e7=[],e8=!1,eH="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",eB=`https://${Q.domain?Q.domain:`${y}.useatonce.com`}`;function eI(e,t,o){let n=t.replace(/([.*+?^=!:${}()|\[\]\/\\])/g,"\\$1");return e.replace(RegExp(n,"g"),o)}let eR=(e,t)=>{try{for(let o of e)o.text?(t&&-1!==o.text.indexOf("{{return_portal}}")&&(o.text=eI(o.text,"{{return_portal}}",eB)),-1!==o.text.indexOf("{{brand_url}}")&&(o.text=eI(o.text,"{{brand_url}}",Z))):o.link&&(t&&-1!==o.link.indexOf("{{return_portal}}")&&(o.link=eI(o.link,"{{return_portal}}",eB)),-1!==o.link.indexOf("{{brand_url}}")&&(o.link=eI(o.link,"{{brand_url}}",Z))),o.sub_actions&&eR(o.sub_actions,t)}catch(n){}};for(let[eK,eU]of Object.entries(ex))-1!==eU.indexOf("[[NAME_PLACEHOLDER]]")&&(ex[`${eK}`]=eU.replace("[[NAME_PLACEHOLDER]]","there"));eR(e$,!0),eR(em);try{for(let ez of e$)"map"===ez.type||ez.tri_action||ez.icon||ev.push(ez)}catch(eG){}ev=ev.filter((e,t,o)=>o.findIndex(t=>t.heading===e.heading)===t);let eV=document.createElement("style");eV.innerHTML=`
                     
                     html {
                         box-sizing: border-box;
@@ -1462,7 +1462,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin: 0;
                         margin-block-start: 0;
                         margin-block-end: 0;
-                        padding-inline-start: 16px;
+                        padding-inline-start: 20px;
                     }
 
                     li {
@@ -1490,7 +1490,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         color: rgba(0, 0, 0, 0.87);
                         margin: 0;
                         font-size: 0.875rem;
-                        font-family: ${e4};
+                        font-family: ${eH};
                         font-weight: 400;
                         line-height: 1.43;
                         letter-spacing: 0.01071em;
@@ -1501,13 +1501,13 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                     }
 
                     button {
-                        font-family: ${e4};
+                        font-family: ${eH};
                         outline: none;
                         user-select: none;
                     }
 
                     select {
-                        font-family: ${e4};
+                        font-family: ${eH};
                         margin-top: 8px;
                     }
 
@@ -1516,10 +1516,10 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                     }
 
                     input {
-                        font-family: ${e4};
+                        font-family: ${eH};
                         display: block;
                         margin-top: 8px;
-                        font-size: ${eu?"16px":"15px"};
+                        font-size: ${e_?"16px":"15px"};
                         width: 100%;
                         border-radius: 12px;
                         padding: 8px;
@@ -1527,35 +1527,35 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: 0.2s;
                     }
 
-                    .atonce_input_red${b} {
+                    .atonce_input_red${T} {
                         outline: 1px solid #dd0000 !important;
                         border-color: transparent !important;
                     }
 
                     input:focus {
-                        border-color: ${e$};
+                        border-color: ${eA};
                     }
 
                     textarea {
-                        font-family: ${e4};
+                        font-family: ${eH};
                         display: block;
                         margin-top: 8px;
                         margin-bottom: 2px;
-                        font-size: ${eu?"16px":"15px"};
+                        font-size: ${e_?"16px":"15px"};
                         width: 100%;
                         border: none;
                         padding: 8px;
                         resize: none;
-                        min-height: ${eu?"85px":"80px"};
+                        min-height: ${e_?"85px":"80px"};
                         outline: none;
                     }
 
                     textarea::-webkit-scrollbar {
-                        width: ${eu?'""':"8px"};
+                        width: ${e_?'""':"8px"};
                     }
                     
-                    .AtOnceBody${b} {
-                        background-color: ${el};
+                    .AtOnceBody${T} {
+                        background-color: ${ed};
                     }
 
                     * {
@@ -1569,7 +1569,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                     }
 
                     *::-webkit-scrollbar {
-                        width: ${eu?'""':"12px"};
+                        width: ${e_?'""':"12px"};
                     }
 
                     *::-webkit-scrollbar-thumb {
@@ -1583,71 +1583,71 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         background: transparent;
                     }
 
-                    .AtOnceBreakAll${b} {
+                    .AtOnceBreakAll${T} {
                         word-break: break-all;
                     }
 
-                    .AtOnceDisabledDiv${b} {
+                    .AtOnceDisabledDiv${T} {
                         user-select: none;
                         pointer-events: none;
                         opacity: 0.3;
                     }
 
-                    .AtOnceFlex${b} {
+                    .AtOnceFlex${T} {
                         display: flex;
                         align-items: center;
                         align-self: center;
                     }
 
-                    .AtOnceFlexCenter${b} {
+                    .AtOnceFlexCenter${T} {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         align-self: center;
                     }
 
-                    .AtOnceFlexSpaced${b} {
+                    .AtOnceFlexSpaced${T} {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         align-self: center;
                     }
 
-                    .AtOnceMarginBottomSmall${b} {
+                    .AtOnceMarginBottomSmall${T} {
                         margin-bottom: 6px;
                     }
 
-                    .AtOnceMarginBottomMedium${b} {
+                    .AtOnceMarginBottomMedium${T} {
                         margin-bottom: 12px;
                     }
 
-                    .AtOnceMarginBottomLarge${b} {
+                    .AtOnceMarginBottomLarge${T} {
                         margin-bottom: 16px;
                     }
 
-                    .AtOnceNoSelect${b} {
+                    .AtOnceNoSelect${T} {
                         user-select: none;
                     }
 
-                    .AtOnceFlexSpacedOrder${b} {
+                    .AtOnceFlexSpacedOrder${T} {
                         width: 100%;
                         padding: 0 0 0 24px;
                     }
 
-                    .AtOnceFlexSpacedNoAlign${b} {
+                    .AtOnceFlexSpacedNoAlign${T} {
                         display: flex;
                         justify-content: space-between;
                         width: 100%;
                     }
 
-                    .AtOnceFlexSpacedProductTitle${b} {
+                    .AtOnceFlexSpacedProductTitle${T} {
                         width: 100%;
                         margin-left: 24px;
                     }
 
-                    .AtOnceAttachmentsUploading${b} {
-                        background: ${ed};
-                        color: ${ev};
+                    .AtOnceAttachmentsUploading${T} {
+                        background: ${eg};
+                        color: ${ef};
                         border-radius: 100px;
                         padding: 1px 8px;
                         font-size: 13px;
@@ -1658,18 +1658,18 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         display: inline-flex;
                     }
 
-                    .AtOnceAttachmentCloseBtn${b} {
+                    .AtOnceAttachmentCloseBtn${T} {
                         margin-left: 12px;
                         cursor: pointer;
                         user-select: none;
                     }
 
-                    .AtOnceFlexSpacedProductTitleSmall${b} {
+                    .AtOnceFlexSpacedProductTitleSmall${T} {
                         width: 100%;
                         margin: 0 12px;
                     }
 
-                    .AtOnceProductQuantityText${b} {
+                    .AtOnceProductQuantityText${T} {
                         position: absolute;
                         top: -6px;
                         right: -17%;
@@ -1682,30 +1682,30 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceProductQuantityTextTwo${b} {
+                    .AtOnceProductQuantityTextTwo${T} {
                         right: -22% !important;
                     }
 
-                    .AtOncePositionRelative${b} {
+                    .AtOncePositionRelative${T} {
                         position: relative;
                     }
 
-                    .AtOnceFlexStart${b} {
+                    .AtOnceFlexStart${T} {
                         align-self: flex-start;
                         flex: none;
                     }
 
-                    .AtOnceSubContainer${b} {
+                    .AtOnceSubContainer${T} {
                         height: 100%;
                         overflow-y: hidden;
-                        animation: AtOnceShowSubContainer${b} 0.25s linear forwards;
+                        animation: AtOnceShowSubContainer${T} 0.25s linear forwards;
                     }
 
-                    .AtOnceSubContainer${b} img {
+                    .AtOnceSubContainer${T} img {
                         max-width: 100%;
                     }
 
-                    .AtOnceSubContainer${b} iframe {
+                    .AtOnceSubContainer${T} iframe {
                         border: none;
                         outline: none;
                         border-radius: 24px;
@@ -1713,57 +1713,57 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         min-height: 225px;
                     }
 
-                    .AtOnceChatPrimaryContainer${b} {
-                        border-radius: ${eu?0:"24px"};
-                        background: ${el};
-                        margin-top: ${eu?0:"10px"};
+                    .AtOnceChatPrimaryContainer${T} {
+                        border-radius: ${e_?0:"24px"};
+                        background: ${ed};
+                        margin-top: ${e_?0:"10px"};
                         margin-left: auto;
-                        margin-right: ${eu?"auto":"20px"};
+                        margin-right: ${e_?"auto":"20px"};
                         width: 100%;
-                        height: ${eu?"100%":"calc(100% - 20px)"};
-                        max-width: ${eu?"unset":"400px"};
-                        max-height: ${eu?"unset":"700px"};
+                        height: ${e_?"100%":"calc(100% - 20px)"};
+                        max-width: ${e_?"unset":"400px"};
+                        max-height: ${e_?"unset":"700px"};
                         display: flex;
                         flex-direction: column;
                         box-shadow: 0 0 10px #99999955;
                     }
 
-                    .AtOnceChatPrimaryContainer${b}.AtOnceShowPrimaryContainer${b} {
-                        animation: AtOnceShowPrimaryContainer${b} 0.2s linear forwards;
+                    .AtOnceChatPrimaryContainer${T}.AtOnceShowPrimaryContainer${T} {
+                        animation: AtOnceShowPrimaryContainer${T} 0.2s linear forwards;
                     }
 
-                    .AtOnceChatPrimaryContainer${b}.AtOnceHidePrimaryContainer${b} {
-                        animation: AtOnceHidePrimaryContainer${b} 0.2s linear forwards;
+                    .AtOnceChatPrimaryContainer${T}.AtOnceHidePrimaryContainer${T} {
+                        animation: AtOnceHidePrimaryContainer${T} 0.2s linear forwards;
                     }
 
-                    .AtOnceLiveChatMessagesContainer${b} {
+                    .AtOnceLiveChatMessagesContainer${T} {
                         border-radius: 0;
                         background: transparent;
-                        margin-top: -${eu?"95":"80"}px;
+                        margin-top: -${e_?"95":"80"}px;
                         margin-left: auto;
-                        margin-right: ${eu?"auto":"20px"};
+                        margin-right: ${e_?"auto":"20px"};
                         width: 100%;
-                        height: ${eu?"100%":"calc(100% - 20px)"};
-                        max-width: ${eu?"unset":"400px"};
-                        max-height: ${eu?"unset":"700px"};
+                        height: ${e_?"100%":"calc(100% - 20px)"};
+                        max-width: ${e_?"unset":"400px"};
+                        max-height: ${e_?"unset":"700px"};
                         display: flex;
                         flex-direction: column;
                         box-shadow: none;
                         justify-content: flex-end;
                     }
 
-                    .AtOnceLiveChatMessagesContainer${b}.hidden {
+                    .AtOnceLiveChatMessagesContainer${T}.hidden {
                         display: none;
                         user-select: none;
                         pointer-events: none;
                     }
 
-                    .AtOnceLiveChatCloseButton${b} {
+                    .AtOnceLiveChatCloseButton${T} {
                         display: flex;
                         justify-content: end;
                         align-items: center;
                         text-align: right;
-                        margin-right: ${eu?"16px":"4px"};
+                        margin-right: ${e_?"16px":"4px"};
                         margin-bottom: 12px;
                         background: #555;
                         border-radius: 50%;
@@ -1774,9 +1774,9 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceChatButton${b} {
-                        bottom: ${eu?"15px":"20px"};
-                        right: ${eu?"15px":"20px"};
+                    .AtOnceChatButton${T} {
+                        bottom: ${e_?"15px":"20px"};
+                        right: ${e_?"15px":"20px"};
                         border: none;
                         margin: 0px;
                         padding: 0px;
@@ -1797,16 +1797,16 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: 64px;
                         height: 64px;
                         border-radius: 50%;
-                        z-index: ${y};
+                        z-index: ${b};
                         box-shadow: rgb(0 0 0 / 10%) 0px 1px 6px, rgb(0 0 0 / 20%) 0px 2px 12px;
                         transform-origin: center bottom;
                         user-select: none;
-                        background: ${ed};
+                        background: ${eg};
                         cursor: pointer;
-                        animation: AtOnceShowChatButton${b} 0.2s linear forwards;
+                        animation: AtOnceShowChatButton${T} 0.2s linear forwards;
                     }
 
-                    .AtOnceChatNotification${b} {
+                    .AtOnceChatNotification${T} {
                         position: absolute;
                         right: -3px;
                         bottom: -3px;
@@ -1826,24 +1826,24 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceChatNotification${b}.hidden {
+                    .AtOnceChatNotification${T}.hidden {
                         display: none;
                         pointer-events: none;
                         user-select: none;
                     }
 
-                    .AtOnceHideChatButton${b} {
-                        animation: AtOnceHidePrimaryContainer${b} 0.2s linear forwards;
+                    .AtOnceHideChatButton${T} {
+                        animation: AtOnceHidePrimaryContainer${T} 0.2s linear forwards;
                     }
 
-                    .AtOnceCloseButtonMobile${b} {
+                    .AtOnceCloseButtonMobile${T} {
                         position: fixed;
-                        top: ${eu?"16px":"24px"};
-                        right: ${eu?"16px":"24px"};
+                        top: ${e_?"16px":"24px"};
+                        right: ${e_?"16px":"24px"};
                         cursor: pointer;
                     }
 
-                    .AtOnceManageOrdersLabel${b} {
+                    .AtOnceManageOrdersLabel${T} {
                         margin:7px 0;
                         position:relative;
                         display:inline-block;
@@ -1852,7 +1852,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: 100%;
                     }
 
-                    .AtOnceManageOrdersSpan${b} {
+                    .AtOnceManageOrdersSpan${T} {
                         margin:10px;
                         padding: 2px;
                         pointer-events: none;
@@ -1864,10 +1864,10 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         outline: none;
                         border: none;
                         font-size: 15px;
-                        background: ${el}00;
+                        background: ${ed}00;
                     }
 
-                    .AtOnceEnterEmailInputLabel${b} {
+                    .AtOnceEnterEmailInputLabel${T} {
                         font-size: 13px;
                         margin-left: 8px;
                         margin-bottom: -7px;
@@ -1875,7 +1875,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-top: 6px;
                     }
 
-                    .AtOnceSearchInput${b} {
+                    .AtOnceSearchInput${T} {
                         padding: 8px 16px;
                         margin-bottom: 12px;
                         outline: none;
@@ -1886,25 +1886,25 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: calc(100% - 48px);
                     }
 
-                    .AtOnceSearchInputIconed${b} {
+                    .AtOnceSearchInputIconed${T} {
                         padding: 8px 16px 8px 38px;
                     }
 
-                    .AtOnceSearchInput${b}.full {
+                    .AtOnceSearchInput${T}.full {
                         margin-left: 0;
                         width: 100%;
                         margin-bottom: 0;
                         margin-top: 36px;
                     }
 
-                    .AtOnceSearchInput${b}.full.bottomed {
+                    .AtOnceSearchInput${T}.full.bottomed {
                         margin-top: 8px;
                         margin-bottom: 12px;
                         border-radius: 12px;
                         padding: 8px 10px;
                     }
 
-                    .AtOnceSearchInputIcon${b} {
+                    .AtOnceSearchInputIcon${T} {
                         width: 16px;
                         height: 16px;
                         position: absolute;
@@ -1912,30 +1912,31 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         left: 36px;
                     }
 
-                    .AtOnceManageOrdersInput${b} {
+                    .AtOnceManageOrdersInput${T} {
                         padding: 12px;
                         outline: none;
                         margin-top: 0;
                         border: 1px solid #ddd;
                         width: 100%;
+                        text-transform: uppercase;
                     }
 
-                    .AtOnceManageOrdersInput${b}:focus + .AtOnceManageOrdersSpan${b}, .AtOnceManageOrdersInput${b}:not(:placeholder-shown) + .AtOnceManageOrdersSpan${b} {
+                    .AtOnceManageOrdersInput${T}:focus + .AtOnceManageOrdersSpan${T}, .AtOnceManageOrdersInput${T}:not(:placeholder-shown) + .AtOnceManageOrdersSpan${T} {
                         color: #222;
                         font-size: 14px;
                         transform: translateY(-22px) translateX(2px);
-                        background: ${el}ff;
+                        background: ${ed}ff;
                     }
                       
-                    .AtOnceManageOrdersInput${b}:focus + .AtOnceManageOrdersSpan${b}, .AtOnceManageOrdersInput${b}:not(:-ms-input-placeholder) + .AtOnceManageOrdersSpan${b} {
+                    .AtOnceManageOrdersInput${T}:focus + .AtOnceManageOrdersSpan${T}, .AtOnceManageOrdersInput${T}:not(:-ms-input-placeholder) + .AtOnceManageOrdersSpan${T} {
                         color: #222;
                         font-size: 13px;
                         padding: 2px;
                         transform: translateY(-22px) translateX(2px);
-                        background: ${el}ff;
+                        background: ${ed}ff;
                     }
 
-                    .AtOnceLoadingSpinner${b}::after {
+                    .AtOnceLoadingSpinner${T}::after {
                         content: "";
                         z-index: 1;
                         box-sizing: border-box;
@@ -1945,31 +1946,31 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         left: calc(50% - 12px);
                         position: absolute;
                         border-radius: 50%;
-                        border-top: 2.5px solid ${ev};
-                        border-left: 2.5px solid ${ev};
-                        border-bottom: 2.5px solid ${ev};
+                        border-top: 2.5px solid ${ef};
+                        border-left: 2.5px solid ${ef};
+                        border-bottom: 2.5px solid ${ef};
                         border-right: 2.5px solid transparent;
-                        animation: AtOnceSpinner${b} .6s linear infinite;
+                        animation: AtOnceSpinner${T} .6s linear infinite;
                     }
 
-                    .AtOnceLoadingSpinner${b}.bottomed::after {
+                    .AtOnceLoadingSpinner${T}.bottomed::after {
                         margin-top: -12.5px;
                     }
 
-                    .AtOnceLoadingSpinner${b}.bottomed.bigger::after {
+                    .AtOnceLoadingSpinner${T}.bottomed.bigger::after {
                         margin-top: -33px;
                     }
 
-                    .AtOncePrimaryMessageContainer${b} {
+                    .AtOncePrimaryMessageContainer${T} {
                         font-size: 16px;
                     }
 
-                    .AtOncePrimaryMessageContainer${b}.self {
+                    .AtOncePrimaryMessageContainer${T}.self {
                         display: table;
                         margin-left: auto;
                     }
 
-                    .AtOnceSeenContainer${b} {
+                    .AtOnceSeenContainer${T} {
                         margin-left: auto;
                         display: table;
                         margin-right: 0;
@@ -1979,7 +1980,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceMessageContainer${b} {
+                    .AtOnceMessageContainer${T} {
                         border-radius: 16px;
                         padding: 5px 15px 5px 15px;
                         display: table;
@@ -1988,7 +1989,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         word-break: break-word;
                     }
 
-                    .AtOnceMessageContainerLink${b} {
+                    .AtOnceMessageContainerLink${T} {
                         border-radius: 100px;
                         text-decoration: none !important;
                         justify-content: center;
@@ -2009,21 +2010,21 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         min-width: 175px;
                     }
 
-                    .AtOnceMessageContainerLink${b}:hover {
+                    .AtOnceMessageContainerLink${T}:hover {
                         text-decoration: underline !important;
                     }
 
-                    .AtOnceMessageContainerLink${b}.self {
-                        background: ${ev};
-                        color: ${"#fff"==ev?"#222":"#fff"} !important;
+                    .AtOnceMessageContainerLink${T}.self {
+                        background: ${ef};
+                        color: ${"#fff"==ef?"#222":"#fff"} !important;
                     }
 
-                    .AtOnceMessageContainerLink${b}.sender {
+                    .AtOnceMessageContainerLink${T}.sender {
                         background: #222;
                         color: #fff;
                     }
 
-                    .AtOnceMessageContainerPreview${b} {
+                    .AtOnceMessageContainerPreview${T} {
                         border-radius: 24px;
                         padding: 10px 15px;
                         width: fit-content;
@@ -2031,71 +2032,71 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         text-align: right;
                         margin-top: 4px;
                         margin-left: auto;
-                        margin-right: ${eu?"16px":"0"};
+                        margin-right: ${e_?"16px":"0"};
                         max-width: calc(100% - 32px);
                         box-shadow: 0 0 5px #ccc;
                     }
 
-                    .AtOnceMessageContainerPreview${b}.one {
+                    .AtOnceMessageContainerPreview${T}.one {
                         opacity: 0.8;
                     }
 
-                    .AtOnceMessageContainerPreview${b}.two {
+                    .AtOnceMessageContainerPreview${T}.two {
                         opacity: 0.9;
                     }
 
-                    .AtOnceMessageContainerPreview${b}.three {
+                    .AtOnceMessageContainerPreview${T}.three {
                         opacity: 1;
                     }
 
-                    .AtOnceMessageContainer${b}.self a {
+                    .AtOnceMessageContainer${T}.self a {
                         color: #fff;
                     }
 
-                    .AtOnceMessageContainer${b}.self.start {
+                    .AtOnceMessageContainer${T}.self.start {
                         border-bottom-right-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${b}.self.middle {
+                    .AtOnceMessageContainer${T}.self.middle {
                         border-top-right-radius: 6px;
                         border-bottom-right-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${b}.self.end {
+                    .AtOnceMessageContainer${T}.self.end {
                         border-top-right-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${b}.sender.start {
+                    .AtOnceMessageContainer${T}.sender.start {
                         border-bottom-left-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${b}.sender.middle {
+                    .AtOnceMessageContainer${T}.sender.middle {
                         border-top-left-radius: 6px;
                         border-bottom-left-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${b}.sender.end {
+                    .AtOnceMessageContainer${T}.sender.end {
                         border-top-left-radius: 6px;
                     }
 
-                    .AtOnceMessageContainer${b} > a {
-                        color: ${ev};
+                    .AtOnceMessageContainer${T} > a {
+                        color: ${ef};
                     }
 
-                    .AtOnceMessageContainer${b}.sender {
+                    .AtOnceMessageContainer${T}.sender {
                         margin-right: auto;
                     }
 
-                    .AtOnceMessageContainer${b}.self {
-                        background: ${ed};
-                        color: ${ev};
+                    .AtOnceMessageContainer${T}.self {
+                        background: ${eg};
+                        color: ${ef};
                         margin-left: auto;
-                        ${"#111"==ev?"background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,.07));":""}
+                        ${"#111"==ef?"background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,.07));":""}
                     }
 
-                    .AtOncePseudoAttachmentLink${b} {
+                    .AtOncePseudoAttachmentLink${T} {
                         font-weight: 600;
-                        color: ${em};
+                        color: ${e0};
                         cursor: pointer;
                         display: -ms-inline-grid;
                         display: inline-grid;
@@ -2108,39 +2109,39 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         vertical-align: top;
                     }
 
-                    .AtOncePseudoAttachmentLink${b}.image {
+                    .AtOncePseudoAttachmentLink${T}.image {
                         border: none;
                         padding: 0px;
                     }
 
-                    .AtOncePseudoAttachmentLink${b}.video {
+                    .AtOncePseudoAttachmentLink${T}.video {
                         border: none;
                         padding: 0px;
                     }
                     
-                    .AtOncePseudoAttachmentLink${b}.video>video {
+                    .AtOncePseudoAttachmentLink${T}.video>video {
                         border-radius: 16px;
                     }
 
-                    .AtOncePseudoAttachmentLink${b}.audio {
+                    .AtOncePseudoAttachmentLink${T}.audio {
                         border: none;
                         padding: 0px;
                         width: 100%;
                         max-height: 48px;
                     }
                     
-                    .AtOncePseudoAttachmentLink${b}.audio>audio {
+                    .AtOncePseudoAttachmentLink${T}.audio>audio {
                         height: 48px;
                         border-radius: 30px;
                     }
 
-                    .AtOncePseudoAttachmentLink${b}.self {
+                    .AtOncePseudoAttachmentLink${T}.self {
                         margin-left: auto;
                         margin-right: 0;
                         display: block;
                     }
 
-                    .AtOnceMainAttachmentsUnavailable${b} {
+                    .AtOnceMainAttachmentsUnavailable${T} {
                         background-color: #eee;
                         width: fit-content;
                         border-radius: 50px;
@@ -2155,34 +2156,34 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-bottom: 8px;
                     }
 
-                    .AtOnceMainAttachmentsUnavailable${b}.self {
+                    .AtOnceMainAttachmentsUnavailable${T}.self {
                         margin-left: auto;
-                        background: ${ed};
-                        color: ${ev};
-                        ${"#111"==ev?"background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,.07));":""}
+                        background: ${eg};
+                        color: ${ef};
+                        ${"#111"==ef?"background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,.07));":""}
                     }
 
-                    .AtOnceMainAttachmentsPreview${b} {
+                    .AtOnceMainAttachmentsPreview${T} {
                         border-radius: 16px;
                         width: 100%;
                     }
 
-                    .AtOncePrimarySubjectHeader${b} {
+                    .AtOncePrimarySubjectHeader${T} {
                         margin-top: 16px;
                     }
 
-                    .AtOnceTimestampContainer${b} {
+                    .AtOnceTimestampContainer${T} {
                         font-size: 12px;
                         margin-bottom: -16px;
                         margin-top: 12px;
                         user-select: none;
                     }
 
-                    .AtOnceMessageContainer${b}.sender {
+                    .AtOnceMessageContainer${T}.sender {
                         background: #eee;
                     }
 
-                    .AtOnceProductImage${b} {
+                    .AtOnceProductImage${T} {
                         width: 64px;
                         height: 64px;
                         background-position: center;
@@ -2190,51 +2191,51 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         border-radius: 16px;
                     }
 
-                    .AtOnceContainerPadded${b} {
+                    .AtOnceContainerPadded${T} {
                         padding: 24px;
                     }
 
-                    .AtOnceContainerPaddedBottomSmall${b} {
+                    .AtOnceContainerPaddedBottomSmall${T} {
                         padding-bottom: 4px;
                     }
 
-                    .AtOnceContainerPaddedBottom${b} {
+                    .AtOnceContainerPaddedBottom${T} {
                         padding-bottom: 16px;
                     }
 
-                    .AtOnceContainerPaddedBottomLarge${b} {
+                    .AtOnceContainerPaddedBottomLarge${T} {
                         padding-bottom: 54px;
                     }
 
-                    .AtOnceContainerNoBottomPadding${b} {
+                    .AtOnceContainerNoBottomPadding${T} {
                         padding-bottom: 0;
                     }
 
-                    .AtOnceContainerSmallTopPadding${b} {
+                    .AtOnceContainerSmallTopPadding${T} {
                         padding-top: 12px !important;
                     }
 
-                    .AtOnceContainerPaddedLess${b} {
+                    .AtOnceContainerPaddedLess${T} {
                         padding: 0 24px;
                     }
 
-                    .AtOnceContainerPaddedTopTiny${b} {
+                    .AtOnceContainerPaddedTopTiny${T} {
                         padding-top: 4px;
                     }
 
-                    .AtOnceContainerPaddedTopSmall${b} {
+                    .AtOnceContainerPaddedTopSmall${T} {
                         padding-top: 12px;
                     }
 
-                    .AtOnceContainerPaddedTopMedium${b} {
+                    .AtOnceContainerPaddedTopMedium${T} {
                         padding-top: 16px;
                     }
 
-                    .AtOnceContainerPaddedTopLarge${b} {
+                    .AtOnceContainerPaddedTopLarge${T} {
                         padding-top: 24px;
                     }
 
-                    .AtOnceContainerFlexProducts${b} {
+                    .AtOnceContainerFlexProducts${T} {
                         display: grid;
                         flex-wrap: unset;
                         width: calc(100% + 16px);
@@ -2251,42 +2252,42 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: 0.2s opacity linear;
                     }
 
-                    .AtOnceContainerFlexProducts${b}.visible {
+                    .AtOnceContainerFlexProducts${T}.visible {
                         opacity: 1;
                     }
 
-                    .AtOnceContainerPaddedTop${b} {
+                    .AtOnceContainerPaddedTop${T} {
                         padding-top: 36px;
                     }
 
-                    .AtOnceChatFirstContainer${b} {
+                    .AtOnceChatFirstContainer${T} {
                         height: 100%;
                     }
 
-                    .AtOnceContainerScrollMiddle${b} {
+                    .AtOnceContainerScrollMiddle${T} {
                         width: 100%;
-                        max-height: calc(100% - ${eu?"175px":"160px"});
+                        max-height: calc(100% - ${e_?"175px":"160px"});
                         height: 100%;
                         overflow-y: auto;
                         transition: 0.2s;
                         position: relative;
                     }
 
-                    .AtOnceContainerScrollMiddleHelpCenter${b} {
+                    .AtOnceContainerScrollMiddleHelpCenter${T} {
                         max-height: calc(100% - 120px);
                     }
 
-                    .AtOnceQuantityContainer${b} {
+                    .AtOnceQuantityContainer${T} {
                         margin-top: 14px;
                     }
 
-                    .AtOnceQuantitySubContainer${b} {
+                    .AtOnceQuantitySubContainer${T} {
                         border: 1px solid #ddd;
                         border-radius: 12px;
                         width: fit-content;
                     }
 
-                    .AtOnceQuantityButtons${b} {
+                    .AtOnceQuantityButtons${T} {
                         height: 32px;
                         user-select: none;
                         width: 32px;
@@ -2296,21 +2297,21 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         cursor: pointer;
                     }
 
-                    .AtOnceQuantityLabel${b} {
+                    .AtOnceQuantityLabel${T} {
                         color: #555;
                         font-size: 14px;
                         margin-bottom: 4px;
                         user-select: none;
                     }
 
-                    .AtOnceQuantityLabelSmall${b} {
+                    .AtOnceQuantityLabelSmall${T} {
                         color: #555;
                         font-size: 13px;
                         margin-bottom: 2px;
                         user-select: none;
                     }
 
-                    .AtOnceQuantityInput${b} {
+                    .AtOnceQuantityInput${T} {
                         width: 48px;
                         height: 16px;
                         user-select: none;
@@ -2327,21 +2328,21 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         -moz-appearance: textfield;
                     }
 
-                    .AtOnceQuantityInput${b}.smaller {
+                    .AtOnceQuantityInput${T}.smaller {
                         width: 36px;
                     }
 
-                    .AtOnceQuantityInput${b}::-webkit-outer-spin-button {
+                    .AtOnceQuantityInput${T}::-webkit-outer-spin-button {
                         -webkit-appearance: none;
                         margin: 0;
                     }
 
-                    .AtOnceQuantityInput${b}::-webkit-inner-spin-button {
+                    .AtOnceQuantityInput${T}::-webkit-inner-spin-button {
                         -webkit-appearance: none;
                         margin: 0;
                     }
 
-                    .AtOnceContainerLiveChatMain${b} {
+                    .AtOnceContainerLiveChatMain${T} {
                         display: flex;
                         padding: 12px;
                         position: fixed;
@@ -2349,7 +2350,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: 100%;
                     }
 
-                    .AtOnceContainerLiveChatAttachmentsError${b} {
+                    .AtOnceContainerLiveChatAttachmentsError${T} {
                         background: #f5f5f5;
                         width: calc(100% - 36px);
                         height: 64px;
@@ -2367,11 +2368,11 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         pointer-events: none;
                     }
 
-                    .AtOnceContainerLiveChatAttachmentsError${b}.shown {
-                        animation: AtOnceErrorMessage${b} 4s linear forwards;
+                    .AtOnceContainerLiveChatAttachmentsError${T}.shown {
+                        animation: AtOnceErrorMessage${T} 4s linear forwards;
                     }
 
-                    .AtOnceContainerLiveChatAttachments${b} {
+                    .AtOnceContainerLiveChatAttachments${T} {
                         background: #f5f5f5;
                         width: calc(100% - 36px);
                         height: 64px;
@@ -2383,21 +2384,21 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         overflow-y: auto;
                     }
 
-                    .AtOnceContainerLiveChatAttachments${b}.shown {
+                    .AtOnceContainerLiveChatAttachments${T}.shown {
                         display: block;
                     }
 
-                    .AtOnceContainerLiveChatAttachments${b}::-webkit-scrollbar-track {
+                    .AtOnceContainerLiveChatAttachments${T}::-webkit-scrollbar-track {
                         margin-top: 12px;
                         margin-bottom: 12px;
                     }
 
-                    .AtOnceContainerLiveChatAttachments${b}::-webkit-scrollbar {
-                        width: ${eu?'""':"8px"};
+                    .AtOnceContainerLiveChatAttachments${T}::-webkit-scrollbar {
+                        width: ${e_?'""':"8px"};
                     }
 
-                    .AtOnceContainerLiveChatInput${b} {
-                        width: calc(100% - ${eu?"44px":"40px"});
+                    .AtOnceContainerLiveChatInput${T} {
+                        width: calc(100% - ${e_?"44px":"40px"});
                         margin-right: 4px;
                         max-height: 100px;
                         outline: none;
@@ -2407,37 +2408,37 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         padding: 6px 31px 6px 12px;
                     }
 
-                    .AtOnceContainerLiveChatInput${b} span {
+                    .AtOnceContainerLiveChatInput${T} span {
                         background-color: #f5f5f5 !important;
                         background: #f5f5f5 !important;
-                        font-family: ${e4} !important;
+                        font-family: ${eH} !important;
                         color: #222 !important;
-                        font-size: ${eu?"16px !important":"15px !important"};
+                        font-size: ${e_?"16px !important":"15px !important"};
                     }
 
-                    .AtOnceContainerLiveChatInputDisabled${b} {
+                    .AtOnceContainerLiveChatInputDisabled${T} {
                         max-height: 28px;
                         overflow-y: hidden;
                     }
 
-                    .AtOnceContainerLiveChatInputDisabled${b}:empty:before{
+                    .AtOnceContainerLiveChatInputDisabled${T}:empty:before{
                         color: #f5f5f5;
                     }
 
-                    .AtOnceContainerLiveChatInput${b}::-webkit-scrollbar-track {
+                    .AtOnceContainerLiveChatInput${T}::-webkit-scrollbar-track {
                         margin-top: 12px;
                         margin-bottom: 12px;
                     }
 
-                    .AtOnceContainerLiveChatInput${b}::-webkit-scrollbar {
-                        width: ${eu?'""':"8px"};
+                    .AtOnceContainerLiveChatInput${T}::-webkit-scrollbar {
+                        width: ${e_?'""':"8px"};
                     }
 
-                    .AtOnceContainerLiveChatInput${b}::-webkit-scrollbar-thumb {
+                    .AtOnceContainerLiveChatInput${T}::-webkit-scrollbar-thumb {
                         background-color: transparent;
                     }
 
-                    .AtOnceContainerLiveChatButton${b} {
+                    .AtOnceContainerLiveChatButton${T} {
                         cursor: pointer;
                         user-select: none;
                         margin-left: 8px;
@@ -2446,7 +2447,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         bottom: 47px;
                         right: 16px;
                         position: fixed;
-                        background: ${el};
+                        background: ${ed};
                         border-radius: 50%;
                         padding: 9px;
                         display: flex;
@@ -2458,20 +2459,20 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         outline: none;
                     }
 
-                    .AtOnceContainerLiveChatButton${b}:disabled {
+                    .AtOnceContainerLiveChatButton${T}:disabled {
                         filter: grayscale(1) opacity(0.5);
                         pointer-events: none;
                     }
 
-                    .AtOnceContainerLiveChatButton${b}:hover {
+                    .AtOnceContainerLiveChatButton${T}:hover {
                         background: #f5f5f5;
                     }
 
-                    .AtOnceContainerLiveChatButton${b}:active {
+                    .AtOnceContainerLiveChatButton${T}:active {
                         filter: brightness(0.9);
                     }
 
-                    .AtOnceContainerLiveChatButton${b}.attachment {
+                    .AtOnceContainerLiveChatButton${T}.attachment {
                         filter: grayscale(1);
                         right: 60.5px;
                         background: transparent;
@@ -2479,39 +2480,39 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         padding: 2px;
                     }
 
-                    .AtOnceContainerLiveChatButton${b}.attachment:hover {
+                    .AtOnceContainerLiveChatButton${T}.attachment:hover {
                         filter: none;
                     }
 
-                    .AtOnceGradientBackground${b} {
-                        background: ${ed};
-                        color: ${ev};
-                        background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,${"#111"==ev?".12":".32"}));
+                    .AtOnceGradientBackground${T} {
+                        background: ${eg};
+                        color: ${ef};
+                        background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,${"#111"==ef?".12":".32"}));
                     }
 
-                    .AtOnceTopContainer${b} {
-                        ${eu?"":"border-top-right-radius: 24px;"}
-                        ${eu?"":"border-top-left-radius: 24px;"}
+                    .AtOnceTopContainer${T} {
+                        ${e_?"":"border-top-right-radius: 24px;"}
+                        ${e_?"":"border-top-left-radius: 24px;"}
                     }
 
-                    .AtOnceBottomContainer${b} {
+                    .AtOnceBottomContainer${T} {
                         position: fixed;
                         bottom: 0;
                         width: 100%;
                         text-align: center;
                     }
 
-                    .AtOnceTopHeadingContainer${b} {
+                    .AtOnceTopHeadingContainer${T} {
                         display: flex;
                         align-items: center;
                     }
 
-                    .AtOnceChatTopBackButton${b} {
+                    .AtOnceChatTopBackButton${T} {
                         margin-right: 8px;
                         margin-left: -8px;
                     }
 
-                    .AtOnceChatRoundedCircleIcon${b} {
+                    .AtOnceChatRoundedCircleIcon${T} {
                         border-radius: 50%;
                         transition: 0.2s linear;
                         text-decoration: none;
@@ -2520,268 +2521,319 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                         cursor: pointer;
                         padding: 4px;
-                        background: ${el}00;
+                        background: ${ed}00;
                     }
 
-                    .AtOnceChatRoundedCircleIcon${b}:hover {
-                        background: ${el}55;
+                    .AtOnceChatRoundedCircleIcon${T}:hover {
+                        background: ${ed}55;
                     }
 
-                    .AtOnceMarginLeft${b} {
+                    .AtOnceMarginLeft${T} {
                         margin-left: auto;
                     }
 
-                    .AtOnceMainHeading${b} {
+                    .AtOnceMainHeading${T} {
                         font-size: 32px;
                         font-weight: 600;
                         user-select: none;
                     }
 
-                    .AtOnceSubHeading${b} {
+                    .AtOnceSubHeading${T} {
                         font-size: 18px;
                         font-weight: 600;
                         user-select: none;
                     }
 
-                    .AtOnceSubHeadingSmall${b} {
+                    .AtOnceSubHeadingSmall${T} {
                         font-size: 14px;
                         font-weight: 600;
                         user-select: none;
                     }
 
-                    .AtOnceTextContainer${b} {
+                    .AtOnceTextContainer${T} {
                         padding: 0 24px;
                         font-size: 16px;
                         font-weight: 400;
                     }
+					
+					.AtOnceTextContainer${T} h3 {
+						font-weight: 600;
+						font-size: 1.25rem;
+						margin-block-end: 0;
+					}
+					
+					.AtOnceTextContainer${T} h2 {
+						font-weight: 600;
+						font-size: 1.5rem;
+						margin-block-end: 0;
+					}
 
-                    .AtOnceButtonContainer${b} {
-                        display: ${eu?"block":"flex"};
-                        justify-content: ${eu?"center":"space-between"};
+                    .AtOnceTextContainer${T} ul li::marker {
+                        color: ${eA};
+                    }
+
+                    .AtOnceTextContainer${T} ol {
+                        list-style: none;
+                        counter-reset: my-atonce-counter;
+                        padding-inline-start: 0;
+                    }
+
+                    .AtOnceTextContainer${T} ol li {
+                        counter-increment: my-atonce-counter;
+                        margin: 1rem 4px;
+                        padding-left: 2.25rem;
+                        position: relative;
+                    }
+
+                    .AtOnceTextContainer${T} ol li::before {
+                        position: absolute;
+                        top: .75rem;
+                        left: 0;
+                        transform: translateY(-50%);
+                        content: counter(my-atonce-counter);
+                        outline: 1px solid ${eA};
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        border-radius: 50%;
+                        display: inline-block;
+                        line-height: 1.5rem;
+                        text-align: center;
+                        margin-right: 0.5rem;
+                        font-size: 0.9rem;
+                    }
+
+                    .AtOnceButtonContainer${T} {
+                        display: ${e_?"block":"flex"};
+                        justify-content: ${e_?"center":"space-between"};
                         padding-bottom: 12px;
                     }
 
-                    .AtOnceMainButton${b} {
+                    .AtOnceMainButton${T} {
                         cursor: pointer;
                         font-size: 16px;
                         border-radius: 100px;
                         font-weight: 600;
                         outline: none;
                         width: 100%;
-                        padding: ${eu?"11px":"8px"} 4px;
+                        padding: ${e_?"11px":"8px"} 4px;
                         color: #333;
                         transition: 0.2s;
-                        ${eu?"margin-top: 12px;":""}
+                        ${e_?"margin-top: 12px;":""}
                     }
 
-                    .AtOnceMainButtonSmall${b} {
+                    .AtOnceMainButtonSmall${T} {
                         font-size: 14px;
                         font-weight: 400 !important;
                         width: unset;
-                        padding: ${eu?"14px 26px":"12px 20px"};
+                        padding: ${e_?"14px 26px":"12px 20px"};
                         border-width: 1px !important;
                         line-height: 0;
                         margin-right: 8px;
                         margin-top: -4px;
                     }
 
-                    .AtOnceMainButtonSmall${b}.smaller {
+                    .AtOnceMainButtonSmall${T}.smaller {
                         margin-top: 2px;
                         margin-right: 0;
                         padding: 12px 14px;
                     }
 
-                    .AtOnceMainButtonSmall${b}:hover {
+                    .AtOnceMainButtonSmall${T}:hover {
                         box-shadow: 0 3px 6px rgb(0 0 0 / 0.15) !important;
                         filter: brightness(0.975) !important;
                     }
 
-                    .AtOnceMainButton${b}:disabled {
+                    .AtOnceMainButton${T}:disabled {
                         color: #fff;
                         background: #ccc;
                         border-color: #ccc;
                         pointer-events: none;
                     }
 
-                    .AtOnceMainButton${b}:hover {
+                    .AtOnceMainButton${T}:hover {
                         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
                         filter: brightness(0.95);
                     }
 
-                    .AtOncePrimaryButton${b} {
-                        color: ${ev};
-                        padding: ${eu?"12.5px":"9.5px"} 5.5px;
+                    .AtOncePrimaryButton${T} {
+                        color: ${ef};
+                        padding: ${e_?"12.5px":"9.5px"} 5.5px;
                         border: none;
-                        background: ${ed};
-                        ${"#111"==ev?"background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,.07));":""}
+                        background: ${eg};
+                        ${"#111"==ef?"background-image: linear-gradient(135deg,hsla(0,0%,100%,0),rgba(0,0,0,.07));":""}
                     }
 
-                    .AtOncePrimaryButton${b}.green {
+                    .AtOncePrimaryButton${T}.green {
                         background: #16AA9E !important;
                         color: white !important;
                     }
 
-                    .AtOncePrimaryButton${b}.red {
+                    .AtOncePrimaryButton${T}.red {
                         background: #dd0000 !important;
                         color: white !important;
                     }
 
-                    .AtOnceSecondaryButton${b} {
-                        border: 1.5px solid ${e$};
+                    .AtOnceSecondaryButton${T} {
+                        border: 1.5px solid ${eA};
                         background: transparent;
                     }
 
-                    .AtOnceTertiaryButton${b} {
+                    .AtOnceTertiaryButton${T} {
                         width: fit-content;
                         padding: 4px 12px;
                         border-width: 1px;
-                        color: ${e$};
+                        color: ${eA};
                         border-color: transparent;
                         font-weight: 600;
-                        ${eu?"margin-top: -2px;":""}
+                        ${e_?"margin-top: -2px;":""}
                     }
 
-                    .AtOnceQuaternaryButton${b}:hover {
+                    .AtOnceQuaternaryButton${T}:hover {
                         box-shadow: none !important;
                     }
 
-                    .AtOnceMainButtonLeft${b} {
-                        margin-right: ${eu?"0":"4px"};
+                    .AtOnceMainButtonLeft${T} {
+                        margin-right: ${e_?"0":"4px"};
                     }
 
-                    .AtOnceMainButtonRight${b} {
-                        margin-left: ${eu?"0":"4px"};
+                    .AtOnceMainButtonRight${T} {
+                        margin-left: ${e_?"0":"4px"};
                     }
 
-                    .AtOnceMainButtonRightMargin${b} {
+                    .AtOnceMainButtonRightMargin${T} {
                         margin-left: 0 !important;
                     }
 
-                    .AtOnceTriHeading${b} {
+                    .AtOnceTriHeading${T} {
                         font-size: 16px;
                         font-weight: 600;
                     }
 
-                    .AtOnceBold${b} {
+                    .AtOnceMobileTriHeading${T} {
+                        ${e_?"padding: 0.5rem 0;":""}
+                        ${e_?"font-size: 18px;":""}
+                    }
+
+                    .AtOnceBold${T} {
                         font-weight: 600;
                     }
 
-                    .AtOnceSubTextBold${b} {
+                    .AtOnceSubTextBold${T} {
                         font-size: 14px;
                         font-weight: 600;
                     }
 
-                    .AtOnceSubText${b} {
+                    .AtOnceSubText${T} {
                         font-size: 14px;
                         font-weight: 400;
                         user-select: none;
                     }
 
-                    .AtOnceSubTextSpacingLeft${b} {
+                    .AtOnceSubTextSpacingLeft${T} {
                         margin-left: 3px;
                     }
 
-                    .AtOnceSubTextSpacingRight${b} {
+                    .AtOnceSubTextSpacingRight${T} {
                         margin-right: 3px;
                     }
 
-                    .AtOnceUserSelect${b} {
+                    .AtOnceUserSelect${T} {
                         user-select: auto !important;
                     }
 
-                    .AtOnceSubTag${b} {
+                    .AtOnceSubTag${T} {
                         text-align: right;
                     }
                     
-                    .AtOnceSubTag${b}.gray {
+                    .AtOnceSubTag${T}.gray {
                         color: #333;
                     }
 
-                    .AtOnceSubTag${b}.blue {
+                    .AtOnceSubTag${T}.blue {
                         color: #16AA9E;
                     }
                     
-                    .AtOnceSubTextAntiMarginTop${b} {
+                    .AtOnceSubTextAntiMarginTop${T} {
                         margin-top: -8px;
                     }
 
-                    .AtOnceSubTextMarginBottom${b} {
+                    .AtOnceSubTextMarginBottom${T} {
                         margin-bottom: 8px;
                     }
 
-                    .AtOnceSubTextSmall${b} {
+                    .AtOnceSubTextSmall${T} {
                         font-size: 13px;
                     }
 
-                    .AtOnceSubTextLarge${b} {
+                    .AtOnceSubTextLarge${T} {
                         font-size: 16px;
                     }
 
-                    .AtOnceSubTextMediumMargin${b} {
+                    .AtOnceSubTextMediumMargin${T} {
                         margin-top: 8px;
                     }
 
-                    .AtOnceTextLargeMargin${b} {
+                    .AtOnceTextLargeMargin${T} {
                         margin-top: 12px;
                     }
 
-                    .AtOnceContainerLargeMargin${b} {
-                        margin-top: ${eu?"24px":"16px"};
+                    .AtOnceContainerLargeMargin${T} {
+                        margin-top: ${e_?"24px":"16px"};
                     }
 
-                    .AtOnceSubTextLargeMargin${b} {
+                    .AtOnceSubTextLargeMargin${T} {
                         margin-top: 24px;
                         margin-bottom: 12px;
                         font-weight: 600;
                     }
 
-                    .AtOnceTextCenter${b} {
+                    .AtOnceTextCenter${T} {
                         text-align: center;
                     }
 
-                    .AtOnceSubTextMargin${b} {
+                    .AtOnceSubTextMargin${T} {
                         margin-top: 2px;
                     }
 
-                    .AtOnceSubHeadingMargin${b} {
+                    .AtOnceSubHeadingMargin${T} {
                         margin: 24px 0 10px 24px;
                     }
 
-                    .AtOnceSubHeadingMarginSmall${b} {
+                    .AtOnceSubHeadingMarginSmall${T} {
                         margin: 16px 0 10px 24px;
                     }
 
-                    .AtOnceContactFormInput${b} {
+                    .AtOnceContactFormInput${T} {
                         border: none;
                         border-bottom: 1px solid #eee;
                         border-radius: 0;
                     }
 
-                    .AtOnceTextColorError${b} {
+                    .AtOnceTextColorError${T} {
                         color: #d40000;
                     }
 
-                    .AtOnceTextColorTwo${b} {
+                    .AtOnceTextColorTwo${T} {
                         color: #222;
                     }
 
-                    .AtOnceTextColorThree${b} {
+                    .AtOnceTextColorThree${T} {
                         color: #333;
                     }
 
-                    .AtOnceTextColorFive${b} {
+                    .AtOnceTextColorFive${T} {
                         color: #555;
                     }
 
-                    .AtOnceTextColorSeven${b} {
+                    .AtOnceTextColorSeven${T} {
                         color: #777;
                     }
 
-                    .AtOnceTextColorNine${b} {
+                    .AtOnceTextColorNine${T} {
                         color: #999;
                     }
 
-                    .AtOnceQuickIcon${b} {
+                    .AtOnceQuickIcon${T} {
                         width: fit-content;
                         height: fit-content;
                         margin-right: 6px;
@@ -2791,7 +2843,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: 0.2s linear;
                     }
 
-                    .AtOnceQuickButton${b} {
+                    .AtOnceQuickButton${T} {
                         display: flex;
                         align-items: center;
                         padding: 10px 20px;
@@ -2799,14 +2851,14 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: 100%;
                         cursor: pointer;
                         transition: 0.2s linear;
-                        background: ${el}00;
+                        background: ${ed}00;
                         text-decoration: none;
                         outline: none;
                         border: none;
                         user-select: none;
                     }
 
-                    .AtOnceQuickButtonPaddedMore${b} {
+                    .AtOnceQuickButtonPaddedMore${T} {
                         padding: 16px 20px;
                         display: flex;
                         align-items: center;
@@ -2818,42 +2870,42 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceQuickButtonPaddedLess${b} {
+                    .AtOnceQuickButtonPaddedLess${T} {
                         padding: 10px 24px;
                     }
 
-                    .AtOnceQuickButtonLink${b}:hover {
+                    .AtOnceQuickButtonLink${T}:hover {
                         text-decoration: none;
                     }
 
-                    .AtOnceQuickButtonPadded${b} {
+                    .AtOnceQuickButtonPadded${T} {
                         padding: 17px 20px;
                     }
 
-                    .AtOnceQuickButton${b}:hover {
-                        background: ${ed}22;
+                    .AtOnceQuickButton${T}:hover {
+                        background: ${eg}22;
                     }
 
-                    .AtOnceQuickLinkButtonHeaders${b} {
+                    .AtOnceQuickLinkButtonHeaders${T} {
                         margin-left: 4px;
                     }
 
-                    .AtOnceReturnIconAdjustment${b} {
+                    .AtOnceReturnIconAdjustment${T} {
                         margin-right: -2px;
                         margin-left: 2px;
                     }
 
-                    .AtOnceFAQIconAdjustment${b} {
+                    .AtOnceFAQIconAdjustment${T} {
                         margin-right: 1px;
                         margin-left: 1px;
                     }
 
-                    .AtOnceFAQIconAdjustment${b}.faq {
+                    .AtOnceFAQIconAdjustment${T}.faq {
                         margin-bottom: -1px;
                         margin-top: 1px;
                     }
 
-                    .AtOnceDestinationLabel${b} {
+                    .AtOnceDestinationLabel${T} {
                         font-size: 13px;
                         font-weight: 400;
                         color: #555;
@@ -2861,7 +2913,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-left: 2px;
                     }
 
-                    .AtOnceDestinationInput${b} {
+                    .AtOnceDestinationInput${T} {
                         outline: 1px solid transparent;
                         border: 1px solid;
                         border-color: #ddd;
@@ -2875,30 +2927,30 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: 0s;
                     }
 
-                    .AtOnceDestinationInput${b}:focus-visible {
-                        outline: 1px solid ${e$};
+                    .AtOnceDestinationInput${T}:focus-visible {
+                        outline: 1px solid ${eA};
                         border-color: transparent;
                     }
 
-                    .AtOnceInputSubContainer_left${b} {
+                    .AtOnceInputSubContainer_left${T} {
                         display: grid;
                         width: calc(50% - 8px);
                         float: left;
                     }
 
-                    .AtOnceInputSubContainer_right${b} {
+                    .AtOnceInputSubContainer_right${T} {
                         display: grid;
                         width: calc(50% - 8px);
                         margin-left: 16px;
                         float: right;
                     }
 
-                    .AtOnceInputSubContainer_clear${b} {
+                    .AtOnceInputSubContainer_clear${T} {
                         clear: both;
                         padding-top: 16px;
                     }
 
-                    .AtOnceMainShopProductSubContainer${b} {
+                    .AtOnceMainShopProductSubContainer${T} {
                         flex: 50%;
                         padding: 8px;
                         cursor: default;
@@ -2908,7 +2960,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         min-width: 100%;
                     }
 
-                    .AtOnceModalProductImageSlideshowContainer${b} {
+                    .AtOnceModalProductImageSlideshowContainer${T} {
                         position: relative;
                         width: 90%;
                         margin-left: 5%;
@@ -2917,37 +2969,37 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         overflow: hidden;
                     }
 
-                    .AtOnceModalProductImageSlideshowChevron${b} {
+                    .AtOnceModalProductImageSlideshowChevron${T} {
                         cursor: pointer;
                         position: absolute;
                         top: calc(50% - 12px);
                         user-select: none;
                         border-radius: 100%;
-                        background: ${el}77;
+                        background: ${ed}77;
                         line-height: 16px;
                         transition: linear 0.2s;
                     }
 
-                    .AtOnceModalProductImageSlideshowChevron${b}:hover {
-                        background: ${el};
+                    .AtOnceModalProductImageSlideshowChevron${T}:hover {
+                        background: ${ed};
                     }
 
-                    .AtOnceModalProductImageSlideshowChevron${b}:active {
+                    .AtOnceModalProductImageSlideshowChevron${T}:active {
                         filter: brightness(0.75);
                     }
 
-                    .AtOnceModalProductImageSlideshowChevron_left${b} {
+                    .AtOnceModalProductImageSlideshowChevron_left${T} {
                         left: 0;
                         padding: 5px 5px 2px 4px;
                     }
 
-                    .AtOnceModalProductImageSlideshowChevron_right${b} {
+                    .AtOnceModalProductImageSlideshowChevron_right${T} {
                         right: 0;
                         padding: 5px 4px 2px 5px;
                     }
 
-                    .AtOnceMainShopStickyChangesContainer${b} {
-                        background: ${el};
+                    .AtOnceMainShopStickyChangesContainer${T} {
+                        background: ${ed};
                         width: 100%;
                         height: 64px;
                         position: fixed;
@@ -2955,23 +3007,23 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         z-index: 1;
                         margin-left: -24px;
                         padding: 0 24px;
-                        ${eu?"":"border-bottom-left-radius: 24px; border-bottom-right-radius: 24px;"}
+                        ${e_?"":"border-bottom-left-radius: 24px; border-bottom-right-radius: 24px;"}
                         opacity: 0;
                         pointer-events: none;
                         transition: opacity 0.2s linear;
                     }
 
-                    .AtOnceMainShopStickyChangesContainer${b}.bigger {
+                    .AtOnceMainShopStickyChangesContainer${T}.bigger {
                         height: 124px;
                         display: block !important;
                     }
 
-                    .AtOnceMainShopStickyChangesContainer${b}.visible {
+                    .AtOnceMainShopStickyChangesContainer${T}.visible {
                         opacity: 1;
                         pointer-events: auto;
                     }
 
-                    .AtOnceMainShopProductImageContainer${b} {
+                    .AtOnceMainShopProductImageContainer${T} {
                         width: 100%;
                         user-select: none;
                         align-self: center;
@@ -2984,15 +3036,15 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         cursor: pointer;
                     }
 
-                    .AtOnceMainShopProductImageContainer${b}:hover {
-                        color: ${e$};
+                    .AtOnceMainShopProductImageContainer${T}:hover {
+                        color: ${eA};
                     }
 
-                    .AtOnceMainShopProductImageContainer${b}:hover + .AtOnceMainShopProductTitleContainer${b} {
-                        color: ${e$};
+                    .AtOnceMainShopProductImageContainer${T}:hover + .AtOnceMainShopProductTitleContainer${T} {
+                        color: ${eA};
                     }
 
-                    .AtOnceMainShopProductImageDiv${b} {
+                    .AtOnceMainShopProductImageDiv${T} {
                         align-self: center;
                         background: #eee;
                         text-align: center;
@@ -3004,52 +3056,52 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         justify-content: center;
                     }
 
-                    .AtOnceMainShopProductImageDivText${b} {
+                    .AtOnceMainShopProductImageDivText${T} {
                         margin-top: calc(-50% - 14px);
                         font-size: 16px;
                         padding: 0 8px;
                     }
 
-                    .AtOnceMainShopProductImage${b} {
+                    .AtOnceMainShopProductImage${T} {
                         width: 100%;
                         user-select: none;
                         border-radius: 24px;
                         pointer-events: none;
                     }
 
-                    .AtOnceMainShopProductPriceContainer${b} {
+                    .AtOnceMainShopProductPriceContainer${T} {
                         pointer-events: none;
                         user-select: none;
                         line-height: 24px;
                     }
 
-                    .AtOnceMainShopProductTitleContainer${b} {
+                    .AtOnceMainShopProductTitleContainer${T} {
                         pointer-events: none;
                         user-select: none;
                     }
 
-                    .AtOnceMainShopProductTitleText${b} {
+                    .AtOnceMainShopProductTitleText${T} {
                         font-size: 16px;
                         font-weight: 600;
                         user-select: none;
                         pointer-events: none;
                     }
 
-                    .AtOnceMainShopProductPriceText${b} {
+                    .AtOnceMainShopProductPriceText${T} {
                         color: #555;
                         font-weight: 400;
                         pointer-events: none;
                         user-select: none;
                     }
 
-                    .AtOnceMainShopProductPriceText_compare${b} {
+                    .AtOnceMainShopProductPriceText_compare${T} {
                         color: #777 !important;
                         text-decoration: line-through;
                         text-decoration-color: #777777aa;
                         margin-right: 12px;
                     }
 
-                    .AtOnceModalBackground${b} {
+                    .AtOnceModalBackground${T} {
                         top: 0;
                         left: 0;
                         width: 100%;
@@ -3065,12 +3117,12 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         background-color: transparent;
                     }
 
-                    .AtOnceModalBackground${b}.active {
+                    .AtOnceModalBackground${T}.active {
                         opacity: 1;
                         pointer-events: auto;
                     }
 
-                    .AtOnceModalContainer${b} {
+                    .AtOnceModalContainer${T} {
                         width: 100%;
                         border: none;
                         height: 100%;
@@ -3087,21 +3139,21 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                         border-radius: 0;
                         pointer-events: none;
-                        scrollbar-color: #ccc ${el};
-                        background-color: ${el};
+                        scrollbar-color: #ccc ${ed};
+                        background-color: ${ed};
                     }
 
-                    .AtOnceModalContainer${b}::-webkit-scrollbar-track {
-                        ${eu?"":"margin-top: 16px; margin-bottom: 16px;"}
+                    .AtOnceModalContainer${T}::-webkit-scrollbar-track {
+                        ${e_?"":"margin-top: 16px; margin-bottom: 16px;"}
                     }
 
-                    .AtOnceModalContainer${b}.active {
+                    .AtOnceModalContainer${T}.active {
                         opacity: 1;
                         pointer-events: auto;
-                        ${eu?"":"border-radius: 22px; box-shadow: none;"}
+                        ${e_?"":"border-radius: 22px; box-shadow: none;"}
                     }
 
-                    .AtOnceModalCloseBtn${b} {
+                    .AtOnceModalCloseBtn${T} {
                         height: 24px;
                         width: 24px;
                         text-align: center;
@@ -3109,27 +3161,27 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         cursor: pointer;
                         user-select: none;
                         position: fixed;
-                        right: ${eu?"12px":"20px"};
-                        top: ${eu?"16px":"24px"};
+                        right: ${e_?"12px":"20px"};
+                        top: ${e_?"16px":"24px"};
                         z-index: 2;
                     }
 
-                    .AtOnceModalCloseBtn${b}:hover {
+                    .AtOnceModalCloseBtn${T}:hover {
                         filter: brightness(0.6);
                     }
 
-                    .AtOnceModalCloseBtn${b}:active {
+                    .AtOnceModalCloseBtn${T}:active {
                         filter: brightness(0.5);
                     }
 
-                    .AtOnceModalStickyBottomContainer${b} {
+                    .AtOnceModalStickyBottomContainer${T} {
                         padding-top: 4px;
-                        background: ${el};
+                        background: ${ed};
                         bottom: 0;
                         position: sticky;
                     }
 
-                    .AtOnceModalProductImageContainer${b} {
+                    .AtOnceModalProductImageContainer${T} {
                         width: 100%;
                         cursor: default;
                         display: block;
@@ -3140,11 +3192,11 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-top: 24px;
                     }
 
-                    .AtOnceModalProductImageContainer${b}.maxwidth {
+                    .AtOnceModalProductImageContainer${T}.maxwidth {
                         width: 100% !important;
                     }
 
-                    .AtOnceModalProductImageContainer${b}.slideshow {
+                    .AtOnceModalProductImageContainer${T}.slideshow {
                         margin: 0 20px;
                         overflow: hidden;
                         max-width: 400px;
@@ -3153,7 +3205,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         border-radius: 4px;
                     }
 
-                    .AtOnceModalProductImage${b} {
+                    .AtOnceModalProductImage${T} {
                         width: 75%;
                         margin-left: 12.5%;
                         cursor: default;
@@ -3163,22 +3215,22 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         pointer-events: none;
                     }
 
-                    .AtOnceModalProductImageUL${b} {
+                    .AtOnceModalProductImageUL${T} {
                         padding: 0;
                         margin: 0;
                         list-style: none;
                         display: flex;
                     }
 
-                    .AtOnceModalProductImageUL${b}:hover {
+                    .AtOnceModalProductImageUL${T}:hover {
                         will-change: transform;
                     }
 
-                    .AtOnceModalProductImage${b}.border {
+                    .AtOnceModalProductImage${T}.border {
                         border-radius: 36px;
                     }
 
-                    .AtOnceModalProductRightContainer${b} {
+                    .AtOnceModalProductRightContainer${T} {
                         width: 100%;
                         margin-top: 16px;
                         margin-left: 0;
@@ -3189,27 +3241,27 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         transition: linear 0.15s;
                     }
                         
-                    .AtOnceModalProductRightContainer${b}::-webkit-scrollbar-track {
-                        background: ${el};
+                    .AtOnceModalProductRightContainer${T}::-webkit-scrollbar-track {
+                        background: ${ed};
                         border-radius: 20px;
                         margin-top: 6px;
                         margin-bottom: 6px;
                     }
 
-                    .AtOnceModalProductRightContainer${b}::-webkit-scrollbar-thumb {
+                    .AtOnceModalProductRightContainer${T}::-webkit-scrollbar-thumb {
                         background-color: #ccc;
                         border-radius: 20px;
-                        border: 2.5px solid ${el};
+                        border: 2.5px solid ${ed};
                     }
 
-                    .AtOnceModalProductTitle${b} {
+                    .AtOnceModalProductTitle${T} {
                         user-select: none;
                         font-weight: 600;
                         font-size: 24px;
                         color: #222;
                     }
 
-                    .AtOnceModalProductVariantInfo${b} {
+                    .AtOnceModalProductVariantInfo${T} {
                         user-select: none;
                         margin-top: 4px;
                         font-size: 14px;
@@ -3217,11 +3269,11 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         color: #999;
                     }
 
-                    .AtOnceModalProductVariantInfo${b}.price {
+                    .AtOnceModalProductVariantInfo${T}.price {
                         margin-left: 24px;
                     }
 
-                    .AtOnceVariantsLabel${b} {
+                    .AtOnceVariantsLabel${T} {
                         color: #333;
                         font-size: 14px;
                         margin-top: 8px;
@@ -3229,7 +3281,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         user-select: none;
                     }
 
-                    .AtOnceModalProductVariantSelectionContainer_images${b} {
+                    .AtOnceModalProductVariantSelectionContainer_images${T} {
                         display: flex;
                         flex-wrap: wrap;
                         flex-direction: row;
@@ -3238,12 +3290,12 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-bottom: -8px;
                     }
 
-                    .AtOnceFlexTitle${b} {
+                    .AtOnceFlexTitle${T} {
                         display: flex;
                         align-items: center;
                     }
 
-                    .AtOnceGreenCircle${b} {
+                    .AtOnceGreenCircle${T} {
                         margin-right: 10px;
                         background-color: #2ecc71;
                         font-size: 0;
@@ -3258,14 +3310,18 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         display: inline-flex;
                     }
 
-                    .AtOnceMainShopVariantsButton${b} {
+                    .AtOnceGreenCircle${T}.yellow {
+                        background-color: #ffbb3b;
+                    }
+
+                    .AtOnceMainShopVariantsButton${T} {
                         color: #222;
                         border: 1px solid;
                         cursor: pointer;
                         outline: none;
                         padding: 6px 16px;
                         font-size: 14px;
-                        background: ${el};
+                        background: ${ed};
                         transition: linear 0.1s;
                         font-weight: 400;
                         user-select: none;
@@ -3275,16 +3331,16 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-bottom: 8px;
                     }
 
-                    .AtOnceMainShopVariantsButton${b}:hover {
+                    .AtOnceMainShopVariantsButton${T}:hover {
                         border-color: #222;
                     }
 
-                    .AtOnceMainShopVariantsButton${b}:disabled {
+                    .AtOnceMainShopVariantsButton${T}:disabled {
                         opacity: 0.2;
                         pointer-events: none;
                     }
 
-                    .AtOnceMainShopVariantsButton_image${b} {
+                    .AtOnceMainShopVariantsButton_image${T} {
                         background-size: cover;
                         border-radius: 50%;
                         background-position: center;
@@ -3294,64 +3350,64 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         margin-left: 1.5px;
                     }
 
-                    .AtOnceMainShopVariantsButton_one${b}:hover {
-                        border-color: ${e$};
+                    .AtOnceMainShopVariantsButton_one${T}:hover {
+                        border-color: ${eA};
                     }
 
-                    .AtOnceMainShopVariantsButton_image_active${b} {
+                    .AtOnceMainShopVariantsButton_image_active${T} {
                         border-color: #222;
                         outline: 1.5px solid #222;
                     }
 
-                    .AtOnceMainShopVariantsButton_image_active_one${b} {
-                        border-color: ${e$};
-                        outline: 1.5px solid ${e$};
+                    .AtOnceMainShopVariantsButton_image_active_one${T} {
+                        border-color: ${eA};
+                        outline: 1.5px solid ${eA};
                     }
 
-                    .AtOnceMainShopVariantsButton_active${b} {
-                        color: ${el};
+                    .AtOnceMainShopVariantsButton_active${T} {
+                        color: ${ed};
                         background: #222;
                         border-color: #222;
                     }
 
-                    .AtOnceMainShopProductDescription${b} {
+                    .AtOnceMainShopProductDescription${T} {
                         margin: 32px 0;
                     }
 
-                    .AtOnceMainShopProductDescription${b} img {
+                    .AtOnceMainShopProductDescription${T} img {
                         border-radius: 16px;
                         max-width: 100%;
                     }
 
-                    .AtOnceMainShopProductDescription${b}:after {
+                    .AtOnceMainShopProductDescription${T}:after {
                         clear: both;
                         content: "";
                         display: block;
                     }
 
 
-                    .AtOncePoweredByContainer${b} {
+                    .AtOncePoweredByContainer${T} {
                         padding: 12px 0;
                     }
 
-                    .AtOncePoweredByLink${b} {
+                    .AtOncePoweredByLink${T} {
                         user-select: none;
                         text-decoration: none !important;
                         color: #aaa;
                         transition: 0.2s linear;
                     }
 
-                    .AtOncePoweredByText${b} {
+                    .AtOncePoweredByText${T} {
                         font-weight: 600;
                         color: #1a73e8;
                     }
 
-                    .AtOncePoweredByLink${b}:hover {
+                    .AtOncePoweredByLink${T}:hover {
                         color: #1a73e8;
                     }
 
 
-                    .AtOnceTiBlock${b} {
+                    .AtOnceTiBlock${T} {
                         -webkit-box-align: center;
                             -ms-flex-align: center;
                                 align-items: center;
@@ -3364,13 +3420,13 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         background: #eee;
                     }
                     
-                    .AtOnceTiContainer${b} .AtOnceTidot${b} {
+                    .AtOnceTiContainer${T} .AtOnceTidot${T} {
                         background-color: #777;
                     }
                     
-                    .AtOnceTidot${b} {
-                        -webkit-animation: AtOnceMercuryTypingAnimation${b} 1.5s infinite ease-in-out;
-                                animation: AtOnceMercuryTypingAnimation${b} 1.5s infinite ease-in-out;
+                    .AtOnceTidot${T} {
+                        -webkit-animation: AtOnceMercuryTypingAnimation${T} 1.5s infinite ease-in-out;
+                                animation: AtOnceMercuryTypingAnimation${T} 1.5s infinite ease-in-out;
                         border-radius: 50%;
                         display: inline-block;
                         height: 8px;
@@ -3378,22 +3434,22 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         width: 8px;
                     }
                     
-                    .AtOnceTidot${b}:nth-child(1) {
+                    .AtOnceTidot${T}:nth-child(1) {
                         -webkit-animation-delay: 200ms;
                                 animation-delay: 200ms;
                     }
                     
-                    .AtOnceTidot${b}:nth-child(2) {
+                    .AtOnceTidot${T}:nth-child(2) {
                         -webkit-animation-delay: 300ms;
                                 animation-delay: 300ms;
                     }
                     
-                    .AtOnceTidot${b}:nth-child(3) {
+                    .AtOnceTidot${T}:nth-child(3) {
                         -webkit-animation-delay: 400ms;
                                 animation-delay: 400ms;
                     }
 
-                    @-webkit-keyframes AtOnceMercuryTypingAnimation${b} {
+                    @-webkit-keyframes AtOnceMercuryTypingAnimation${T} {
                         0% {
                             -webkit-transform: translateY(0)
                         }
@@ -3407,7 +3463,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         }
                     }
                     
-                    @keyframes AtOnceMercuryTypingAnimation${b} {
+                    @keyframes AtOnceMercuryTypingAnimation${T} {
                         0% {
                             -webkit-transform: translateY(0)
                         }
@@ -3421,49 +3477,53 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         }
                     }
 
-                    @keyframes AtOnceSpinner${b} {
+                    @keyframes AtOnceSpinner${T} {
                         to {
                             transform: rotate(360deg);
                         }
                     }
 
-                    @keyframes AtOnceShowSubContainer${b} {
+                    @keyframes AtOnceShowSubContainer${T} {
                         0% {opacity: 0;}
                         100% {opacity: 1;}
                     }
 
-                    @keyframes AtOnceHideSubContainer${b} {
+                    @keyframes AtOnceHideSubContainer${T} {
                         0% {opacity: 1;}
                         100% {opacity: 0;}
                     }
 
-                    @keyframes AtOnceShowChatButton${b} {
+                    @keyframes AtOnceShowChatButton${T} {
                         0% {transform:translate(0px, 10px);}
                         100% {transform:translate(0px, 0px);}
                     }
 
-                    @keyframes AtOnceHidePrimaryContainer${b} {
-                        0% {opacity: 1;${eu?"":"transform:translate(0px, 0px);"}}
-                        100% {opacity: 0;user-select:none;${eu?"":"transform:translate(0px, 10px);"}}
+                    @keyframes AtOnceHidePrimaryContainer${T} {
+                        0% {opacity: 1;${e_?"":"transform:translate(0px, 0px);"}}
+                        100% {opacity: 0;user-select:none;${e_?"":"transform:translate(0px, 10px);"}}
                     }
 
-                    @keyframes AtOnceShowPrimaryContainer${b} {
-                        0% {opacity: 0;${eu?"":"transform:translate(0px, 10px);"}}
-                        100% {opacity: 1;user-select:unset;${eu?"":"transform:translate(0px, 0px);"}}
+                    @keyframes AtOnceShowPrimaryContainer${T} {
+                        0% {opacity: 0;${e_?"":"transform:translate(0px, 10px);"}}
+                        100% {opacity: 1;user-select:unset;${e_?"":"transform:translate(0px, 0px);"}}
                     }
 
-                    @keyframes AtOnceErrorMessage${b} {
+                    @keyframes AtOnceErrorMessage${T} {
                         0% {opacity: 0;z-index:1;pointer-events: auto;}
                         5% {opacity: 1;z-index:1;pointer-events: auto;}
                         95% {opacity: 1;z-index:1;pointer-events: auto;}
                         100% {opacity: 0;z-index:-1;pointer-events: none;}
                     }
-                    `;let eN=[],e7=[],eB="";function eH(e,t,o,n,i){return{attachments_fetched:"true",from:e,id:t,message:o,messageId:t,name:e,sender:D.currentUser.uid,snippet:"",subject:o.substring(0,30),threadId:n,timestamp:Date.now(),to:Q,type:"live",other_attachments:i}}function e8(e,t){let o=Math.floor(Date.now());(e=Number(e)).toString().length>15&&(e/=1e3);let n=o-e;if(t&&(n=e-o),n<12e4)return"Now";if(n<36e5)return`${Math.round(Number(n)/6e4)}m ago`;if(n<864e5)return`${Math.round(Number(n)/36e5)}h ago`;if(n<6048e5)return function e(t){let o=new Intl.DateTimeFormat("en-US",{dateStyle:"full",timeZone:`${Intl.DateTimeFormat().resolvedOptions().timeZone}`}),n=o.format(new Date(1e3*t));return n.substring(0,n.indexOf(","))}(e/1e3);if(n>6048e5)return function e(t){let o=new Intl.DateTimeFormat("en-US",{dateStyle:"medium",timeZone:`${Intl.DateTimeFormat().resolvedOptions().timeZone}`});return o.format(new Date(1e3*t)).split(",")[0]}(e/1e3);else return""}async function eI(){let e=p(V,"messages",`${Q}`,"user_threads",`${D.currentUser.uid}`,"threads");return new Promise(async function(t,o){try{v(e).then(e=>{e.empty||e.forEach(e=>{let t=e.data().list;t&&Array.prototype.push.apply(eN,t)}),t(!0)}).catch(e=>{t(!0)})}catch(n){t(!0)}})}async function eR(){try{if(eo){let e=es.getElementById("AtOnceLiveChatMainContainer");if(e){let t=Date.now()-eo,o=es.getElementById("atOnceAgentTypingIndicatorContainer");if(o){if(t>4e3){Y=!1;try{clearInterval(X)}catch(n){}o.remove()}else!1==Y&&(Y=!0,X=setInterval(function(){eR()},2e3))}else{if(t<4e3){let i=document.createElement("div");i.className=`AtOnceTiContainer${b}`,i.id="atOnceAgentTypingIndicatorContainer";let a=document.createElement("div");a.className=`AtOnceTiBlock${b}`;for(let l=0;l<3;l++){let p=document.createElement("div");p.className=`AtOnceTidot${b}`,a.appendChild(p)}i.appendChild(a),e.appendChild(i)}!1==Y&&(Y=!0,X=setInterval(function(){eR()},2e3))}}}}catch(r){}}async function eK(e){let o=r(p(V,"messages",`${Q}`,"all_msgs",`${e}`,"sub_msgs"),u("timestamp","desc"),s(20));try{let c=r(l(V,"messages",`${Q}`,"user_threads",`${D.currentUser.uid}`));$(c,e=>{try{let t=e.data();if(t){if(t.agent_read&&!1==isNaN(t.agent_read)){et=Number(t.agent_read);let o=es.getElementById("AtOnceMessageSeenText");o&&(o.innerText="Read");let n=es.getElementById("AtOnceMessageConnectedText");n&&Date.now()-et<18e4&&en&&(n.className=`AtOnceFlexCenter${b} AtOnceTimestampContainer${b} AtOnceTextColorNine${b} AtOnceSubText${b}`,n.innerText=`${en} joined the chat`)}t.agent_typed&&!1==isNaN(t.agent_read)&&(eo=Number(t.agent_read)),t.agent_read_by&&(en=t.agent_read_by),t.agent_typed_by&&(ei=t.agent_typed_by),eR()}}catch(i){}})}catch(d){}$(o,o=>{try{o.docChanges().forEach(o=>{try{let l=o.doc.data();if(l){let p=l.message.id;for(let r of e7)if(r.threadId==e){let c=r.messages;if(c){let s=c.findIndex(function(e){return e.id==p});function u(o){let l=es.getElementById("AtOnceLiveChatMainContainer");if(eB==e&&l&&!0==t){try{"visible"==document.visibilityState?(n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)):(ee||(ee=window.top.document.title),window.top.document.title=`(1) ${ee}`)}catch(p){}o&&td(c,l)}else if(!1==t||"hidden"==document.visibilityState)try{let r=[];try{let s=D.currentUser.uid;if(c&&c.length)for(let u of c)u.timestamp&&u.timestamp>n&&u.sender!==s&&r.push(u)}catch(d){}if(r.length){let v=r.slice(0,3);if(!1==t){S.innerHTML="";let $=document.createElement("div");$.className=`AtOnceLiveChatCloseButton${b}`,$.innerHTML=e3,$.addEventListener("click",function(){try{g.className=`AtOnceChatNotification${b} hidden`,ee&&(window.top.document.title=ee),S.className=`AtOnceLiveChatMessagesContainer${b} hidden`,S.innerHTML="";try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(e){}}catch(t){}}),S.appendChild($);let m=v.length;for(let h=0;h<m;h++){let _=document.createElement("div");1==m?_.className=`AtOnceMessageContainerPreview${b} three`:2==m?_.className=`AtOnceMessageContainerPreview${b} ${0==h?"two":"three"}`:_.className=`AtOnceMessageContainerPreview${b} ${0==h?"one":1==h?"two":"three"}`,_.innerHTML=Autolinker.link(v[h].message),_.addEventListener("click",function(){tM(),th(e,c)}),i=e,a=c,S.appendChild(_)}AtOnceChatContainer.style.width="100%",AtOnceChatContainer.style.height="100%",S.className=`AtOnceLiveChatMessagesContainer${b}`,ti=[]}ee||(ee=window.top.document.title),window.top.document.title=`(${r.length}) ${ee}`,g.innerText=r.length,g.className=`AtOnceChatNotification${b}`}}catch(f){}}-1==s?(r.messages.push(l.message),r.timestamp=l.timestamp,e7.sort(function(e,t){return t.timestamp-e.timestamp}),u(!0)):u()}break}}}catch(d){}})}catch(l){}},e=>{})}async function eU(e){try{return new Promise(async function(t,o){try{let n=r(p(V,"messages",`${Q}`,"all_msgs",`${e}`,"sub_msgs"),u("timestamp","desc"),s(20));v(n).then(o=>{if(o.empty)eK(e),t(!0);else try{let n=[];o.forEach(e=>{let t=e.data().message;t&&n.push(t)}),n.length&&(n.sort(function(e,t){return e.timestamp-t.timestamp}),e7.push({threadId:e,messages:n,timestamp:n[n.length-1].timestamp}),eK(e)),t(!0)}catch(i){t(!0)}}).catch(e=>{t(!0)})}catch(i){t(!0)}})}catch(t){return!0}}function ez(e){setTimeout(function(){try{e.selectionStart=e.selectionEnd=1e4,e.focus(),e.scrollLeft=e.scrollWidth}catch(t){}},0)}let eG=document.createElement("div");eG.className=`AtOnceSubContainer${b}`;let eV=document.createElement("div");eV.style.cssText="visibility:hidden !important;position:relative !important;display:none !important;width:0;height:0;line-height:0;transform:scale(0);",eV.className=`AtOnceChatPrimaryContainer${b}`;let eD=document.createElement("div");eD.className=`AtOnceChatFirstContainer${b}`;let eF=document.createElement("div");function eJ(e){let t=document.createElement("div");return(t.innerHTML=e),t.textContent}async function ej(){try{await eQ.then(()=>{if(e7.length){e7.sort(function(e,t){return t.timestamp-e.timestamp});let e=document.createElement("div"),t=document.createElement("div");for(let o of(t.innerText="Your conversations",t.className=`AtOnceSubHeadingSmall${b} AtOnceTextColorSeven${b} AtOnceSubHeadingMargin${b}`,e.appendChild(t),e7))try{let n=o.messages,i=n[n.length-1],a=eJ(i.subject.substring(0,30)).replace(/\n/g," "),l=eJ(i.snippet.substring(0,30)).replace(/\n/g," "),p=e8(i.timestamp),r=o.threadId,c=document.createElement("div");c.className=`AtOnceFlexSpaced${b} AtOnceQuickButton${b} AtOnceQuickButtonPaddedLess${b}`,c.addEventListener("click",function(){th(r,n)});let s=document.createElement("div"),u=document.createElement("div");u.className=`AtOnceSubText${b} AtOnceSubTextLarge${b} AtOnceTextColorThree${b}`,u.innerText=a;let d=document.createElement("div");d.innerText=l,d.className=`AtOnceSubText${b} AtOnceTextColorSeven${b}`,s.appendChild(u),s.appendChild(d);let v=document.createElement("div");v.className=`AtOnceSubText${b} AtOnceFlexStart${b} AtOnceTextColorNine${b}`,v.innerText=p,c.appendChild(s),c.appendChild(v),e.appendChild(c)}catch($){}es.getElementById("AtOnceLiveChatMainContainer")||eF.appendChild(e)}})}catch(e){}}eF.className=`AtOnceContainerScrollMiddle${b}`;let eq=!1,eQ=eZ();async function eZ(){return new Promise(async function(e,t){if(!0==eq)e(!0);else try{eI().then(()=>{try{if(eN.length>0){let t=eN.slice(-5),o=[];for(let n of t)o.push(eU(n));eg(o).then(()=>{eq=!0,e(!0)})}else eq=!0,e(!0)}catch(i){eq=!0,e(!0)}})}catch(o){eq=!0,e(!0)}})}let eW=document.createElement("div");eW.className=`AtOnceContainerPadded${b} AtOnceTopContainer${b} AtOnceGradientBackground${b}`;let eY=document.createElement("div"),eX=document.createElement("div");eX.className=`AtOnceTopHeadingContainer${b}`;let te=document.createElement("div");te.className=`AtOnceChatRoundedCircleIcon${b} AtOnceChatTopBackButton${b}`,te.style.display="none";let tt=document.createElement("div");tt.innerHTML=eA,te.appendChild(tt);let to=document.createElement("div");eX.appendChild(te),eX.appendChild(to);let tn=document.createElement("div");tn.className=`AtOnceSubText${b} AtOnceSubTextMargin${b}`,eY.appendChild(eX),eY.appendChild(tn),eW.appendChild(eY);let ti=[],ta="Usual reply time: a few hours",tl=new Date().getDay();(0==tl||6==tl)&&(ta="Usual reply time: 48 hours"),Z&&W-Z<9e5&&(ta=`<div class="AtOnceFlexTitle${b}"><span class="AtOnceGreenCircle${b}"> </span>We’re Online</div>`);let tp=D.currentUser.email;tp&&localStorage.setItem("AtOnceLiveChatUserEmail",tp.trimStart().trimEnd().toLowerCase());try{tp||(tp=localStorage.getItem("AtOnceLiveChatUserEmail").trimStart().trimEnd().toLowerCase())}catch(tr){}let tc=new m(ep,{distance:2e3,keys:["heading","subheading","actions_heading","text",]});function ts(e,t,o){e||(e="order");let n=[],i=tc.search(e);if(i.item)n.push(i);else for(let a of i)try{if(n.length>o)break;n.push(a.item)}catch(l){}if(n.length)for(let p of(t.innerHTML="",n))t9(p,t,!1,!1,"",t,!1,"","",!0)}function tu(e){let t=document.createElement("a"),o=e.name;return void 0===e.type?(t.href=`data:${e.mimetype},${e.url}`,t.target="_blank",t.download=o):"image"==e.type?(t.href=`data:image/${e.filetype},${e.url}`,t.target="_blank",t.download=o):(t.href=`${e.url}`,t.target="_blank"),t}function td(e,t){try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(o){}try{if(t.innerHTML="",e&&e.length){let i=e.length,a=i-1,l="",p="",r=0,c="",s=document.createElement("div");s.className=`AtOnceTextCenter${b} AtOnceSubHeadingSmall${b} AtOnceTextColorThree${b} AtOnceSubTextAntiMarginTop${b}`,s.innerText=`We’ll reply here & email ${tp||localStorage.getItem("AtOnceLiveChatUserEmail")}`,t.appendChild(s);for(let u=0;u<i;u++){let d=e[u];if(d&&d.message){let v=d.name,$=d.to,m=d.timestamp,h=!1;d.sender!==Q&&(h=!0);let _=document.createElement("div");_.className=`AtOncePrimaryMessageContainer${b} ${h?"self":"sender"}`;let g=document.createElement("div");g.className=`AtOnceMessageContainer${b} ${h?"self":"sender"}`,g.innerHTML=Autolinker.link(d.message);try{if(d.first_url_title){let f=g.getElementsByTagName("a");if(f.length){let A=f[0].cloneNode(!1);A.className=`AtOnceMessageContainerLink${b} ${h?"self":"sender"}`,A.innerText=d.first_url_title,g.appendChild(A)}}}catch(x){}let O="",C="",y=l==v||p==$&&$==Q;if(y&&(g.classList.add("middle"),c&&-1!==c.className.indexOf("end")&&(c.classList.remove("end"),c.classList.add("start"))),!y){c?(g.classList.add("end"),c.classList.remove("middle"),c.classList.add("end")):g.classList.add("start");let S=document.createElement("div");if(S.className=`${""==l?"":"AtOncePrimarySubjectHeader"}${b} AtOnceSubText${b} AtOnceSubTextSmall${b} ${h?`AtOnceSubTextSpacingRight${b}`:`AtOnceSubTextSpacingLeft${b}`} AtOnceTextColorSeven${b} ${h?`AtOncePrimaryMessageContainer${b} self`:""}`,!0==h?S.innerText="Me":S.innerText=`${v}`,_.appendChild(S),m-r>12e4){r=m;let T=document.createElement("div");T.className=`AtOnceFlexCenter${b} AtOnceTimestampContainer${b} AtOnceTextColorNine${b}`,T.innerText=e8(m),t.appendChild(T)}}if(u==a){g.className=`AtOnceMessageContainer${b} ${h?"self":"sender"} end`;try{h&&((O=document.createElement("div")).className=`AtOnceSeenContainer${b}`,O.id="AtOnceMessageSeenText",et>=d.timestamp?O.innerText="Read":O.innerText="Unread"),(0==u||Math.abs(d.timestamp-et)>12e5)&&((C=document.createElement("div")).id="AtOnceMessageConnectedText",et>d.timestamp&&Date.now()-et<18e4&&en&&(C.className=`AtOnceFlexCenter${b} AtOnceTimestampContainer${b} AtOnceTextColorNine${b} AtOnceSubText${b}`,C.innerText=`${en} joined the chat`))}catch(M){}}_.appendChild(g),t.appendChild(_),O&&t.appendChild(O),C&&t.appendChild(C);let P=d.other_attachments,w=`${h?"self":"sender"}`;if(P&&P.length)for(let k of P)try{let L=document.createElement("div"),E=tu(k),N=k.name;if(""==N){N="File";let B=k.filetype;""!==B&&(N+=`.${B}`)}let H=N.substring(0,35);function I(e){let t=document.createElement("img");t.addEventListener("error",function(){t.style.display="none",L.className=`AtOnceMainAttachmentsUnavailable${b} ${w}`,L.innerHTML="Image unavailable/expired",E.removeAttribute("href"),E.removeAttribute("target"),E.removeAttribute("download"),E.remove()}),t.src=e.url,t.className=`AtOnceMainAttachmentsPreview${b}`,L.classList.add("image"),L.innerText="",L.appendChild(t)}function R(e){let t=document.createElement("video");t.style.width="100%",t.controls=!0;let o=document.createElement("source");o.src=e.url,t.appendChild(o),L.classList.add("video"),L.innerText="",L.appendChild(t)}function K(e){let t=document.createElement("audio");t.style.width="100%",t.controls=!0;let o=document.createElement("source");o.addEventListener("error",function(){o.style.display="none",t.style.display="none",E.removeAttribute("href"),E.removeAttribute("target"),E.removeAttribute("download"),E.remove(),L.className=`AtOnceMainAttachmentsUnavailable${b} ${w}`,L.innerHTML="Audio file unavailable"}),o.src=e.url,t.appendChild(o),L.classList.add("audio"),L.innerText="",L.appendChild(t)}N.length>35&&(H=`${H}...`),L.className=`AtOncePseudoAttachmentLink${b} ${w}`,L.title=N,L.innerText=`${H}`,!1!==k.mimetype&&(-1!==k.mimetype.indexOf("image")?I(k):-1!==k.mimetype.indexOf("video")?R(k):-1!==k.mimetype.indexOf("audio")&&K(k)),L.addEventListener("click",function(){E&&E.click()}),t.appendChild(L)}catch(U){}l=v,p=$,c=g}}}try{setTimeout(function(){eF.children[0].scrollIntoView({behavior:"smooth",block:"end"})},2)}catch(z){}}catch(G){}}async function tv(e){return new Promise(async function(t,o){try{await U(e,"orders").then(e=>{if(e&&e[0]){let o=e[0],n=o.line_items,i=[];if(o.line_items_returned&&o.line_items_returned.length){let a=o.line_items_returned;for(let l of a){let r=1;l.quantity&&(r=Number(l.quantity)),isNaN(r)&&(r=1),i.push({id:l.id,line_item:l.line_item,product_id:l.product_id,quantity:r})}}let c=p(V,"shopify",e[1],"products");n?tf(n,i,!1,c).then(()=>{t(e)}):t(null)}else t(null)})}catch(n){t(null)}})}function t$(){te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerHTML="Recent Orders",to.className=`AtOnceSubHeading${b}`,tn.innerText="",tn.style.display="none";let e=document.createElement("div");e.className=`AtOnceContainerPaddedTopSmall${b}`;let t=document.createElement("div");t.className=`AtOnceFlexCenter${b}`;let o=document.createElement("button");return o.id=`AtOnceFindOtherOrders${b}`,o.className=`AtOnceMainButton${b} AtOnceSecondaryButton${b} AtOnceTertiaryButton${b}`,o.innerText="Find Another Order",o.addEventListener("click",function(){tg(!0)}),t.appendChild(o),e.appendChild(t),e}async function tm(e,t){return new Promise(async function(o,n){let i=function e(){let t=localStorage.getItem("AtOnceOrders"),o=[];if(t)try{let n=t.split(",");if(n&&n.length)for(let i of n)try{i&&i.length>7&&-1==o.indexOf(i)&&o.push(i.replace("_atonce_",""))}catch(a){}}catch(l){}return o}(),a=[];if(i.length){for(let l of i=i.slice(0,15))a.push(tv(l));await eg(a).then(n=>{if(a.length&&n){let i=[];for(let l of n)if(l){let p=l[1],r=i.findIndex(function(e){return e.store==p});-1==r&&i.push({order:l[0],store:p,order_identifier:l[2]})}if(i.length)for(let c of i)R(c.order_identifier,c.order.customer_id,c.store)}if(e){if(n&&n.length){let s=t$();for(let u of(eS=[],n)){if(u){let d=u[1],v=u[0];t0(v,d,s,eF)}eS.push(u)}eF.innerHTML="";es.getElementById("AtOnceLiveChatMainContainer")||eF.appendChild(s)}}else if(t)for(let $ of(eS=[],n))$&&eS.push($);o(!0)})}else o(null)})}function th(e,t,o){to.innerHTML=ta,to.className=`AtOnceSubHeading${b}`,tn.style.display="none",te.style.display="",ti=[];let n=[],i=0,a=async e=>{let t=Array.from(e.target.files);d(t)};if(o){let l=t[0];k("send_live_message",{company:Q,user:D.currentUser.uid,email:tp,message:l.message,id:l.id,threadId:e,u:!0}).then(()=>{eK(e)});let p=e7.findIndex(function(t){return t.threadId==e});-1==p&&e7.unshift({threadId:e,timestamp:Date.now(),messages:t})}eB=e;let r=document.createElement("div");r.id="AtOnceLiveChatMainContainer",r.className=`AtOnceContainerPadded${b}`,td(t,r);let c=document.createElement("div");c.className=`AtOnceContainerLiveChatMain${b}`;let s=document.createElement("div");s.className=`AtOnceContainerLiveChatAttachments${b}`;let u=document.createElement("div");async function d(e){try{let t=e.length;for(let o=0;o<t;o++){let a=await e[o],l=Number(a.size);if(l>20971520||l+i>20971520)u.classList.add("shown");else{let p=a.name,r=a.type;i+=l;let c=`${E(32)}${p}`,d=A(G,`attachments/${Q}/${c}`),v={customMetadata:{user_id:`${D.currentUser.uid}`,owner:`${Q}`}},$=document.createElement("div");$.className=`AtOnceFlex${b}`;let m=document.createElement("span");m.innerHTML=`${p} <span class="AtOnceAttachmentsUploading${b}">Uploading</span>`;let h=document.createElement("div");h.className=`AtOnceAttachmentCloseBtn${b}`,h.innerHTML=e1;let _=!1;$.appendChild(m),$.appendChild(h),s.appendChild($),s.classList.add("shown"),x(d,a,v).then(()=>{f(d).then(e=>{if(!1==_)n.push({url:e,fakeName:c,name:p,fileName:p,mimetype:r}),m.innerText=`${p}`;else{$.remove();try{O(d)}catch(t){}}}).catch(e=>{})}),h.addEventListener("click",function(){_=!0,$.remove();try{O(d)}catch(e){}if(n.length)try{for(let t of n)if(t.fakeName==c){n=n.filter(e=>e!==t);break}}catch(o){}0==n.length&&s.classList.remove("shown")})}}}catch(g){}}u.className=`AtOnceContainerLiveChatAttachmentsError${b}`,u.innerText="Max file size is 20MB";let v=document.createElement("span");v.className=`AtOnceContainerLiveChatInput${b}`,v.setAttribute("placeholder","Write a message"),v.contentEditable=!0,v.addEventListener("keydown",function e(t){try{"Enter"===t.key&&!1==t.shiftKey&&y()}catch(o){}});let $=`
+                    `;let eD=[],eF=[],eJ="";function eq(e,t,o,n,i){return{attachments_fetched:"true",from:e,id:t,message:o,messageId:t,name:e,sender:J.currentUser.uid,snippet:"",subject:o.substring(0,30),threadId:n,timestamp:Date.now(),to:Y,type:"live",other_attachments:i}}function ej(e,t){let o=Math.floor(Date.now());(e=Number(e)).toString().length>15&&(e/=1e3);let n=o-e;if(t&&(n=e-o),n<12e4)return"Now";if(n<36e5)return`${Math.round(Number(n)/6e4)}m ago`;if(n<864e5)return`${Math.round(Number(n)/36e5)}h ago`;if(n<6048e5)return function e(t){let o=new Intl.DateTimeFormat("en-US",{dateStyle:"full",timeZone:`${Intl.DateTimeFormat().resolvedOptions().timeZone}`}),n=o.format(new Date(1e3*t));return n.substring(0,n.indexOf(","))}(e/1e3);if(n>6048e5)return function e(t){let o=new Intl.DateTimeFormat("en-US",{dateStyle:"medium",timeZone:`${Intl.DateTimeFormat().resolvedOptions().timeZone}`});return o.format(new Date(1e3*t)).split(",")[0]}(e/1e3);else return""}async function eQ(){let e=p(F,"messages",`${Y}`,"user_threads",`${J.currentUser.uid}`,"threads");return new Promise(async function(t,o){try{v(e).then(e=>{e.empty||e.forEach(e=>{let t=e.data().list;t&&Array.prototype.push.apply(eD,t)}),t(!0)}).catch(e=>{t(!0)})}catch(n){t(!0)}})}async function eZ(){try{if(ea){let e=eh.getElementById("AtOnceLiveChatMainContainer");if(e){let t=Date.now()-ea,o=eh.getElementById("atOnceAgentTypingIndicatorContainer");if(o){if(t>4e3){et=!1;try{clearInterval(eo)}catch(n){}o.remove()}else!1==et&&(et=!0,eo=setInterval(function(){eZ()},2e3))}else{if(t<4e3){let i=document.createElement("div");i.className=`AtOnceTiContainer${T}`,i.id="atOnceAgentTypingIndicatorContainer";let a=document.createElement("div");a.className=`AtOnceTiBlock${T}`;for(let l=0;l<3;l++){let p=document.createElement("div");p.className=`AtOnceTidot${T}`,a.appendChild(p)}i.appendChild(a),e.appendChild(i)}!1==et&&(et=!0,eo=setInterval(function(){eZ()},2e3))}}}}catch(r){}}async function eY(e){let o=r(p(F,"messages",`${Y}`,"all_msgs",`${e}`,"sub_msgs"),u("timestamp","desc"),s(20));try{let c=r(l(F,"messages",`${Y}`,"user_threads",`${J.currentUser.uid}`));$(c,e=>{try{let t=e.data();if(t){if(t.agent_read&&!1==isNaN(t.agent_read)){ei=Number(t.agent_read);let o=eh.getElementById("AtOnceMessageSeenText");o&&(o.innerText="Read");let n=eh.getElementById("AtOnceMessageConnectedText");n&&Date.now()-ei<18e4&&el&&(n.className=`AtOnceFlexCenter${T} AtOnceTimestampContainer${T} AtOnceTextColorNine${T} AtOnceSubText${T}`,n.innerText=`${el} joined the chat`)}t.agent_typed&&!1==isNaN(t.agent_read)&&(ea=Number(t.agent_read)),t.agent_read_by&&(el=t.agent_read_by),t.agent_typed_by&&(ep=t.agent_typed_by),eZ()}}catch(i){}})}catch(d){}$(o,o=>{try{o.docChanges().forEach(o=>{try{let l=o.doc.data();if(l){let p=l.message.id;for(let r of eF)if(r.threadId==e){let c=r.messages;if(c){let s=c.findIndex(function(e){return e.id==p});function u(o){let l=eh.getElementById("AtOnceLiveChatMainContainer");if(eJ==e&&l&&!0==t){try{"visible"==document.visibilityState?(n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)):(en||(en=window.top.document.title),window.top.document.title=`(1) ${en}`)}catch(p){}o&&tO(c,l)}else if(!1==t||"hidden"==document.visibilityState)try{let r=[];try{let s=J.currentUser.uid;if(c&&c.length)for(let u of c)u.timestamp&&u.timestamp>n&&u.sender!==s&&r.push(u)}catch(d){}if(r.length){let v=r.slice(0,3);if(!1==t){f.innerHTML="";let $=document.createElement("div");$.className=`AtOnceLiveChatCloseButton${T}`,$.innerHTML=eN,$.addEventListener("click",function(){try{_.className=`AtOnceChatNotification${T} hidden`,en&&(window.top.document.title=en),f.className=`AtOnceLiveChatMessagesContainer${T} hidden`,f.innerHTML="";try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(e){}}catch(t){}}),f.appendChild($);let m=v.length;for(let h=0;h<m;h++){let g=document.createElement("div");1==m?g.className=`AtOnceMessageContainerPreview${T} three`:2==m?g.className=`AtOnceMessageContainerPreview${T} ${0==h?"two":"three"}`:g.className=`AtOnceMessageContainerPreview${T} ${0==h?"one":1==h?"two":"three"}`,g.innerHTML=K(Autolinker.link(v[h].message)),g.addEventListener("click",function(){tH(),t1(e,c)}),i=e,a=c,f.appendChild(g)}AtOnceChatContainer.style.width="100%",AtOnceChatContainer.style.height="100%",f.className=`AtOnceLiveChatMessagesContainer${T}`,th=[]}en||(en=window.top.document.title),window.top.document.title=`(${r.length}) ${en}`,_.innerText=r.length,_.className=`AtOnceChatNotification${T}`}}catch(A){}}-1==s?(r.messages.push(l.message),r.timestamp=l.timestamp,eF.sort(function(e,t){return t.timestamp-e.timestamp}),u(!0)):u()}break}}}catch(d){}})}catch(l){}},e=>{})}async function eW(e){try{return new Promise(async function(t,o){try{let n=r(p(F,"messages",`${Y}`,"all_msgs",`${e}`,"sub_msgs"),u("timestamp","desc"),s(20));v(n).then(o=>{if(o.empty)eY(e),t(!0);else try{let n=[];o.forEach(e=>{let t=e.data().message;t&&n.push(t)}),n.length&&(n.sort(function(e,t){return e.timestamp-t.timestamp}),eF.push({threadId:e,messages:n,timestamp:n[n.length-1].timestamp}),eY(e)),t(!0)}catch(i){t(!0)}}).catch(e=>{t(!0)})}catch(i){t(!0)}})}catch(t){return!0}}function eX(e){setTimeout(function(){try{e.selectionStart=e.selectionEnd=1e4,e.focus(),e.scrollLeft=e.scrollWidth}catch(t){}},0)}let te=document.createElement("div");te.className=`AtOnceSubContainer${T}`;let tt=document.createElement("div");tt.style.cssText="visibility:hidden !important;position:relative !important;display:none !important;width:0;height:0;line-height:0;transform:scale(0);",tt.className=`AtOnceChatPrimaryContainer${T}`;let to=document.createElement("div");to.className=`AtOnceChatFirstContainer${T}`;let tn=document.createElement("div");function ti(e){let t=document.createElement("div");return(t.innerHTML=e),t.textContent}async function ta(){try{await tp.then(()=>{if(eF.length){eF.sort(function(e,t){return t.timestamp-e.timestamp});let e=document.createElement("div"),t=document.createElement("div");for(let o of(t.innerText="Your conversations",t.className=`AtOnceSubHeadingSmall${T} AtOnceTextColorSeven${T} AtOnceSubHeadingMargin${T}`,e.appendChild(t),eF))try{let n=o.messages,i=n[n.length-1],a=ti(i.subject.substring(0,30)).replace(/\n/g," "),l=ti(i.snippet.substring(0,30)).replace(/\n/g," "),p=ej(i.timestamp),r=o.threadId,c=document.createElement("div");c.className=`AtOnceFlexSpaced${T} AtOnceQuickButton${T} AtOnceQuickButtonPaddedLess${T}`,c.addEventListener("click",function(){t1(r,n)});let s=document.createElement("div"),u=document.createElement("div");u.className=`AtOnceSubText${T} AtOnceSubTextLarge${T} AtOnceTextColorThree${T}`,u.innerText=a;let d=document.createElement("div");d.innerText=l,d.className=`AtOnceSubText${T} AtOnceTextColorSeven${T}`,s.appendChild(u),s.appendChild(d);let v=document.createElement("div");v.className=`AtOnceSubText${T} AtOnceFlexStart${T} AtOnceTextColorNine${T}`,v.innerText=p,c.appendChild(s),c.appendChild(v),e.appendChild(c)}catch($){}eh.getElementById("AtOnceLiveChatMainContainer")||tn.appendChild(e)}})}catch(e){}}tn.className=`AtOnceContainerScrollMiddle${T}`;let tl=!1,tp=tr();async function tr(){return new Promise(async function(e,t){if(!0==tl)e(!0);else try{eQ().then(()=>{try{if(eD.length>0){let t=eD.slice(-5),o=[];for(let n of t)o.push(eW(n));eC(o).then(()=>{tl=!0,e(!0)})}else tl=!0,e(!0)}catch(i){tl=!0,e(!0)}})}catch(o){tl=!0,e(!0)}})}let tc=document.createElement("div");tc.className=`AtOnceContainerPadded${T} AtOnceTopContainer${T} AtOnceGradientBackground${T}`;let ts=document.createElement("div"),tu=document.createElement("div");tu.className=`AtOnceTopHeadingContainer${T}`;let td=document.createElement("div");td.className=`AtOnceChatRoundedCircleIcon${T} AtOnceChatTopBackButton${T}`,td.style.display="none";let tv=document.createElement("div");tv.innerHTML=e2,td.appendChild(tv);let t$=document.createElement("div");tu.appendChild(td),tu.appendChild(t$);let tm=document.createElement("div");tm.className=`AtOnceSubText${T} AtOnceSubTextMargin${T}`,ts.appendChild(tu),ts.appendChild(tm),tc.appendChild(ts);let th=[],t_=`Usually replies in ${W}`;if(X){let tg=ee-X;if(tg<9e5)t_=`
+                            <div class="AtOnceFlexTitle${T}"><span class="AtOnceGreenCircle${T}"> </span>We’re Online</div>
+                            <div class="AtOnceSubText${T} AtOnceSubTextMargin${T}">${t_}</div>`;else if(tg>9e5){var tf;t_=`
+                            <div class="AtOnceFlexTitle${T}"><span class="AtOnceGreenCircle${T} yellow"> </span>Active ${(tf=e1(Number((tg/6e4).toFixed(0)))).toLowerCase().split(" ").map(e=>e.charAt(0).toUpperCase()+e.slice(1)).join(" ")} Ago</div>
+                            <div class="AtOnceSubText${T} AtOnceSubTextMargin${T}">${t_}</div>`}}let tA=new h(ev,{distance:2e3,keys:["heading","subheading","actions_heading","text",]});function t0(e,t,o,n){e||(e="order");let i=[],a=tA.search(e);if(a.item)i.push(a);else for(let l of a)try{if(i.length>o)break;i.push(l.item)}catch(p){}if(i.length){for(let r of(t.innerHTML="",i))tw(r,t,!1,!1,"",t,!1,"","",!0,void 0,n);if(!0==n)try{setTimeout(function(){try{t.scrollIntoView({behavior:"smooth",block:"end"})}catch(e){}},2)}catch(c){}}}function tx(e){let t=document.createElement("a");t.rel="noopener noreferrer nofollow";let o=e.name;return void 0===e.type?(t.href=`data:${e.mimetype},${e.url}`,t.target="_blank",t.download=o):"image"==e.type?(t.href=`data:image/${e.filetype},${e.url}`,t.target="_blank",t.download=o):(t.href=`${e.url}`,t.target="_blank"),t}function tO(e,t){try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(o){}try{if(t.innerHTML="",e&&e.length){let i=e.length,a=i-1,l="",p="",r=0,c="",s=document.createElement("div");s.className=`AtOnceTextCenter${T} AtOnceSubHeadingSmall${T} AtOnceTextColorThree${T} AtOnceSubTextAntiMarginTop${T}`,s.innerText=`We’ll reply here & email ${z||localStorage.getItem("AtOnceLiveChatUserEmail")}`,t.appendChild(s);for(let u=0;u<i;u++){let d=e[u];if(d&&d.message){let v=d.name,$=d.to,m=d.timestamp,h=!1;d.sender!==Y&&(h=!0);let _=document.createElement("div");_.className=`AtOncePrimaryMessageContainer${T} ${h?"self":"sender"}`;let g=document.createElement("div");g.className=`AtOnceMessageContainer${T} ${h?"self":"sender"}`,g.innerHTML=K(Autolinker.link(d.message));try{if(d.first_url_title){let f=g.getElementsByTagName("a");if(f.length){let A=f[0].cloneNode(!1);A.className=`AtOnceMessageContainerLink${T} ${h?"self":"sender"}`,A.innerText=d.first_url_title,g.appendChild(A)}}}catch(x){}let O="",C="",y=l==v||p==$&&$==Y;if(y&&(g.classList.add("middle"),c&&-1!==c.className.indexOf("end")&&(c.classList.remove("end"),c.classList.add("start"))),!y){c?(g.classList.add("end"),c.classList.remove("middle"),c.classList.add("end")):g.classList.add("start");let b=document.createElement("div");if(b.className=`${""==l?"":"AtOncePrimarySubjectHeader"}${T} AtOnceSubText${T} AtOnceSubTextSmall${T} ${h?`AtOnceSubTextSpacingRight${T}`:`AtOnceSubTextSpacingLeft${T}`} AtOnceTextColorSeven${T} ${h?`AtOncePrimaryMessageContainer${T} self`:""}`,!0==h?b.innerText="Me":b.innerText=`${v}`,_.appendChild(b),m-r>12e4){r=m;let S=document.createElement("div");S.className=`AtOnceFlexCenter${T} AtOnceTimestampContainer${T} AtOnceTextColorNine${T}`,S.innerText=ej(m),t.appendChild(S)}}if(u==a){g.className=`AtOnceMessageContainer${T} ${h?"self":"sender"} end`;try{h&&((O=document.createElement("div")).className=`AtOnceSeenContainer${T}`,O.id="AtOnceMessageSeenText",ei>=d.timestamp?O.innerText="Read":O.innerText="Unread"),(0==u||Math.abs(d.timestamp-ei)>12e5)&&((C=document.createElement("div")).id="AtOnceMessageConnectedText",ei>d.timestamp&&Date.now()-ei<18e4&&el&&(C.className=`AtOnceFlexCenter${T} AtOnceTimestampContainer${T} AtOnceTextColorNine${T} AtOnceSubText${T}`,C.innerText=`${el} joined the chat`))}catch(M){}}_.appendChild(g),t.appendChild(_),O&&t.appendChild(O),C&&t.appendChild(C);let w=d.other_attachments,P=`${h?"self":"sender"}`;if(w&&w.length)for(let k of w)try{let L=document.createElement("div"),N=tx(k),E=k.name;if(""==E){E="File";let H=k.filetype;""!==H&&(E+=`.${H}`)}let B=E.substring(0,35);function I(e){let t=document.createElement("img");t.addEventListener("error",function(){t.style.display="none",L.className=`AtOnceMainAttachmentsUnavailable${T} ${P}`,L.innerHTML="Image unavailable/expired",N.removeAttribute("href"),N.removeAttribute("target"),N.removeAttribute("download"),N.remove()}),t.src=e.url,t.className=`AtOnceMainAttachmentsPreview${T}`,L.classList.add("image"),L.innerText="",L.appendChild(t)}function R(e){let t=document.createElement("video");t.style.width="100%",t.controls=!0;let o=document.createElement("source");o.src=e.url,t.appendChild(o),L.classList.add("video"),L.innerText="",L.appendChild(t)}function U(e){let t=document.createElement("audio");t.style.width="100%",t.controls=!0;let o=document.createElement("source");o.addEventListener("error",function(){o.style.display="none",t.style.display="none",N.removeAttribute("href"),N.removeAttribute("target"),N.removeAttribute("download"),N.remove(),L.className=`AtOnceMainAttachmentsUnavailable${T} ${P}`,L.innerHTML="Audio file unavailable"}),o.src=e.url,t.appendChild(o),L.classList.add("audio"),L.innerText="",L.appendChild(t)}E.length>35&&(B=`${B}...`),L.className=`AtOncePseudoAttachmentLink${T} ${P}`,L.title=E,L.innerText=`${B}`,!1!==k.mimetype&&(-1!==k.mimetype.indexOf("image")?I(k):-1!==k.mimetype.indexOf("video")?R(k):-1!==k.mimetype.indexOf("audio")&&U(k)),L.addEventListener("click",function(){N&&N.click()}),t.appendChild(L)}catch(G){}l=v,p=$,c=g}}}try{setTimeout(function(){tn.children[0].scrollIntoView({behavior:"smooth",block:"end"})},2)}catch(V){}}catch(D){}}async function t9(e){return new Promise(async function(t,o){try{await ey(e,"orders").then(e=>{if(e&&e[0]){let o=e[0],n=o.line_items,i=[];if(o.line_items_returned&&o.line_items_returned.length){o.is_changeable=!1;let a=o.line_items_returned;for(let l of a){let r=1;l.quantity&&(r=Number(l.quantity)),isNaN(r)&&(r=1),i.push({id:l.id,line_item:l.line_item,product_id:l.product_id,quantity:r})}}let c=p(F,ec,e[1],"products");n?t2(n,i,!1,c,o.currency).then(()=>{t(e)}):t(null)}else t(null)})}catch(n){t(null)}})}function tC(){td.style.display="",tn.classList.add(`AtOnceContainerScrollMiddleHelpCenter${T}`),t$.innerHTML="Recent Orders",t$.className=`AtOnceSubHeading${T}`,tm.innerText="",tm.style.display="none";let e=document.createElement("div");e.className=`AtOnceContainerPaddedTopSmall${T}`;let t=document.createElement("div");t.className=`AtOnceFlexCenter${T}`;let o=document.createElement("button");return o.id=`AtOnceFindOtherOrders${T}`,o.className=`AtOnceMainButton${T} AtOnceSecondaryButton${T} AtOnceTertiaryButton${T}`,o.innerText="Find Another Order",o.addEventListener("click",function(){t3(!0)}),t.appendChild(o),e.appendChild(t),e}async function ty(e,t){return new Promise(async function(o,n){let i=function e(){let t=localStorage.getItem("AtOnceOrders"),o=[];if(t)try{let n=t.split(",");if(n&&n.length)for(let i of n)try{i&&i.length>7&&-1==o.indexOf(i)&&o.push(i.replace("_atonce_",""))}catch(a){}}catch(l){}return o}(),a=[];if(i.length){for(let l of i=i.slice(0,15))a.push(t9(l));await eC(a).then(n=>{if(a.length&&n){let i=[];for(let l of n)if(l){let p=l[1],r=i.findIndex(function(e){return e.store==p});-1==r&&i.push({order:l[0],store:p,order_identifier:l[2]})}if(i.length)for(let c of i)M(c.order_identifier,c.order.customer_id,c.store)}if(e){if(n&&n.length){let s=tC();for(let u of(e7=[],n)){if(u){let d=u[1],v=u[0];tS(v,d,s,tn)}e7.push(u)}tn.innerHTML="";eh.getElementById("AtOnceLiveChatMainContainer")||tn.appendChild(s)}}else if(t)for(let $ of(e7=[],n))$&&e7.push($);o(!0)})}else o(null)})}function t1(e,t,o){t$.innerHTML=t_,t$.className=`AtOnceSubHeading${T}`,tm.style.display="none",td.style.display="",th=[];let n=[],i=0,a=async e=>{let t=Array.from(e.target.files);d(t)};if(o){let l=t[0];L("send_live_message",{company:Y,user:J.currentUser.uid,email:z,message:l.message,id:l.id,threadId:e,u:!0}).then(()=>{eY(e)});let p=eF.findIndex(function(t){return t.threadId==e});-1==p&&eF.unshift({threadId:e,timestamp:Date.now(),messages:t})}eJ=e;let r=document.createElement("div");r.id="AtOnceLiveChatMainContainer",r.className=`AtOnceContainerPadded${T}`,tO(t,r);let c=document.createElement("div");c.className=`AtOnceContainerLiveChatMain${T}`;let s=document.createElement("div");s.className=`AtOnceContainerLiveChatAttachments${T}`;let u=document.createElement("div");async function d(e){try{let t=e.length;for(let o=0;o<t;o++){let a=await e[o],l=Number(a.size);if(l>20971520||l+i>20971520)u.classList.add("shown");else{let p=a.name,r=a.type;i+=l;let c=`${E(32)}${p}`,d=x(D,`attachments/${Y}/${c}`),v={customMetadata:{user_id:`${J.currentUser.uid}`,owner:`${Y}`}},$=document.createElement("div");$.className=`AtOnceFlex${T}`;let m=document.createElement("span");m.innerHTML=`${p} <span class="AtOnceAttachmentsUploading${T}">Uploading</span>`;let h=document.createElement("div");h.className=`AtOnceAttachmentCloseBtn${T}`,h.innerHTML=e6;let _=!1;$.appendChild(m),$.appendChild(h),s.appendChild($),s.classList.add("shown"),O(d,a,v).then(()=>{A(d).then(e=>{if(!1==_)n.push({url:e,fakeName:c,name:p,fileName:p,mimetype:r}),m.innerText=`${p}`;else{$.remove();try{C(d)}catch(t){}}}).catch(e=>{})}),h.addEventListener("click",function(){_=!0,$.remove();try{C(d)}catch(e){}if(n.length)try{for(let t of n)if(t.fakeName==c){n=n.filter(e=>e!==t);break}}catch(o){}0==n.length&&s.classList.remove("shown")})}}}catch(g){}}u.className=`AtOnceContainerLiveChatAttachmentsError${T}`,u.innerText="Max file size is 20MB";let v=document.createElement("div"),$=document.createElement("span");$.className=`AtOnceContainerLiveChatInput${T}`,$.setAttribute("placeholder","Write a message"),$.contentEditable=!0,$.addEventListener("keydown",function e(t){try{"Enter"===t.key&&!1==t.shiftKey&&b()}catch(o){}});let m=`
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                            <path fill="${"#111"==ev?em:ed}" d="M18.08,12.42,11.9,18.61a4.25,4.25,0,0,1-6-6l8-8a2.57,2.57,0,0,1,3.54,0,2.52,2.52,0,0,1,0,3.54l-6.9,6.89A.75.75,0,1,1,9.42,14l5.13-5.12a1,1,0,0,0-1.42-1.42L8,12.6a2.74,2.74,0,0,0,0,3.89,2.82,2.82,0,0,0,3.89,0l6.89-6.9a4.5,4.5,0,0,0-6.36-6.36l-8,8A6.25,6.25,0,0,0,13.31,20l6.19-6.18a1,1,0,1,0-1.42-1.42Z"/>
+                            <path fill="${"#111"==ef?e0:eg}" d="M18.08,12.42,11.9,18.61a4.25,4.25,0,0,1-6-6l8-8a2.57,2.57,0,0,1,3.54,0,2.52,2.52,0,0,1,0,3.54l-6.9,6.89A.75.75,0,1,1,9.42,14l5.13-5.12a1,1,0,0,0-1.42-1.42L8,12.6a2.74,2.74,0,0,0,0,3.89,2.82,2.82,0,0,0,3.89,0l6.89-6.9a4.5,4.5,0,0,0-6.36-6.36l-8,8A6.25,6.25,0,0,0,13.31,20l6.19-6.18a1,1,0,1,0-1.42-1.42Z"/>
                         </svg>
-                        `,m=`
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="${"#111"==ev?em:ed}" xmlns="http://www.w3.org/2000/svg">
+                        `,h=`
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="${"#111"==ef?e0:eg}" xmlns="http://www.w3.org/2000/svg">
                             <path transform="translate(1, 0)" d="m16.6915026 12.4744748-13.18537879.785487c-.31393759 0-.47090638.1570974-.47090638.3141948l-1.88362554 6.440993C.8376543 20.8006365.99 21.89 1.77946707 22.52c.63053293.47 1.72665674.58 2.35453192.3229026L21.714504 14.0454487c.9418128-.4712921 1.4127191-1.4138765 1.2557504-2.3564608-.1569688-.6283896-.6278752-1.2567791-1.2557504-1.5709739L4.13399899 1.16346272C3.34915502.9 2.40734225 1.00636533 1.77946707 1.4776575.9946231 2.10604706.8376543 3.0486314 1.15159189 3.99121575l1.88362554 6.44099305c0 .1570973.31393759.3141947.47090638.3141947l13.18537879.785487s.4709063 0 .4709063.4712922c0 .4712921-.4709063.4712921-.4709063.4712921Z"/>
                         </svg>
-                        `,h=document.createElement("input");h.style.display="none",h.type="file",h.multiple=!0,h.addEventListener("change",a);let g=document.createElement("button");g.className=`AtOnceContainerLiveChatButton${b} attachment`,g.innerHTML=$,g.addEventListener("click",function(){h.click()});let C=document.createElement("button");function y(){try{let t=v.innerText,o=t.replace(/\s+/g,"");function i(){setTimeout(function(){v.innerText="",C.disabled=!0,v.classList.remove(`AtOnceContainerLiveChatInputDisabled${b}`)},1e-6)}if(o.length>0){v.classList.add(`AtOnceContainerLiveChatInputDisabled${b}`);let a=E(20),l=[];if(n.length)for(let p of n)try{l.push({url:p.url,fileName:p.fileName,name:p.name,mimetype:p.mimetype,filetype:_.getExtension(p.mimetype)})}catch(c){}for(let u of(k("send_live_message",{company:Q,user:D.currentUser.uid,email:tp,message:t,attachments:l,threadId:e,id:a}),s.classList.remove("shown"),s.innerHTML="",e7))if(u.threadId==e){let d=u.messages;if(d){let $=d.findIndex(function(e){return e.id==a});if(-1==$){let m=eH(tp,a,t,e,l);u.messages.push(m),u.timestamp=m.timestamp,e7.sort(function(e,t){return t.timestamp-e.timestamp}),td(u.messages,r)}}break}i()}else v.classList.add(`AtOnceContainerLiveChatInputDisabled${b}`),i()}catch(h){}}C.className=`AtOnceContainerLiveChatButton${b}`,C.innerHTML=m,C.disabled=!0,C.addEventListener("click",function(){y()}),v.addEventListener("keyup",function(){try{v.innerText.length>0?C.disabled=!1:C.disabled=!0}catch(e){}}),c.appendChild(u),c.appendChild(s),c.appendChild(v),c.appendChild(h),c.appendChild(g),c.appendChild(C),eF.innerHTML="",eF.appendChild(r),eF.appendChild(c),ez(v),eR()}function t_(e,t,o,n){let i=document.createElement("div");i.className=`AtOnceContainerPadded${b} AtOnceButtonContainer${b}`;let a=`AtOnceMainButton${b} AtOnceMainButtonLeft${b} AtOncePrimaryButton${b}`,l=`AtOnceMainButton${b} AtOnceMainButtonRight${b} AtOnceSecondaryButton${b}`,p=(es.getElementById("AtOnceMainSearchInput"),document.createElement("button"));p.className=t?l:a,p.innerText="Okay, thanks",p.addEventListener("click",function(){eT?tx():ty(er,"Quick links")});let r=document.createElement("button");if(r.className=t?a:l,r.innerText="Message us",r.addEventListener("click",function(){let e="";try{eT&&(e=e2.name)}catch(t){}!function e(t,o,n){to.innerHTML=ta,to.className=`AtOnceSubHeading${b}`;let i=document.createElement("div"),a=document.createElement("div"),l=document.createElement("div");l.className=`AtOnceContainerPaddedLess${b}`;let p=document.createElement("div");p.className=`AtOnceContainerLargeMargin${b}`;let r=document.createElement("div");r.className=`AtOnceSubText${b} AtOnceSubTextLargeMargin${b} AtOnceTextCenter${b}`,r.innerText=`Need something else? We’d love to help!`;let c=document.createElement("input");c.className=`AtOnceContactFormInput${b}`,c.placeholder="Enter your email",c.type="text";let s=document.createElement("textarea");s.maxLength=5e3,s.placeholder="Leave a message",(t||o)&&o&&(s.value=`Order ${o}. `);let u=document.createElement("button");u.disabled=!0,u.innerText="Send",u.className=`AtOnceMainButton${b} AtOncePrimaryButton${b} AtOnceSubTextMediumMargin${b}`;let d=Date.now();function v(){setTimeout(function(){try{u.innerText="Send"}catch(e){}},3e3)}s.addEventListener("keyup",function(){try{let e=s.value;if(e.length>0){let t=Date.now();t-d>500&&(d=t,ts(e,p,4)),u.disabled=!1}else u.disabled=!0}catch(o){}}),u.addEventListener("click",function(){try{if(-1==c.value.indexOf("@"))u.innerText="Invalid Email",v();else if(""==s.value.trimStart().trimEnd())u.innerText="Invalid Message",v(),ez(s);else{var e;let t=c.value.trimStart().trimEnd().toLowerCase();!0==D.currentUser.isAnonymous&&t!==tp&&localStorage.setItem("AtOnceLiveChatUserEmail",t),tp=t;let o=s.value.trimStart().trimEnd(),n=(e=`${D.currentUser.uid}${o.substring(0,30)}`,window.btoa(unescape(encodeURIComponent(e))).replace(/=/g,"").replace(/\+/g,"-").replace(/\//g,"_")),i=E(20);th(n,[eH(tp,i,o,n)],!0)}}catch(a){}}),ts("order",p,4),l.appendChild(r),l.appendChild(c),l.appendChild(s),l.appendChild(u),a.appendChild(l),a.appendChild(p),i.appendChild(a),eF.innerHTML="",eF.appendChild(i),tp&&(c.value=tp,ez(s))}(o,e,n)}),!0==t){let c=document.createElement("div"),s=document.createElement("div"),u=Date.now();ts("order",s,2);let d=document.createElement("div");d.className=`AtOncePositionRelative${b} AtOnceFlexTitle${b}`;let v=document.createElement("div");v.className=`AtOnceSearchInputIcon${b}`,v.innerHTML=eC;let $=document.createElement("input");$.id="AtOnceMainSearchInput",$.type="text",$.className=`AtOnceSearchInput${b} AtOnceSearchInputIconed${b}`,$.placeholder="Search instant answers",$.addEventListener("keyup",function(){try{let e=$.value,t=Date.now();t-u>500&&(u=t,ts(e,s,2))}catch(o){}}),d.appendChild(v),d.appendChild($),c.appendChild(d),c.appendChild(s),e.appendChild(c),setTimeout(function(){ez($)},2);try{i.appendChild(r)}catch(m){}try{i.appendChild(p)}catch(h){}try{es.getElementById(`AtOnceContainerHelpCenterSearch${b}`).remove()}catch(_){}}else{try{i.appendChild(p)}catch(g){}try{i.appendChild(r)}catch(f){}}e.appendChild(i)}function tg(e){if(e||!localStorage.getItem("AtOnceOrders")){te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerHTML=`I’m an existing customer`,to.className=`AtOnceSubHeading${b}`,tn.innerText="",tn.style.display="none";let t=document.createElement("div"),o=document.createElement("div");o.className=`AtOnceSubHeadingSmall${b} AtOnceSubHeadingMargin${b} AtOnceTextColorSeven${b}`,o.innerText="Access your orders";let n=document.createElement("div");n.className=`AtOnceContainerPaddedLess${b} AtOnceContainerPaddedTopSmall${b}`;let i=document.createElement("div");i.innerText="Order info is in your email/text/packing slip",i.className=`AtOnceSubText${b} AtOnceTextColorTwo${b} AtOnceSubTextMarginBottom${b}`;let a=document.createElement("div");a.className=`AtOnceContainerPaddedTopSmall${b}`;let l=[];function p(e,t){let o=document.createElement("label");o.className=`AtOnceManageOrdersLabel${b}`;let n=document.createElement("span");n.className=`AtOnceManageOrdersSpan${b}`,n.innerText=e;let i=document.createElement("input");i.type="text",i.className=`AtOnceManageOrdersInput${b}`,i.placeholder=" ",o.appendChild(i),o.appendChild(n),a.appendChild(o),l.push({input:i,name:t})}p("Order Number/ID","order_number"),p("Zip/Postal Code","zip_code");let r=l[0].input,c=l[1].input,s=document.createElement("div");s.style.display="none",s.className=`AtOnceLoadingSpinner${b}`;let u=document.createElement("button");u.className=`AtOnceMainButton${b} AtOncePrimaryButton${b} AtOnceSubTextMediumMargin${b}`,u.innerText="Enter",u.disabled=!0;let d=document.createElement("div");for(let v of(d.className=`AtOnceTriHeading${b} AtOncePrimarySubjectHeader${b} AtOnceFlexCenter${b} AtOnceTextColorError${b}`,d.innerText="",u.addEventListener("click",function(){s.style.display="";let t=`${r.value}`.replace(/\s/g,"").replace(/\D/g,"").trimStart().trimEnd().toUpperCase(),o=`${c.value}`.replace(/\s/g,"").trimStart().trimEnd().toUpperCase(),n=`${t}${o}`;U(n,"orders").then(n=>{n&&n[0]?(T(`${t}_atonce_${o}`),tx(e)):(u.disabled=!0,s.style.display="none",d.innerText="Order not found")})}),l))v.input.addEventListener("keyup",function(){d.innerText="",r.value.length>3&&c.value.length>3?u.disabled=!1:u.disabled=!0}),"zip_code"==v.name?v.input.addEventListener("keydown",function e(t){try{"Enter"===t.key&&!1==t.shiftKey&&u.click()}catch(o){}}):ez(v.input);n.appendChild(i),n.appendChild(a),n.appendChild(s),n.appendChild(u),n.appendChild(d),t.appendChild(o),t.appendChild(n),eF.innerHTML="",eF.appendChild(t)}else tx(!0)}async function tf(e,t,o,n){try{let i=[];if(t.length){let a=t.length;for(let l=0;l<a;l++)t[l].position_id=l}if(o)for(let p of e)p&&p.variant_id&&-1==i.indexOf(p.variant_id)&&i.push(p.variant_id);else for(let s of e){let u=s.variant_id;u&&-1==i.indexOf(u)&&i.push(u);let d=s.id,$=Number(s.price_set.presentment_money.amount)*Number(s.quantity),m=s.price_set.presentment_money.currency_code,h=s.discount_allocations,_=s.tax_lines;if(h&&h.length)for(let g of h)$-=Number(g.amount_set.presentment_money.amount);if(_&&_.length)for(let f of _)$+=Number(f.price_set.presentment_money.amount);s.customer_paid_amount=$.toFixed(2),s.customer_paid_currency=m;let A=s.quantity-s.fulfillable_quantity;if(A>0&&t.length)for(let x of t){if(0==A)break;if(x.line_item==d){let O=x.position_id,C=x.quantity-A;0==C?(A=0,t=t.filter(e=>e.id!==O)):C>0?(x.quantity-=A,A=0):C<0&&(x.quantity=0,A=Math.abs(C))}}s.returnable_quantity=A}if(i.length){let y=function e(t,o){for(var n=[],i=0;i<t.length;i+=o)n.push(t.slice(i,i+o));return n}(i,10),b=[],S=[];async function T(t){return new Promise(async function(a,l){await v(r(n,c("variant_ids_list","array-contains-any",t))).then(t=>{t.empty||t.forEach(t=>{try{let n=t.data(),a=n.variants,l=n.images,p=n.options,r=["id","price","compare_at_price","option1","option2","option3","position","product_id","title"];for(let c of i)if(-1==S.indexOf(c)){S.push(c);let s=e.findIndex(function(e){return e.variant_id==c});if(-1!==s){o&&(e[s].title=n.title);let u=[];for(let d of a){let v=d.id;if(v==c){if(o)e[s].variant_title=d.title;else{let $={};for(let m=1;m<4;m++){let h=`option${m}`,_=d[`${h}`];_&&($[`${h}`]=_)}"{}"!==JSON.stringify($)&&(e[s].current_variant=$)}}if(!o&&(null==d.inventory_management||"continue"==d.inventory_policy||d.inventory_quantity>0)){let g={};for(let f of r)-1!==f.indexOf("price")?g[`${f}`]=Number(d[`${f}`]).toFixed(2):g[`${f}`]=d[`${f}`];for(let A of l)-1!==A.variant_ids.indexOf(v)&&(g.img=A.src);u.push(g)}}if(!o){if(p&&p.length){let x=[];for(let O of p)x.push({name:O.name,position:O.position,values:O.values});e[s].product_options=x}e[s].exchange_options=u}if(l&&l.length){let C=[];for(let y of l)-1!==y.variant_ids.indexOf(c)&&(e[s].img=y.src),y.src&&C.push(y.src);o||(e[s].images=C)}1==a.length?e[s].hasOnlyDefaultVariant=!0:e[s].hasOnlyDefaultVariant=!1}}}catch(b){}}),a("success")})})}if(y&&y.length){for(let M of y)b.push(T(M));b.length&&await eg(b)}}return e}catch(P){return e}}function tA(e){if(e2){let t=[],o=[],n=0,i=e2.currency,a=B(i);te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerHTML=`${"edit_add"==e?"Add Items Below":"Add/Remove Items Below"}`,to.className=`AtOnceSubHeading${b}`,tn.innerText="",tn.style.display="none";let l=document.createElement("div");l.className=`AtOnceContainerPadded${b} AtOnceContainerNoBottomPadding${b}`;let d=document.createElement("div");d.className=`AtOnceMainShopStickyChangesContainer${b} AtOnceFlexCenter${b}`;let $=document.createElement("button");$.className=`AtOnceMainButton${b} AtOncePrimaryButton${b}`,$.innerText="Edit Order";let h=document.createElement("div");h.style.display="none",h.className=`AtOnceLoadingSpinner${b} bottomed`;let _=document.createElement("div");_.style.display="none";let g=document.createElement("div");g.className=`AtOnceEnterEmailInputLabel${b}`,g.innerText="Enter your email";let f=document.createElement("input");f.className=`AtOnceSearchInput${b} full bottomed`,f.placeholder="Enter your email";try{e2.email?f.value=e2.email:e2.customer.email&&(f.value=e2.customer.email);try{!f.value&&localStorage.getItem("AtOnceLiveChatUserEmail")&&(f.value=localStorage.getItem("AtOnceLiveChatUserEmail"))}catch(A){}}catch(x){}f.value||(l.classList.add(`AtOnceContainerPaddedBottomLarge${b}`),l.classList.remove(`AtOnceContainerNoBottomPadding${b}`),h.classList.add("bigger"),d.classList.add("bigger"),_.style.display="",f.addEventListener("keyup",function(){try{f.value&&-1!==f.value.indexOf("@")?$.disabled=!1:$.disabled=!0}catch(e){}})),_.appendChild(g),_.appendChild(f);let O="",C=e2.shipping_zip,y=e2.billing_zip,S="";null!=C?S=C:null!=y&&(S=y);let T=e2.order_number;O=`${T=`${T}`.replace(/\s/g,"").replace(/\D/g,"").trimStart().trimEnd().toUpperCase()}${S=`${S}`.replace(/\s/g,"").trimStart().trimEnd().toUpperCase()}`,$.addEventListener("click",function(){h.style.display="",$.disabled=!0,$.classList.remove("red");let e=[];for(let o of t){let n={};!1!==o.product_exists&&o.id&&(o.line_item&&(n.line_item=Number(o.line_item)),o.id&&(n.variant_id=Number(o.id)),o.product_id&&(n.product_id=Number(o.product_id)),0==o.quantity?n.quantity=0:Number(o.quantity)?n.quantity=Number(o.quantity):n.quantity=1,e.push(n))}function i(e,t){setTimeout(function(){try{let o=$.innerText;"Updated - Check Your Email"!==o&&"Update Failed"!==o&&($.innerText=`${e} (${t}/4)`)}catch(n){}},2e3*t)}i("Checking Order",1),i("Adding Credit",2),i("Updating Order",3),i("Sending Email",4);let a=`${f.value}`.trimStart().trimEnd().toLowerCase();k("edit_order",{store:e2.shopify_store,order:e2.id,order_identifier:O,line_items:e,email:a}).then(e=>{try{a&&-1!==a.indexOf("@")&&!localStorage.getItem("AtOnceLiveChatUserEmail")&&(tp||(tp=a),localStorage.setItem("AtOnceLiveChatUserEmail",a))}catch(t){}e&&e.success?(h.style.display="none",$.disabled=!1,$.classList.add("green"),$.innerText="Updated - Check Your Email",setTimeout(function(){try{te.click()}catch(e){}},3e3)):($.classList.add("red"),h.style.display="none",$.innerText="Update Failed")})}),d.appendChild(_),d.appendChild($),d.appendChild(h);let M=document.createElement("div"),P=p(V,"shopify",e2.shopify_store,"products"),w=r(P,c("in_stock","==",!0),c("status","==","active"),u("total_sales","desc"),s(200)),L=["id","price","compare_at_price","option1","option2","option3","position","product_id","title"],E=[],R="",K={keys:["handle","description","title","variant_titles_list","product_type",]},U=document.createElement("div");U.className=`AtOnceContainerPaddedTopMedium${b}`;let z=document.createElement("div");function G(e,o){let n=e.length;if(n>0){for(let i=0;i<n;i++){let l=e[i],p=document.createElement("div");p.className=`AtOnceMainShopProductSubContainer${b}`;let r=document.createElement("div");r.className=`AtOnceMainShopProductImageContainer${b}`,r.setAttribute("atonce_product_id",`${l.id}`);let c="",s=l.image;if(s)(c=document.createElement("img")).className=`AtOnceMainShopProductImage${b}`,c.src=s;else{(c=document.createElement("div")).className=`AtOnceMainShopProductImageDiv${b}`;let u=document.createElement("div");u.className=`AtOnceMainShopProductImageDivText${b}`,u.innerText=l.title,c.appendChild(u)}r.appendChild(c);let d=document.createElement("div");if(d.className=`AtOnceMainShopProductPriceContainer${b}`,l.compare_at_price){let v=document.createElement("span");v.className=`AtOnceMainShopProductPriceText${b} AtOnceMainShopProductPriceText_compare${b}`,v.innerText=`${a}${l.compare_at_price}`,d.appendChild(v)}let $=document.createElement("span");if($.className=`AtOnceMainShopProductPriceText${b}`,$.innerText=`${a}${l.price}`,d.appendChild($),p.appendChild(r),s){let m=document.createElement("div");m.className=`AtOnceMainShopProductTitleContainer${b}`;let h=document.createElement("div");h.className=`AtOnceMainShopProductTitleText${b}`,h.innerText=l.title,m.appendChild(h),p.appendChild(m)}p.appendChild(d),r.addEventListener("click",function(){let e=document.createElement("div"),o=l.variants;e.className=`AtOnceModalBackground${b}`;let n=document.createElement("div");n.style.display="none",n.className=`AtOnceModalContainer${b}`;let i=document.createElement("div");i.innerHTML=eb,i.className=`AtOnceModalCloseBtn${b}`;let p=document.createElement("div");p.className=`AtOnceModalProductImageContainer${b}`;let r=document.createElement("img");r.className=`AtOnceModalProductImage${b}`;let c=l.images,s="",u=[],d=document.createElement("div"),v=document.createElement("div"),$=`AtOnceModalProductImageContainer${b} maxwidth slideshow`,m=`AtOnceModalProductImageContainer${b} maxwidth`,h=l.image;h?r.src=`${h}`:(r.classList.add("border"),r.src=`${product_placeholder_image}`),p.appendChild(r);let _=document.createElement("div");_.className=`AtOnceModalProductRightContainer${b}`;let g="",f=l.hasOnlyDefaultVariant;!1==f&&(g=o[0].title);let A=document.createElement("span"),x=document.createElement("span");function O(){let e=document.createElement("div");e.className=`AtOnceModalProductTitle${b}`;let t=document.createElement("div");t.className=`AtOnceModalProductVariantInfo${b}`,""==g?x.className=`AtOnceModalProductVariantInfo${b}`:x.className=`AtOnceModalProductVariantInfo${b} price`,A.innerText=g,x.innerText=`${a}${l.price}`,t.appendChild(A),t.appendChild(x),e.innerText=l.title,_.appendChild(e),_.appendChild(t)}let C={},y={};function S(e){try{let t=!1;for(let n of o){let i=!0;for(let[a,l]of Object.entries(e))if(n[a]!==l){i=!1;break}if(!0==i){t=!0;break}}return t}catch(p){return!0}}function T(e){let t=!1;for(let n of o){let i=!0;for(let[a,p]of Object.entries(C))if(n[a]!==p){i=!1;break}if(!0==i){n.img?y.img=n.img:l.image?y.img=l.image:y.img=product_placeholder_image,y.id=n.id,y.title=l.title,y.option=n.title,y.price=n.price,y.product_id=n.product_id,y.variant_title=n.title,y.hasOnlyDefaultVariant=l.hasOnlyDefaultVariant,y.quantity=void 0!==l.quantity?l.quantity:1,t=!0,z();break}}!1==t&&(e&&(e.disabled=!0),U())}function M(){let e=document.createElement("div");if(e.className=`AtOncePrimarySubjectHeader${b}`,!1==f){let t=l.options,n=t.length,i=[];for(let p of t){let c=document.createElement("div"),s=`option${p.position}`,u=document.createElement("div");u.className=`AtOnceVariantsLabel${b}`,u.innerText=p.name;let d=[],v=[],$=[],m=document.createElement("div"),h=!0,g=!0,O=!0,y="",M="";for(let P of o){let w=P[`${s}`];if(-1==d.indexOf(w)){d.push(w);let k=P.img;k!==M&&(M&&(O=!1),M=k)}}for(let L of(!1==O&&(m.className=`AtOnceModalProductVariantSelectionContainer_images${b}`),o)){let E=L[`${s}`];if(-1==v.indexOf(E)){async function N(){for(let e of o){let t=!0;for(let[n,i]of Object.entries(C))if(e[n]!==i){t=!1;break}if(!0==t){e.title?A.innerText=e.title:A.innerText="",e.price&&(x.innerText=`${a}${e.price}`);break}}}v.push(E);let B=document.createElement("button"),H=`AtOnceMainShopVariantsButton${b}`,R=`AtOnceMainShopVariantsButton_active${b}`,K=L.img;!1==O&&(1==n?(H=`AtOnceMainShopVariantsButton${b} AtOnceMainShopVariantsButton_image${b} AtOnceMainShopVariantsButton_one${b}`,R=`AtOnceMainShopVariantsButton_image_active${b} AtOnceMainShopVariantsButton_image_active_one${b}`):(H=`AtOnceMainShopVariantsButton${b} AtOnceMainShopVariantsButton_image${b}`,R=`AtOnceMainShopVariantsButton_image_active${b}`),K&&(B.style.backgroundImage=`url(${K})`)),!0==h?(h=!1,C[`${s}`]=E,B.className=`${H} ${R}`):B.className=H,K!==y&&(y&&(g=!1),y=K);let U={option_name:s,name:E,button:B};$.push(B),i.push(U),B.addEventListener("click",function(){async function e(e){try{let t=JSON.parse(JSON.stringify(C));if(t){t[`${e.option_name}`]=e.name;let o=S(t);!0==o?e.button.disabled=!1:e.button.disabled=!0}}catch(n){}}if(C[`${s}`]=E,T(B),N(),K?!1==g&&(r.src!==K&&(r.src=K),I(K)):!1==g&&(r.src!==product_placeholder_image&&(r.src=product_placeholder_image),I(K)),$.length)for(let t of $)t!==B&&(t.className=H);if(i.length)for(let o of i)e(o);B.className=`${H} ${R}`}),!0==O&&(B.innerText=E),m.appendChild(B)}}c.appendChild(u),c.appendChild(m),e.appendChild(c)}}_.appendChild(e)}function P(){let e=document.createElement("div");e.className=`AtOnceMainShopProductDescription${b}`,e.innerHTML=l.description,_.appendChild(e)}O(),M();let w=document.createElement("div");w.className=`AtOnceQuantityContainer${b}`;let k=document.createElement("div");k.className=`AtOnceQuantitySubContainer${b} AtOnceFlexCenter${b}`;let L=document.createElement("div");L.innerText="Quantity",L.className=`AtOnceQuantityLabel${b}`;let E=document.createElement("span");E.innerHTML=e9,E.className=`AtOnceQuantityButtons${b} AtOnceFlexCenter${b}`;let N=document.createElement("span");N.innerHTML=eO,N.className=`AtOnceQuantityButtons${b} AtOnceFlexCenter${b}`;let B=document.createElement("input");B.type="number",B.min=1,B.value=1,B.step=1,B.className=`AtOnceQuantityInput${b} AtOnceFlexCenter${b}`,N.addEventListener("click",function(){let e=B.value;e++,B.value=e}),E.addEventListener("click",function(){let e=B.value;e>1&&e--,B.value=e}),w.appendChild(L),w.appendChild(k),k.appendChild(E),k.appendChild(B),k.appendChild(N),_.appendChild(w);let R=document.createElement("div");R.className=`AtOncePrimarySubjectHeader${b} AtOnceModalStickyBottomContainer${b}`;let K=document.createElement("button");function U(){K.disabled=!0,K.innerText="Sold Out"}function z(){K.disabled=!1,K.innerText="Add to Cart"}function G(){if(t.length){let o=!1;for(let n of t)if(n.id==y.id){let i=Number(n.quantity);i+=Number(y.quantity),n.quantity=i,o=!0;break}!1==o&&t.push(y)}else t.push(y);ee(),V(e)}function V(e){try{e.className=`AtOnceModalBackground${b}`}catch(t){}setTimeout(function(){try{e.remove()}catch(t){}},150)}K.className=`AtOnceMainButton${b} AtOncePrimaryButton${b}`,K.innerText="Add to Cart",K.addEventListener("click",function(){!0==f&&(y.id=o[0].id,l.image?y.img=l.image:y.img=product_placeholder_image,y.name=l.title,y.price=l.price,y.product_id=l.id,y.title="");let e=B.value;e<1&&(e=1),y.quantity=e,G()}),T(),R.appendChild(K),_.appendChild(R),P(),i.addEventListener("click",function(){V(e)}),e.addEventListener("click",function(t){let o=t.target;!1===n.contains(o)&&!1===p.contains(o)&&V(e)}),n.appendChild(i),s=H(c,d,v,u,m,$),n.appendChild(i),c&&c.length>1?n.appendChild(s):n.appendChild(p),n.appendChild(_),e.appendChild(n),n.style.display="",eF.appendChild(e),setTimeout(function(){n.className=`AtOnceModalContainer${b} active`,e.className=`AtOnceModalBackground${b} active`},0)}),o.appendChild(p)}z.classList.add("visible")}}async function D(){return new Promise(async function(e,t){v(w).then(t=>{t.empty||(t.forEach(e=>{try{let t=e.data(),o=t.id,n=t.title,i=t.image,a=t.images;i&&(i=i.src);let l=t.body_html,p="0.00",r=null;try{p=`${N(Number(t.variants[0].price))}`}catch(c){}try{let s=t.variants[0].compare_at_price;s&&(r=`${N(Number(s))}`)}catch(u){}let d={id:o,title:n,image:i,description:l,product_type:t.product_type,handle:t.handle,price:p,compare_at_price:r,variant_titles_list:t.variant_titles_list,options:t.options},v=[];if(a&&a.length){for(let $ of a)$.src&&v.push($.src);d.images=v}let m=t.variants;if(1==m.length){let h=m[0];d.variants=[{product_id:h.product_id,id:h.id,title:""}],d.hasOnlyDefaultVariant=!0}else{d.hasOnlyDefaultVariant=!1;let _=[];for(let g of m)if(null==g.inventory_management||"continue"==g.inventory_policy||g.inventory_quantity>0){let f=g.id,A={};for(let x of L)-1!==x.indexOf("price")?A[`${x}`]=Number(g[`${x}`]).toFixed(2):A[`${x}`]=g[`${x}`];for(let O of a)-1!==O.variant_ids.indexOf(f)&&(A.img=O.src);_.push(A)}d.variants=_}E.push(d)}catch(C){}}),E.length&&(G(E,z),R=new m(E,K))),e(!0)})})}z.className=`AtOnceContainerFlexProducts${b}`,U.appendChild(z);let F=D(),J=document.createElement("div"),j=document.createElement("input");function q(e){t.splice(e,1),X(),ee()}function Q(e,t,o,n){let i=document.createElement("div");i.className=`AtOnceFlex${b} AtOnceMarginBottomLarge${b}${t?"":` AtOnceDisabledDiv${b}`}`;let a=document.createElement("div"),l=document.createElement("div");l.className=`AtOnceProductImage${b}`,e.img?l.style.backgroundImage=`url(${e.img})`:l.innerHTML=ex,a.appendChild(l);let p=document.createElement("div");p.className=`AtOnceFlexSpacedProductTitleSmall${b}`;let r=document.createElement("div");r.className=`AtOnceSubTextBold${b} AtOnceTextColorThree${b}`,r.innerText=e.title?e.title:"";let c=document.createElement("div");c.className=`AtOnceSubText${b} AtOnceTextColorNine${b} AtOnceUserSelect${b}`;let s="";if(!1==e.hasOnlyDefaultVariant&&e.variant_title&&(s=e.variant_title),c.innerText=s,p.appendChild(r),p.appendChild(c),!0!==e.hasOnlyDefaultVariant){let u=e.product_id,d=e.title,v=document.createElement("button");function $(){let e=es.getElementById("AtOnceSearchInputProducts");if(e){e.value=d;try{e.dispatchEvent(new KeyboardEvent("keyup",{key:"a"}))}catch(t){}}}v.className=`AtOnceMainButton${b} AtOnceMainButtonSmall${b} smaller AtOnceSecondaryButton${b}`,v.innerText="Add style",v.addEventListener("click",function(){let e=es.querySelectorAll(`[atonce_product_id="${u}"]`);if(e&&e.length)try{e[0].click()}catch(t){$()}else $()}),p.appendChild(v)}let m=document.createElement("div");m.className=`AtOnceProductQuantityText${b}`,m.innerText=e.quantity;let h=document.createElement("div"),_=document.createElement("div");_.className=`AtOnceQuantitySubContainer${b} AtOnceFlexCenter${b}`;let g=document.createElement("div");g.innerText="New quantity",g.className=`AtOnceQuantityLabelSmall${b}`;let f=document.createElement("span");f.innerHTML=e9,f.className=`AtOnceQuantityButtons${b} AtOnceFlexCenter${b}`;let A=document.createElement("span");A.innerHTML=eO,A.className=`AtOnceQuantityButtons${b} AtOnceFlexCenter${b}`;let x=document.createElement("input");x.type="number",x.min=1;let O=1;e.quantity&&Number(e.quantity)>1&&(O=Number(e.quantity)),x.value=O,x.step=1,x.className=`AtOnceQuantityInput${b} smaller AtOnceFlexCenter${b}`,t&&(x.addEventListener("keyup",function(){let t=x.value;t>0||(t=0),o||0!=t||q(n),e.quantity=t,X()}),A.addEventListener("click",function(){let t=x.value;t++,x.value=t,e.quantity=t,X()}),f.addEventListener("click",function(){let t=x.value;t>0&&t--,o||0!=t||q(n),x.value=t,e.quantity=t,X()})),h.appendChild(g),h.appendChild(_),_.appendChild(f),_.appendChild(x),_.appendChild(A),i.appendChild(a),i.appendChild(p),i.appendChild(h),M.appendChild(i)}j.className=`AtOnceSearchInput${b} full`,j.placeholder="Search new products",j.id="AtOnceSearchInputProducts",j.addEventListener("keyup",function(){F.then(()=>{if(R){if(z.innerHTML="",j.value){let e=R.search(j.value),t=[];if(e.item)t.push(e);else for(let o of e)t.push(o.item);t.length?G(t,z):G(E,z)}else G(E,z)}})}),J.appendChild(j),l.appendChild(d),l.appendChild(M),l.appendChild(J),l.appendChild(U);let Z=e2.line_items;if(Z&&Z.length){for(let W of Z){let Y=!0;!1!==W.product_exists&&W.variant_id||(Y=!1),n+=Number(W.fulfillable_quantity)*Number(W.price),t.push({line_item:W.id,id:W.variant_id,title:W.title,option:W.variant_title,price:W.price,product_id:W.product_id,variant_title:W.variant_title,is_editable:Y,img:W.img,quantity:W.fulfillable_quantity,hasOnlyDefaultVariant:W.hasOnlyDefaultVariant})}o=JSON.parse(JSON.stringify(t)),ee()}function X(){let i=!0,a=0,l=0;for(let p of t)a+=Number(p.quantity),l+=Number(p.price)*Number(p.quantity);if(f.value){if($.disabled=!1,$.classList.remove("red"),0==a&&"edit_cancel"==e)$.innerText="Cancel & Send Gift Card";else{let r=Number(Number(n).toFixed(2))-Number(Number(l).toFixed(2));r>0?$.innerText="Edit & Send Gift Card":r<0?$.innerText="Edit & Send Invoice":$.innerText="Edit Order"}}else $.disabled=!0;if(o.length!==t.length)d.classList.add("visible");else{let c=o.length;for(let s=0;s<c;s++){let u=o[s],v=t[s];if(u.quantity!==v.quantity){i=!1;break}}!1==i&&d.classList.add("visible")}!0==i&&o.length==t.length&&d.classList.remove("visible")}function ee(){M.innerHTML="";let e=t.length;for(let o=0;o<e;o++){let n=t[o],i=n.line_item;!1===n.is_editable?Q(n,!1,i,o):Q(n,!0,i,o)}X()}eF.innerHTML="",eF.appendChild(l)}}function t0(e,t,o,n){let i="",a=e.shipping_zip,l=e.billing_zip,p="";null!=a?p=a:null!=l&&(p=l);let r=e.order_number;function c(t,o){let n=document.createElement("div");n.className=`AtOnceNoSelect${b}${o?` AtOnceTextLargeMargin${b}`:""}`;let i=document.createElement("div");i.className=`AtOnceFlexSpacedNoAlign${b} AtOnceQuickButtonPaddedMore${b}`;let a=document.createElement("div");a.className=`AtOncePositionRelative${b}`;let l="",p=e.line_items,r=p.length,c=e.fulfillments;if(c&&c.length){for(let s of p)if(s.img){let $=s.id,m=s.hasOnlyDefaultVariant;for(let h of c){let _=h.line_items;if(_&&_.length)for(let g of _)g.id==$&&(g.img=s.img,g.hasOnlyDefaultVariant=m)}}}for(let f of p)if(f.img){l=f.img;break}let A=document.createElement("div");A.className=`AtOnceProductImage${b}`,l?A.style.backgroundImage=`url(${l})`:A.innerHTML=ex;let x=document.createElement("div");x.className=`AtOnceProductQuantityText${b} AtOnceProductQuantityTextTwo${b}`,a.appendChild(x),a.appendChild(A),1!==r?r=`+${r-1}`:x.remove(),x.innerText=r;let O=document.createElement("div");O.className=`AtOnceFlexSpacedOrder${b}`;let C=document.createElement("div");C.className=`AtOnceFlexSpacedNoAlign${b}`;let y=document.createElement("div");y.className=`AtOnceSubTextBold${b} AtOnceTextColorThree${b}`,y.innerText=`${e.name}`;let S=e.fulfillment_status;"paid"!==e.financial_status?S=e.financial_status:S?"partial"==S&&(S="Partially_fulfilled"):S="Unfulfilled",S=K(S);let T=["gray","gray","gray","gray","blue","gray"],M="",P=0;for(let w of[["Unfulfilled"],["Expired","Voided","On hold","Authorized","Refunded"],["Pending","In progress","Scheduled"],["Partially paid","Partially fulfilled","Partial"],["Paid","Fulfilled"],["Partially refunded"]])w.includes(S)&&(M=T[P]),P+=1;e.cancelled_at&&(M="gray",S="Cancelled");let k=document.createElement("div");k.className=`AtOnceSubTag${b} ${M}`,k.innerText=S,C.appendChild(y),C.appendChild(k);let L=document.createElement("div");L.className=`AtOnceFlexSpacedNoAlign${b}`;let E=document.createElement("div");E.className=`AtOnceSubText${b} AtOnceTextColorNine${b}`,E.innerText=`${B(e.total_price_set.presentment_money.currency_code)}${N(e.total_price_set.presentment_money.amount)}`;let H=document.createElement("div");H.className=`AtOnceSubText${b} AtOnceTextColorNine${b}`,H.innerText=e8(Date.parse(e.created_at));let I=document.createElement("div");I.className=`AtOnceFlex${b} AtOnceTextLargeMargin${b}`;let R=document.createElement("button");R.className=`AtOnceMainButton${b} AtOnceMainButtonSmall${b} AtOnceSecondaryButton${b}`,R.innerText=t[0],"Help"==t[0]?R.addEventListener("click",function(){t$(),u()}):"View"==t[0]?R.addEventListener("click",function(){t$(),v()}):"Track"==t[0]&&R.addEventListener("click",function(){t$(),d()});let U=document.createElement("button");return U.className=`AtOnceMainButton${b} AtOnceMainButtonSmall${b} AtOnceSecondaryButton${b}`,U.innerText="Track","Help"==t[1]?U.addEventListener("click",function(){t$(),u()}):"View"==t[1]?U.addEventListener("click",function(){t$(),v()}):"Track"==t[1]&&U.addEventListener("click",function(){t$(),d()}),I.appendChild(R),I.appendChild(U),L.appendChild(E),L.appendChild(H),O.appendChild(C),O.appendChild(L),O.appendChild(I),i.appendChild(a),i.appendChild(O),n.appendChild(i),n}i=`${r=`${r}`.replace(/\s/g,"").replace(/\D/g,"").trimStart().trimEnd().toUpperCase()}_atonce_${p=`${p}`.replace(/\s/g,"").trimStart().trimEnd().toUpperCase()}`;let s=c(["Help","Track"]);function u(){e.shopify_store=t,e2=e,eT=!0;let a=document.createElement("div");a.className=`AtOnceContainerPaddedTopSmall${b}`;let l=c(["View","Track"]),p=document.createElement("div"),r=document.createElement("div");r.className=`AtOnceSubHeadingSmall${b} AtOnceSubHeadingMarginSmall${b} AtOnceTextColorSeven${b}`,r.innerText="Quick help";let s=document.createElement("div");if(tC=document.createElement("div"),ec.length){let u=JSON.parse(JSON.stringify(ec));for(let d of(i&&function e(t,o){try{for(let n of t)n.text?-1!==n.text.indexOf("{{return_portal}}")&&(n.text=e5(n.text,"{{return_portal}}",`${eM}?order=${o}`)):n.link&&-1!==n.link.indexOf("{{return_portal}}")&&(n.link=e5(n.link,"{{return_portal}}",`${eM}?order=${o}`)),n.sub_actions&&e(n.sub_actions,o)}catch(i){}}(u,i),u))if(d.actions){let v=d.actions;for(let $ of u)-1!==v.indexOf($.id)&&($.is_actioned=!0)}for(let m of u)!0!==m.is_actioned&&t9(m,s,!1,!1,r,s,!1,u,"Quick help",!0,!0)}p.appendChild(r),p.appendChild(s),o.style.display="none",to.innerHTML=`Order ${e.name}`,to.className=`AtOnceSubHeading${b}`,a.appendChild(l),a.appendChild(p),n.innerHTML="",n.appendChild(a)}function d(){e.shopify_store=t,e2=e,eT=!0;let i=document.createElement("div");i.className=`AtOnceContainerPaddedTopSmall${b}`;let a=c(["Help","View"]),l=document.createElement("div"),p=e.fulfillments,r=e.shipping_address;function s(e){let t=document.createElement("div");t.className=`AtOnceContainerPadded${b} AtOnceContainerSmallTopPadding${b} AtOnceContainerNoBottomPadding${b}`;let o=document.createElement("div");o.className=`AtOnceTriHeading${b} AtOnceTextColorThree${b} AtOnceMarginBottomMedium${b}`;let n=document.createElement("div");n.className=`AtOnceContainerPaddedBottom${b}`,t.appendChild(o),t.appendChild(n);let i=!0,a=e.tracking_numbers,l=e.tracking_urls,p=0;try{p=a.length>l.length?a.length:l.length}catch(r){}function c(o,a,l,r,c,s){if(o){let u=document.createElement("div");if(u.className=`AtOnceFlex${b} AtOnceTextColorThree${b} AtOnceBreakAll${b} AtOnceContainerPaddedBottomSmall${b}`,e.tracking_company&&"Other"!==e.tracking_company&&c){let d=document.createElement("div");d.className=`AtOnceBold${b}`,d.innerText=`Sent via ${e.tracking_company}`,u.appendChild(d)}else if(c&&"Other"==e.tracking_company&&e.updated_at){i=!1;let v=document.createElement("div");v.className=`AtOnceTextColorNine${b}`,v.innerText=`Updated ${e8(Date.parse(e.updated_at))}`,u.appendChild(v)}let $=document.createElement("div");if(r&&($.className=`AtOnceTextColorNine${b} AtOnceMarginLeft${b}`),s?$.innerHTML=`${1==p&&(s||l)?"":"Tracking: "}<a href="${o}" target="_blank" rel="noopener noreferrer">${s}</a>`:l?$.innerHTML=`<a href="${o}" target="_blank" rel="noopener noreferrer">${a}</a>`:$.innerText=`${a} ${r?e8(Date.parse(o)):o}`,1==p&&(s||l)){let m=t.children[t.childElementCount-1];m.children[m.childElementCount-1].insertAdjacentElement("afterbegin",$)}else u.appendChild($),n.appendChild(u)}}c(e.created_at,"Shipped",!1,!0,!0),!0==i&&c(e.updated_at,"Updated",!1,!0);try{if(p>0)for(let s=0;s<p;s++)l[s]&&a[s]?c(l[s],"Tracking url",!0,!1,!1,a[s]):a[s]?c(a[s],"Tracking no.",!1,!1):l[s]&&c(l[s],"Tracking url",!0,!1,!1)}catch(u){}let d=e.line_items;if(d&&d.length)for(let v of(o.innerText=`${K(e.display_status)}`,d)){let $=document.createElement("div");$.className=`AtOnceFlex${b} AtOnceMarginBottomMedium${b}`;let m=document.createElement("div");m.className=`AtOncePositionRelative${b}`;let h=document.createElement("div");h.className=`AtOnceProductQuantityText${b}`,h.innerText=v.quantity;let _=document.createElement("div");_.className=`AtOnceProductImage${b}`,v.img?_.style.backgroundImage=`url(${v.img})`:_.innerHTML=ex,m.appendChild(h),m.appendChild(_);let g=document.createElement("div");g.className=`AtOnceFlexSpacedProductTitle${b}`;let f=document.createElement("div");f.className=`AtOnceSubTextBold${b} AtOnceTextColorThree${b}`,f.innerText=v.title?v.title:"";let A=document.createElement("div");A.className=`AtOnceSubText${b} AtOnceTextColorNine${b} AtOnceUserSelect${b}`;let x="";!1==v.hasOnlyDefaultVariant&&v.variant_title&&(x=v.variant_title),A.innerText=x,g.appendChild(f),g.appendChild(A),$.appendChild(m),$.appendChild(g),t.appendChild($)}return t}if(p&&p.length)for(let u of p){let d=s(u);l.appendChild(d)}else{let v=document.createElement("div");v.className=`AtOnceContainerPadded${b} AtOnceContainerSmallTopPadding${b} AtOnceContainerNoBottomPadding${b} AtOnceSubTextLarge${b}`;let $=Date.parse(e.created_at);Date.now()-$>432e6?v.innerHTML=`<p>Thanks for your patience!</p><p>Your order is likely still in production.</p><p>If you don’t get any updates after 3 more days, please message us & we’ll find your order.</p>`:v.innerHTML=`<p>Thanks for your patience!</p><p>Your order is still in production.</p><p>We’ll send your tracking info once it’s shipped.</p>`,l.appendChild(v)}let m=document.createElement("div");if(m.className=`AtOnceContainerPadded${b} AtOnceContainerNoBottomPadding${b}`,r){function h(e,t){return r[`${e}`]?`${t?" ":""}${r[`${e}`]}`:""}let _=document.createElement("div");_.className=`AtOnceSubHeadingSmall${b} AtOnceTextColorSeven${b}`,_.innerText="Shipping address";let g=document.createElement("div");g.className=`AtOnceSubText${b} AtOnceTextColorThree${b} AtOnceSubTextMediumMargin${b}`;let f=document.createElement("div");f.innerText=`${h("address1")}${h("address2",!0)}`;let A=document.createElement("div");A.innerText=`${h("city")}${h(`${r.province_code?"province_code":"province"}`,!0)}${h("zip",!0)}`;let x=document.createElement("div");x.innerText=`${h("country")}`,g.appendChild(f),g.appendChild(A),g.appendChild(x),m.appendChild(_),m.appendChild(g)}o.style.display="none",to.innerHTML=`Order ${e.name}`,to.className=`AtOnceSubHeading${b}`,i.appendChild(a),i.appendChild(l),i.appendChild(m),n.innerHTML="",n.appendChild(i)}async function v(){e.shopify_store=t,e2=e,eT=!0;let o=e.line_items,i=[];if(e.line_items_returned&&e.line_items_returned.length){let a=e.line_items_returned;for(let l of a){let p=1;l.quantity&&(p=Number(l.quantity)),isNaN(p)&&(p=1),i.push({id:l.id,line_item:l.line_item,product_id:l.product_id,quantity:p})}}te.style.display="",n.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerHTML=`Order ${e.name}`,to.className=`AtOnceSubHeading${b}`,tn.innerText="",tn.style.display="none";let r=document.createElement("div");r.className=`AtOnceContainerPadded${b}`;let s=document.createElement("div");for(let u of(s.className=`AtOnceContainerPaddedTopSmall${b}`,o))try{let d=document.createElement("div");d.className=`AtOnceFlexSpacedNoAlign${b} AtOnceMarginBottomMedium${b}`;let v=document.createElement("div");v.className=`AtOncePositionRelative${b}`;let $=u.img,m=u.title,h=u.customer_paid_amount,_=u.customer_paid_currency,g="";!1==u.hasOnlyDefaultVariant&&u.variant_title&&(g=u.variant_title);let f=document.createElement("div");f.className=`AtOnceProductQuantityText${b}`,f.innerText=u.quantity;let A=document.createElement("div");A.className=`AtOnceProductImage${b}`,$?A.style.backgroundImage=`url(${$})`:A.innerHTML=ex,v.appendChild(f),v.appendChild(A);let x=document.createElement("div");x.className=`AtOnceFlexSpacedProductTitle${b}`;let O=document.createElement("div");O.className=`AtOnceTriHeading${b} AtOnceTextColorThree${b}`,O.innerText=m;let C=document.createElement("div");C.className=`AtOnceSubText${b} AtOnceTextColorNine${b} AtOnceUserSelect${b}`,C.innerText=g,x.appendChild(O),x.appendChild(C);let y=document.createElement("div");y.className=`AtOnceSubText${b} AtOnceTextColorFive${b}`,y.innerText=`${B(_)}${N(h)}`,d.appendChild(v),d.appendChild(x),d.appendChild(y),s.appendChild(d)}catch(S){}let T=document.createElement("div");function M(t,o,n){try{let i=e[`${o}`];if(i&&i.presentment_money){let a=i.presentment_money.amount;if("Discount"==t&&0==Number(a));else{let l=document.createElement("div");l.className=`AtOnceFlexSpacedNoAlign${b} AtOnceMarginBottomSmall${b}${n?` AtOnceContainerPaddedTopSmall${b}`:""}`;let p=document.createElement("div");p.className=`${n?" AtOnceTriHeading":"AtOnceSubText"}${b} AtOnceTextColorThree${b}`,p.innerText=t;let r=document.createElement("div");r.className=`${n?" AtOnceTriHeading":"AtOnceSubText"}${b} AtOnceTextColorFive${b}`,0==Number(a)?r.innerText="Free":r.innerText=`${"Discount"==t?"- ":""}${B(i.presentment_money.currency_code)}${N(a)}`,l.appendChild(p),l.appendChild(r),T.appendChild(l)}}}catch(c){}}if(T.className=`AtOnceContainerPaddedTopMedium${b}`,M("Subtotal","total_line_items_price_set"),M("Discount","total_discounts_set"),M("Shipping","total_shipping_price_set"),M("Taxes","total_tax_set"),M("Total","total_price_set",!0),s.appendChild(T),e.self_service_gift_cards&&e.self_service_gift_cards.length){let P=e.self_service_gift_cards,w=document.createElement("div");w.className=`AtOnceContainerPaddedTopLarge${b}`;let k=document.createElement("div");k.className=`AtOnceSubHeadingSmall${b} AtOnceTextColorSeven${b} AtOnceSubTextMarginBottom${b}`,k.innerText="Gift Cards",w.appendChild(k);let L=B(e.presentment_currency);for(let E of P){let H=document.createElement("div");H.className=`AtOnceFlex${b} AtOnceMarginBottomMedium${b}`;let I=document.createElement("div");I.className=`AtOnceFlexSpacedNoAlign${b}`;let R=document.createElement("a");R.target="_blank",R.rel="noopener noreferrer",R.href=`${q||e.shopify_store}/discount/${E.code}?ref=atonce`,R.innerText=`${E.code}`;let K=document.createElement("div");K.className=`AtOnceSubText${b} AtOnceTextColorFive${b}`,K.innerText=`${L}${Number(E.presentment_amount).toFixed(2)}`,I.appendChild(R),I.appendChild(K),H.appendChild(I),w.appendChild(H)}s.appendChild(w)}if(e.self_services&&e.self_services.length){let U=e.self_services,z=document.createElement("div");z.className=`AtOnceContainerPaddedTopLarge${b}`;let G=document.createElement("div");for(let V of(G.className=`AtOnceSubHeadingSmall${b} AtOnceTextColorSeven${b} AtOnceSubTextMarginBottom${b}`,G.innerText="Returns",z.appendChild(G),U)){let D=document.createElement("div");D.className=`AtOnceFlex${b} AtOnceMarginBottomMedium${b}`;let F=document.createElement("div");F.className=`AtOnceFlexSpacedNoAlign${b}`;let J=document.createElement("a");J.target="_blank",J.rel="noopener noreferrer",J.href=`${eM}?return=${V.return}`,J.innerText=`${V.return}`,F.appendChild(J),D.appendChild(F),z.appendChild(D)}s.appendChild(z)}r.appendChild(s);let j=c(["Help","Track"],!0);n.innerHTML="",n.appendChild(j),n.appendChild(r)}o.appendChild(s)}async function tx(e){if(eT=!1,eS.length&&!e){let t=t$();for(let o of eS)if(o){let n=o[1],i=o[0];t0(i,n,t,eF)}eF.innerHTML="",eF.appendChild(t)}else tm(!0)}async function tO(){let e=document.createElement("div");if(eF.appendChild(e),0==eS.length&&await tm(!1,!0),eS.length){let t=document.createElement("div");t.innerText="Your orders",t.className=`AtOnceSubHeadingSmall${b} AtOnceTextColorSeven${b} AtOnceSubHeadingMargin${b}`,e.appendChild(t);let o=eS.length,n=eS.slice(0,3);for(let i of n)if(i){let a=i[1],l=i[0];t0(l,a,e,eF)}if(o>3){let p=document.createElement("div");p.className=`AtOnceFlexCenter${b} AtOnceContainerPaddedLess${b} AtOnceContainerPaddedTopTiny${b}`;let r=document.createElement("button");r.className=`AtOnceMainButton${b} AtOnceSecondaryButton${b} AtOnceTertiaryButton${b} AtOnceQuaternaryButton${b}`,r.innerText="View All Orders",r.addEventListener("click",function(){tx()}),p.appendChild(r),e.appendChild(p)}}}function t9(e,t,o,n,i,a,l,p,r,c,s){try{let u=!1;try{e2&&(e2.fulfillments&&e2.fulfillments.length||e2.cancelled_at||Number(e2.total_outstanding))&&(u=!0)}catch(d){}let v=null;try{v=e.action}catch($){}if(!0==u&&("edit_add"==v||"edit_remove"==v||"edit_shipping_address"==v||"edit_cancel"==v));else{let m="div";"link"==e.type?m="a":"map"==e.type?m="map":"text"==e.type?m="text":"button"==e.type&&(m="button");let h=document.createElement("a"==m?"a":"div");if(h.className=`AtOnceQuickButton${b}`,"a"==m){h.target="_blank",h.rel="noopener noreferrer";let _=e.link;_?h.href=`${_}`:h.href="https://atonce.com?utm_medium=self_service&utm_campaign=missing_link",h.classList.add(`AtOnceQuickButtonLink${b}`)}else if("map"==m){let g=e.actions,f=e.actions_heading,A=e.sub_action;h.addEventListener("click",function(){ty(g,f,!0,A)})}else if("text"==m){let x=e.text,O=e.heading,C=e.sub_actions;h.addEventListener("click",function(){let o=document.createElement("div");if(o.className=`AtOnceTextContainer${b}`,o.innerHTML=x,i&&(i.innerText=O),a.innerHTML="",a.appendChild(o),C){let s=document.createElement("div");try{for(let u of C)t9(u,s,!0,n,i,a,l,p,r)}catch(d){}a.appendChild(s)}if("search"==e.tri_action){try{tC.remove()}catch(v){}t_(a,!0,e.heading,e.tri_action)}else t_(a,!1,e.heading,e.tri_action);if(!0!==c&&ti.push({l:p,t:r,t_q:n,t_s:l}),n&&l)try{tC.remove()}catch($){}if(!0==c)try{t.scrollIntoView({behavior:"smooth"})}catch(m){}})}else"button"==m&&("manage_orders"==v?h.addEventListener("click",function(){tg(!1)}):"edit_add"==v?h.addEventListener("click",function(){tA("edit_add")}):"edit_remove"==v?h.addEventListener("click",function(){tA("edit_remove")}):"edit_shipping_address"==v?h.addEventListener("click",function(){!function e(){if(e2){let t=e2.shipping_address,o=JSON.parse(JSON.stringify(t)),n=document.createElement("div");n.className=`AtOnceMainShopStickyChangesContainer${b} AtOnceFlexCenter${b}`;let i=document.createElement("button");i.className=`AtOnceMainButton${b} AtOncePrimaryButton${b}`,i.innerText="Change Address";let a=document.createElement("div");function l(e,t){setTimeout(function(){try{let o=i.innerText;"Changed Address"!==o&&"Address Change Failed"!==o&&(i.innerText=`${e} (${t}/3)`)}catch(n){}},2e3*t)}a.style.display="none",a.className=`AtOnceLoadingSpinner${b} bottomed`,i.addEventListener("click",function(){a.style.display="",i.disabled=!0,i.classList.remove("red"),l("Confirming Address",1),l("Updating Package",2),l("Changing Address",3),k("edit_shipping_address",{store:e2.shopify_store,order:e2.id,address:t}).then(e=>{e&&e.success?(a.style.display="none",i.disabled=!1,i.classList.add("green"),i.innerText="Changed Address",setTimeout(function(){try{te.click()}catch(e){}},2500)):(i.classList.add("red"),a.style.display="none",i.innerText="Address Change Failed")})}),n.appendChild(a),n.appendChild(i);let p=[];te.style.display="",eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerHTML="Change Address",to.className=`AtOnceSubHeading${b}`,tn.innerText="",tn.style.display="none";let r=document.createElement("div");r.className=`AtOnceContainerPadded${b} AtOnceContainerNoBottomPadding${b}`;let c=P,s=t.country_code,u=t.country,d=[];for(let v of M)d.push(`<option value="${v.alpha2}">${v.country}</option>`);let $="";for(let m of d)-1==m.indexOf(`value="${s}"`)&&($+=m);c=$+c,s&&u&&(c=`<option value="${s}">${u}</option>`+c);let h=[{name:"Name",value:"name",required:!0,type:"text"},{name:"Address",value:"address1",required:!0,type:"text"},{name:"Apartment, suite, etc.",value:"address2",required:!1,type:"text"},{name:"City",value:"city",required:!0,type:"text"},{name:"State/Province",value:"province_code",required:!0,type:"text"},{name:"ZIP/Post code",value:"zip",required:!0,type:"text"},{name:"Country",value:"country_code",required:!0,options:c,type:"text"},{name:"Company",value:"company",required:!1,maxLength:35,type:"text"},{name:"Phone",value:"phone",required:!1,type:"tel"},];if(t)for(let _ of h){let g="";t[`${_.value}`]&&(g=t[`${_.value}`]),g&&(_.default=g)}let f="l",A=document.createElement("div"),x="";for(let O of h){let C=document.createElement("div");if(A.appendChild(C),"l"==f)f="r",C.className=`AtOnceInputSubContainer_left${b}`;else{f="l";let y=document.createElement("div");y.className=`AtOnceInputSubContainer_clear${b}`,A.appendChild(y),C.className=`AtOnceInputSubContainer_right${b}`}let S="",T=document.createElement("label");if(T.htmlFor=O.value,T.innerText=`${O.name}`,T.className=`AtOnceDestinationLabel${b}`,O.options||"province_code"==O.value){if((S=document.createElement("select")).className=`AtOnceDestinationInput${b}`,O.options){if(S.innerHTML=O.options,t.country_code){if(x.innerHTML=w[`${t.country_code}`],t.province_code){x.value=t.province_code;try{let L=new Event("change");x.dispatchEvent(L)}catch(E){}}w[`${t.country_code}`]?x.disabled=!1:x.disabled=!0}else x.disabled=!0;S.addEventListener("change",function(){x.innerHTML=w[`${S.value}`],w[`${S.value}`]?x.disabled=!1:x.disabled=!0})}else x=S}else(S=document.createElement("input")).className=`AtOnceDestinationInput${b}`,S.type=O.type,S.name=O.value,O.maxLength&&(S.maxLength=O.maxLength);function N(){i.innerText="Change Address",i.disabled=!1,i.classList.remove("red"),B(),!S.value&&O.required?S.classList.add(`atonce_input_red${b}`):S.classList.remove(`atonce_input_red${b}`)}O.default&&(S.value=O.default),S.addEventListener("keyup",function(){B()}),S.addEventListener("change",function(){t[`${O.value}`]=S.value,N()}),N(),p.push({input:S,required:O.required,value:O.value,name:O.name}),C.appendChild(T),C.appendChild(S)}function B(){let e=!0;for(let[i,a]of Object.entries(o))if(t[`${i}`]!==o[`${i}`]){e=!1;break}!0==e?n.classList.remove("visible"):n.classList.add("visible")}A.style.display="",r.appendChild(A),r.appendChild(n),eF.innerHTML="",eF.appendChild(r)}}()}):"edit_cancel"==v&&h.addEventListener("click",function(){tA("edit_cancel")}));if("map"==m||"text"==m||"button"==m||"link"==m){let y=e.id;h.addEventListener("click",function(){try{k("update_frequency",{store:Q,id:y,ol:eT,u:F,f:J}),J+=.1,F=!1}catch(e){}})}let S=document.createElement("div");S.className=`AtOnceQuickLinkButtonHeaders${b}`;let T=document.createElement("div");if(T.className=`AtOnceTriHeading${b} AtOnceTextColorThree${b}`,T.innerText=e.heading?e.heading:e.actions_heading,S.appendChild(T),e.subheading){let L=document.createElement("div");L.className=`AtOnceSubText${b} AtOnceTextColorSeven${b}`,L.innerText=e.subheading,S.appendChild(L)}else(n||s)&&!0!==o&&h.classList.add(`AtOnceQuickButtonPadded${b}`);if(e.icon){let E=document.createElement("div");E.className=`AtOnceQuickIcon${b}`,E.innerHTML=e_[`${e.icon}`],h.appendChild(E)}h.appendChild(S);let N=document.createElement("div");N.className=`AtOnceMarginLeft${b}`,N.innerHTML=e0,h.appendChild(N),t.appendChild(h)}}catch(B){}}tm(!1,!0);let tC="";function t1(e,t){let o=document.createElement("div");o.id=`AtOnceContainerHelpCenterSearch${b}`,o.className=`AtOnceContainerPaddedTopSmall${b}`;let n=document.createElement("div"),i=Date.now(),a=document.createElement("div");a.className=`AtOncePositionRelative${b} AtOnceFlexTitle${b}`;let l=document.createElement("div");l.className=`AtOnceSearchInputIcon${b}`,l.innerHTML=eC;let p=document.createElement("input");p.id="AtOnceMainSearchInput",p.type="text",p.className=`AtOnceSearchInput${b} AtOnceSearchInputIconed${b}`,p.placeholder="Search instant answers",function e(t,o,n){try{let i=[];if(o||!(ea&&ea.length)&&ep.length){if(t.innerHTML="",o){let a=tc.search(o);if(a.item)i.push(a);else{a.sort(function(e,t){return t.f-e.f});let l=[];function p(){if(n&&n.length&&a.length)for(let e of a){let t=e.id;-1==n.findIndex(function(e){return e==t})&&l.push(e)}}if(p(),l.length)for(let r of l)try{if(i.length>5)break;i.push(r.item)}catch(c){}else for(let s of(a=ep.sort(function(e,t){return t.f-e.f}),p(),l))try{if(i.length>5)break;i.push(s)}catch(u){}}}else i=ep.sort(function(e,t){return t.f-e.f});try{if(o&&i.length<5){let d=ep.sort(function(e,t){return t.f-e.f});for(let v of d){let $=v.id;if(i.length<5)-1==n.findIndex(function(e){return e==$})&&i.push(v);else break}let m=d.slice(0,5);for(let h of m){let _=h.id;if(i.length<5)-1==i.findIndex(function(e){return e.id==_})&&i.push(h);else break}}}catch(g){}let f=i.slice(0,5);for(let A of f)t9(A,t,!1,!1,"",t,!1,"","",!0)}}catch(x){}}(n,e,t),p.addEventListener("keyup",function(){try{let e=p.value,t=Date.now();t-i>500&&(i=t,ts(e,n,4))}catch(o){}}),a.appendChild(l),a.appendChild(p),o.appendChild(a),o.appendChild(n),eF.appendChild(o)}function ty(e,t,o,n,i){o?(eF.classList.add(`AtOnceContainerScrollMiddleHelpCenter${b}`),to.innerText="Instant Answers",to.className=`AtOnceSubHeading${b}`,tn.style.display="none",te.style.display=""):(eF.classList.remove(`AtOnceContainerScrollMiddleHelpCenter${b}`),te.style.display="none",to.className=`AtOnceMainHeading${b}`,to.innerText=eh.top_hi_text,tn.innerText=eh.top_hi_subtext,tn.style.display="");let a=document.createElement("div"),l=document.createElement("div");l.className=`AtOnceSubHeadingSmall${b} AtOnceSubHeadingMargin${b} AtOnceTextColorSeven${b}`,l.innerText=t||"";let p=document.createElement("div"),r=document.createElement("div");if(tC=r,"Quick links"==t){if(e.length)for(let c of e)c.icon&&t9(c,p,!1,o,l,p,n,e,t)}else if(eT){if(e.length){for(let s of e)for(let u of ec)if(u.id==s){t9(u,p,!1,o,l,p,n,e,t);break}}}else if(e.length){for(let d of e)for(let v of er)if(v.id==d){t9(v,p,!1,o,l,p,n,e,t);break}}if(a.appendChild(l),a.appendChild(p),o&&n)try{r.className=`AtOnceContainerPaddedTop${b}`,t9(n,r,!0,o,l,p,n,e,t),a.appendChild(r)}catch($){}eF.innerHTML="",eF.appendChild(a),"Quick links"==t?(t1(),tO(),ej()):t1(t,e),!0!==i&&ti.push({l:e,t:t,t_q:o,t_s:n})}te.addEventListener("click",function(){if(eT)tx();else{ti.pop();let e=ti[ti.length-1];e?ty(e.l,e.t,e.t_q,e.t_s,!0):ty(er,"Quick links"),eT=!1}});let tb=document.createElement("div");tb.className=`AtOncePoweredByContainer${b} AtOnceBottomContainer${b}`;let t3=document.createElement("div");t3.className=`AtOnceSubText${b} AtOnceTextColorSeven${b}`,t3.innerHTML=`<a href="https://atonce.com?utm_medium=self_service&utm_campaign=by_atonce" target="_blank" rel="noopener noreferrer" class="AtOncePoweredByLink${b}">Powered by <span class="AtOncePoweredByText${b}">AtOnce</span></a>`,tb.appendChild(t3),eD.appendChild(eW),eD.appendChild(eF),eD.appendChild(tb),eV.appendChild(eD);let t2=document.createElement("button");t2.className=`AtOnceChatButton${b}`,t2.appendChild(g),t2.ariaLabel="Open self service",t2.ariaHasPopup=!1;let tS=document.createElement("div");tS.innerHTML=z;let tT=document.createElement("div");function t4(){t=!1,t2.classList.remove(`AtOnceHideChatButton${b}`),!0==eu&&es.body.classList.remove(`AtOnceBody${b}`),eV.className=`AtOnceChatPrimaryContainer${b} AtOnceHidePrimaryContainer${b}`;try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(e){}setTimeout(function(){!1==t&&(t2.style.display="",eV.style.display="none",AtOnceChatContainer.style.width="100px",AtOnceChatContainer.style.height="100px")},200)}function tM(){AtOnceChatContainer.style.width="100%",AtOnceChatContainer.style.height="100%",eV.style.display="",S.className=`AtOnceLiveChatMessagesContainer${b} hidden`,S.innerHTML="",setTimeout(function(){if(!0==t){t2.style.display="none";try{g.className=`AtOnceChatNotification${b} hidden`,ee&&(window.top.document.title=ee)}catch(e){}}},200),t=!0,ti=[],ty(er,"Quick links"),eV.style.cssText="",t2.classList.add(`AtOnceHideChatButton${b}`),!0==eu&&es.body.classList.add(`AtOnceBody${b}`),eV.className=`AtOnceChatPrimaryContainer${b} AtOnceShowPrimaryContainer${b}`}tT.className=`AtOnceCloseButtonMobile${b}`,tT.innerHTML=ey,tT.addEventListener("click",function(){t4()}),eV.appendChild(tT),tS.className=`AtOnceFlexCenter${b}`,t2.addEventListener("click",function(){if(!0==t)t4();else{if(i&&S.innerText)try{setTimeout(function(){try{th(i,a)}catch(e){}})}catch(e){}tM()}}),t2.appendChild(tS),eG.appendChild(S),eG.appendChild(eV),eG.appendChild(t2),setTimeout(function(){let e=document.getElementById("AtOnceChatContainer");e.contentDocument?es=e.contentDocument:e.contentWindow&&(es=e.contentWindow.document),es.head.appendChild(eE),es.body.appendChild(eG)})}catch(t5){}})}catch(ex){}}export{createAtOnceLiveChat};
+                        `,_=document.createElement("input");_.style.display="none",_.type="file",_.multiple=!0,_.addEventListener("change",a);let f=document.createElement("button");f.className=`AtOnceContainerLiveChatButton${T} attachment`,f.innerHTML=m,f.addEventListener("click",function(){_.click()});let y=document.createElement("button");function b(){try{let t=$.innerText,o=t.replace(/\s+/g,"");function i(){setTimeout(function(){$.innerText="",y.disabled=!0,$.classList.remove(`AtOnceContainerLiveChatInputDisabled${T}`)},1e-6)}if(o.length>0){$.classList.add(`AtOnceContainerLiveChatInputDisabled${T}`);let a=E(20),l=[];if(n.length)for(let p of n)try{l.push({url:p.url,fileName:p.fileName,name:p.name,mimetype:p.mimetype,filetype:g.getExtension(p.mimetype)})}catch(c){}for(let u of(L("send_live_message",{company:Y,user:J.currentUser.uid,email:z,message:t,attachments:l,threadId:e,id:a}),s.classList.remove("shown"),s.innerHTML="",eF))if(u.threadId==e){let d=u.messages;if(d){let v=d.findIndex(function(e){return e.id==a});if(-1==v){let m=eq(z,a,t,e,l);u.messages.push(m),u.timestamp=m.timestamp,eF.sort(function(e,t){return t.timestamp-e.timestamp}),tO(u.messages,r)}}break}i()}else $.classList.add(`AtOnceContainerLiveChatInputDisabled${T}`),i()}catch(h){}}y.className=`AtOnceContainerLiveChatButton${T}`,y.innerHTML=h,y.disabled=!0,y.addEventListener("click",function(){b()});let S=Date.now();$.addEventListener("keyup",function(){try{$.innerText.length>0?y.disabled=!1:y.disabled=!0}catch(e){}try{let t=$.innerText.trim();if(t.length>0){let o=Date.now();o-S>500&&(S=o,t0(t,v,2,!0))}else v.innerHTML=""}catch(n){}}),c.appendChild(u),c.appendChild(s),c.appendChild($),c.appendChild(_),c.appendChild(f),c.appendChild(y),tn.innerHTML="",tn.appendChild(r),tn.appendChild(v),tn.appendChild(c),eX($),eZ()}function tb(e,t,o,n,i){let a=document.createElement("div");a.className=`AtOnceContainerPadded${T} AtOnceButtonContainer${T}`;let l=`AtOnceMainButton${T} AtOnceMainButtonLeft${T} AtOncePrimaryButton${T}`,p=`AtOnceMainButton${T} AtOnceMainButtonRight${T} AtOnceSecondaryButton${T}`,r=eh.getElementById("AtOnceMainSearchInput"),c=document.createElement("button");c.className=t?p:l,c.innerText="Okay, thanks",c.addEventListener("click",function(){if(!0==i){e.innerHTML="";try{r.dispatchEvent(new KeyboardEvent("keyup",{key:"a"}))}catch(t){}}else e8?t4():t6(e$,"Quick links")});let s=document.createElement("button");if(s.className=t?l:p,s.innerText="Message us",s.addEventListener("click",function(){if(!0==i)e.innerHTML="";else{let t="";try{e8&&(t=eE.name)}catch(a){}!function e(t,o,n){t$.innerHTML=t_,t$.className=`AtOnceSubHeading${T}`,tm.style.display="none";let i=document.createElement("div"),a=document.createElement("div"),l=document.createElement("div");l.className=`AtOnceContainerPaddedLess${T}`;let p=document.createElement("div");p.className=`AtOnceContainerLargeMargin${T}`;let r=document.createElement("div");r.className=`AtOnceSubText${T} AtOnceSubTextLargeMargin${T} AtOnceTextCenter${T}`,r.innerText=`Need something else? We’d love to help!`;let c=document.createElement("input");c.className=`AtOnceContactFormInput${T}`,c.placeholder="Enter your email",c.type="text";let s=document.createElement("textarea");s.maxLength=5e3,s.placeholder="Leave a message",(t||o)&&o&&(s.value=`Order ${o}. `);let u=document.createElement("button");u.disabled=!0,u.innerText="Send",u.className=`AtOnceMainButton${T} AtOncePrimaryButton${T} AtOnceSubTextMediumMargin${T}`;let d=Date.now();function v(){setTimeout(function(){try{u.innerText="Send"}catch(e){}},3e3)}s.addEventListener("keyup",function(){try{let e=s.value;if(e.length>0){let t=Date.now();t-d>500&&(d=t,t0(e,p,4)),u.disabled=!1}else u.disabled=!0}catch(o){}}),u.addEventListener("click",function(){try{if(-1==c.value.indexOf("@"))u.innerText="Invalid Email",v();else if(""==s.value.trim())u.innerText="Invalid Message",v(),eX(s);else{var e;let t=c.value.trim().toLowerCase();!0==J.currentUser.isAnonymous&&t!==z&&localStorage.setItem("AtOnceLiveChatUserEmail",t),z=t;let o=s.value.trim(),n=(e=`${J.currentUser.uid}${o.substring(0,30)}`,window.btoa(unescape(encodeURIComponent(e))).replace(/=/g,"").replace(/\+/g,"-").replace(/\//g,"_")),i=E(20);t1(n,[eq(z,i,o,n)],!0)}}catch(a){}}),t0("order",p,4),l.appendChild(r),l.appendChild(c),l.appendChild(s),l.appendChild(u),a.appendChild(l),a.appendChild(p),i.appendChild(a),tn.innerHTML="",tn.appendChild(i),z&&(c.value=z,eX(s))}(o,t,n)}}),!0==t){let u=document.createElement("div"),d=document.createElement("div"),v=Date.now();t0("order",d,2);let $=document.createElement("div");$.className=`AtOncePositionRelative${T} AtOnceFlexTitle${T}`;let m=document.createElement("div");m.className=`AtOnceSearchInputIcon${T}`,m.innerHTML=eP;let h=document.createElement("input");h.id="AtOnceMainSearchInput",h.type="text",h.className=`AtOnceSearchInput${T} AtOnceSearchInputIconed${T}`,h.placeholder="Search instant answers",h.addEventListener("keyup",function(){try{let e=h.value,t=Date.now();t-v>500&&(v=t,t0(e,d,2))}catch(o){}}),$.appendChild(m),$.appendChild(h),u.appendChild($),u.appendChild(d),e.appendChild(u),setTimeout(function(){eX(h)},2);try{a.appendChild(s)}catch(_){}try{a.appendChild(c)}catch(g){}try{eh.getElementById(`AtOnceContainerHelpCenterSearch${T}`).remove()}catch(f){}}else{try{a.appendChild(c)}catch(A){}try{a.appendChild(s)}catch(x){}}e.appendChild(a)}function t3(e){if(e||!localStorage.getItem("AtOnceOrders")){td.style.display="",tn.classList.add(`AtOnceContainerScrollMiddleHelpCenter${T}`),t$.innerHTML=`I’m an existing customer`,t$.className=`AtOnceSubHeading${T}`,tm.innerText="",tm.style.display="none";let t=document.createElement("div"),o=document.createElement("div");o.className=`AtOnceSubHeadingSmall${T} AtOnceSubHeadingMargin${T} AtOnceTextColorSeven${T}`,o.innerText="Access your orders";let n=document.createElement("div");n.className=`AtOnceContainerPaddedLess${T} AtOnceContainerPaddedTopSmall${T}`;let i=document.createElement("div");i.innerText="Order info is in your email/text/packing slip",i.className=`AtOnceSubText${T} AtOnceTextColorTwo${T} AtOnceSubTextMarginBottom${T}`;let a=document.createElement("div");a.className=`AtOnceContainerPaddedTopSmall${T}`;let l=[];function p(e,t){let o=document.createElement("label");o.className=`AtOnceManageOrdersLabel${T}`;let n=document.createElement("span");n.className=`AtOnceManageOrdersSpan${T}`,n.innerText=e;let i=document.createElement("input");i.type="text",i.className=`AtOnceManageOrdersInput${T}`,i.placeholder=" ",o.appendChild(i),o.appendChild(n),a.appendChild(o),l.push({input:i,name:t})}p("Order Number/ID","order_number"),p("Zip/Postal Code","zip_code");let r=l[0].input,c=l[1].input,s=document.createElement("div");s.style.display="none",s.className=`AtOnceLoadingSpinner${T}`;let u=document.createElement("button");u.className=`AtOnceMainButton${T} AtOncePrimaryButton${T} AtOnceSubTextMediumMargin${T}`,u.innerText="Enter",u.disabled=!0;let d=document.createElement("div");for(let v of(d.className=`AtOnceTriHeading${T} AtOncePrimarySubjectHeader${T} AtOnceFlexCenter${T} AtOnceTextColorError${T}`,d.innerText="",u.addEventListener("click",function(){s.style.display="";let t=`${r.value}`.replace(/\s/g,"").replace(/\D/g,"").trim().toUpperCase(),o=`${c.value}`.replace(/\s/g,"").trim().toUpperCase(),n=`${t}${o}`;ey(n,"orders").then(n=>{n&&n[0]?(S(`${t}_atonce_${o}`),t4(e)):(u.disabled=!0,s.style.display="none",d.innerText="Order not found")})}),l))v.input.addEventListener("keyup",function(){d.innerText="",r.value.length>0&&c.value.length>3?u.disabled=!1:u.disabled=!0}),"zip_code"==v.name?v.input.addEventListener("keydown",function e(t){try{"Enter"===t.key&&!1==t.shiftKey&&u.click()}catch(o){}}):eX(v.input);n.appendChild(i),n.appendChild(a),n.appendChild(s),n.appendChild(u),n.appendChild(d),t.appendChild(o),t.appendChild(n),tn.innerHTML="",tn.appendChild(t)}else t4(!0)}async function t2(e,t,o,n,i){try{let a=[];if(t.length){let l=t.length;for(let p=0;p<l;p++)t[p].position_id=p}if(o)for(let s of e)s&&s.variant_id&&-1==a.indexOf(s.variant_id)&&a.push(s.variant_id);else for(let u of e){let d=u.variant_id;d&&-1==a.indexOf(d)&&a.push(d);let $=u.id;if("shopify"==ec){let m=Number(u.price_set.presentment_money.amount)*Number(u.quantity),h=u.price_set.presentment_money.currency_code,_=u.discount_allocations,g=u.tax_lines;if(_&&_.length)for(let f of _)m-=Number(f.amount_set.presentment_money.amount);if(g&&g.length)for(let A of g)m+=Number(A.price_set.presentment_money.amount);u.customer_paid_amount=m.toFixed(2),u.customer_paid_currency=h}else"woocommerce"==ec&&(u.customer_paid_amount=Number(u.total).toFixed(2),u.customer_paid_currency=i);let x=u.quantity-u.fulfillable_quantity;if(x>0&&t.length)for(let O of t){if(0==x)break;if(O.line_item==$){let C=O.position_id,y=O.quantity-x;0==y?(x=0,t=t.filter(e=>e.id!==C)):y>0?(O.quantity-=x,x=0):y<0&&(O.quantity=0,x=Math.abs(y))}}u.returnable_quantity=x}if("woocommerce"==ec){for(let b of e)if(b&&!b.variant_id){let T=b.product_id;-1==a.indexOf(T)&&a.push(T)}}if(a.length){let S=function e(t,o){for(var n=[],i=0;i<t.length;i+=o)n.push(t.slice(i,i+o));return n}(a,10),M=[],w=[];async function P(t){return new Promise(async function(i,l){await v(r(n,c("variant_ids_list","array-contains-any",t))).then(t=>{t.empty||t.forEach(t=>{try{let n=t.data(),i=n.variants,l=n.variant_ids_list,p=n.images,r=n.options,c=n.requires_shipping,s=["id","price","compare_at_price","option1","option2","option3","position","product_id","title"];for(let u of("shopify"==ec&&s.push("requires_shipping"),a))try{if(-1==w.indexOf(u)){l&&-1!==l.indexOf(u)&&w.push(u);let d=e.findIndex(function(e){return e.variant_id==u});if(-1==d&&"woocommerce"==ec&&(d=e.findIndex(function(e){return e.product_id==u})),-1!==d){o&&(e[d].title=n.title);let v=[];for(let $ of i){let m=$.id;if(m==u){if(o)e[d].variant_title=$.title;else{let h={};for(let _=1;_<4;_++){let g=`option${_}`,f=$[`${g}`];f&&(h[`${g}`]=f)}"{}"!==JSON.stringify(h)&&(e[d].current_variant=h)}}if(!o&&(null==$.inventory_management||"continue"==$.inventory_policy||$.inventory_quantity>0||!0==$.in_stock)){let A={};for(let x of s)-1!==x.indexOf("price")?A[`${x}`]=Number($[`${x}`]).toFixed(2):A[`${x}`]=$[`${x}`];if("shopify"==ec)for(let O of p)-1!==O.variant_ids.indexOf(m)&&(A.img=O.src);else A.requires_shipping=c,$.img&&(A.img=$.img);v.push(A)}}if(!o){if(r&&r.length){let C=[];for(let y of r)C.push({name:y.name,position:y.position,values:y.values});e[d].product_options=C}e[d].exchange_options=v}let b=[];if("woocommerce"==ec){for(let T of i){let S=T.id;T.img&&S==u&&(e[d].img=T.img),T.img&&-1==b.indexOf(T.img)&&b.push(T.img)}e[d].requires_shipping=c}else if(p&&p.length)for(let M of p)-1!==M.variant_ids.indexOf(u)&&(e[d].img=M.src),M.src&&b.push(M.src);b.length&&!o&&(e[d].images=b),1==i.length?e[d].hasOnlyDefaultVariant=!0:e[d].hasOnlyDefaultVariant=!1}}}catch(P){}}catch(k){}}),i("success")})})}if(S&&S.length){for(let k of S)M.push(P(k));M.length&&await eC(M)}}return e}catch(L){return e}}function tT(e){if(eE){let t=[],o=[],n=0,i=eE.currency,a=B(i);td.style.display="",tn.classList.add(`AtOnceContainerScrollMiddleHelpCenter${T}`),t$.innerHTML=`${"edit_add"==e?"Add Items Below":"Add/Remove Items Below"}`,t$.className=`AtOnceSubHeading${T}`,tm.innerText="",tm.style.display="none";let l=document.createElement("div");l.className=`AtOnceContainerPadded${T} AtOnceContainerNoBottomPadding${T}`;let d=document.createElement("div");d.className=`AtOnceMainShopStickyChangesContainer${T} AtOnceFlexCenter${T}`;let $=document.createElement("button");$.className=`AtOnceMainButton${T} AtOncePrimaryButton${T}`,$.innerText="Edit Order";let m=document.createElement("div");m.style.display="none",m.className=`AtOnceLoadingSpinner${T} bottomed`;let _=document.createElement("div");_.style.display="none";let g=document.createElement("div");g.className=`AtOnceEnterEmailInputLabel${T}`,g.innerText="Enter your email";let f=document.createElement("input");f.className=`AtOnceSearchInput${T} full bottomed`,f.placeholder="Enter your email";try{eE.email?f.value=eE.email:eE.customer.email&&(f.value=eE.customer.email);try{!f.value&&localStorage.getItem("AtOnceLiveChatUserEmail")&&(f.value=localStorage.getItem("AtOnceLiveChatUserEmail"))}catch(A){}}catch(x){}f.value||(l.classList.add(`AtOnceContainerPaddedBottomLarge${T}`),l.classList.remove(`AtOnceContainerNoBottomPadding${T}`),m.classList.add("bigger"),d.classList.add("bigger"),_.style.display="",f.addEventListener("keyup",function(){try{f.value&&-1!==f.value.indexOf("@")?$.disabled=!1:$.disabled=!0}catch(e){}})),_.appendChild(g),_.appendChild(f);let O="",C=eE.shipping_zip,y=eE.billing_zip,b="";null!=C?b=C:null!=y&&(b=y);let S=eE.order_number;O=`${S=`${S}`.replace(/\s/g,"").replace(/\D/g,"").trim().toUpperCase()}${b=`${b}`.replace(/\s/g,"").trim().toUpperCase()}`,$.addEventListener("click",function(){m.style.display="",$.disabled=!0,$.classList.remove("red");let e=[];for(let o of t){let n={};!1!==o.product_exists&&o.id&&(o.line_item&&(n.line_item=Number(o.line_item)),o.id&&(n.variant_id=Number(o.id)),o.product_id&&(n.product_id=Number(o.product_id)),0==o.quantity?n.quantity=0:Number(o.quantity)?n.quantity=Number(o.quantity):n.quantity=1,e.push(n))}function i(e,t){setTimeout(function(){try{let o=$.innerText;"Updated - Check Your Email"!==o&&"Update Failed"!==o&&($.innerText=`${e} (${t}/4)`)}catch(n){}},2e3*t)}i("Checking Order",1),i("Adding Credit",2),i("Updating Order",3),i("Sending Email",4);let a=`${f.value}`.trim().toLowerCase();L("edit_order",{store:eE.shopify_store,order:eE.id,order_identifier:O,line_items:e,email:a}).then(e=>{try{a&&-1!==a.indexOf("@")&&!localStorage.getItem("AtOnceLiveChatUserEmail")&&(z||(z=a),localStorage.setItem("AtOnceLiveChatUserEmail",a))}catch(t){}e&&e.success?(m.style.display="none",$.disabled=!1,$.classList.add("green"),$.innerText="Updated - Check Your Email",setTimeout(function(){try{td.click()}catch(e){}},3e3)):($.classList.add("red"),m.style.display="none",$.innerText="Update Failed")})}),d.appendChild(_),d.appendChild($),d.appendChild(m);let M=document.createElement("div"),w=p(F,ec,eE.shopify_store,"products"),P=r(w,c("in_stock","==",!0),c("status","==","active"),u("total_sales","desc"),s(200)),k=["id","price","compare_at_price","option1","option2","option3","position","product_id","title"],N=[],E="",K={keys:["handle","description","title","variant_titles_list","product_type",]},U=document.createElement("div");U.className=`AtOnceContainerPaddedTopMedium${T}`;let G=document.createElement("div");function V(e,o){let n=e.length;if(n>0){for(let i=0;i<n;i++){let l=e[i],p=document.createElement("div");p.className=`AtOnceMainShopProductSubContainer${T}`;let r=document.createElement("div");r.className=`AtOnceMainShopProductImageContainer${T}`,r.setAttribute("atonce_product_id",`${l.id}`);let c="",s=l.image;if(s)(c=document.createElement("img")).className=`AtOnceMainShopProductImage${T}`,c.src=s;else{(c=document.createElement("div")).className=`AtOnceMainShopProductImageDiv${T}`;let u=document.createElement("div");u.className=`AtOnceMainShopProductImageDivText${T}`,u.innerText=l.title,c.appendChild(u)}r.appendChild(c);let d=document.createElement("div");if(d.className=`AtOnceMainShopProductPriceContainer${T}`,l.compare_at_price&&l.compare_at_price!==l.price){let v=document.createElement("span");v.className=`AtOnceMainShopProductPriceText${T} AtOnceMainShopProductPriceText_compare${T}`,v.innerText=`${a}${l.compare_at_price}`,d.appendChild(v)}let $=document.createElement("span");if($.className=`AtOnceMainShopProductPriceText${T}`,$.innerText=`${a}${l.price}`,d.appendChild($),p.appendChild(r),s){let m=document.createElement("div");m.className=`AtOnceMainShopProductTitleContainer${T}`;let h=document.createElement("div");h.className=`AtOnceMainShopProductTitleText${T}`,h.innerText=l.title,m.appendChild(h),p.appendChild(m)}p.appendChild(d),r.addEventListener("click",function(){let e=document.createElement("div"),o=l.variants;e.className=`AtOnceModalBackground${T}`;let n=document.createElement("div");n.style.display="none",n.className=`AtOnceModalContainer${T}`;let i=document.createElement("div");i.innerHTML=eL,i.className=`AtOnceModalCloseBtn${T}`;let p=document.createElement("div");p.className=`AtOnceModalProductImageContainer${T}`;let r=document.createElement("img");r.className=`AtOnceModalProductImage${T}`;let c=l.images,s="",u=[],d=document.createElement("div"),v=document.createElement("div"),$=`AtOnceModalProductImageContainer${T} maxwidth slideshow`,m=`AtOnceModalProductImageContainer${T} maxwidth`,h=l.image;h?r.src=`${h}`:(r.classList.add("border"),r.src=`${e4}`),p.appendChild(r);let _=document.createElement("div");_.className=`AtOnceModalProductRightContainer${T}`;let g="",f=l.hasOnlyDefaultVariant;!1==f&&(g=o[0].title);let A=document.createElement("span"),x=document.createElement("span");function O(){let e=document.createElement("div");e.className=`AtOnceModalProductTitle${T}`;let t=document.createElement("div");t.className=`AtOnceModalProductVariantInfo${T}`,""==g?x.className=`AtOnceModalProductVariantInfo${T}`:x.className=`AtOnceModalProductVariantInfo${T} price`,A.innerText=g,x.innerText=`${a}${l.price}`,t.appendChild(A),t.appendChild(x),e.innerText=l.title,_.appendChild(e),_.appendChild(t)}let C={},y={};function b(e){try{let t=!1;for(let n of o){let i=!0;for(let[a,l]of Object.entries(e))if(n[a]!==l){i=!1;break}if(!0==i){t=!0;break}}return t}catch(p){return!0}}function S(e){let t=!1;for(let n of o){let i=!0;for(let[a,p]of Object.entries(C))if(n[a]!==p){i=!1;break}if(!0==i){if(n.img?y.img=n.img:l.image?y.img=l.image:y.img=e4,"woocommerce"==ec&&y.img)try{r.src=y.img}catch(c){}"shopify"==ec?y.requires_shipping=n.requires_shipping:"woocommerce"==ec&&(y.requires_shipping=l.requires_shipping),y.id=n.id,y.title=l.title,y.option=n.title,y.price=n.price,y.product_id=n.product_id,y.variant_title=n.title,y.hasOnlyDefaultVariant=l.hasOnlyDefaultVariant,y.quantity=void 0!==l.quantity?l.quantity:1,t=!0,z();break}}!1==t&&(e&&(e.disabled=!0),U())}function M(){let e=document.createElement("div");if(e.className=`AtOncePrimarySubjectHeader${T}`,!1==f){let t=l.options,n=t.length,i=[];for(let p of t){let c=document.createElement("div"),s=`option${p.position}`,u=document.createElement("div");u.className=`AtOnceVariantsLabel${T}`,u.innerText=p.name;let d=[],v=[],$=[],m=document.createElement("div"),h=!0,g=!0,O=!0,y="",M="";for(let w of o){let P=w[`${s}`];if(-1==d.indexOf(P)){d.push(P);let k=w.img;k!==M&&(M&&(O=!1),M=k)}}for(let L of(!1==O&&(m.className=`AtOnceModalProductVariantSelectionContainer_images${T}`),o)){let N=L[`${s}`];if(-1==v.indexOf(N)){async function E(){for(let e of o){let t=!0;for(let[n,i]of Object.entries(C))if(e[n]!==i){t=!1;break}if(!0==t){e.title?A.innerText=e.title:A.innerText="",e.price&&(x.innerText=`${a}${e.price}`);break}}}v.push(N);let H=document.createElement("button"),B=`AtOnceMainShopVariantsButton${T}`,I=`AtOnceMainShopVariantsButton_active${T}`,K=L.img;!1==O&&(1==n?(B=`AtOnceMainShopVariantsButton${T} AtOnceMainShopVariantsButton_image${T} AtOnceMainShopVariantsButton_one${T}`,I=`AtOnceMainShopVariantsButton_image_active${T} AtOnceMainShopVariantsButton_image_active_one${T}`):(B=`AtOnceMainShopVariantsButton${T} AtOnceMainShopVariantsButton_image${T}`,I=`AtOnceMainShopVariantsButton_image_active${T}`),K&&(H.style.backgroundImage=`url(${K})`)),!0==h?(h=!1,C[`${s}`]=N,H.className=`${B} ${I}`):H.className=B,K!==y&&(y&&(g=!1),y=K);let U={option_name:s,name:N,button:H};$.push(H),i.push(U),H.addEventListener("click",function(){async function e(e){try{let t=JSON.parse(JSON.stringify(C));if(t){t[`${e.option_name}`]=e.name;let o=b(t);!0==o?e.button.disabled=!1:e.button.disabled=!0}}catch(n){}}if(C[`${s}`]=N,S(H),E(),K?!1==g&&(r.src!==K&&(r.src=K),R(K),setTimeout(function(){R(K)},10)):!1==g&&(r.src!==e4&&(r.src=e4),R(K),setTimeout(function(){R(K)},10)),$.length)for(let t of $)t!==H&&(t.className=B);if(i.length)for(let o of i)e(o);H.className=`${B} ${I}`}),!0==O&&(H.innerText=N),m.appendChild(H)}}c.appendChild(u),c.appendChild(m),e.appendChild(c)}}_.appendChild(e)}function w(){let e=document.createElement("div");e.className=`AtOnceMainShopProductDescription${T}`,e.innerHTML=l.description,_.appendChild(e)}O(),M();let P=document.createElement("div");P.className=`AtOnceQuantityContainer${T}`;let k=document.createElement("div");k.className=`AtOnceQuantitySubContainer${T} AtOnceFlexCenter${T}`;let L=document.createElement("div");L.innerText="Quantity",L.className=`AtOnceQuantityLabel${T}`;let N=document.createElement("span");N.innerHTML=e5,N.className=`AtOnceQuantityButtons${T} AtOnceFlexCenter${T}`;let E=document.createElement("span");E.innerHTML=ew,E.className=`AtOnceQuantityButtons${T} AtOnceFlexCenter${T}`;let H=document.createElement("input");H.type="number",H.min=1,H.value=1,H.step=1,H.className=`AtOnceQuantityInput${T} AtOnceFlexCenter${T}`,E.addEventListener("click",function(){let e=H.value;e++,H.value=e}),N.addEventListener("click",function(){let e=H.value;e>1&&e--,H.value=e}),P.appendChild(L),P.appendChild(k),k.appendChild(N),k.appendChild(H),k.appendChild(E),_.appendChild(P);let B=document.createElement("div");B.className=`AtOncePrimarySubjectHeader${T} AtOnceModalStickyBottomContainer${T}`;let K=document.createElement("button");function U(){K.disabled=!0,K.innerText="Sold Out"}function z(){K.disabled=!1,K.innerText="Add to Cart"}function G(){if(t.length){let o=!1;for(let n of t)if(n.id==y.id){let i=Number(n.quantity);i+=Number(y.quantity),n.quantity=i,o=!0;break}!1==o&&t.push(y)}else t.push(y);et(),V(e)}function V(e){try{e.className=`AtOnceModalBackground${T}`}catch(t){}setTimeout(function(){try{e.remove()}catch(t){}},150)}K.className=`AtOnceMainButton${T} AtOncePrimaryButton${T}`,K.innerText="Add to Cart",K.addEventListener("click",function(){!0==f&&(y.id=o[0].id,l.image?y.img=l.image:y.img=e4,y.name=l.title,y.price=l.price,y.product_id=l.id,y.title="");let e=H.value;e<1&&(e=1),y.quantity=e,G()}),S(),B.appendChild(K),_.appendChild(B),w(),i.addEventListener("click",function(){V(e)}),e.addEventListener("click",function(t){let o=t.target;!1===n.contains(o)&&!1===p.contains(o)&&V(e)}),n.appendChild(i),s=I(c,d,v,u,m,$),n.appendChild(i),c&&c.length>1?n.appendChild(s):n.appendChild(p),n.appendChild(_),e.appendChild(n),n.style.display="",tn.appendChild(e),setTimeout(function(){n.className=`AtOnceModalContainer${T} active`,e.className=`AtOnceModalBackground${T} active`},0)}),o.appendChild(p)}G.classList.add("visible")}}async function D(){return new Promise(async function(e,t){v(P).then(t=>{t.empty||(t.forEach(e=>{try{let t=e.data(),o=t.id,n=t.title,i=t.image,a=t.images,l=t.requires_shipping;i&&(i=i.src);let p=t.body_html,r="0.00",c=null;try{r=`${H(Number(t.variants[0].price))}`}catch(s){}try{let u=t.variants[0].compare_at_price;u&&(c=`${H(Number(u))}`)}catch(d){}let v={id:o,title:n,image:i,description:p,product_type:t.product_type,handle:t.handle,price:r,compare_at_price:c,variant_titles_list:t.variant_titles_list,options:t.options};"woocommerce"==ec&&(v.requires_shipping=l);let $=[];if(a&&a.length){for(let m of a)m.src&&$.push(m.src);v.images=$}let h=t.variants;if(1==h.length){let _=h[0],g={product_id:_.product_id,id:_.id,title:""};"shopify"==ec?g.requires_shipping=_.requires_shipping:g.requires_shipping=l,v.variants=[g],v.hasOnlyDefaultVariant=!0}else{v.hasOnlyDefaultVariant=!1;let f=[];for(let A of h)if(null==A.inventory_management||"continue"==A.inventory_policy||A.inventory_quantity>0){let x=A.id,O={};for(let C of("shopify"==ec?O.requires_shipping=A.requires_shipping:O.requires_shipping=l,k))-1!==C.indexOf("price")?O[`${C}`]=Number(A[`${C}`]).toFixed(2):O[`${C}`]=A[`${C}`];for(let y of a)try{-1!==y.variant_ids.indexOf(x)&&(O.img=y.src)}catch(b){}"woocommerce"==ec&&A.img&&(O.img=A.img),f.push(O)}v.variants=f}N.push(v)}catch(T){}}),N.length&&(V(N,G),E=new h(N,K))),e(!0)})})}G.className=`AtOnceContainerFlexProducts${T}`,U.appendChild(G);let J=D(),q=document.createElement("div"),j=document.createElement("input");function Q(e){t.splice(e,1),ee(),et()}function Z(e,t,o,n){let i=document.createElement("div");i.className=`AtOnceFlex${T} AtOnceMarginBottomLarge${T}${t?"":` AtOnceDisabledDiv${T}`}`;let a=document.createElement("div"),l=document.createElement("div");l.className=`AtOnceProductImage${T}`,e.img?l.style.backgroundImage=`url(${e.img})`:l.innerHTML=eS,a.appendChild(l);let p=document.createElement("div");p.className=`AtOnceFlexSpacedProductTitleSmall${T}`;let r=document.createElement("div");r.className=`AtOnceSubTextBold${T} AtOnceTextColorThree${T}`,r.innerText=e.title?e.title:e.name?e.name:"";let c=document.createElement("div");c.className=`AtOnceSubText${T} AtOnceTextColorNine${T} AtOnceUserSelect${T}`;let s="";if(!1==e.hasOnlyDefaultVariant&&e.variant_title&&(s=e.variant_title),c.innerText=s,p.appendChild(r),p.appendChild(c),!0!==e.hasOnlyDefaultVariant){let u=e.product_id,d=e.title;if(t){let v=document.createElement("button");function $(){let e=eh.getElementById("AtOnceSearchInputProducts");if(e){e.value=d;try{e.dispatchEvent(new KeyboardEvent("keyup",{key:"a"}))}catch(t){}}}v.className=`AtOnceMainButton${T} AtOnceMainButtonSmall${T} smaller AtOnceSecondaryButton${T}`,v.innerText="Add style",v.addEventListener("click",function(){let e=eh.querySelectorAll(`[atonce_product_id="${u}"]`);if(e&&e.length)try{e[0].click()}catch(t){$()}else $()}),p.appendChild(v)}}let m=document.createElement("div");m.className=`AtOnceProductQuantityText${T}`,m.innerText=e.quantity;let h=document.createElement("div"),_=document.createElement("div");_.className=`AtOnceQuantitySubContainer${T} AtOnceFlexCenter${T}`;let g=document.createElement("div");g.innerText="New quantity",g.className=`AtOnceQuantityLabelSmall${T}`;let f=document.createElement("span");f.innerHTML=e5,f.className=`AtOnceQuantityButtons${T} AtOnceFlexCenter${T}`;let A=document.createElement("span");A.innerHTML=ew,A.className=`AtOnceQuantityButtons${T} AtOnceFlexCenter${T}`;let x=document.createElement("input");x.type="number",x.min=1;let O=1;e.quantity&&Number(e.quantity)>1&&(O=Number(e.quantity)),x.value=O,x.step=1,x.className=`AtOnceQuantityInput${T} smaller AtOnceFlexCenter${T}`,t&&(x.addEventListener("keyup",function(){let t=x.value;t>0||(t=0),o||0!=t||Q(n),e.quantity=t,ee()}),A.addEventListener("click",function(){let t=x.value;t++,x.value=t,e.quantity=t,ee()}),f.addEventListener("click",function(){let t=x.value;t>0&&t--,o||0!=t||Q(n),x.value=t,e.quantity=t,ee()})),h.appendChild(g),h.appendChild(_),_.appendChild(f),_.appendChild(x),_.appendChild(A),i.appendChild(a),i.appendChild(p),i.appendChild(h),M.appendChild(i)}j.className=`AtOnceSearchInput${T} full`,j.placeholder="Search new products",j.id="AtOnceSearchInputProducts",j.addEventListener("keyup",function(){J.then(()=>{if(E){if(G.innerHTML="",j.value){let e=E.search(j.value),t=[];if(e.item)t.push(e);else for(let o of e)t.push(o.item);t.length?V(t,G):V(N,G)}else V(N,G)}})}),q.appendChild(j),l.appendChild(d),l.appendChild(M),l.appendChild(q),l.appendChild(U);let Y=eE.line_items;if(Y&&Y.length){for(let W of Y){let X=!0;"shopify"!=ec||!1!==W.product_exists&&W.variant_id||(X=!1),n+=Number(W.fulfillable_quantity)*Number(W.price),"shopify"==ec?t.push({line_item:W.id,id:W.variant_id,title:W.title,option:W.variant_title,price:W.price,product_id:W.product_id,variant_title:W.variant_title,is_editable:X,img:W.img,quantity:W.fulfillable_quantity,hasOnlyDefaultVariant:W.hasOnlyDefaultVariant}):t.push({line_item:W.id,id:W.variant_id?W.variant_id:W.product_id,title:W.title,option:W.variant_title,price:W.price,product_id:W.product_id,variant_title:W.variant_title?W.variant_title:"",is_editable:X,img:W.img,quantity:W.fulfillable_quantity,hasOnlyDefaultVariant:W.hasOnlyDefaultVariant})}o=JSON.parse(JSON.stringify(t)),et()}function ee(){let i=!0,a=0,l=0;for(let p of t)a+=Number(p.quantity),l+=Number(p.price)*Number(p.quantity);if(f.value){if($.disabled=!1,$.classList.remove("red"),0==a&&"edit_cancel"==e)$.innerText="Cancel & Send Gift Card";else{let r=Number(Number(n).toFixed(2))-Number(Number(l).toFixed(2));r>0?$.innerText="Edit & Send Gift Card":r<0?$.innerText="Edit & Send Invoice":$.innerText="Edit Order"}}else $.disabled=!0;if(o.length!==t.length)d.classList.add("visible");else{let c=o.length;for(let s=0;s<c;s++){let u=o[s],v=t[s];if(u.quantity!==v.quantity){i=!1;break}}!1==i&&d.classList.add("visible")}!0==i&&o.length==t.length&&d.classList.remove("visible")}function et(){M.innerHTML="";let e=t.length;for(let o=0;o<e;o++){let n=t[o],i=n.line_item;!1===n.is_editable?Z(n,!1,i,o):Z(n,!0,i,o)}ee()}tn.innerHTML="",tn.appendChild(l)}}function tS(e,t,o,n){let i="",a=e.shipping_zip,l=e.billing_zip,p="";null!=a?p=a:null!=l&&(p=l);let r=e.order_number;function c(t,o){let n=document.createElement("div");n.className=`AtOnceNoSelect${T}${o?` AtOnceTextLargeMargin${T}`:""}`;let i=document.createElement("div");i.className=`AtOnceFlexSpacedNoAlign${T} AtOnceQuickButtonPaddedMore${T}`;let a=document.createElement("div");a.className=`AtOncePositionRelative${T}`;let l="",p=e.line_items,r=p.length,c=e.fulfillments;if(c&&c.length){for(let s of p)if(s.img){let $=s.id,m=s.hasOnlyDefaultVariant;for(let h of c){let _=h.line_items;if(_&&_.length)for(let g of _)g.id==$&&(g.img=s.img,g.hasOnlyDefaultVariant=m)}}}for(let f of p)if(f.img){l=f.img;break}let A=document.createElement("div");A.className=`AtOnceProductImage${T}`,l?A.style.backgroundImage=`url(${l})`:A.innerHTML=eS;let x=document.createElement("div");x.className=`AtOnceProductQuantityText${T} AtOnceProductQuantityTextTwo${T}`,a.appendChild(x),a.appendChild(A),1!==r?r=`+${r-1}`:x.remove(),x.innerText=r;let O=document.createElement("div");O.className=`AtOnceFlexSpacedOrder${T}`;let C=document.createElement("div");C.className=`AtOnceFlexSpacedNoAlign${T}`;let y=document.createElement("div");y.className=`AtOnceSubTextBold${T} AtOnceTextColorThree${T}`,y.innerText=`${e.name}`;let b=e.fulfillment_status;"woocommerce"==ec?b=e.status:"paid"!==e.financial_status?b=e.financial_status:b?"partial"==b&&(b="Partially_fulfilled"):b="Unfulfilled",b=U(b);let S=["gray","gray","gray","gray","blue","gray"],M="",w=0;for(let P of[["Unfulfilled"],["Expired","Voided","On hold","Authorized","Refunded","Cancelled","Failed","Trash"],["Pending","In progress","Scheduled","Processing"],["Partially paid","Partially fulfilled","Partial"],["Paid","Fulfilled","Completed"],["Partially refunded"]])P.includes(b)&&(M=S[w]),w+=1;e.cancelled_at&&(M="gray",b="Cancelled");let k=document.createElement("div");k.className=`AtOnceSubTag${T} ${M}`,k.innerText=b,C.appendChild(y),C.appendChild(k);let L=document.createElement("div");L.className=`AtOnceFlexSpacedNoAlign${T}`;let N=document.createElement("div");N.className=`AtOnceSubText${T} AtOnceTextColorNine${T}`,"shopify"==ec?N.innerText=`${B(e.total_price_set.presentment_money.currency_code)}${H(e.total_price_set.presentment_money.amount)}`:"woocommerce"==ec&&(N.innerText=`${e.currency_symbol}${H(e.total)}`);let E=document.createElement("div");E.className=`AtOnceSubText${T} AtOnceTextColorNine${T}`,E.innerText=ej(Date.parse(e.created_at));let I=document.createElement("div");I.className=`AtOnceFlex${T} AtOnceTextLargeMargin${T}`;let R=document.createElement("button");R.className=`AtOnceMainButton${T} AtOnceMainButtonSmall${T} AtOnceSecondaryButton${T}`,R.innerText=t[0],"Help"==t[0]?R.addEventListener("click",function(){tC(),u()}):"View"==t[0]?R.addEventListener("click",function(){tC(),v()}):"Track"==t[0]&&R.addEventListener("click",function(){tC(),d()});let K=document.createElement("button");return K.className=`AtOnceMainButton${T} AtOnceMainButtonSmall${T} AtOnceSecondaryButton${T}`,K.innerText="Track","Help"==t[1]?K.addEventListener("click",function(){tC(),u()}):"View"==t[1]?K.addEventListener("click",function(){tC(),v()}):"Track"==t[1]&&K.addEventListener("click",function(){tC(),d()}),I.appendChild(R),I.appendChild(K),L.appendChild(N),L.appendChild(E),O.appendChild(C),O.appendChild(L),O.appendChild(I),i.appendChild(a),i.appendChild(O),n.appendChild(i),n}i=`${r=`${r}`.replace(/\s/g,"").replace(/\D/g,"").trim().toUpperCase()}_atonce_${p=`${p}`.replace(/\s/g,"").trim().toUpperCase()}`;let s=c(["Help","Track"]);function u(){e.shopify_store=t,eE=e,e8=!0;let a=document.createElement("div");a.className=`AtOnceContainerPaddedTopSmall${T}`;let l=c(["View","Track"]),p=document.createElement("div"),r=document.createElement("div");r.className=`AtOnceSubHeadingSmall${T} AtOnceSubHeadingMarginSmall${T} AtOnceTextColorSeven${T}`,r.innerText="Quick help";let s=document.createElement("div");if(t5=document.createElement("div"),em.length){let u=JSON.parse(JSON.stringify(em));for(let d of(i&&function e(t,o){try{for(let n of t)n.text?-1!==n.text.indexOf("{{return_portal}}")&&(n.text=eI(n.text,"{{return_portal}}",`${eB}?order=${o}`)):n.link&&-1!==n.link.indexOf("{{return_portal}}")&&(n.link=eI(n.link,"{{return_portal}}",`${eB}?order=${o}`)),n.sub_actions&&e(n.sub_actions,o)}catch(i){}}(u,i),u))if(d.actions){let v=d.actions;for(let $ of u)-1!==v.indexOf($.id)&&($.is_actioned=!0)}for(let m of u)!0!==m.is_actioned&&tw(m,s,!1,!1,r,s,!1,u,"Quick help",!0,!0)}p.appendChild(r),p.appendChild(s),o.style.display="none",t$.innerHTML=`Order ${e.name}`,t$.className=`AtOnceSubHeading${T}`,a.appendChild(l),a.appendChild(p),n.innerHTML="",n.appendChild(a)}function d(){e.shopify_store=t,eE=e,e8=!0;let i=document.createElement("div");i.className=`AtOnceContainerPaddedTopSmall${T}`;let a=c(["Help","View"]),l=document.createElement("div"),p=e.fulfillments,r=e.shipping_address;function s(e){let t=document.createElement("div");t.className=`AtOnceContainerPadded${T} AtOnceContainerSmallTopPadding${T} AtOnceContainerNoBottomPadding${T}`;let o=document.createElement("div");o.className=`AtOnceTriHeading${T} AtOnceTextColorThree${T} AtOnceMarginBottomMedium${T}`;let n=document.createElement("div");n.className=`AtOnceContainerPaddedBottom${T}`,t.appendChild(o),t.appendChild(n);let i=!0,a=e.tracking_numbers,l=e.tracking_urls,p=0;try{p=a.length>l.length?a.length:l.length}catch(r){}function c(o,a,l,r,c,s){if(o){let u=document.createElement("div");if(u.className=`AtOnceFlex${T} AtOnceTextColorThree${T} AtOnceBreakAll${T} AtOnceContainerPaddedBottomSmall${T}`,e.tracking_company&&"Other"!==e.tracking_company&&c){let d=document.createElement("div");d.className=`AtOnceBold${T}`,d.innerText=`Sent via ${e.tracking_company}`,u.appendChild(d)}else if(c&&"Other"==e.tracking_company&&e.updated_at){i=!1;let v=document.createElement("div");v.className=`AtOnceTextColorNine${T}`,v.innerText=`Updated ${ej(Date.parse(e.updated_at))}`,u.appendChild(v)}let $=document.createElement("div");if(r&&($.className=`AtOnceTextColorNine${T} AtOnceMarginLeft${T}`),s?$.innerHTML=`${1==p&&(s||l)?"":"Tracking: "}<a href="${o}" target="_blank" rel="noopener noreferrer nofollow">${s}</a>`:l?$.innerHTML=`<a href="${o}" target="_blank" rel="noopener noreferrer nofollow">${a}</a>`:$.innerText=`${a} ${r?ej(Date.parse(o)):o}`,1==p&&(s||l)){let m=t.children[t.childElementCount-1];m.children[m.childElementCount-1].insertAdjacentElement("afterbegin",$)}else u.appendChild($),n.appendChild(u)}}c(e.created_at,"Shipped",!1,!0,!0),!0==i&&c(e.updated_at,"Updated",!1,!0);try{if(p>0)for(let s=0;s<p;s++)l[s]&&a[s]?c(l[s],"Tracking url",!0,!1,!1,a[s]):a[s]?c(a[s],"Tracking no.",!1,!1):l[s]&&c(l[s],"Tracking url",!0,!1,!1)}catch(u){}let d=e.line_items;if(d&&d.length)for(let v of(o.innerText=`${U(e.display_status)}`,d)){let $=document.createElement("div");$.className=`AtOnceFlex${T} AtOnceMarginBottomMedium${T}`;let m=document.createElement("div");m.className=`AtOncePositionRelative${T}`;let h=document.createElement("div");h.className=`AtOnceProductQuantityText${T}`,h.innerText=v.quantity;let _=document.createElement("div");_.className=`AtOnceProductImage${T}`,v.img?_.style.backgroundImage=`url(${v.img})`:_.innerHTML=eS,m.appendChild(h),m.appendChild(_);let g=document.createElement("div");g.className=`AtOnceFlexSpacedProductTitle${T}`;let f=document.createElement("div");f.className=`AtOnceSubTextBold${T} AtOnceTextColorThree${T}`,f.innerText=v.title?v.title:"";let A=document.createElement("div");A.className=`AtOnceSubText${T} AtOnceTextColorNine${T} AtOnceUserSelect${T}`;let x="";!1==v.hasOnlyDefaultVariant&&v.variant_title&&(x=v.variant_title),A.innerText=x,g.appendChild(f),g.appendChild(A),$.appendChild(m),$.appendChild(g),t.appendChild($)}return t}if(p&&p.length)for(let u of p){let d=s(u);l.appendChild(d)}else{let v=document.createElement("div");v.className=`AtOnceContainerPadded${T} AtOnceContainerSmallTopPadding${T} AtOnceContainerNoBottomPadding${T} AtOnceSubTextLarge${T}`;let $=Date.parse(e.created_at);Date.now()-$>432e6?v.innerHTML=`<p>Thanks for your patience!</p><p>Your order is likely still in production.</p><p>If you don’t get any updates after 3 more days, please message us & we’ll find your order.</p>`:v.innerHTML=`<p>Thanks for your patience!</p><p>Your order is still in production.</p><p>We’ll send your tracking info once it’s shipped.</p>`,l.appendChild(v)}let m=document.createElement("div");if(m.className=`AtOnceContainerPadded${T} AtOnceContainerNoBottomPadding${T}`,r){function h(e,t){return r[`${e}`]?`${t?" ":""}${r[`${e}`]}`:""}let _=document.createElement("div");_.className=`AtOnceSubHeadingSmall${T} AtOnceTextColorSeven${T}`,_.innerText="Shipping address";let g=document.createElement("div");g.className=`AtOnceSubText${T} AtOnceTextColorThree${T} AtOnceSubTextMediumMargin${T}`;let f=document.createElement("div");f.innerText=`${h("address1")}${h("address2",!0)}`;let A=document.createElement("div");A.innerText=`${h("city")}${h(`${r.province_code?"province_code":"province"}`,!0)}${h("zip",!0)}`;let x=document.createElement("div");x.innerText=`${h("country")}`,g.appendChild(f),g.appendChild(A),g.appendChild(x),m.appendChild(_),m.appendChild(g)}o.style.display="none",t$.innerHTML=`Order ${e.name}`,t$.className=`AtOnceSubHeading${T}`,i.appendChild(a),i.appendChild(l),i.appendChild(m),n.innerHTML="",n.appendChild(i)}async function v(){e.shopify_store=t,eE=e,e8=!0;let o=e.line_items,i=[];if(e.line_items_returned&&e.line_items_returned.length){let a=e.line_items_returned;for(let l of a){let p=1;l.quantity&&(p=Number(l.quantity)),isNaN(p)&&(p=1),i.push({id:l.id,line_item:l.line_item,product_id:l.product_id,quantity:p})}}td.style.display="",n.classList.add(`AtOnceContainerScrollMiddleHelpCenter${T}`),t$.innerHTML=`Order ${e.name}`,t$.className=`AtOnceSubHeading${T}`,tm.innerText="",tm.style.display="none";let r=document.createElement("div");r.className=`AtOnceContainerPadded${T}`;let s=document.createElement("div");for(let u of(s.className=`AtOnceContainerPaddedTopSmall${T}`,o))try{let d=document.createElement("div");d.className=`AtOnceFlexSpacedNoAlign${T} AtOnceMarginBottomMedium${T}`;let v=document.createElement("div");v.className=`AtOncePositionRelative${T}`;let $=u.img,m=u.title,h=u.customer_paid_amount,_=u.customer_paid_currency,g="";!1==u.hasOnlyDefaultVariant&&u.variant_title&&(g=u.variant_title);let f=document.createElement("div");f.className=`AtOnceProductQuantityText${T}`,f.innerText=u.quantity;let A=document.createElement("div");A.className=`AtOnceProductImage${T}`,$?A.style.backgroundImage=`url(${$})`:A.innerHTML=eS,v.appendChild(f),v.appendChild(A);let x=document.createElement("div");x.className=`AtOnceFlexSpacedProductTitle${T}`;let O=document.createElement("div");O.className=`AtOnceTriHeading${T} AtOnceTextColorThree${T}`,O.innerText=m;let C=document.createElement("div");C.className=`AtOnceSubText${T} AtOnceTextColorNine${T} AtOnceUserSelect${T}`,C.innerText=g,x.appendChild(O),x.appendChild(C);let y=document.createElement("div");y.className=`AtOnceSubText${T} AtOnceTextColorFive${T}`,y.innerText=`${B(_)}${H(h)}`,d.appendChild(v),d.appendChild(x),d.appendChild(y),s.appendChild(d)}catch(b){}let S=document.createElement("div");function M(t,o,n,i){try{let a,l=0,p="";try{"shopify"==ec?(l=(a=e[`${o}`]).presentment_money.amount,p=B(a.presentment_money.currency_code)):(l=a=!0==i&&!1==isNaN(o)?o:e[`${o}`],p=e.currency_symbol)}catch(r){}if(null!=a){if("Discount"==t&&0==Number(l));else{let c=document.createElement("div");c.className=`AtOnceFlexSpacedNoAlign${T} AtOnceMarginBottomSmall${T}${n?` AtOnceContainerPaddedTopSmall${T}`:""}`;let s=document.createElement("div");s.className=`${n?" AtOnceTriHeading":"AtOnceSubText"}${T} AtOnceTextColorThree${T}`,s.innerText=t;let u=document.createElement("div");u.className=`${n?" AtOnceTriHeading":"AtOnceSubText"}${T} AtOnceTextColorFive${T}`,0==Number(l)?u.innerText="Free":u.innerText=`${"Discount"==t?"- ":""}${p}${H(l)}`,c.appendChild(s),c.appendChild(u),S.appendChild(c)}}}catch(d){}}if(S.className=`AtOnceContainerPaddedTopMedium${T}`,"shopify"==ec)M("Subtotal","total_line_items_price_set"),M("Discount","total_discounts_set"),M("Shipping","total_shipping_price_set"),M("Taxes","total_tax_set"),M("Total","total_price_set",!0);else{try{let w=Number(e.total)-Number(e.total_tax)-Number(e.shipping_total)-Number(e.discount_total);null!=w&&!1==isNaN(w)&&M("Subtotal",w,!1,!0)}catch(P){}M("Discount","discount_total"),M("Shipping","shipping_total"),M("Taxes","total_tax"),M("Total","total",!0)}if(s.appendChild(S),e.self_service_gift_cards&&e.self_service_gift_cards.length){let k=e.self_service_gift_cards,L=document.createElement("div");L.className=`AtOnceContainerPaddedTopLarge${T}`;let N=document.createElement("div");N.className=`AtOnceSubHeadingSmall${T} AtOnceTextColorSeven${T} AtOnceSubTextMarginBottom${T}`,N.innerText="Gift Cards",L.appendChild(N);let E=B(e.presentment_currency);for(let I of k){let R=document.createElement("div");R.className=`AtOnceFlex${T} AtOnceMarginBottomMedium${T}`;let K=document.createElement("div");K.className=`AtOnceFlexSpacedNoAlign${T}`;let U=document.createElement("a");U.target="_blank",U.rel="noopener noreferrer nofollow",U.href=`${Z||e.shopify_store}/discount/${I.code}?ref=atonce`,U.innerText=`${I.code}`;let z=document.createElement("div");z.className=`AtOnceSubText${T} AtOnceTextColorFive${T}`,z.innerText=`${E}${Number(I.presentment_amount).toFixed(2)}`,K.appendChild(U),K.appendChild(z),R.appendChild(K),L.appendChild(R)}s.appendChild(L)}if(e.self_services&&e.self_services.length){let G=e.self_services,V=document.createElement("div");V.className=`AtOnceContainerPaddedTopLarge${T}`;let D=document.createElement("div");for(let F of(D.className=`AtOnceSubHeadingSmall${T} AtOnceTextColorSeven${T} AtOnceSubTextMarginBottom${T}`,D.innerText="Returns",V.appendChild(D),G)){let J=document.createElement("div");J.className=`AtOnceFlex${T} AtOnceMarginBottomMedium${T}`;let q=document.createElement("div");q.className=`AtOnceFlexSpacedNoAlign${T}`;let j=document.createElement("a");j.target="_blank",j.rel="noopener noreferrer nofollow",j.href=`${eB}?return=${F.return}`,j.innerText=`${F.return}`,q.appendChild(j),J.appendChild(q),V.appendChild(J)}s.appendChild(V)}r.appendChild(s);let Q=c(["Help","Track"],!0);n.innerHTML="",n.appendChild(Q),n.appendChild(r)}o.appendChild(s)}async function t4(e){if(e8=!1,e7.length&&!e){let t=tC();for(let o of e7)if(o){let n=o[1],i=o[0];tS(i,n,t,tn)}tn.innerHTML="",tn.appendChild(t)}else ty(!0)}async function tM(){let e=document.createElement("div");if(tn.appendChild(e),0==e7.length&&await ty(!1,!0),e7.length){let t=document.createElement("div");t.innerText="Your orders",t.className=`AtOnceSubHeadingSmall${T} AtOnceTextColorSeven${T} AtOnceSubHeadingMargin${T}`,e.appendChild(t);let o=e7.length,n=e7.slice(0,3);for(let i of n)if(i){let a=i[1],l=i[0];tS(l,a,e,tn)}if(o>3){let p=document.createElement("div");p.className=`AtOnceFlexCenter${T} AtOnceContainerPaddedLess${T} AtOnceContainerPaddedTopTiny${T}`;let r=document.createElement("button");r.className=`AtOnceMainButton${T} AtOnceSecondaryButton${T} AtOnceTertiaryButton${T} AtOnceQuaternaryButton${T}`,r.innerText="View All Orders",r.addEventListener("click",function(){t4()}),p.appendChild(r),e.appendChild(p)}}}function tw(e,t,o,n,i,a,l,p,r,c,s,u){try{let d=!1;try{if(eE){if("shopify"==ec)(eE.fulfillments&&eE.fulfillments.length||eE.cancelled_at||Number(eE.total_outstanding))&&(d=!0);else if("woocommerce"==ec){("on-hold"==eE.status||"completed"==eE.status||"cancelled"==eE.status||"refunded"==eE.status||"failed"==eE.status||"trash"==eE.status)&&(d=!0);try{!0==eE.needs_payment&&(d=!0)}catch(v){}try{!1===eE.is_changeable&&(d=!0)}catch($){}}}}catch(m){}let h=null;try{h=e.action}catch(_){}if(!0==d&&("edit_add"==h||"edit_remove"==h||"edit_shipping_address"==h||"edit_cancel"==h));else{let g="div";"link"==e.type?g="a":"map"==e.type?g="map":"text"==e.type?g="text":"button"==e.type&&(g="button");let f=document.createElement("a"==g?"a":"div");if(f.className=`AtOnceQuickButton${T}`,"a"==g){f.target="_blank",f.rel="noopener noreferrer nofollow";let A=e.link;A?f.href=`${A}`:f.href=eu,f.classList.add(`AtOnceQuickButtonLink${T}`)}else if("map"==g){let x=e.actions,O=e.actions_heading,C=e.sub_action;f.addEventListener("click",function(){t6(x,O,!0,C,u)})}else if("text"==g){let y=e.text,b=e.heading,S=e.sub_actions;f.addEventListener("click",function(){let o=document.createElement("div");if(o.className=`AtOnceTextContainer${T}`,o.innerHTML=y,i&&(i.innerText=b),a.innerHTML="",a.appendChild(o),S){let s=document.createElement("div");try{for(let d of S)tw(d,s,!0,n,i,a,l,p,r,void 0,void 0,u)}catch(v){}a.appendChild(s)}if("search"==e.tri_action){try{t5.remove()}catch($){}tb(a,!0,e.heading,e.tri_action,u)}else tb(a,!1,e.heading,e.tri_action,u);if(!0!==c&&th.push({l:p,t:r,t_q:n,t_s:l}),n&&l)try{t5.remove()}catch(m){}if(!0==c)try{t.scrollIntoView({behavior:"smooth"})}catch(h){}})}else"button"==g&&("manage_orders"==h?f.addEventListener("click",function(){t3(!1)}):"edit_add"==h?f.addEventListener("click",function(){tT("edit_add")}):"edit_remove"==h?f.addEventListener("click",function(){tT("edit_remove")}):"edit_shipping_address"==h?f.addEventListener("click",function(){!function e(){if(eE){let t=eE.shipping_address,o=JSON.parse(JSON.stringify(t)),n=document.createElement("div");n.className=`AtOnceMainShopStickyChangesContainer${T} AtOnceFlexCenter${T}`;let i=document.createElement("button");i.className=`AtOnceMainButton${T} AtOncePrimaryButton${T}`,i.innerText="Change Address";let a=document.createElement("div");function l(e,t){setTimeout(function(){try{let o=i.innerText;"Changed Address"!==o&&"Address Change Failed"!==o&&(i.innerText=`${e} (${t}/3)`)}catch(n){}},2e3*t)}a.style.display="none",a.className=`AtOnceLoadingSpinner${T} bottomed`,i.addEventListener("click",function(){a.style.display="",i.disabled=!0,i.classList.remove("red"),l("Confirming Address",1),l("Updating Package",2),l("Changing Address",3),L("edit_shipping_address",{store:eE.shopify_store,order:eE.id,address:t}).then(e=>{e&&e.success?(a.style.display="none",i.disabled=!1,i.classList.add("green"),i.innerText="Changed Address",setTimeout(function(){try{td.click()}catch(e){}},2500)):(i.classList.add("red"),a.style.display="none",i.innerText="Address Change Failed")})}),n.appendChild(a),n.appendChild(i);let p=[];td.style.display="",tn.classList.add(`AtOnceContainerScrollMiddleHelpCenter${T}`),t$.innerHTML="Change Address",t$.className=`AtOnceSubHeading${T}`,tm.innerText="",tm.style.display="none";let r=document.createElement("div");r.className=`AtOnceContainerPadded${T} AtOnceContainerNoBottomPadding${T}`;let c=P,s=t.country_code,u=t.country,d=[];for(let v of w)d.push(`<option value="${v.alpha2}">${v.country}</option>`);let $="";for(let m of d)-1==m.indexOf(`value="${s}"`)&&($+=m);c=$+c,s&&u&&(c=`<option value="${s}">${u}</option>`+c);let h=[{name:"Name",value:"name",required:!0,type:"text"},{name:"Address",value:"address1",required:!0,type:"text"},{name:"Apartment, suite, etc.",value:"address2",required:!1,type:"text"},{name:"City",value:"city",required:!0,type:"text"},{name:"State/Province",value:"province_code",required:"shopify"==ec,type:"text"},{name:"ZIP/Post code",value:"zip",required:!0,type:"text"},{name:"Country",value:"country_code",required:!0,options:c,type:"text"},{name:"Company",value:"company",required:!1,maxLength:35,type:"text"},{name:"Phone",value:"phone",required:!1,type:"tel"},];if(t)for(let _ of h){let g="";t[`${_.value}`]&&(g=t[`${_.value}`]),g&&(_.default=g)}let f="l",A=document.createElement("div"),x="";for(let O of h){let C=document.createElement("div");if(A.appendChild(C),"l"==f)f="r",C.className=`AtOnceInputSubContainer_left${T}`;else{f="l";let y=document.createElement("div");y.className=`AtOnceInputSubContainer_clear${T}`,A.appendChild(y),C.className=`AtOnceInputSubContainer_right${T}`}let b="",S=document.createElement("label");if(S.htmlFor=O.value,S.innerText=`${O.name}`,S.className=`AtOnceDestinationLabel${T}`,O.options||"province_code"==O.value){if((b=document.createElement("select")).className=`AtOnceDestinationInput${T}`,O.options){if(b.innerHTML=O.options,t.country_code){if(x.innerHTML=k[`${t.country_code}`],t.province_code){x.value=t.province_code;try{let M=new Event("change");x.dispatchEvent(M)}catch(N){}}k[`${t.country_code}`]?x.disabled=!1:x.disabled=!0}else x.disabled=!0;b.addEventListener("change",function(){x.innerHTML=k[`${b.value}`],k[`${b.value}`]?x.disabled=!1:x.disabled=!0})}else x=b}else(b=document.createElement("input")).className=`AtOnceDestinationInput${T}`,b.type=O.type,b.name=O.value,O.maxLength&&(b.maxLength=O.maxLength);function E(){i.innerText="Change Address",i.disabled=!1,i.classList.remove("red"),H(),!b.value&&O.required?b.classList.add(`atonce_input_red${T}`):b.classList.remove(`atonce_input_red${T}`)}O.default&&(b.value=O.default),b.addEventListener("keyup",function(){H()}),b.addEventListener("keyup",function(){t[`${O.value}`]=b.value,E()}),b.addEventListener("change",function(){t[`${O.value}`]=b.value,E()}),E(),p.push({input:b,required:O.required,value:O.value,name:O.name}),C.appendChild(S),C.appendChild(b)}function H(){let e=!0;for(let[i,a]of Object.entries(o))if(t[`${i}`]!==o[`${i}`]){e=!1;break}!0==e?n.classList.remove("visible"):n.classList.add("visible")}A.style.display="",r.appendChild(A),r.appendChild(n),tn.innerHTML="",tn.appendChild(r)}}()}):"edit_cancel"==h&&f.addEventListener("click",function(){tT("edit_cancel")}));if("map"==g||"text"==g||"button"==g||"link"==g){let M=e.id;f.addEventListener("click",function(){try{L("update_frequency",{store:Y,id:M,ol:e8,u:q,f:j}),j+=.1,q=!1}catch(e){}})}let N=document.createElement("div");N.className=`AtOnceQuickLinkButtonHeaders${T}`;let E=document.createElement("div");if(E.className=`AtOnceTriHeading${T} AtOnceTextColorThree${T} AtOnceMobileTriHeading${T}`,E.innerText=e.heading?e.heading:e.actions_heading,N.appendChild(E),e.subheading){let H=document.createElement("div");H.className=`AtOnceSubText${T} AtOnceTextColorSeven${T}`,H.innerText=e.subheading,N.appendChild(H)}else(n||s)&&!0!==o&&f.classList.add(`AtOnceQuickButtonPadded${T}`);if(e.icon){let B=document.createElement("div");B.className=`AtOnceQuickIcon${T}`,B.innerHTML=eO[`${e.icon}`],f.appendChild(B)}f.appendChild(N);let I=document.createElement("div");I.className=`AtOnceMarginLeft${T}`,I.innerHTML=eT,f.appendChild(I),t.appendChild(f)}}catch(R){}}ty(!1,!0);let t5="";function tP(e,t){let o=document.createElement("div");o.id=`AtOnceContainerHelpCenterSearch${T}`,o.className=`AtOnceContainerPaddedTopSmall${T}`;let n=document.createElement("div"),i=Date.now(),a=document.createElement("div");a.className=`AtOncePositionRelative${T} AtOnceFlexTitle${T}`;let l=document.createElement("div");l.className=`AtOnceSearchInputIcon${T}`,l.innerHTML=eP;let p=document.createElement("input");p.id="AtOnceMainSearchInput",p.type="text",p.className=`AtOnceSearchInput${T} AtOnceSearchInputIconed${T}`,p.placeholder="Search instant answers",function e(t,o,n){try{let i=[],a=!0;if(es&&es.length)try{let l=localStorage.getItem("AtOnceOrders");l&&l.split(",").length&&(a=!1)}catch(p){}if(o||!0==a&&ev.length){if(t.innerHTML="",o){let r=tA.search(o);if(r.item)i.push(r);else{r.sort(function(e,t){return t.f-e.f});let c=[];function s(){try{if(n&&n.length&&r.length)for(let e of r){let t=e.id;-1==n.findIndex(function(e){return e==t})&&c.push(e)}}catch(o){}}if(s(),c.length)for(let u of c)try{if(i.length>5)break;i.push(u.item)}catch(d){}else for(let v of(r=ev.sort(function(e,t){return t.f-e.f}),s(),c))try{if(i.length>5)break;i.push(v)}catch($){}}}else i=ev.sort(function(e,t){return t.f-e.f});let m=i.slice(0,5);try{m=m.filter(e=>-1==n.indexOf(e.id))}catch(h){}for(let _ of m)tw(_,t,!1,!1,"",t,!1,"","",!0)}}catch(g){}}(n,e,t),p.addEventListener("keyup",function(){try{let e=p.value,t=Date.now();t-i>500&&(i=t,t0(e,n,4))}catch(o){}}),a.appendChild(l),a.appendChild(p),o.appendChild(a),o.appendChild(n),tn.appendChild(o)}function t6(e,t,o,n,i,a){o?(tn.classList.add(`AtOnceContainerScrollMiddleHelpCenter${T}`),t$.innerText="Instant Answers",t$.className=`AtOnceSubHeading${T}`,tm.style.display="none",td.style.display=""):(tn.classList.remove(`AtOnceContainerScrollMiddleHelpCenter${T}`),td.style.display="none",t$.className=`AtOnceMainHeading${T}`,t$.innerText=ex.top_hi_text,tm.innerText=ex.top_hi_subtext,tm.style.display="");let l=document.createElement("div"),p=document.createElement("div");p.className=`AtOnceSubHeadingSmall${T} AtOnceSubHeadingMargin${T} AtOnceTextColorSeven${T}`,p.innerText=t||"";let r=document.createElement("div"),c=document.createElement("div");if(t5=c,"Quick links"==t){if(e.length)for(let s of e)s.icon&&tw(s,r,!1,o,p,r,n,e,t,void 0,void 0,a)}else if(e8){if(e.length){for(let u of e)for(let d of em)if(d.id==u){tw(d,r,!1,o,p,r,n,e,t,void 0,void 0,a);break}}}else if(e.length){for(let v of e)for(let $ of e$)if($.id==v){tw($,r,!1,o,p,r,n,e,t,void 0,void 0,a);break}}if(l.appendChild(p),l.appendChild(r),o&&n)try{c.className=`AtOnceContainerPaddedTop${T}`,tw(n,c,!0,o,p,r,n,e,t,void 0,void 0,a),l.appendChild(c)}catch(m){}tn.innerHTML="",tn.appendChild(l),"Quick links"==t?(tP(),tM(),ta()):tP(t,e),!0!==i&&th.push({l:e,t:t,t_q:o,t_s:n})}td.addEventListener("click",function(){if(e8)t4();else{th.pop();let e=th[th.length-1];e?t6(e.l,e.t,e.t_q,e.t_s,!0):t6(e$,"Quick links"),e8=!1}});let tk=document.createElement("div");tk.className=`AtOncePoweredByContainer${T} AtOnceBottomContainer${T}`;let tL=document.createElement("div");tL.className=`AtOnceSubText${T} AtOnceTextColorSeven${T}`,tL.innerHTML=`<a href="${eu}" target="_blank" rel="noopener noreferrer nofollow" class="AtOncePoweredByLink${T}">Powered by <span class="AtOncePoweredByText${T}">AtOnce</span></a>`,tk.appendChild(tL),to.appendChild(tc),to.appendChild(tn),to.appendChild(tk),tt.appendChild(to);let tN=document.createElement("button");tN.className=`AtOnceChatButton${T}`,tN.appendChild(_),tN.ariaLabel="Open self service",tN.ariaHasPopup=!1;let tE=document.createElement("div");tE.innerHTML=eb;let t7=document.createElement("div");function t8(){t=!1,tN.classList.remove(`AtOnceHideChatButton${T}`),!0==e_&&eh.body.classList.remove(`AtOnceBody${T}`),tt.className=`AtOnceChatPrimaryContainer${T} AtOnceHidePrimaryContainer${T}`;try{n=Date.now(),localStorage.setItem("AtOnceLastUnreadMessage",n)}catch(e){}setTimeout(function(){!1==t&&(tN.style.display="",tt.style.display="none",AtOnceChatContainer.style.width="100px",AtOnceChatContainer.style.height="100px")},200)}function tH(){AtOnceChatContainer.style.width="100%",AtOnceChatContainer.style.height="100%",tt.style.display="",f.className=`AtOnceLiveChatMessagesContainer${T} hidden`,f.innerHTML="",setTimeout(function(){if(!0==t){tN.style.display="none";try{_.className=`AtOnceChatNotification${T} hidden`,en&&(window.top.document.title=en)}catch(e){}try{!er&&Y&&J.currentUser.uid&&(e9(!1),eh.addEventListener("visibilitychange",function(){try{"hidden"===eh.visibilityState?navigator.sendBeacon("https://atonce.com/api/selfservice.js?action=update_live_active",JSON.stringify({email:Y,user:J.currentUser.uid})):e9(!1)}catch(e){}}),er=setInterval(function(){e9(!1)},6e4))}catch(o){}}},200),t=!0,th=[],t6(e$,"Quick links"),tt.style.cssText="",tN.classList.add(`AtOnceHideChatButton${T}`),!0==e_&&eh.body.classList.add(`AtOnceBody${T}`),tt.className=`AtOnceChatPrimaryContainer${T} AtOnceShowPrimaryContainer${T}`}t7.className=`AtOnceCloseButtonMobile${T}`,t7.innerHTML=ek,t7.addEventListener("click",function(){t8()}),tt.appendChild(t7),tE.className=`AtOnceFlexCenter${T}`,tN.addEventListener("click",function(){if(!0==t)t8();else{if(i&&f.innerText)try{setTimeout(function(){try{t1(i,a)}catch(e){}})}catch(e){}tH()}}),tN.appendChild(tE),te.appendChild(f),te.appendChild(tt),te.appendChild(tN),setTimeout(function(){let e=document.getElementById("AtOnceChatContainer");e.contentDocument?eh=e.contentDocument:e.contentWindow&&(eh=e.contentWindow.document),eh.head.appendChild(eV),eh.body.appendChild(te)})}catch(tB){}})}catch(e2){}}export{createAtOnceLiveChat};
