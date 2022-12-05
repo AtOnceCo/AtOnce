@@ -2505,6 +2505,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         bottom: 0;
                         width: 100%;
                         text-align: center;
+						background: ${ed};
                     }
 
                     .AtOnceTopHeadingContainer${T} {
