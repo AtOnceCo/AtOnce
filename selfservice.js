@@ -2612,6 +2612,7 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
                         display: ${e_?"block":"flex"};
                         justify-content: ${e_?"center":"space-between"};
                         padding-bottom: 12px;
+						margin-bottom: 36px;
                     }
 
                     .AtOnceMainButton${T} {
