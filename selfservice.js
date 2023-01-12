@@ -3395,6 +3395,8 @@ import{initializeApp as e,getApp as t}from"https://www.gstatic.com/firebasejs/9.
 
                     .AtOncePoweredByContainer${T} {
                         padding: 12px 0;
+						border-bottom-left-radius: 24px;
+						border-bottom-right-radius: 24px;
                     }
 
                     .AtOncePoweredByLink${T} {
